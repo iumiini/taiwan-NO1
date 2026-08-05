@@ -1,0 +1,262 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://iumiini.github.io/taiwan-NO1/schema/daily.schema.json",
+  "title": "圖鑑 — 每日層（快速層）",
+  "description": "每個交易日晚間 7:00 結算一次翻新的當日狀態。只影響戰鬥乘區與遭遇／收服，永不改動種族層面板。對應設計文件第 12 節每日結算制。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "market_date", "settled_at", "generation", "world", "monsters"],
+  "properties": {
+    "schema_version": { "$ref": "#/$defs/semver" },
+    "market_date": {
+      "type": "string",
+      "format": "date",
+      "description": "本包資料所屬的交易日（收盤日），非產生日。"
+    },
+    "settled_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "結算時刻。遊戲內的「開獎時刻」。"
+    },
+    "generation": { "type": "integer", "minimum": 1 },
+    "season": { "type": "string", "pattern": "^[0-9]{4}-S[1-4]$" },
+    "world": { "$ref": "#/$defs/world" },
+    "monsters": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/monster_daily" }
+    }
+  },
+  "$defs": {
+    "semver": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "symbol": { "type": "string", "pattern": "^[0-9]{4}[A-Z]?$" },
+
+    "world": {
+      "type": "object",
+      "description": "世界層。大盤＝全地圖天氣，景氣燈號＝季節。個股天氣之上再罩一層，覆巢之下無完卵。",
+      "additionalProperties": false,
+      "required": ["index", "weather"],
+      "properties": {
+        "index": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["symbol", "close", "change_percent"],
+          "properties": {
+            "symbol": { "type": "string" },
+            "name": { "type": "string" },
+            "close": { "type": "number" },
+            "change_percent": { "type": "number" }
+          }
+        },
+        "weather": {
+          "type": "string",
+          "enum": ["sunny", "normal", "storm"],
+          "description": "sunny＝大盤大漲（全體小 buff）；storm＝大盤大跌（氛圍為主）；normal＝平盤。"
+        },
+        "business_light": {
+          "type": ["string", "null"],
+          "enum": ["blue", "yellow_blue", "green", "yellow_red", "red", null],
+          "description": "國發會景氣燈號＝遊戲世界的季節，月更。"
+        },
+        "multipliers": {
+          "$ref": "#/$defs/multipliers",
+          "description": "世界天氣的全體乘區。與個股乘區相乘。"
+        }
+      }
+    },
+
+    "price": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["open", "high", "low", "close", "change_percent", "volume"],
+      "properties": {
+        "open":  { "type": "number", "minimum": 0 },
+        "high":  { "type": "number", "minimum": 0 },
+        "low":   { "type": "number", "minimum": 0 },
+        "close": { "type": "number", "minimum": 0 },
+        "change_percent": { "type": "number" },
+        "volume": { "type": "integer", "minimum": 0, "description": "成交股數。" },
+        "turnover_value": { "type": "number", "minimum": 0, "description": "成交金額（元）。" }
+      }
+    },
+
+    "moving_averages": {
+      "type": "object",
+      "description": "均線。null 代表歷史資料不足（例如新上市未滿一年）。",
+      "additionalProperties": false,
+      "properties": {
+        "ma5":   { "type": ["number", "null"] },
+        "ma20":  { "type": ["number", "null"] },
+        "ma60":  { "type": ["number", "null"] },
+        "ma240": { "type": ["number", "null"] }
+      }
+    },
+
+    "weather_state": {
+      "type": "string",
+      "enum": ["excited", "tailwind", "depressed"],
+      "description": "均線天氣（只賞不罰）。excited＝站上 5 日線（爆擊率↑）；tailwind＝站上月線（全能力小加成）；depressed＝跌破年線（唯一減益）。"
+    },
+
+    "aura": {
+      "type": "object",
+      "description": "氣場系統（量價關係）。管遭遇與收服鑑定，不管戰鬥 buff。",
+      "additionalProperties": false,
+      "required": ["quadrant", "volume_ratio"],
+      "properties": {
+        "quadrant": {
+          "type": "string",
+          "enum": ["true_surge", "true_weak", "phantom_surge", "dormant"],
+          "description": "true_surge 量增價漲＝真暴走；true_weak 量增價跌＝真虛弱；phantom_surge 量縮價漲＝幻影暴走（騙局個體，烙印加成打折）；dormant 量縮價跌＝蓄力假寐（好抓便宜，可能隱藏加成）。"
+        },
+        "volume_ratio": {
+          "type": "number",
+          "minimum": 0,
+          "description": "當日成交量 ÷ 近 20 日均量。決定氣場厚薄與穩定度。"
+        },
+        "awakening_omen": {
+          "type": "boolean",
+          "description": "覺醒前兆：價未動但量先膨脹（量先價行）。看得懂的玩家可在暴走前先收服。"
+        }
+      }
+    },
+
+    "kd": {
+      "type": "object",
+      "description": "KD 指標（9,3,3）。金叉開盾管守，與均線天氣管攻不重疊。",
+      "additionalProperties": false,
+      "required": ["k", "d", "shield"],
+      "properties": {
+        "k": { "type": "number", "minimum": 0, "maximum": 100 },
+        "d": { "type": "number", "minimum": 0, "maximum": 100 },
+        "cross": {
+          "type": ["string", "null"],
+          "enum": ["golden", "death", null],
+          "description": "當日是否發生交叉。golden＝黃金交叉開盾；death＝死亡交叉關盾（無懲罰）。"
+        },
+        "shield": {
+          "type": "boolean",
+          "description": "護盾狀態制：K>D 期間持續為 true，受傷減免固定一檔。"
+        }
+      }
+    },
+
+    "net_value_shield": {
+      "type": "object",
+      "description": "淨值盾（血量墊）。門檻制：少數派才有盾，好奇心＝教育入口。盾在則此擊必不爆擊。",
+      "additionalProperties": false,
+      "required": ["tier", "amount"],
+      "properties": {
+        "tier": {
+          "type": "string",
+          "enum": ["none", "silver", "gold"],
+          "description": "none＝PB 高於門檻無盾；silver＝1 ≤ PB < 門檻；gold＝PB < 1（破淨），全服僅個位數的稀有話題個體。"
+        },
+        "amount": {
+          "type": "number",
+          "minimum": 0,
+          "description": "盾量（血量墊）。PB 越低越厚。無盾為 0。"
+        }
+      }
+    },
+
+    "valuation": {
+      "type": "object",
+      "description": "估值三兄弟徽章：市值看多大（稀有度）、本益比看多貴（身價）、淨值比看多實（盾）。",
+      "additionalProperties": false,
+      "required": ["pe_tag"],
+      "properties": {
+        "pe": {
+          "type": ["number", "null"],
+          "description": "本益比。EPS 為負時 TWSE 回傳「-」，此處為 null。"
+        },
+        "pb": { "type": ["number", "null"], "description": "股價淨值比。" },
+        "dividend_yield": { "type": ["number", "null"], "description": "殖利率（%）。" },
+        "pe_tag": {
+          "type": "string",
+          "enum": ["undervalued", "fair", "popular", "mysterious"],
+          "description": "身價標籤。undervalued 💎 被低估的實力派；fair ⚖️ 身價合理；popular 🔥 人氣王（含人氣稅）；mysterious ❓ 神秘系（EPS 為負無法鑑定）。只管錢包決策，不影響收服機率。"
+        },
+        "market_cap": { "type": ["number", "null"], "description": "當日市值＝收盤價×股本。供圖鑑顯示，不影響本賽季稀有度。" }
+      }
+    },
+
+    "capture": {
+      "type": "object",
+      "description": "收服經濟。成本走股價、機率走稀有度與狀態，兩者刻意分離。",
+      "additionalProperties": false,
+      "required": ["cost", "rate_modifier"],
+      "properties": {
+        "cost": {
+          "type": "number",
+          "minimum": 0,
+          "description": "收服成本＝收盤價 × 固定係數（見 balance.json）。象徵買進一單位。EPS 刻意不進此公式。"
+        },
+        "rate_modifier": {
+          "type": "number",
+          "minimum": 0,
+          "description": "當日狀態對收服率的乘數。暴走日 <1（氣勢正旺難抓）、虛弱日 >1（好抓）。"
+        },
+        "iv_range": {
+          "type": "object",
+          "description": "個體值擲骰區間。捕獲當下市場狀態定區間、區間內隨機擲出，烙印定終身。",
+          "additionalProperties": false,
+          "required": ["min", "max"],
+          "properties": {
+            "min": { "type": "integer", "minimum": 0, "maximum": 30 },
+            "max": { "type": "integer", "minimum": 0, "maximum": 30 }
+          }
+        }
+      }
+    },
+
+    "multipliers": {
+      "type": "object",
+      "description": "當日乘區。所有平衡調整在雲端算好後放這裡，改公式當天生效、玩家不用更新 App。1.0 為無影響。",
+      "additionalProperties": false,
+      "properties": {
+        "hp":   { "type": "number", "minimum": 0 },
+        "atk":  { "type": "number", "minimum": 0 },
+        "matk": { "type": "number", "minimum": 0 },
+        "def":  { "type": "number", "minimum": 0 },
+        "mdef": { "type": "number", "minimum": 0 },
+        "spd":  { "type": "number", "minimum": 0 },
+        "crit_rate":    { "type": "number", "minimum": 0, "maximum": 1, "description": "爆擊率絕對值（非乘數）。" },
+        "damage_taken": { "type": "number", "minimum": 0, "description": "受到傷害乘數。KD 護盾生效時 <1。" }
+      }
+    },
+
+    "monster_daily": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["symbol", "price", "aura", "weather", "net_value_shield", "valuation", "capture", "multipliers"],
+      "properties": {
+        "symbol": { "$ref": "#/$defs/symbol" },
+        "price": { "$ref": "#/$defs/price" },
+        "moving_averages": { "$ref": "#/$defs/moving_averages" },
+        "weather": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/weather_state" },
+          "uniqueItems": true,
+          "description": "當日均線天氣，可同時成立多項。空陣列＝平常狀態。"
+        },
+        "aura": { "$ref": "#/$defs/aura" },
+        "kd": { "$ref": "#/$defs/kd" },
+        "net_value_shield": { "$ref": "#/$defs/net_value_shield" },
+        "valuation": { "$ref": "#/$defs/valuation" },
+        "capture": { "$ref": "#/$defs/capture" },
+        "encounter_weight": {
+          "type": "number",
+          "minimum": 0,
+          "description": "同稀有度階層內的遭遇權重，由周轉率活躍度與事件加成決定。階層基礎率見 balance.json。"
+        },
+        "special_state": {
+          "type": ["string", "null"],
+          "enum": ["hyper_evolution", "detention", "exhausted", null],
+          "description": "hyper_evolution＝注意股超進化（能力大增、醫療費暴增、野生不可收服但經驗豐富）；detention＝處置股禁閉室（無法遭遇／出戰）；exhausted＝退榜後的短暫力竭。"
+        },
+        "multipliers": { "$ref": "#/$defs/multipliers" }
+      }
+    }
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://iumiini.github.io/taiwan-NO1/schema/species.schema.json",
+  "title": "圖鑑 — 種族層（慢速層）",
+  "description": "怪獸的固定身分與種族值。隨財報季／月營收更新，不隨每日行情變動。對應設計文件第十章「面積→形狀」與第 13 節變動性總表。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "generation", "season", "stats_as_of", "species"],
+  "properties": {
+    "schema_version": { "$ref": "#/$defs/semver" },
+    "generation": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "世代編號。同一檔股票跨世代再入選＝發行新世代版本，需重抓重練。"
+    },
+    "season": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-S[1-4]$",
+      "description": "賽季代號，例如 2026-S3。"
+    },
+    "stats_as_of": {
+      "type": "string",
+      "format": "date",
+      "description": "種族值所依據的資料日期。"
+    },
+    "fiscal_period": {
+      "type": "string",
+      "pattern": "^[0-9]{4}Q[1-4]$",
+      "description": "種族值採用的財報季，例如 2026Q2。"
+    },
+    "species": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/species" }
+    }
+  },
+  "$defs": {
+    "semver": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "symbol": {
+      "type": "string",
+      "pattern": "^[0-9]{4}[A-Z]?$",
+      "description": "台股證券代號。"
+    },
+    "element": {
+      "type": "string",
+      "enum": ["electric", "fire", "steel", "wind", "grass", "water", "earth", "gold", "psychic"],
+      "description": "屬性系。七系克制環（earth→electric/fire→steel→wind→grass→water→earth）＋環外 gold↔psychic 互克。"
+    },
+    "rarity": {
+      "type": "string",
+      "enum": ["mythical", "legendary", "epic", "rare", "common"],
+      "description": "稀有度＝世代內市值排名。幻獸／傳說／史詩／稀有／普通。"
+    },
+    "growth_group": {
+      "type": "string",
+      "enum": ["slow", "medium", "fast"],
+      "description": "經驗曲線分組。Phase 1 依市值分組：大公司 slow（慢養、高天花板），小公司 fast（快養、即戰力）。"
+    },
+    "base_stats": {
+      "type": "object",
+      "description": "六圍種族值。總和應等於該稀有度的 BST。",
+      "additionalProperties": false,
+      "required": ["hp", "atk", "matk", "def", "mdef", "spd"],
+      "properties": {
+        "hp":   { "type": "integer", "minimum": 1, "description": "生命 ← 營收規模（體格）" },
+        "atk":  { "type": "integer", "minimum": 1, "description": "物攻 ← EPS（真金白銀的獲利）" },
+        "matk": { "type": "integer", "minimum": 1, "description": "魔攻 ← 營收 YoY 成長率（題材與想像）" },
+        "def":  { "type": "integer", "minimum": 1, "description": "物防 ← 負債比（反向）" },
+        "mdef": { "type": "integer", "minimum": 1, "description": "魔防 ← 波動率（反向）＋殖利率" },
+        "spd":  { "type": "integer", "minimum": 1, "description": "速度 ← 周轉率" }
+      }
+    },
+    "move": {
+      "type": "object",
+      "description": "招式卡。四資訊：名稱｜系｜威力｜屬性。招式池由歷史股性統計決定，賽季更新，不隨每日 K 線洗牌。",
+      "additionalProperties": false,
+      "required": ["id", "name", "category", "element", "power", "pp", "learn_level"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+        "name": { "type": "string" },
+        "category": {
+          "type": "string",
+          "enum": ["physical", "magical"],
+          "description": "physical＝實體 K 棒型態（走出來的）；magical＝缺口與影線（跳過去的）。"
+        },
+        "element": { "$ref": "#/$defs/element" },
+        "power": { "type": "integer", "minimum": 1, "description": "威力固定，行情只透過當日乘區影響發揮。" },
+        "pp": { "type": "integer", "minimum": 1, "description": "使用次數，耗盡需上醫院回復。" },
+        "learn_level": { "type": "integer", "minimum": 1, "description": "解鎖此招的等級。每隻最多帶 4 招。" }
+      }
+    },
+    "source_metrics": {
+      "type": "object",
+      "description": "產生種族值的原始數據。保留原值供圖鑑網頁做「真實公司百科」展示，並讓平衡調整可回溯。",
+      "additionalProperties": false,
+      "properties": {
+        "market_cap":          { "type": "number", "minimum": 0, "description": "賽季起始市值快照（新台幣元）。決定稀有度與 BST。" },
+        "shares_outstanding":  { "type": "number", "minimum": 0, "description": "股本（股數）。" },
+        "revenue_monthly":     { "type": "number", "description": "最近月營收（新台幣元）。" },
+        "revenue_yoy":         { "type": "number", "description": "去年同月增減（%），TWSE 直接提供。" },
+        "eps":                 { "type": "number", "description": "基本每股盈餘（元）。可為負。" },
+        "debt_ratio":          { "type": "number", "minimum": 0, "description": "負債比（%）＝負債總計÷資產總計。" },
+        "turnover_ratio":      { "type": "number", "minimum": 0, "description": "週轉率（%），TWSE 直接提供。" },
+        "volatility_60d":      { "type": "number", "minimum": 0, "description": "近 60 日年化波動率（%），自算。" },
+        "book_value_per_share":{ "type": "number", "description": "每股參考淨值（元）。" }
+      }
+    },
+    "art": {
+      "type": "object",
+      "description": "美術欄位。第一天就留在資料結構裡，後期換圖不動程式。",
+      "additionalProperties": false,
+      "required": ["placeholder_color"],
+      "properties": {
+        "placeholder_color": {
+          "type": "string",
+          "pattern": "^#[0-9A-Fa-f]{6}$",
+          "description": "占位素材色塊。"
+        },
+        "sprite": {
+          "type": ["string", "null"],
+          "description": "正式立繪檔名。占位階段為 null。"
+        }
+      }
+    },
+    "etf_scout": {
+      "type": "object",
+      "description": "星探認證徽章。被 N 檔主動型 ETF 持有＝經理人認證，共持檔數越多認證越高。",
+      "additionalProperties": false,
+      "required": ["holder_count"],
+      "properties": {
+        "holder_count": { "type": "integer", "minimum": 0 },
+        "funds": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/symbol" },
+          "description": "持有本檔的主動型 ETF 代號清單。"
+        }
+      }
+    },
+    "species": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["symbol", "name", "generation", "element", "rarity", "rarity_rank", "bst", "base_stats", "growth_group", "art"],
+      "properties": {
+        "symbol": { "$ref": "#/$defs/symbol" },
+        "name": { "type": "string", "description": "公司簡稱。" },
+        "generation": { "type": "integer", "minimum": 1 },
+        "element": { "$ref": "#/$defs/element" },
+        "industry": { "type": "string", "description": "產業別原文，供圖鑑顯示與屬性歸類回溯。" },
+        "rarity": { "$ref": "#/$defs/rarity" },
+        "rarity_rank": { "type": "integer", "minimum": 1, "description": "世代內市值排名（非全市場排名）。" },
+        "bst": { "type": "integer", "minimum": 1, "description": "六圍總點數，由稀有度階層決定。同階面積相同、只差形狀。" },
+        "base_stats": { "$ref": "#/$defs/base_stats" },
+        "growth_group": { "$ref": "#/$defs/growth_group" },
+        "move_pool": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/move" },
+          "description": "種族招式池。玩家升等逐一解鎖，自配 4 招。"
+        },
+        "source_metrics": { "$ref": "#/$defs/source_metrics" },
+        "art": { "$ref": "#/$defs/art" },
+        "etf_scout": { "$ref": "#/$defs/etf_scout" }
+      }
+    }
+  }
+}

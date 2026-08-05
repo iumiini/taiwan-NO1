@@ -1,0 +1,287 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://iumiini.github.io/taiwan-NO1/schema/balance.schema.json",
+  "title": "圖鑑 — 平衡參數層",
+  "description": "所有可調數值的單一來源。放在雲端讓平衡調整當天生效，玩家不用更新 App。⚠️ 目前多數數值為 v0.1 提案，尚待平衡階段定案。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "effective_from", "type_chart", "rarity_tiers", "capture", "weather_effects"],
+  "properties": {
+    "schema_version": { "$ref": "#/$defs/semver" },
+    "effective_from": { "type": "string", "format": "date", "description": "本組參數生效日。" },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "playtest", "locked"],
+      "description": "draft＝提案未驗證；playtest＝測試中；locked＝定案。"
+    },
+
+    "type_chart": {
+      "type": "object",
+      "description": "屬性克制表。七系環＋環外 gold↔psychic 互克。鍵為攻方屬性，值為對各防守方屬性的倍率；未列出視為 1.0。",
+      "additionalProperties": false,
+      "properties": {
+        "electric": { "$ref": "#/$defs/type_row" },
+        "fire":     { "$ref": "#/$defs/type_row" },
+        "steel":    { "$ref": "#/$defs/type_row" },
+        "wind":     { "$ref": "#/$defs/type_row" },
+        "grass":    { "$ref": "#/$defs/type_row" },
+        "water":    { "$ref": "#/$defs/type_row" },
+        "earth":    { "$ref": "#/$defs/type_row" },
+        "gold":     { "$ref": "#/$defs/type_row" },
+        "psychic":  { "$ref": "#/$defs/type_row" }
+      }
+    },
+
+    "rarity_tiers": {
+      "type": "object",
+      "description": "各稀有度階層的固定參數。BST 決定六圍總點（面積），同階面積相同、只差形狀。",
+      "additionalProperties": false,
+      "required": ["mythical", "legendary", "epic", "rare", "common"],
+      "properties": {
+        "mythical":  { "$ref": "#/$defs/rarity_tier" },
+        "legendary": { "$ref": "#/$defs/rarity_tier" },
+        "epic":      { "$ref": "#/$defs/rarity_tier" },
+        "rare":      { "$ref": "#/$defs/rarity_tier" },
+        "common":    { "$ref": "#/$defs/rarity_tier" }
+      }
+    },
+
+    "iv": {
+      "type": "object",
+      "description": "個體值（捕獲烙印）。遭遇當日市場狀態定區間、區間內隨機擲出，定終身。★1~5 星級於遭遇畫面透明化。",
+      "additionalProperties": false,
+      "required": ["max", "ranges"],
+      "properties": {
+        "max": { "type": "integer", "minimum": 1 },
+        "ranges": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["surge", "normal", "weak"],
+          "properties": {
+            "surge":  { "$ref": "#/$defs/iv_range", "description": "暴走日" },
+            "normal": { "$ref": "#/$defs/iv_range", "description": "平常日" },
+            "weak":   { "$ref": "#/$defs/iv_range", "description": "虛弱日" }
+          }
+        },
+        "star_thresholds": {
+          "type": "array",
+          "items": { "type": "integer", "minimum": 0 },
+          "description": "★1~5 的個體值下界，由低到高共 5 個值。"
+        }
+      }
+    },
+
+    "weather_effects": {
+      "type": "object",
+      "description": "均線天氣效果（只賞不罰）。跌破短中期均線只是回常態，唯有跌破年線小減益。",
+      "additionalProperties": false,
+      "required": ["excited", "tailwind", "depressed"],
+      "properties": {
+        "excited":   { "$ref": "#/$defs/effect", "description": "站上 5 日線" },
+        "tailwind":  { "$ref": "#/$defs/effect", "description": "站上月線（20 日）" },
+        "depressed": { "$ref": "#/$defs/effect", "description": "跌破年線（240 日）" }
+      }
+    },
+
+    "world_weather_effects": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "sunny":  { "$ref": "#/$defs/effect" },
+        "normal": { "$ref": "#/$defs/effect" },
+        "storm":  { "$ref": "#/$defs/effect" }
+      }
+    },
+
+    "kd_shield": {
+      "type": "object",
+      "description": "KD 黃金交叉護盾。狀態制，K>D 期間持續。",
+      "additionalProperties": false,
+      "properties": {
+        "period":       { "type": "integer", "minimum": 1, "description": "RSV 計算週期，預設 9。" },
+        "damage_taken": { "type": "number", "minimum": 0, "description": "受傷乘數，例如 0.85＝減傷一檔。" }
+      }
+    },
+
+    "net_value_shield": {
+      "type": "object",
+      "description": "淨值盾門檻制。人人有盾＝沒有盾，預期全服約 2~3 成有盾。",
+      "additionalProperties": false,
+      "properties": {
+        "pb_threshold":     { "type": "number", "minimum": 0, "description": "低於此 PB 才生成盾，v0.1 提案 1.5。" },
+        "gold_threshold":   { "type": "number", "minimum": 0, "description": "低於此 PB 為破淨金盾，固定 1.0。" },
+        "amount_formula_k": { "type": "number", "minimum": 0, "description": "盾量係數：盾量 ≈ k × (門檻 − PB) / 門檻 × 種族 HP。" },
+        "blocks_crit":      { "type": "boolean", "description": "盾在則此擊必不爆擊（出手瞬間判定，破盾溢出也不回復爆擊）。" }
+      }
+    },
+
+    "capture": {
+      "type": "object",
+      "description": "收服經濟。失敗只賠球錢不賠部位——收服成功那一刻才扣大錢。",
+      "additionalProperties": false,
+      "required": ["price_multiplier", "balls"],
+      "properties": {
+        "price_multiplier": {
+          "type": "number",
+          "minimum": 0,
+          "description": "收服成本＝收盤價 × 此係數，v0.1 提案 10（象徵買進一單位）。"
+        },
+        "state_modifiers": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "surge":  { "type": "number", "minimum": 0, "description": "暴走日收服率乘數（<1，難抓）。" },
+            "normal": { "type": "number", "minimum": 0 },
+            "weak":   { "type": "number", "minimum": 0, "description": "虛弱日收服率乘數（>1，好抓）。" }
+          }
+        },
+        "balls": {
+          "type": "array",
+          "minItems": 1,
+          "description": "寶貝球＝委託單。收服＝買進、投球＝下單、成功＝成交。",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "name", "rate_multiplier", "price"],
+            "properties": {
+              "id":   { "type": "string", "pattern": "^[a-z0-9_]+$" },
+              "name": { "type": "string" },
+              "real_world": { "type": "string", "description": "現實對應的委託單類型，供圖鑑教育文案使用。" },
+              "rate_multiplier": { "type": "number", "minimum": 0, "description": "球種係數，乘在收服率上。" },
+              "guaranteed": { "type": "boolean", "description": "必中球。為 true 時忽略 rate_multiplier 直接收服。" },
+              "price": { "type": "number", "minimum": 0 },
+              "rarity_limit": {
+                "type": ["array", "null"],
+                "items": { "type": "string", "enum": ["mythical", "legendary", "epic", "rare", "common"] },
+                "description": "可使用的稀有度限制。null＝無限制。零股球僅能收普通階。"
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "hospital": {
+      "type": "object",
+      "description": "醫院＝持續性小支出。收服是一次性大支出，兩者構成消費循環。",
+      "additionalProperties": false,
+      "properties": {
+        "daily_uses": { "type": "integer", "minimum": 1, "description": "每日次數，全帳號共用，推動板凳輪替。" },
+        "fee_by_eps_percentile": {
+          "type": "array",
+          "description": "依 EPS 百分位分級費率（高 EPS＝高薪球星保養貴）。",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["min_percentile", "fee"],
+            "properties": {
+              "min_percentile": { "type": "number", "minimum": 0, "maximum": 100 },
+              "fee": { "type": "number", "minimum": 0 }
+            }
+          }
+        },
+        "hyper_evolution_multiplier": { "type": "number", "minimum": 0, "description": "超進化期間醫療費倍率（養飆股很燒錢）。" }
+      }
+    },
+
+    "leveling": {
+      "type": "object",
+      "description": "經驗曲線＝基準 × 等級² × 成長組係數。前快後慢。經驗 100% 來自戰鬥。",
+      "additionalProperties": false,
+      "properties": {
+        "max_level": { "type": "integer", "minimum": 1 },
+        "base_exp":  { "type": "number", "minimum": 0 },
+        "group_coefficient": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "slow":   { "type": "number", "minimum": 0 },
+            "medium": { "type": "number", "minimum": 0 },
+            "fast":   { "type": "number", "minimum": 0 }
+          }
+        },
+        "rested_bonus": {
+          "type": "object",
+          "description": "蓄勢值（養精蓄銳）。持有累積、戰鬥時消耗換經驗加成，掛機不升等。",
+          "additionalProperties": false,
+          "properties": {
+            "max_days":   { "type": "integer", "minimum": 1 },
+            "multiplier": { "type": "number", "minimum": 1 }
+          }
+        }
+      }
+    },
+
+    "battle": {
+      "type": "object",
+      "description": "傷害＝招式威力 ×（攻÷防）× 等級係數 × 屬性克制 × 爆擊 × 當日乘區。",
+      "additionalProperties": false,
+      "properties": {
+        "base_crit_rate":  { "type": "number", "minimum": 0, "maximum": 1 },
+        "crit_multiplier": { "type": "number", "minimum": 1 },
+        "level_coefficient_k": { "type": "number", "minimum": 0 },
+        "max_moves": { "type": "integer", "minimum": 1, "description": "每隻可帶招式數，設計為 4。" }
+      }
+    }
+  },
+
+  "$defs": {
+    "semver": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "element_name": {
+      "type": "string",
+      "enum": ["electric", "fire", "steel", "wind", "grass", "water", "earth", "gold", "psychic"]
+    },
+    "type_row": {
+      "type": "object",
+      "description": "對各防守屬性的傷害倍率。",
+      "additionalProperties": false,
+      "properties": {
+        "electric": { "type": "number", "minimum": 0 },
+        "fire":     { "type": "number", "minimum": 0 },
+        "steel":    { "type": "number", "minimum": 0 },
+        "wind":     { "type": "number", "minimum": 0 },
+        "grass":    { "type": "number", "minimum": 0 },
+        "water":    { "type": "number", "minimum": 0 },
+        "earth":    { "type": "number", "minimum": 0 },
+        "gold":     { "type": "number", "minimum": 0 },
+        "psychic":  { "type": "number", "minimum": 0 }
+      }
+    },
+    "rarity_tier": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["bst", "count", "encounter_base_rate", "capture_base_rate"],
+      "properties": {
+        "bst":   { "type": "integer", "minimum": 1, "description": "六圍總點數。" },
+        "count": { "type": "integer", "minimum": 0, "description": "本世代此階層的隻數。" },
+        "encounter_base_rate": { "type": "number", "minimum": 0, "maximum": 1, "description": "稀有度基礎遭遇率。活躍度只在同階層內分配，傳說永遠稀有。" },
+        "capture_base_rate":   { "type": "number", "minimum": 0, "maximum": 1 },
+        "growth_group": { "type": "string", "enum": ["slow", "medium", "fast"] }
+      }
+    },
+    "iv_range": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["min", "max"],
+      "properties": {
+        "min": { "type": "integer", "minimum": 0 },
+        "max": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "effect": {
+      "type": "object",
+      "description": "一組狀態效果。省略的欄位視為無影響。",
+      "additionalProperties": false,
+      "properties": {
+        "hp":   { "type": "number", "minimum": 0 },
+        "atk":  { "type": "number", "minimum": 0 },
+        "matk": { "type": "number", "minimum": 0 },
+        "def":  { "type": "number", "minimum": 0 },
+        "mdef": { "type": "number", "minimum": 0 },
+        "spd":  { "type": "number", "minimum": 0 },
+        "crit_rate":    { "type": "number", "minimum": 0, "maximum": 1 },
+        "damage_taken": { "type": "number", "minimum": 0 }
+      }
+    }
+  }
+}

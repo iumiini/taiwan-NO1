@@ -1,0 +1,67 @@
+{
+  "schema_version": "0.1.0",
+  "generation": 1,
+  "season": "2026-S3",
+  "market_date": "2026-08-05",
+  "generated_at": "2026-08-05T21:20:27+08:00",
+  "next_settlement_at": "2026-08-06T19:00:00+08:00",
+  "files": {
+    "species": {
+      "path": "species.json",
+      "sha256": "d89bc175180765bac607a18176073fc91de17bed2da0585fc224c13f86313b89",
+      "bytes": 4108,
+      "updated_at": "2026-08-05T18:46:32.357978+08:00"
+    },
+    "daily": {
+      "path": "daily/2026-08-05.json",
+      "sha256": "6a8e0756376cd7a2c8b7ffe47c1d7c92e05c9ccf25780367af1c8de36e2dd20f",
+      "bytes": 3763,
+      "updated_at": "2026-08-05T18:46:48.493978+08:00"
+    },
+    "balance": {
+      "path": "balance.json",
+      "sha256": "70f5df7ba986a6d98803ad460de810717f36ba8f0d74f33b9982b9c38a72cda3",
+      "bytes": 3472,
+      "updated_at": "2026-08-05T21:20:20.742743+08:00"
+    }
+  },
+  "pipeline": {
+    "sources": [
+      {
+        "name": "fugle-snapshot-tse",
+        "endpoint": "/marketdata/v1.0/snapshot/quotes/TSE",
+        "record_count": 1536
+      },
+      {
+        "name": "fugle-historical-candles",
+        "endpoint": "/marketdata/v1.0/stock/historical/candles",
+        "record_count": 282
+      },
+      {
+        "name": "fugle-index",
+        "endpoint": "/marketdata/v1.0/stock/intraday/quote/IX0001",
+        "record_count": 1
+      },
+      {
+        "name": "twse-bwibbu",
+        "endpoint": "/v1/exchangeReport/BWIBBU_ALL",
+        "record_count": 1082
+      },
+      {
+        "name": "twse-monthly-revenue",
+        "endpoint": "/v1/opendata/t187ap05_L",
+        "record_count": 1082
+      },
+      {
+        "name": "twse-turnover",
+        "endpoint": "/v1/exchangeReport/FMSRFK_ALL",
+        "record_count": 29253
+      }
+    ],
+    "warnings": [
+      "2026Q2 財報尚未到公布期限，t187ap06/t187ap07 僅 4 筆；本包 EPS 由收盤價÷本益比回推、每股淨值由收盤價÷股價淨值比回推",
+      "market_cap 待補：需股本資料，來源同上受阻",
+      "ma60 未計算：本次回補僅取 5/20/240 日"
+    ]
+  }
+}

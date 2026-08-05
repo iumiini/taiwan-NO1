@@ -1,0 +1,113 @@
+{
+  "schema_version": "0.1.0",
+  "generation": 1,
+  "season": "2026-S3",
+  "stats_as_of": "2026-08-05",
+  "fiscal_period": "2026Q1",
+  "species": [
+    {
+      "symbol": "2330",
+      "name": "台積電",
+      "generation": 1,
+      "element": "electric",
+      "industry": "半導體業",
+      "rarity": "mythical",
+      "rarity_rank": 1,
+      "bst": 600,
+      "base_stats": {
+        "hp": 115,
+        "atk": 125,
+        "matk": 110,
+        "def": 95,
+        "mdef": 80,
+        "spd": 75
+      },
+      "growth_group": "slow",
+      "move_pool": [
+        { "id": "red_three_soldiers", "name": "紅三兵",   "category": "physical", "element": "electric", "power": 80,  "pp": 15, "learn_level": 1 },
+        { "id": "long_red_engulfing", "name": "長紅吞噬", "category": "physical", "element": "electric", "power": 95,  "pp": 10, "learn_level": 15 },
+        { "id": "gap_up",             "name": "向上跳空", "category": "magical",  "element": "electric", "power": 85,  "pp": 10, "learn_level": 28 },
+        { "id": "limit_up_lock",      "name": "漲停鎖死", "category": "physical", "element": "electric", "power": 120, "pp": 5,  "learn_level": 42 }
+      ],
+      "source_metrics": {
+        "revenue_monthly": 442679969000,
+        "revenue_yoy": 67.87,
+        "eps": 77.11,
+        "turnover_ratio": 3.44,
+        "volatility_60d": 39.5,
+        "book_value_per_share": 235.55
+      },
+      "art": { "placeholder_color": "#4FC3F7", "sprite": null },
+      "etf_scout": { "holder_count": 5 }
+    },
+    {
+      "symbol": "2412",
+      "name": "中華電",
+      "generation": 1,
+      "element": "psychic",
+      "industry": "通信網路業",
+      "rarity": "epic",
+      "rarity_rank": 8,
+      "bst": 500,
+      "base_stats": {
+        "hp": 80,
+        "atk": 70,
+        "matk": 55,
+        "def": 85,
+        "mdef": 125,
+        "spd": 85
+      },
+      "growth_group": "medium",
+      "move_pool": [
+        { "id": "steady_climb",    "name": "緩步盤堅", "category": "physical", "element": "psychic", "power": 60, "pp": 25, "learn_level": 1 },
+        { "id": "dividend_shield", "name": "配息護體", "category": "magical",  "element": "psychic", "power": 50, "pp": 15, "learn_level": 10 },
+        { "id": "support_line",    "name": "支撐線",   "category": "physical", "element": "psychic", "power": 75, "pp": 15, "learn_level": 25 }
+      ],
+      "source_metrics": {
+        "revenue_monthly": 21342447000,
+        "revenue_yoy": 11.4,
+        "eps": 5.05,
+        "turnover_ratio": 6.37,
+        "volatility_60d": 19.1,
+        "book_value_per_share": 51.31
+      },
+      "art": { "placeholder_color": "#BA68C8", "sprite": null },
+      "etf_scout": { "holder_count": 0 }
+    },
+    {
+      "symbol": "2603",
+      "name": "長榮",
+      "generation": 1,
+      "element": "water",
+      "industry": "航運業",
+      "rarity": "rare",
+      "rarity_rank": 24,
+      "bst": 460,
+      "base_stats": {
+        "hp": 85,
+        "atk": 95,
+        "matk": 75,
+        "def": 70,
+        "mdef": 50,
+        "spd": 85
+      },
+      "growth_group": "medium",
+      "move_pool": [
+        { "id": "gap_up",                "name": "向上跳空",   "category": "magical",  "element": "water", "power": 85,  "pp": 10, "learn_level": 1 },
+        { "id": "upper_shadow_thrust",   "name": "上影線突刺", "category": "magical",  "element": "water", "power": 70,  "pp": 15, "learn_level": 8 },
+        { "id": "long_black_engulfing",  "name": "長黑吞噬",   "category": "physical", "element": "water", "power": 95,  "pp": 10, "learn_level": 20 },
+        { "id": "limit_up_lock",         "name": "漲停鎖死",   "category": "physical", "element": "water", "power": 120, "pp": 5,  "learn_level": 40 }
+      ],
+      "source_metrics": {
+        "revenue_monthly": 39141253000,
+        "revenue_yoy": 30.01,
+        "eps": 22.78,
+        "turnover_ratio": 11.47,
+        "volatility_60d": 43.2,
+        "book_value_per_share": 266.23
+      },
+      "art": { "placeholder_color": "#4DD0E1", "sprite": null },
+      "etf_scout": { "holder_count": 0 }
+    }
+  ]
+}

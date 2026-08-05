@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://iumiini.github.io/taiwan-NO1/schema/index.schema.json",
+  "title": "圖鑑 — 索引（manifest）",
+  "description": "遊戲端每日第一個要抓的小檔。先比對 market_date 與 sha256，判斷哪些檔案需要重新下載，避免每天重抓完整種族層。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "generation", "season", "market_date", "generated_at", "files"],
+  "properties": {
+    "schema_version": { "$ref": "#/$defs/semver" },
+    "generation": { "type": "integer", "minimum": 1 },
+    "season": { "type": "string", "pattern": "^[0-9]{4}-S[1-4]$" },
+    "market_date": {
+      "type": "string",
+      "format": "date",
+      "description": "本包資料所屬的交易日。遊戲端用此欄判斷本地快取是否為最新。"
+    },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "next_settlement_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "下一次結算時刻。遊戲端可據此顯示倒數，並避免在此之前重複請求。"
+    },
+    "files": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["species", "daily", "balance"],
+      "properties": {
+        "species": { "$ref": "#/$defs/file_ref" },
+        "daily":   { "$ref": "#/$defs/file_ref" },
+        "balance": { "$ref": "#/$defs/file_ref" }
+      }
+    },
+    "pipeline": {
+      "type": "object",
+      "description": "產生本包資料的管線資訊，供除錯與資料稽核。",
+      "additionalProperties": false,
+      "properties": {
+        "git_sha": { "type": "string", "description": "產生此包資料的 commit。" },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["name"],
+            "properties": {
+              "name":     { "type": "string", "description": "資料源名稱，例如 fugle-snapshot、twse-bwibbu。" },
+              "endpoint": { "type": "string" },
+              "fetched_at": { "type": "string", "format": "date-time" },
+              "record_count": { "type": "integer", "minimum": 0 }
+            }
+          }
+        },
+        "warnings": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "本次產生過程中的非致命問題，例如某檔缺財報、歷史不足無法算年線。"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "semver": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "file_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256", "bytes", "updated_at"],
+      "properties": {
+        "path":   { "type": "string", "description": "相對於本 manifest 的路徑。" },
+        "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$", "description": "內容雜湊。與本地快取相同即可跳過下載。" },
+        "bytes":  { "type": "integer", "minimum": 0 },
+        "updated_at": { "type": "string", "format": "date-time" }
+      }
+    }
+  }
+}
