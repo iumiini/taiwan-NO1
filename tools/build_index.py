@@ -64,8 +64,10 @@ def main(root: Path) -> None:
                 {"name": "twse-turnover", "endpoint": "/v1/exchangeReport/FMSRFK_ALL", "record_count": 29253},
             ],
             "warnings": [
-                "2026Q2 財報尚未到公布期限，t187ap06/t187ap07 僅 4 筆；本包 EPS 由收盤價÷本益比回推、每股淨值由收盤價÷股價淨值比回推",
-                "market_cap 待補：需股本資料，來源同上受阻",
+                "2026Q2 財報尚未到公布期限（截止 8/14），t187ap06_L_ci 僅 82/1093 家；"
+                "本包 EPS 由收盤價÷本益比回推、每股淨值由收盤價÷股價淨值比回推",
+                "debt_ratio 未填：待接入財報快取以涵蓋公布空窗期",
+                "market_cap 未填：t187ap03_L 已驗證可提供已發行股數，尚未接入管線",
                 "ma60 未計算：本次回補僅取 5/20/240 日",
             ],
         },

@@ -69,10 +69,16 @@ python3 tools/build_index.py examples # 重新產生索引
 | 每日全市場行情 | 富果 `snapshot/quotes/TSE`、`/OTC` | **否** |
 | 歷史 K 線回補（均線／KD／波動率） | 富果 `stock/historical/candles` | 是 |
 | 大盤指數（世界天氣） | 富果 `stock/intraday/quote/IX0001` | 是 |
+| **注意股／處置股**（超進化、禁閉室） | 富果 `stock/intraday/ticker/{代號}` | 是 |
 | 本益比／殖利率／淨值比 | TWSE `BWIBBU_ALL` | 否 |
 | 月營收＋YoY | TWSE `t187ap05_L` | 否 |
 | 週轉率 | TWSE `FMSRFK_ALL` | 否 |
-| EPS／負債比／股本 | TWSE `t187ap06_X_ci`、`t187ap07_X_ci` | 否 |
+| 已發行股數（市值） | TWSE `t187ap03_L` | 否 |
+| EPS | TWSE `t187ap06_L_*`（依業別分端點） | 否 |
+| 負債比 | TWSE `t187ap07_L_*`（依業別分端點） | 否 |
+
+⚠️ 財報端點務必用 `_L_`（上市公司）系列，不是 `_X_`（公發公司）。
+詳見 `docs/schema-guide.md` 的「資料源陷阱」。
 
 **每日排程不需要任何金鑰** —— 富果 snapshot 免金鑰即給全市場當日行情。
 金鑰只在初次歷史回補（建 240 日年線基準）時使用一次。
