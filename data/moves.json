@@ -1,0 +1,15 @@
+{
+  "_note": "招式模板。設計文件第十一章：物理＝實體 K 棒型態（走出來的，每步都有成交），魔法＝缺口與影線（跳過去的，隔空發功）。屬性欄位於產生時填入該怪的屬性系。⚠️ 招式清單尚未定案（設計文件列為「先選 5~8 種」），此為 v0.1 佔位。",
+  "physical": [
+    { "id": "red_three_soldiers", "name": "紅三兵",   "power": 80,  "pp": 15, "learn_level": 1 },
+    { "id": "long_red_engulfing", "name": "長紅吞噬", "power": 95,  "pp": 10, "learn_level": 15 },
+    { "id": "long_black_engulfing", "name": "長黑吞噬", "power": 95, "pp": 10, "learn_level": 22 },
+    { "id": "limit_up_lock",      "name": "漲停鎖死", "power": 120, "pp": 5,  "learn_level": 42 }
+  ],
+  "magical": [
+    { "id": "gap_up",              "name": "向上跳空",   "power": 85,  "pp": 10, "learn_level": 1 },
+    { "id": "upper_shadow_thrust", "name": "上影線突刺", "power": 70,  "pp": 15, "learn_level": 8 },
+    { "id": "lower_shadow_probe",  "name": "下影線試探", "power": 65,  "pp": 20, "learn_level": 18 },
+    { "id": "island_reversal",     "name": "島狀反轉",   "power": 110, "pp": 5,  "learn_level": 40 }
+  ]
+}

@@ -1,0 +1,56 @@
+name: 每日圖鑑結算
+
+# 台北時間 19:00 ＝ UTC 11:00。設計文件第 12 節的「開獎時刻」。
+# 週一到週五執行；非交易日管線會產出與前一日相同的市場日期，由 commit 判斷是否有變動。
+on:
+  schedule:
+    - cron: "0 11 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      size:
+        description: 名單檔數
+        default: "50"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-pokedex
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install -r requirements.txt
+
+      # 財報快取必須進版控：runner 是全新容器，本機檔案不會跨執行保留。
+      # 每日併入當季新公布的公司，公布空窗期則沿用上一季。
+      - name: 更新財報快取
+        run: python3 -m src.fundamentals refresh
+
+      - name: 產生圖鑑資料
+        env:
+          FUGLE_API_KEY: ${{ secrets.FUGLE_API_KEY }}
+        run: python3 -m src.pipeline --size ${{ inputs.size || 50 }}
+
+      - name: 驗證輸出符合 Schema
+        run: python3 tools/validate.py site/data
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/fundamentals site/data
+          if git diff --staged --quiet; then
+            echo "無變動，略過 commit"
+          else
+            git commit -m "圖鑑每日結算 $(date -u +%Y-%m-%d)"
+            git push
+          fi

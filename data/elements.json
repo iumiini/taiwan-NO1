@@ -1,0 +1,76 @@
+{
+  "_note": "產業別 → 屬性系對照。七系克制環：earth→electric/fire→steel→wind→grass→water→earth，環外 gold↔psychic 互克。產業名稱取自 TWSE t187ap05_L 的「產業別」欄位。",
+  "by_industry": {
+    "半導體業": "electric",
+
+    "電子零組件業": "fire",
+    "光電業": "fire",
+
+    "電腦及週邊設備業": "steel",
+    "通信網路業": "steel",
+    "其他電子業": "steel",
+    "資訊服務業": "steel",
+    "數位雲端": "steel",
+
+    "貿易百貨": "wind",
+    "電子通路業": "wind",
+    "汽車工業": "wind",
+    "觀光餐旅": "wind",
+    "運動休閒": "wind",
+    "居家生活": "wind",
+
+    "食品工業": "grass",
+    "生技醫療業": "grass",
+
+    "航運業": "water",
+
+    "塑膠工業": "earth",
+    "化學工業": "earth",
+    "鋼鐵工業": "earth",
+    "水泥工業": "earth",
+    "玻璃陶瓷": "earth",
+    "造紙工業": "earth",
+    "橡膠工業": "earth",
+    "紡織纖維": "earth",
+    "電機機械": "earth",
+    "電器電纜": "earth",
+    "建材營造": "earth",
+    "油電燃氣業": "earth",
+    "綠能環保": "earth",
+
+    "金融保險業": "gold"
+  },
+  "_overrides_note": "產業別無法區分的個案，依設計文件第十七章的歸屬邊界備註逐檔指定。",
+  "overrides": {
+    "2412": "psychic",
+    "3045": "psychic",
+    "4904": "psychic",
+
+    "2360": "electric",
+
+    "2059": "fire",
+    "8210": "fire",
+
+    "2301": "steel",
+    "2395": "steel",
+
+    "6139": "earth",
+    "2404": "earth",
+    "1402": "earth",
+
+    "2207": "wind"
+  },
+  "fallback": "steel",
+  "_colors_note": "占位素材色塊。正式美術到位後改由 art.sprite 供應，此欄位保留。",
+  "colors": {
+    "electric": "#4FC3F7",
+    "fire": "#FF8A65",
+    "steel": "#90A4AE",
+    "wind": "#AED581",
+    "grass": "#66BB6A",
+    "water": "#4DD0E1",
+    "earth": "#A1887F",
+    "gold": "#FFD54F",
+    "psychic": "#BA68C8"
+  }
+}
