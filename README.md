@@ -35,6 +35,7 @@ GitHub Pages（免費靜態託管）
 - [x] 富果 API 可行性驗證（2026/08/05）
 - [x] TWSE 端點複驗
 - [x] 資料契約 Schema v0.1.0 + 範例檔 + 驗證工具
+- [x] 財報資料層（多業別合併、欄位容錯、季度快取沿用上一季）
 - [ ] 每日管線腳本
 - [ ] GitHub Actions 排程
 - [ ] 圖鑑網頁
@@ -47,6 +48,8 @@ GitHub Pages（免費靜態託管）
 |---|---|
 | `schema/` | JSON Schema（資料契約本體） |
 | `examples/` | 範例資料檔，數值取自 2026-08-05 真實收盤 |
+| `src/` | 管線程式 |
+| `data/fundamentals/` | 財報季度快取（**進版控**，Actions 容器不保留本機檔案） |
 | `tools/` | 驗證與索引產生工具 |
 | `docs/schema-guide.md` | **契約導覽 —— 先讀這份** |
 
@@ -56,8 +59,10 @@ GitHub Pages（免費靜態託管）
 
 ```bash
 pip install jsonschema
-python3 tools/validate.py            # 驗證範例檔
+python3 tools/validate.py             # 驗證範例檔
 python3 tools/build_index.py examples # 重新產生索引
+python3 -m src.fundamentals refresh   # 更新財報快取
+python3 -m src.fundamentals resolve 2330 2317  # 查各檔採用的季別
 ```
 
 ---
