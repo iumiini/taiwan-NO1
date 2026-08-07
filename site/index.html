@@ -1,0 +1,634 @@
+<meta charset="utf-8">
+<title>圖鑑 No.001 台積電 — 台股寶可夢</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* ------------------------------------------------------------------
+   單一深色主題：看盤終端本來就是暗的，怪獸氣場光暈也需要暗底才成立。
+   所有顏色明確指定，不依賴瀏覽器或宿主的預設底色。
+   ------------------------------------------------------------------ */
+:root {
+  --ground:      #0B1015;
+  --surface:     #121A22;
+  --surface-2:   #16212B;
+  --line:        #1F2C38;
+  --line-soft:   #18232D;
+  --text:        #DCE6EE;
+  --text-dim:    #8399AB;
+  --text-faint:  #5A6E7E;
+
+  --element:     #4FC3F7;   /* 電系，取自資料的 art.placeholder_color */
+  --element-dim: #2A7FA8;
+  --rarity:      #E8B84B;   /* 幻獸 */
+
+  --up:          #F0483E;   /* 台股：紅漲 */
+  --down:        #00C880;   /* 台股：綠跌 */
+
+  --step--1: 0.75rem;
+  --step-0:  0.875rem;
+  --step-1:  1rem;
+  --step-2:  1.375rem;
+  --step-3:  2rem;
+  --step-4:  3.25rem;
+
+  --han: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", "Heiti TC", sans-serif;
+  --mono: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--text);
+  font-family: var(--han);
+  font-size: var(--step-1);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: clamp(1.25rem, 4vw, 3rem) clamp(1rem, 4vw, 2rem) 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* --- 通用零件 --- */
+.label {
+  font-family: var(--mono);
+  font-size: var(--step--1);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+.num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+.up   { color: var(--up); }
+.down { color: var(--down); }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 1.5rem;
+}
+
+/* --- 頁首 --- */
+.masthead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--line);
+}
+.masthead .title {
+  font-size: var(--step-0);
+  letter-spacing: 0.3em;
+  color: var(--text-dim);
+  margin: 0;
+  font-weight: 600;
+}
+.masthead .meta { margin-left: auto; display: flex; gap: 1.25rem; flex-wrap: wrap; }
+
+/* --- 主體：怪獸 + 六圍 --- */
+.specimen {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: 2rem;
+  align-items: start;
+}
+@media (max-width: 800px) { .specimen { grid-template-columns: 1fr; } }
+
+.portrait {
+  position: relative;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(79,195,247,0.07), transparent 62%),
+    var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+#aura { width: 100%; height: auto; display: block; }
+
+.dexno {
+  font-family: var(--mono);
+  font-size: var(--step--1);
+  letter-spacing: 0.2em;
+  color: var(--rarity);
+}
+.creature-name {
+  font-size: var(--step-4);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  margin: 0.15rem 0 0;
+  text-wrap: balance;
+}
+.creature-sub {
+  font-family: var(--mono);
+  color: var(--text-dim);
+  font-size: var(--step-0);
+  letter-spacing: 0.08em;
+}
+
+.chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.chip {
+  font-size: var(--step--1);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 0.3rem 0.7rem;
+  border-radius: 2px;
+  border: 1px solid;
+}
+.chip-element { color: var(--element); border-color: var(--element-dim); background: rgba(79,195,247,0.08); }
+.chip-rarity  { color: var(--rarity);  border-color: #7A6224; background: rgba(232,184,75,0.09); }
+.chip-plain   { color: var(--text-dim); border-color: var(--line); }
+
+/* --- 六圍 --- */
+.stats { display: flex; flex-direction: column; gap: 1.25rem; }
+.stats-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+.bst { font-family: var(--mono); font-size: var(--step-2); color: var(--rarity); font-variant-numeric: tabular-nums; }
+
+.radar-row {
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) minmax(0, 1.35fr);
+  gap: 1.5rem;
+  align-items: center;
+}
+@media (max-width: 560px) { .radar-row { grid-template-columns: 1fr; } }
+#radar { width: 100%; height: auto; display: block; }
+
+.statlist { display: flex; flex-direction: column; gap: 0.55rem; }
+.statrow { display: grid; grid-template-columns: 3.2rem 2.6rem 1fr; gap: 0.6rem; align-items: center; }
+.statrow .nm { font-size: var(--step-0); color: var(--text-dim); }
+.statrow .vl { font-family: var(--mono); font-variant-numeric: tabular-nums; text-align: right; font-weight: 700; }
+.bar { height: 5px; background: var(--line-soft); border-radius: 999px; overflow: hidden; }
+.bar > i { display: block; height: 100%; background: var(--element); border-radius: 999px; }
+
+/* --- 今日狀態 --- */
+.today { display: grid; grid-template-columns: repeat(auto-fit, minmax(155px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 3px; overflow: hidden; }
+.tile { background: var(--surface); padding: 1rem 1.1rem; display: flex; flex-direction: column; gap: 0.35rem; }
+.tile .v { font-size: var(--step-2); font-weight: 700; line-height: 1.2; }
+.tile .n { font-size: var(--step--1); color: var(--text-faint); }
+
+/* --- 對照表：遊戲數值 ← 真實數據 --- */
+.section-head { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 1rem; }
+.section-head h2 { font-size: var(--step-2); font-weight: 700; margin: 0; letter-spacing: -0.01em; }
+.section-head p { margin: 0; color: var(--text-dim); font-size: var(--step-0); }
+
+.tablewrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: var(--step-0); min-width: 460px; }
+th, td { text-align: left; padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--line-soft); }
+th { color: var(--text-faint); font-weight: 600; font-size: var(--step--1); letter-spacing: 0.1em; text-transform: uppercase; }
+td.n { font-family: var(--mono); font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+tr:last-child td { border-bottom: none; }
+.arrow { color: var(--element-dim); font-family: var(--mono); }
+.missing { color: var(--text-faint); font-style: italic; }
+
+/* --- 招式 --- */
+.moves { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 0.75rem; }
+.move { background: var(--surface-2); border: 1px solid var(--line); border-left: 2px solid var(--element-dim); border-radius: 2px; padding: 0.85rem 1rem; display: flex; flex-direction: column; gap: 0.3rem; }
+.move.magical { border-left-color: #8E6FD8; }
+.move-top { display: flex; justify-content: space-between; align-items: baseline; gap: 0.75rem; }
+.move-name { font-weight: 700; }
+.move-meta { display: flex; gap: 0.9rem; font-size: var(--step--1); color: var(--text-faint); }
+.cat { font-size: var(--step--1); padding: 0.1rem 0.45rem; border-radius: 2px; border: 1px solid var(--line); color: var(--text-dim); }
+.cat.magical { color: #B49BEA; border-color: #4A3A70; }
+
+/* --- 註記 --- */
+.note {
+  border-left: 2px solid var(--element-dim);
+  padding: 0.25rem 0 0.25rem 1rem;
+  color: var(--text-dim);
+  font-size: var(--step-0);
+}
+footer { color: var(--text-faint); font-size: var(--step--1); border-top: 1px solid var(--line); padding-top: 1.25rem; }
+footer a { color: var(--element-dim); }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+</style>
+
+<div class="wrap" id="app">
+  <p class="label">載入圖鑑資料…</p>
+</div>
+
+<script>
+/* 圖鑑網頁與 Unity 遊戲讀同一包 JSON。
+   線上時向 ./data/ 取得最新資料；離線或無法取用時退回內嵌快照，
+   讓這一頁在任何情境都能顯示。 */
+const SNAPSHOT = {
+  meta: { generation: 1, season: "2026-S3", market_date: "2026-08-06", fiscal_period: "2026Q2" },
+  species: {
+    symbol: "2330", name: "台積電", element: "electric", industry: "半導體業",
+    rarity: "mythical", rarity_rank: 1, bst: 600, growth_group: "slow",
+    base_stats: { hp: 146, atk: 146, matk: 117, def: 88, mdef: 88, spd: 15 },
+    art: { placeholder_color: "#4FC3F7" },
+    source_metrics: {
+      market_cap: 61330055208455, shares_outstanding: 25932370067,
+      revenue_monthly: 442679969000, revenue_yoy: 67.87, eps: 73.15,
+      turnover_ratio: 3.44, volatility_60d: 39.62, book_value_per_share: 223.32
+    },
+    move_pool: [
+      { id: "gap_up", name: "向上跳空", power: 85, pp: 10, learn_level: 1, category: "magical" },
+      { id: "red_three_soldiers", name: "紅三兵", power: 80, pp: 15, learn_level: 1, category: "physical" },
+      { id: "upper_shadow_thrust", name: "上影線突刺", power: 70, pp: 15, learn_level: 8, category: "magical" },
+      { id: "lower_shadow_probe", name: "下影線試探", power: 65, pp: 20, learn_level: 18, category: "magical" }
+    ]
+  },
+  daily: {
+    symbol: "2330",
+    price: { open: 2395, high: 2395, low: 2360, close: 2365, change_percent: -1.66, volume: 25536816 },
+    moving_averages: { ma5: 2377.0, ma20: 2364.0, ma60: 2354.25, ma240: 1797.79 },
+    weather: ["tailwind"],
+    aura: { quadrant: "dormant", volume_ratio: 0.6, awakening_omen: false },
+    kd: { k: 69.55, d: 57.64, shield: true },
+    net_value_shield: { tier: "none", amount: 0 },
+    valuation: { pe: 32.33, pb: 10.59, dividend_yield: 0.91, pe_tag: "popular" },
+    capture: { cost: 23650, rate_modifier: 1.3, iv_range: { min: 0, max: 15 } },
+    special_state: null
+  }
+};
+
+const ELEMENT = { electric: "電", fire: "火", steel: "鋼", wind: "風", grass: "草",
+                  water: "水", earth: "地", gold: "金", psychic: "超能力" };
+const RARITY  = { mythical: "幻獸", legendary: "傳說", epic: "史詩", rare: "稀有", common: "普通" };
+const AURA = {
+  true_surge:    { name: "真暴走",   desc: "量增價漲。氣場厚實穩定，氣勢正旺難收服。" },
+  true_weak:     { name: "真虛弱",   desc: "量增價跌。真恐慌賣壓，虛弱好收服。" },
+  phantom_surge: { name: "幻影暴走", desc: "量縮價漲。紅光亮但氣場薄且閃爍——騙局個體，烙印加成打折。" },
+  dormant:       { name: "蓄力假寐", desc: "量縮價跌。買壓枯竭可能落底，好抓便宜還可能藏著加成。" }
+};
+const WEATHER = {
+  excited:   { name: "亢奮", desc: "站上 5 日線，爆擊率提升" },
+  tailwind:  { name: "順風", desc: "站上月線，全能力小幅加成" },
+  depressed: { name: "低迷", desc: "跌破年線，小幅減益" }
+};
+const PE_TAG = {
+  undervalued: { name: "被低估的實力派", hint: "本益比偏低" },
+  fair:        { name: "身價合理",       hint: "本益比落在常見區間" },
+  popular:     { name: "人氣王",         hint: "本益比偏高，含人氣稅" },
+  mysterious:  { name: "神秘系",         hint: "每股盈餘為負，無法鑑定身價" }
+};
+const SHIELD = { none: "無盾", silver: "銀盾", gold: "破淨金盾" };
+const STAT_META = {
+  hp:   { name: "生命", from: "營收規模" },
+  atk:  { name: "物攻", from: "每股盈餘" },
+  matk: { name: "魔攻", from: "營收年增率" },
+  def:  { name: "物防", from: "負債比（反向）" },
+  mdef: { name: "魔防", from: "波動率（反向）＋殖利率" },
+  spd:  { name: "速度", from: "週轉率" }
+};
+
+/* --- 格式化 --- */
+const money = n => {
+  if (n == null) return null;
+  if (n >= 1e12) return (n / 1e12).toFixed(2) + " 兆";
+  if (n >= 1e8)  return (n / 1e8).toFixed(1) + " 億";
+  if (n >= 1e4)  return (n / 1e4).toFixed(1) + " 萬";
+  return n.toLocaleString("zh-TW");
+};
+const pct  = n => n == null ? null : (n > 0 ? "+" : "") + n.toFixed(2) + "%";
+const num  = (n, d = 2) => n == null ? null : n.toLocaleString("zh-TW", { minimumFractionDigits: d, maximumFractionDigits: d });
+const esc  = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const dash = v => v == null ? '<span class="missing">未公布</span>' : v;
+
+/* --- 氣場：本體發光＝價，外圈厚薄＝量 --- */
+function drawAura(canvas, changePct, volumeRatio, color) {
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  const size = 300;
+  canvas.width = size * dpr; canvas.height = size * dpr;
+  canvas.style.aspectRatio = "1 / 1";
+  const ctx = canvas.getContext("2d");
+  ctx.scale(dpr, dpr);
+
+  const cx = size / 2, cy = size / 2, core = 52;
+  const priceColor = changePct >= 0 ? "#F0483E" : "#00C880";
+  // 量能比決定氣場的厚度與濃度：量縮則薄而淡。
+  const thickness = Math.max(0.28, Math.min(1.6, volumeRatio));
+
+  const glow = ctx.createRadialGradient(cx, cy, core * 0.6, cx, cy, core + 78 * thickness);
+  glow.addColorStop(0, priceColor + "66");
+  glow.addColorStop(0.45, priceColor + "22");
+  glow.addColorStop(1, priceColor + "00");
+  ctx.fillStyle = glow;
+  ctx.fillRect(0, 0, size, size);
+
+  for (let i = 0; i < 3; i++) {
+    ctx.beginPath();
+    ctx.arc(cx, cy, core + 14 + i * 17 * thickness, 0, Math.PI * 2);
+    ctx.strokeStyle = priceColor + (i === 0 ? "55" : i === 1 ? "2E" : "16");
+    ctx.lineWidth = 1;
+    ctx.stroke();
+  }
+
+  ctx.beginPath();
+  ctx.arc(cx, cy, core, 0, Math.PI * 2);
+  ctx.fillStyle = color + "26";
+  ctx.fill();
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 2;
+  ctx.stroke();
+
+  ctx.fillStyle = color;
+  ctx.font = '700 30px ui-monospace, monospace';
+  ctx.textAlign = "center"; ctx.textBaseline = "middle";
+  ctx.fillText("2330", cx, cy);
+}
+
+/* --- 六圍雷達 --- */
+function drawRadar(canvas, stats, color) {
+  const keys = ["hp", "atk", "matk", "spd", "mdef", "def"];
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  const size = 260;
+  canvas.width = size * dpr; canvas.height = size * dpr;
+  canvas.style.aspectRatio = "1 / 1";
+  const ctx = canvas.getContext("2d");
+  ctx.scale(dpr, dpr);
+
+  const cx = size / 2, cy = size / 2, R = size / 2 - 34;
+  const max = Math.max(...Object.values(stats)) * 1.12;
+  const pt = (i, r) => {
+    const a = -Math.PI / 2 + i * Math.PI / 3;
+    return [cx + Math.cos(a) * r, cy + Math.sin(a) * r];
+  };
+
+  for (let ring = 1; ring <= 4; ring++) {
+    ctx.beginPath();
+    keys.forEach((_, i) => {
+      const [x, y] = pt(i, R * ring / 4);
+      i ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
+    });
+    ctx.closePath();
+    ctx.strokeStyle = ring === 4 ? "#243441" : "#1B2733";
+    ctx.stroke();
+  }
+  keys.forEach((_, i) => {
+    ctx.beginPath();
+    ctx.moveTo(cx, cy);
+    const [x, y] = pt(i, R);
+    ctx.lineTo(x, y);
+    ctx.strokeStyle = "#1B2733";
+    ctx.stroke();
+  });
+
+  ctx.beginPath();
+  keys.forEach((k, i) => {
+    const [x, y] = pt(i, R * stats[k] / max);
+    i ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
+  });
+  ctx.closePath();
+  ctx.fillStyle = color + "33";
+  ctx.fill();
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 1.5;
+  ctx.stroke();
+
+  keys.forEach((k, i) => {
+    const [x, y] = pt(i, R * stats[k] / max);
+    ctx.beginPath();
+    ctx.arc(x, y, 2.5, 0, Math.PI * 2);
+    ctx.fillStyle = color;
+    ctx.fill();
+  });
+
+  ctx.fillStyle = "#8399AB";
+  ctx.font = '600 11px system-ui, sans-serif';
+  ctx.textAlign = "center"; ctx.textBaseline = "middle";
+  keys.forEach((k, i) => {
+    const [x, y] = pt(i, R + 19);
+    ctx.fillText(STAT_META[k].name, x, y);
+  });
+}
+
+/* --- 組頁 --- */
+function render(data) {
+  const s = data.species, d = data.daily, m = data.meta;
+  const sm = s.source_metrics || {};
+  const up = d.price.change_percent >= 0;
+  const dir = up ? "up" : "down";
+  const color = s.art?.placeholder_color || "#4FC3F7";
+  const aura = AURA[d.aura.quadrant];
+  const tag = PE_TAG[d.valuation.pe_tag];
+
+  const statRows = Object.keys(STAT_META).map(k => {
+    const v = s.base_stats[k], w = Math.round(v / Math.max(...Object.values(s.base_stats)) * 100);
+    return `<div class="statrow">
+      <span class="nm">${STAT_META[k].name}</span>
+      <span class="vl">${v}</span>
+      <span class="bar"><i style="width:${w}%"></i></span>
+    </div>`;
+  }).join("");
+
+  const mapping = [
+    ["hp",   "月營收",       money(sm.revenue_monthly) ? money(sm.revenue_monthly) + " 元" : null],
+    ["atk",  "每股盈餘",     sm.eps != null ? num(sm.eps) + " 元" : null],
+    ["matk", "營收年增率",   pct(sm.revenue_yoy)],
+    ["def",  "負債比",       sm.debt_ratio != null ? num(sm.debt_ratio) + "%" : null],
+    ["mdef", "波動率／殖利率", sm.volatility_60d != null ? num(sm.volatility_60d) + "% ／ " + num(d.valuation.dividend_yield) + "%" : null],
+    ["spd",  "週轉率",       sm.turnover_ratio != null ? num(sm.turnover_ratio) + "%" : null]
+  ].map(([k, label, val]) => `<tr>
+      <td>${STAT_META[k].name}</td>
+      <td class="n" style="color:${color}">${s.base_stats[k]}</td>
+      <td class="arrow">←</td>
+      <td>${label}</td>
+      <td class="n">${dash(val)}</td>
+    </tr>`).join("");
+
+  const weatherText = d.weather.length
+    ? d.weather.map(w => WEATHER[w].name).join("・")
+    : "平常";
+  const weatherDesc = d.weather.length
+    ? d.weather.map(w => WEATHER[w].desc).join("；")
+    : "未站上任何均線，也未跌破年線";
+
+  const moves = s.move_pool.map(mv => `
+    <div class="move ${mv.category}">
+      <div class="move-top">
+        <span class="move-name">${esc(mv.name)}</span>
+        <span class="cat ${mv.category}">${mv.category === "physical" ? "物理" : "魔法"}</span>
+      </div>
+      <div class="move-meta num">
+        <span>威力 ${mv.power}</span><span>PP ${mv.pp}</span><span>Lv.${mv.learn_level} 習得</span>
+      </div>
+    </div>`).join("");
+
+  document.getElementById("app").innerHTML = `
+    <header class="masthead">
+      <h1 class="title">台股寶可夢 圖鑑</h1>
+      <div class="meta">
+        <span class="label">第 ${m.generation} 世代</span>
+        <span class="label">賽季 ${esc(m.season)}</span>
+        <span class="label">結算 ${esc(m.market_date)}</span>
+      </div>
+    </header>
+
+    <section class="specimen">
+      <div class="portrait">
+        <canvas id="aura" aria-label="氣場：${aura.name}"></canvas>
+        <div>
+          <div class="dexno">No.${String(s.rarity_rank).padStart(3, "0")}</div>
+          <h2 class="creature-name">${esc(s.name)}</h2>
+          <div class="creature-sub">${esc(s.symbol)}　${esc(s.industry || "")}</div>
+        </div>
+        <div class="chips">
+          <span class="chip chip-element">${ELEMENT[s.element]}系</span>
+          <span class="chip chip-rarity">${RARITY[s.rarity]}</span>
+          <span class="chip chip-plain">成長 ${s.growth_group === "slow" ? "慢" : s.growth_group === "fast" ? "快" : "中"}</span>
+        </div>
+      </div>
+
+      <div class="stats card">
+        <div class="stats-head">
+          <span class="label">種族值</span>
+          <span class="bst">${s.bst}</span>
+        </div>
+        <div class="radar-row">
+          <canvas id="radar" aria-label="六圍雷達圖"></canvas>
+          <div class="statlist">${statRows}</div>
+        </div>
+        <p class="note">同稀有度的怪獸總點數相同，差別只在形狀。台積電把點數壓在生命與物攻，速度只有 ${s.base_stats.spd} —— 週轉率 ${num(sm.turnover_ratio)}%，大戶抱著不動，股性最慢。</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>今日狀態</h2>
+        <p>每個交易日晚間結算一次，只影響當日表現，不改動種族值</p>
+      </div>
+      <div class="today">
+        <div class="tile">
+          <span class="v num ${dir}">${num(d.price.close, 0)}</span>
+          <span class="n">收盤　<span class="${dir} num">${pct(d.price.change_percent)}</span></span>
+        </div>
+        <div class="tile">
+          <span class="v">${aura.name}</span>
+          <span class="n">氣場　量能比 <span class="num">${d.aura.volume_ratio}</span></span>
+        </div>
+        <div class="tile">
+          <span class="v">${weatherText}</span>
+          <span class="n">均線天氣</span>
+        </div>
+        <div class="tile">
+          <span class="v">${d.kd?.shield ? "護盾開啟" : "無護盾"}</span>
+          <span class="n">KD　<span class="num">${d.kd ? d.kd.k + " / " + d.kd.d : "—"}</span></span>
+        </div>
+        <div class="tile">
+          <span class="v">${SHIELD[d.net_value_shield.tier]}</span>
+          <span class="n">淨值盾　股價淨值比 <span class="num">${num(d.valuation.pb)}</span></span>
+        </div>
+        <div class="tile">
+          <span class="v">${tag.name}</span>
+          <span class="n">身價　本益比 <span class="num">${num(d.valuation.pe)}</span></span>
+        </div>
+      </div>
+      <p class="note" style="margin-top:1rem">${aura.desc}<br>${weatherDesc}。</p>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>牠為什麼長這樣</h2>
+        <p>每一項能力值都對應一個真實的財報或行情數字</p>
+      </div>
+      <div class="card tablewrap">
+        <table>
+          <thead>
+            <tr><th>能力值</th><th style="text-align:right">數值</th><th></th><th>來源數據</th><th style="text-align:right">實際數字</th></tr>
+          </thead>
+          <tbody>${mapping}</tbody>
+        </table>
+      </div>
+      ${sm.debt_ratio == null ? `<p class="note" style="margin-top:1rem">負債比取自季報，${esc(m.fiscal_period)} 尚未公布，物防暫以名單中位數代替。財報公布後會自動補上。</p>` : ""}
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>公司檔案</h2>
+        <p>圖鑑同時是一份真實的公司資料</p>
+      </div>
+      <div class="card tablewrap">
+        <table>
+          <tbody>
+            <tr><td>市值</td><td class="n">${money(sm.market_cap)} 元</td><td>世代內排名第 ${s.rarity_rank} —— 決定稀有度</td></tr>
+            <tr><td>已發行股數</td><td class="n">${money(sm.shares_outstanding)} 股</td><td>市值 ＝ 股數 × 收盤價</td></tr>
+            <tr><td>每股淨值</td><td class="n">${dash(num(sm.book_value_per_share))} 元</td><td>拆解價值，淨值盾的厚度來源</td></tr>
+            <tr><td>本益比</td><td class="n">${num(d.valuation.pe)}</td><td>${tag.hint}</td></tr>
+            <tr><td>股價淨值比</td><td class="n">${num(d.valuation.pb)}</td><td>高於門檻 1.5，因此沒有淨值盾</td></tr>
+            <tr><td>殖利率</td><td class="n">${num(d.valuation.dividend_yield)}%</td><td>魔防的來源之一</td></tr>
+            <tr><td>年化波動率</td><td class="n">${num(sm.volatility_60d)}%</td><td>近 60 日，數值越低魔防越高</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note" style="margin-top:1rem">貴不貴看的是本益比，不是股價。台積電一股 ${num(d.price.close, 0)} 元，本益比 ${num(d.valuation.pe)} 倍 —— 你付的是價格，牠的實力來自每股盈餘 ${num(sm.eps)} 元。兩者的落差就是人氣稅。</p>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>招式池</h2>
+        <p>物理招來自實體 K 棒，魔法招來自缺口與影線</p>
+      </div>
+      <div class="moves">${moves}</div>
+      <p class="note" style="margin-top:1rem">招式威力固定，行情只透過當日狀態影響發揮。每隻最多帶 4 招。</p>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>收服</h2>
+        <p>成本跟著股價走，機率跟著狀態走</p>
+      </div>
+      <div class="today">
+        <div class="tile">
+          <span class="v num">${d.capture.cost.toLocaleString("zh-TW")}</span>
+          <span class="n">收服成本　收盤價 × 10</span>
+        </div>
+        <div class="tile">
+          <span class="v num">×${d.capture.rate_modifier}</span>
+          <span class="n">收服率修正　${d.capture.rate_modifier > 1 ? "虛弱好抓" : d.capture.rate_modifier < 1 ? "氣勢正旺難抓" : "平常"}</span>
+        </div>
+        <div class="tile">
+          <span class="v num">${d.capture.iv_range.min}–${d.capture.iv_range.max}</span>
+          <span class="n">個體值區間　收服當下擲出，定終身</span>
+        </div>
+      </div>
+      <p class="note" style="margin-top:1rem">今天是量縮價跌的蓄力假寐，收服機率提高、成本也比暴走日便宜，但烙印區間是最低的 ${d.capture.iv_range.min}–${d.capture.iv_range.max}。便宜有便宜的代價。</p>
+    </section>
+
+    <footer>
+      資料來源：臺灣證券交易所公開資料、富果 MarketData API　·　結算日 ${esc(m.market_date)}　·
+      本頁與 Unity 遊戲讀取同一份圖鑑 JSON<br>
+      「寶可夢」為任天堂商標，此為開發期內部代號，公開發布前將更名。
+    </footer>
+  `;
+
+  drawAura(document.getElementById("aura"), d.price.change_percent, d.aura.volume_ratio, color);
+  drawRadar(document.getElementById("radar"), s.base_stats, color);
+}
+
+async function load() {
+  try {
+    const idx = await fetch("./data/index.json").then(r => r.ok ? r.json() : Promise.reject());
+    const [sp, dy] = await Promise.all([
+      fetch("./data/" + idx.files.species.path).then(r => r.json()),
+      fetch("./data/" + idx.files.daily.path).then(r => r.json())
+    ]);
+    const species = sp.species.find(x => x.symbol === "2330");
+    const daily = dy.monsters.find(x => x.symbol === "2330");
+    if (!species || !daily) throw new Error("找不到 2330");
+    return {
+      meta: { generation: sp.generation, season: sp.season,
+              market_date: dy.market_date, fiscal_period: sp.fiscal_period },
+      species, daily
+    };
+  } catch {
+    return SNAPSHOT;   // 離線或直接開啟檔案時使用內嵌快照
+  }
+}
+
+load().then(render);
+</script>

@@ -195,7 +195,9 @@ def collect(size: int, skip_ticker: bool) -> tuple[dict, list[str], list[dict]]:
             "shares_outstanding": _f(profile.get("已發行普通股數或TDR原股發行股數")),
             # 月營收單位為仟元，統一換算為元。
             "revenue": (r * 1000 if (r := _f(rev.get("營業收入-當月營收"))) else None),
-            "revenue_yoy": _f(rev.get("營業收入-去年同月增減(%)")),
+            "revenue_yoy": (round(y, 2)
+                            if (y := _f(rev.get("營業收入-去年同月增減(%)"))) is not None
+                            else None),
             "eps": eps,
             "eps_source": eps_source,
             "debt_ratio": f.get("debt_ratio"),
