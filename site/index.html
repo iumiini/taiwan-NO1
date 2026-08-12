@@ -248,36 +248,148 @@ footer { color: var(--text-faint); font-size: var(--step--1); border-top: 1px so
 /* 圖鑑網頁與 Unity 遊戲讀同一包 JSON。
    線上時向 ./data/ 取得最新資料；離線或無法取用時退回內嵌快照。 */
 const SNAPSHOT = {
-  meta: { generation: 1, season: "2026-S3", market_date: "2026-08-06", fiscal_period: "2026Q2" },
-  balance: { status: "draft" },
-  species: {
-    symbol: "2330", name: "台積電", element: "electric", industry: "半導體業",
-    rarity: "mythical", rarity_rank: 1, bst: 600, growth_group: "slow",
-    base_stats: { hp: 146, atk: 146, matk: 117, def: 88, mdef: 88, spd: 15 },
-    art: { placeholder_color: "#4FC3F7" },
-    source_metrics: {
-      market_cap: 61330055208455, shares_outstanding: 25932370067,
-      revenue_monthly: 442679969000, revenue_yoy: 67.87, eps: 73.15,
-      turnover_ratio: 3.44, volatility_60d: 39.62, book_value_per_share: 223.32
-    },
-    move_pool: [
-      { id: "gap_up", name: "向上跳空", power: 85, pp: 10, learn_level: 1, category: "magical" },
-      { id: "red_three_soldiers", name: "紅三兵", power: 80, pp: 15, learn_level: 1, category: "physical" },
-      { id: "upper_shadow_thrust", name: "上影線突刺", power: 70, pp: 15, learn_level: 8, category: "magical" },
-      { id: "lower_shadow_probe", name: "下影線試探", power: 65, pp: 20, learn_level: 18, category: "magical" }
-    ]
+  "meta": {
+    "generation": 1,
+    "season": "2026-S3",
+    "market_date": "2026-08-12",
+    "fiscal_period": "2026Q2"
   },
-  daily: {
-    symbol: "2330",
-    price: { open: 2395, high: 2395, low: 2360, close: 2365, change_percent: -1.66, volume: 25536816 },
-    moving_averages: { ma5: 2377.0, ma20: 2364.0, ma60: 2354.25, ma240: 1797.79 },
-    weather: ["tailwind"],
-    aura: { quadrant: "dormant", volume_ratio: 0.6, awakening_omen: false },
-    kd: { k: 69.55, d: 57.64, shield: true },
-    net_value_shield: { tier: "none", amount: 0 },
-    valuation: { pe: 32.33, pb: 10.59, dividend_yield: 0.91, pe_tag: "popular" },
-    capture: { cost: 23650, rate_modifier: 1.3, iv_range: { min: 0, max: 15 } },
-    special_state: null
+  "balance": {
+    "status": "draft"
+  },
+  "species": {
+    "symbol": "2330",
+    "name": "台積電",
+    "generation": 1,
+    "element": "electric",
+    "rarity": "mythical",
+    "rarity_rank": 1,
+    "bst": 600,
+    "base_stats": {
+      "hp": 158,
+      "atk": 158,
+      "matk": 79,
+      "def": 95,
+      "mdef": 94,
+      "spd": 16
+    },
+    "growth_group": "slow",
+    "move_pool": [
+      {
+        "id": "red_three_soldiers",
+        "name": "紅三兵",
+        "power": 80,
+        "pp": 15,
+        "learn_level": 1,
+        "category": "physical",
+        "element": "electric"
+      },
+      {
+        "id": "gap_up",
+        "name": "向上跳空",
+        "power": 85,
+        "pp": 10,
+        "learn_level": 1,
+        "category": "magical",
+        "element": "electric"
+      },
+      {
+        "id": "long_red_engulfing",
+        "name": "長紅吞噬",
+        "power": 95,
+        "pp": 10,
+        "learn_level": 15,
+        "category": "physical",
+        "element": "electric"
+      },
+      {
+        "id": "long_black_engulfing",
+        "name": "長黑吞噬",
+        "power": 95,
+        "pp": 10,
+        "learn_level": 22,
+        "category": "physical",
+        "element": "electric"
+      }
+    ],
+    "art": {
+      "placeholder_color": "#4FC3F7",
+      "sprite": null
+    },
+    "industry": "半導體業",
+    "source_metrics": {
+      "market_cap": 62626673711805,
+      "shares_outstanding": 25932370067.0,
+      "revenue_monthly": 467580548000.0,
+      "revenue_yoy": 44.69,
+      "eps": 75.0,
+      "turnover_ratio": 3.44,
+      "volatility_60d": 39.17,
+      "book_value_per_share": 229.13
+    }
+  },
+  "daily": {
+    "symbol": "2330",
+    "price": {
+      "open": 2405,
+      "high": 2415,
+      "low": 2390,
+      "close": 2415,
+      "change_percent": 0.84,
+      "volume": 19448153
+    },
+    "moving_averages": {
+      "ma5": 2385.0,
+      "ma20": 2356.25,
+      "ma60": 2363.67,
+      "ma240": 1817.9
+    },
+    "weather": [
+      "excited",
+      "tailwind"
+    ],
+    "aura": {
+      "quadrant": "phantom_surge",
+      "volume_ratio": 0.5,
+      "awakening_omen": false
+    },
+    "net_value_shield": {
+      "tier": "none",
+      "amount": 0
+    },
+    "valuation": {
+      "pe": 32.2,
+      "pb": 10.54,
+      "dividend_yield": 0.92,
+      "pe_tag": "popular",
+      "market_cap": 62626673711805
+    },
+    "capture": {
+      "cost": 24150,
+      "rate_modifier": 1.0,
+      "iv_range": {
+        "min": 5,
+        "max": 25
+      }
+    },
+    "encounter_weight": 1.0,
+    "special_state": null,
+    "multipliers": {
+      "crit_rate": 0.25,
+      "damage_taken": 0.85,
+      "hp": 1.05,
+      "atk": 1.05,
+      "matk": 1.05,
+      "def": 1.05,
+      "mdef": 1.05,
+      "spd": 1.05
+    },
+    "kd": {
+      "k": 83.31,
+      "d": 75.08,
+      "cross": null,
+      "shield": true
+    }
   }
 };
 

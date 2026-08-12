@@ -19,6 +19,7 @@ import contextlib
 import json
 import os
 import statistics
+import subprocess
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -392,6 +393,10 @@ def run(size: int, skip_ticker: bool, refreeze: bool = False,
 
     manifest.build_index(OUT_DIR, daily["market_date"], species_doc,
                          provenance, warnings)
+
+    # 圖鑑頁的內嵌快照供離線與預覽使用，不同步就會顯示舊數字。
+    subprocess.run([sys.executable, str(ROOT / "tools/embed_snapshot.py")],
+                   check=False)
 
     print(f"\n✅ 完成：{len(species)} 隻怪獸 → {OUT_DIR}")
     for w in warnings:
