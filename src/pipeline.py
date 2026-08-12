@@ -141,8 +141,10 @@ def collect(size: int, skip_ticker: bool) -> tuple[dict, list[str], list[dict]]:
     note("twse-company-profile", "/opendata/t187ap03_L", len(profiles))
 
     caps = universe.market_caps(quotes, profiles)
-    symbols = universe.top_market_cap(caps, size)
-    log(f"③ 選出市值前 {len(symbols)} 檔："
+    season = season_of(datetime.now(TZ))
+    symbols, created = universe.resolve_season(season, caps, size)
+    log(f"③ 賽季 {season} 名單 {len(symbols)} 檔"
+        f"（{'本次凍結建立' if created else '沿用已凍結名單'}）："
         f"{'、'.join(symbols[:6])}…")
 
     log("④ 估值（本益比／殖利率／淨值比）…")

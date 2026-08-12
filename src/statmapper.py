@@ -115,13 +115,17 @@ def assign_rarity(ranked_symbols: list[str], tiers: dict) -> dict[str, str]:
     return out
 
 
-def build_move_pool(element: str, volatility: float | None,
-                    templates: dict, threshold: float = 35.0) -> list[dict]:
+def build_move_pool(element: str, volatility_pct: float,
+                    templates: dict, threshold: float = 50.0) -> list[dict]:
     """招式池。波動率高者偏魔法（常跳空的妖股），低者偏物理（穩健權值股）。
+
+    判定用的是**名單內百分位**而非絕對波動率：台股整體波動遠高於直覺，
+    2026/08 前 50 大的波動率中位數即達 72%，用絕對門檻會把幾乎所有股票
+    都判成妖股——包含穩健權值股。相對排名才能真的分出「這批裡誰比較妖」。
 
     ⚠️ 招式清單尚未定案，此為 v0.1：依偏向取 3 招主系 + 1 招副系。
     """
-    magical_bias = volatility is not None and volatility >= threshold
+    magical_bias = volatility_pct >= threshold
     primary = "magical" if magical_bias else "physical"
     secondary = "physical" if magical_bias else "magical"
 
@@ -162,6 +166,10 @@ def build_species(metrics: dict[str, dict], ranked_symbols: list[str],
         ranks[stat] = {s: sum(p[s] for p in parts) / len(parts)
                        for s in ranked_symbols}
 
+    # 招式偏向另外取一次波動率百分位（未反向），與魔防的反向排名分開。
+    vol_pct = percentile_ranks({s: metrics[s].get("volatility_60d")
+                                for s in ranked_symbols})
+
     species: list[dict] = []
     for rank_index, symbol in enumerate(ranked_symbols, start=1):
         m = metrics[symbol]
@@ -180,7 +188,7 @@ def build_species(metrics: dict[str, dict], ranked_symbols: list[str],
             "bst": tier["bst"],
             "base_stats": allocate(grades, tier["bst"]),
             "growth_group": tier["growth_group"],
-            "move_pool": build_move_pool(element, m.get("volatility_60d"), moves),
+            "move_pool": build_move_pool(element, vol_pct[symbol], moves),
             "art": {"placeholder_color": elements["colors"][element], "sprite": None},
         }
         if m.get("industry"):

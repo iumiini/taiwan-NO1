@@ -72,15 +72,24 @@ def check_cross_rules(root: Path, errors: list) -> None:
     if abs(total_rate - 1.0) > 1e-9:
         errors.append(f"稀有度遭遇基礎率總和 {total_rate} ≠ 1.0")
 
-    # 每日檔的每一隻都必須在種族檔裡有定義
+    # 只嚴格檢查 index.json 指向的當期每日檔。歷史檔可能屬於前一個賽季，
+    # 名單與稀有度會隨賽季重排，拿舊檔比對現行種族層並無意義。
+    index_path = root / "index.json"
+    current = None
+    if index_path.exists():
+        current = root / load(index_path)["files"]["daily"]["path"]
+
     for daily_path in sorted((root / "daily").glob("*.json")):
+        if current and daily_path != current:
+            print(f"  ↷ {daily_path.name} 非當期，略過交叉檢查")
+            continue
         daily = load(daily_path)
         for m in daily["monsters"]:
             if m["symbol"] not in known:
                 errors.append(f"{daily_path.name} 的 {m['symbol']} 在 species.json 中無定義")
 
         # 淨值盾階層必須與 PB 一致
-        for m in daily["monsters"]:
+        for m in daily["monsters"]:  # noqa: PLW2901  同一份當期每日檔
             pb = m["valuation"].get("pb")
             tier = m["net_value_shield"]["tier"]
             if pb is None:

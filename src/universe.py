@@ -41,6 +41,36 @@ def top_market_cap(caps: dict[str, float], size: int) -> list[str]:
 
 PROVIDERS = {"top_market_cap": top_market_cap}
 
+UNIVERSE_DIR = DATA_DIR / "universe"
+
+
+def resolve_season(season: str, caps: dict[str, float], size: int,
+                   provider: str = "top_market_cap") -> tuple[list[str], bool]:
+    """取得本賽季的名單，第一次呼叫時凍結存檔，之後整季沿用。
+
+    名單一旦固定就不再隨每日市值波動變動——設計文件第五章的「名單固定」，
+    避免玩家的怪獸今天在圖鑑、明天消失。實測 2026/08/06 與 08/12 相隔六天，
+    純市值排名就已經換掉一檔（合庫金掉出、瑞昱進榜）。
+
+    稀有度是世代內市值排名，因此排名順序也一併凍結，不隨股價每日重排。
+    回傳 (名單, 是否為本次新建)。
+    """
+    path = UNIVERSE_DIR / f"{season}.json"
+    if path.exists():
+        return json.loads(path.read_text())["symbols"], False
+
+    symbols = PROVIDERS[provider](caps, size)
+    UNIVERSE_DIR.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps({
+        "season": season,
+        "provider": provider,
+        "size": len(symbols),
+        "frozen_at": __import__("datetime").datetime.now().date().isoformat(),
+        "note": "名單與排名於賽季開始時凍結，整季不變。稀有度依此排名切分金字塔。",
+        "symbols": symbols,
+    }, ensure_ascii=False, indent=2) + "\n")
+    return symbols, True
+
 
 def load_elements() -> dict:
     return json.loads((DATA_DIR / "elements.json").read_text())
