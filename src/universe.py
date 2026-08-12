@@ -44,19 +44,28 @@ PROVIDERS = {"top_market_cap": top_market_cap}
 UNIVERSE_DIR = DATA_DIR / "universe"
 
 
+def frozen_path(season: str) -> Path:
+    return UNIVERSE_DIR / f"{season}.json"
+
+
 def resolve_season(season: str, caps: dict[str, float], size: int,
-                   provider: str = "top_market_cap") -> tuple[list[str], bool]:
-    """取得本賽季的名單，第一次呼叫時凍結存檔，之後整季沿用。
+                   market_date: str, provider: str = "top_market_cap",
+                   refreeze: bool = False) -> tuple[list[str], bool]:
+    """取得本賽季的名單。已凍結就沿用，否則以當次的市場資料凍結存檔。
 
     名單一旦固定就不再隨每日市值波動變動——設計文件第五章的「名單固定」，
     避免玩家的怪獸今天在圖鑑、明天消失。實測 2026/08/06 與 08/12 相隔六天，
     純市值排名就已經換掉一檔（合庫金掉出、瑞昱進榜）。
 
+    **凍結日由執行日決定**：想以某一天的收盤名單開賽季，就在那天執行管線
+    （或帶 refreeze 重跑）。檔案記錄的是 `market_date`（市場資料日）而非
+    系統日期，兩者在收盤後跨日執行時會不同。
+
     稀有度是世代內市值排名，因此排名順序也一併凍結，不隨股價每日重排。
-    回傳 (名單, 是否為本次新建)。
+    回傳 (名單, 是否為本次凍結)。
     """
-    path = UNIVERSE_DIR / f"{season}.json"
-    if path.exists():
+    path = frozen_path(season)
+    if path.exists() and not refreeze:
         return json.loads(path.read_text())["symbols"], False
 
     symbols = PROVIDERS[provider](caps, size)
@@ -65,8 +74,9 @@ def resolve_season(season: str, caps: dict[str, float], size: int,
         "season": season,
         "provider": provider,
         "size": len(symbols),
-        "frozen_at": __import__("datetime").datetime.now().date().isoformat(),
-        "note": "名單與排名於賽季開始時凍結，整季不變。稀有度依此排名切分金字塔。",
+        "market_date": market_date,
+        "note": "名單與排名以 market_date 當日收盤市值凍結，整季不變；"
+                "稀有度依此排名切分金字塔。要改用別的日期，於該日執行管線並帶 --refreeze。",
         "symbols": symbols,
     }, ensure_ascii=False, indent=2) + "\n")
     return symbols, True

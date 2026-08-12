@@ -15,7 +15,9 @@ data/ 則是輸入端（平衡參數、屬性對照、財報快取），兩者�
 from __future__ import annotations
 
 import argparse
+import contextlib
 import json
+import os
 import statistics
 import sys
 from datetime import datetime, timedelta, timezone
@@ -32,6 +34,26 @@ SETTLEMENT_HOUR = 19
 
 # 大盤漲跌超過此幅度即切換世界天氣。
 WORLD_WEATHER_THRESHOLD = 1.5
+
+
+@contextlib.contextmanager
+def single_instance():
+    """避免兩份管線同時執行——實測同時跑會互相覆寫 site/data 的產出。
+
+    鎖檔記錄 PID；若前一次執行被強制中斷留下死鎖，會自動接管。
+    """
+    lock = ROOT / ".pipeline.lock"
+    if lock.exists():
+        pid = lock.read_text().strip()
+        alive = pid.isdigit() and Path(f"/proc/{pid}").exists()
+        if alive:
+            raise SystemExit(f"另一份管線正在執行（PID {pid}）。等它結束，或確認後刪除 {lock}")
+        print(f"發現殘留鎖檔（PID {pid} 已不存在），接管")
+    lock.write_text(str(os.getpid()))
+    try:
+        yield
+    finally:
+        lock.unlink(missing_ok=True)
 
 
 def _f(value) -> float | None:
@@ -122,7 +144,8 @@ def world_state(index: dict, balance: dict) -> dict:
 # 主流程
 # --------------------------------------------------------------------------
 
-def collect(size: int, skip_ticker: bool) -> tuple[dict, list[str], list[dict]]:
+def collect(size: int, skip_ticker: bool, refreeze: bool = False
+            ) -> tuple[dict, list[str], list[dict]]:
     """抓取所有資料源並彙整成 {代號: 指標}。回傳 (metrics, 名單, 資料源紀錄)。"""
     log = print
     provenance: list[dict] = []
@@ -142,9 +165,11 @@ def collect(size: int, skip_ticker: bool) -> tuple[dict, list[str], list[dict]]:
 
     caps = universe.market_caps(quotes, profiles)
     season = season_of(datetime.now(TZ))
-    symbols, created = universe.resolve_season(season, caps, size)
+    market_date = snap.get("date")
+    symbols, created = universe.resolve_season(
+        season, caps, size, market_date, refreeze=refreeze)
     log(f"③ 賽季 {season} 名單 {len(symbols)} 檔"
-        f"（{'本次凍結建立' if created else '沿用已凍結名單'}）："
+        f"（{f'以 {market_date} 收盤凍結' if created else '沿用已凍結名單'}）："
         f"{'、'.join(symbols[:6])}…")
 
     log("④ 估值（本益比／殖利率／淨值比）…")
@@ -304,9 +329,9 @@ def build_daily(bundle: dict, species_by_symbol: dict, balance: dict) -> dict:
     }
 
 
-def run(size: int, skip_ticker: bool) -> int:
+def run(size: int, skip_ticker: bool, refreeze: bool = False) -> int:
     balance = json.loads((DATA_DIR / "balance.json").read_text())
-    bundle, symbols, provenance = collect(size, skip_ticker)
+    bundle, symbols, provenance = collect(size, skip_ticker, refreeze)
     if not symbols:
         print("✗ 沒有任何可用資料")
         return 1
@@ -358,8 +383,11 @@ def main() -> int:
     ap.add_argument("--size", type=int, default=50, help="名單檔數（預設 50）")
     ap.add_argument("--skip-ticker", action="store_true",
                     help="略過注意股／處置股查詢（逐檔請求，較慢）")
+    ap.add_argument("--refreeze", action="store_true",
+                    help="以本次的市場資料重新凍結賽季名單（換季或改用其他日期時使用）")
     args = ap.parse_args()
-    return run(args.size, args.skip_ticker)
+    with single_instance():
+        return run(args.size, args.skip_ticker, args.refreeze)
 
 
 if __name__ == "__main__":
