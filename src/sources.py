@@ -9,6 +9,7 @@
 
 from __future__ import annotations
 
+import http.client
 import json
 import os
 import time
@@ -51,7 +52,10 @@ def _request(url: str, headers: dict | None = None, timeout: int = 120,
             elif 400 <= e.code < 500:
                 raise SourceError(f"{url} → {e.code} {e.read().decode()[:200]}") from e
             last = e
-        except (urllib.error.URLError, ConnectionError, json.JSONDecodeError) as e:
+        except (urllib.error.URLError, ConnectionError, json.JSONDecodeError,
+                http.client.IncompleteRead) as e:
+            # IncompleteRead：TWSE 的 6.6 MB 週轉率端點實測會提早斷流，
+            # 回傳的位元組數少於 Content-Length，重試即可。
             last = e
         if i < attempts - 1:
             time.sleep(2 ** i)
