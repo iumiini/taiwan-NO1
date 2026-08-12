@@ -140,6 +140,31 @@ def valuations() -> dict[str, dict]:
     return {r["Code"]: r for r in _twse("exchangeReport/BWIBBU_ALL")}
 
 
+def closing_prices_on(date_str: str) -> dict[str, float]:
+    """指定日期的全市場收盤價，供賽季名單以過去某一天凍結。
+
+    走 TWSE 的 web API（非 OpenAPI），因為只有它支援日期參數；OpenAPI 的
+    對應端點只給最新一日。回傳的是個股（約 1084 檔），不含 ETF——正好是
+    選股需要的母體。
+
+    date_str 為 ISO 格式（2026-08-11）。
+    """
+    ymd = date_str.replace("-", "")
+    body = _request(
+        "https://www.twse.com.tw/exchangeReport/BWIBBU_d"
+        f"?response=json&date={ymd}&selectType=ALL")
+    if body.get("stat") != "OK":
+        raise SourceError(f"{date_str} 無交易資料：{body.get('stat')}")
+
+    out: dict[str, float] = {}
+    for row in body.get("data") or []:
+        try:
+            out[row[0]] = float(row[2].replace(",", ""))
+        except (IndexError, ValueError):
+            continue
+    return out
+
+
 def company_profiles() -> dict[str, dict]:
     """公司基本資料。提供已發行普通股數——市值＝股數 × 收盤價。"""
     return {r["公司代號"]: r for r in _twse("opendata/t187ap03_L")}

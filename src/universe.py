@@ -48,6 +48,30 @@ def frozen_path(season: str) -> Path:
     return UNIVERSE_DIR / f"{season}.json"
 
 
+def caps_from_closes(closes: dict[str, float], profiles: dict[str, dict],
+                     tradable: set[str] | None = None) -> dict[str, float]:
+    """以指定日期的收盤價重算市值。股本不隨日期變動，沿用最新的公司基本資料。
+
+    `tradable` 為每日行情來源涵蓋的代號集合，用來排除拿得到估值、卻拿不到
+    每日行情的板塊。實測 6949 沛爾生醫屬**創新板**——限合格投資人交易，
+    一般玩家在現實中買不到，行情快照也沒有它，選進名單只會讓每日結算開天窗。
+    """
+    caps: dict[str, float] = {}
+    for symbol, profile in profiles.items():
+        close = closes.get(symbol)
+        if not close:
+            continue
+        if tradable is not None and symbol not in tradable:
+            continue
+        try:
+            shares = float(profile["已發行普通股數或TDR原股發行股數"])
+        except (KeyError, TypeError, ValueError):
+            continue
+        if shares > 0:
+            caps[symbol] = shares * close
+    return caps
+
+
 def resolve_season(season: str, caps: dict[str, float], size: int,
                    market_date: str, provider: str = "top_market_cap",
                    refreeze: bool = False) -> tuple[list[str], bool]:

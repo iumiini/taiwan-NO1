@@ -144,8 +144,8 @@ def world_state(index: dict, balance: dict) -> dict:
 # 主流程
 # --------------------------------------------------------------------------
 
-def collect(size: int, skip_ticker: bool, refreeze: bool = False
-            ) -> tuple[dict, list[str], list[dict]]:
+def collect(size: int, skip_ticker: bool, refreeze: bool = False,
+            freeze_on: str | None = None) -> tuple[dict, list[str], list[dict]]:
     """抓取所有資料源並彙整成 {代號: 指標}。回傳 (metrics, 名單, 資料源紀錄)。"""
     log = print
     provenance: list[dict] = []
@@ -166,10 +166,20 @@ def collect(size: int, skip_ticker: bool, refreeze: bool = False
     caps = universe.market_caps(quotes, profiles)
     season = season_of(datetime.now(TZ))
     market_date = snap.get("date")
+
+    # 名單可指定以過去某一天的收盤價凍結；當日行情仍取最新，兩者用途不同。
+    freeze_caps, freeze_date = caps, market_date
+    needs_freeze = refreeze or not universe.frozen_path(season).exists()
+    if freeze_on and needs_freeze:
+        log(f"   以 {freeze_on} 收盤價重算市值供凍結…")
+        freeze_caps = universe.caps_from_closes(
+            sources.closing_prices_on(freeze_on), profiles, tradable=set(quotes))
+        freeze_date = freeze_on
+
     symbols, created = universe.resolve_season(
-        season, caps, size, market_date, refreeze=refreeze)
+        season, freeze_caps, size, freeze_date, refreeze=refreeze)
     log(f"③ 賽季 {season} 名單 {len(symbols)} 檔"
-        f"（{f'以 {market_date} 收盤凍結' if created else '沿用已凍結名單'}）："
+        f"（{f'以 {freeze_date} 收盤凍結' if created else '沿用已凍結名單'}）："
         f"{'、'.join(symbols[:6])}…")
 
     log("④ 估值（本益比／殖利率／淨值比）…")
@@ -192,7 +202,13 @@ def collect(size: int, skip_ticker: bool, refreeze: bool = False
     metrics: dict[str, dict] = {}
 
     log(f"⑧ 歷史 K 線與指標（{len(symbols)} 檔，分段抓取）…")
+    missing_quote: list[str] = []
     for i, symbol in enumerate(symbols, 1):
+        if symbol not in quotes:
+            # 凍結名單的成員可能因下市、暫停交易或轉板而從當日行情消失。
+            missing_quote.append(symbol)
+            log(f"   ⚠️ {symbol} 不在當日行情中，跳過")
+            continue
         rows = sources.candles(symbol)
         if len(rows) < 2:
             log(f"   ⚠️ {symbol} K 線不足，跳過")
@@ -254,6 +270,10 @@ def collect(size: int, skip_ticker: bool, refreeze: bool = False
                 "detention" if t.get("isDisposition")
                 else "hyper_evolution" if t.get("isAttention") else None)
         note("fugle-ticker", "/stock/intraday/ticker", len(symbols))
+
+    if missing_quote:
+        fund_warnings.append(
+            f"{len(missing_quote)} 檔不在當日行情中而略過：{'、'.join(missing_quote)}")
 
     return {"metrics": metrics, "symbols": symbols, "quotes": quotes,
             "market_date": snap.get("date"),
@@ -329,9 +349,10 @@ def build_daily(bundle: dict, species_by_symbol: dict, balance: dict) -> dict:
     }
 
 
-def run(size: int, skip_ticker: bool, refreeze: bool = False) -> int:
+def run(size: int, skip_ticker: bool, refreeze: bool = False,
+        freeze_on: str | None = None) -> int:
     balance = json.loads((DATA_DIR / "balance.json").read_text())
-    bundle, symbols, provenance = collect(size, skip_ticker, refreeze)
+    bundle, symbols, provenance = collect(size, skip_ticker, refreeze, freeze_on)
     if not symbols:
         print("✗ 沒有任何可用資料")
         return 1
@@ -384,10 +405,12 @@ def main() -> int:
     ap.add_argument("--skip-ticker", action="store_true",
                     help="略過注意股／處置股查詢（逐檔請求，較慢）")
     ap.add_argument("--refreeze", action="store_true",
-                    help="以本次的市場資料重新凍結賽季名單（換季或改用其他日期時使用）")
+                    help="重新凍結賽季名單（換季或改用其他日期時使用）")
+    ap.add_argument("--freeze-on", metavar="YYYY-MM-DD",
+                    help="以指定日期的收盤市值凍結名單，預設為執行當日")
     args = ap.parse_args()
     with single_instance():
-        return run(args.size, args.skip_ticker, args.refreeze)
+        return run(args.size, args.skip_ticker, args.refreeze, args.freeze_on)
 
 
 if __name__ == "__main__":
