@@ -37,6 +37,24 @@
 回填用 `notion-update-page` 的 `update_content`，以 `Q : ...\n\tA :` 當
 `old_str` 精準定位。寫入前務必先 `notion-fetch` 讀取現況。
 
+### 規格書分三層，不要手寫規格
+
+手寫的規格書一定會跟程式漂移——實測曾發生設計文件寫「魔防僅取波動率」、
+程式跑的卻是複合版，差了一個多月沒人發現。因此：
+
+| 層 | 檔案 | 性質 |
+|---|---|---|
+| 討論與決策理由 | Notion《設計討論總結》 | append-only，保留歷史，允許前後不同版本 |
+| 規格現況 | `data/spec.json` | **每項只出現一次**，會被覆寫 |
+| 數值 | `data/balance.json` | 程式與文件共用的單一來源 |
+
+`docs/spec-current.md` 由 `tools/gen_spec.py` 從上面兩份生成，**不要手動編輯**。
+數值以路徑指向 balance.json，生成時代入，因此文件永遠等於程式實際讀的那份。
+
+新增或修改規格時：改 `data/spec.json`（必要時連同 `balance.json`），
+重跑生成器，再把產出同步到 Notion。自己提出的待決策問題填 `status: undecided`，
+會自動列在文件開頭的待決策清單。
+
 ### 誠實標示未定案內容
 
 真實財報行情數字與遊戲規則的提案值必須可區分。遊戲規則尚未定案者一律標「暫定」，
@@ -100,5 +118,6 @@ python3 tools/validate.py site/data          # 驗證產出
 python3 -m src.fundamentals refresh          # 更新財報快取
 python3 -m src.pipeline --size 50            # 跑管線
 python3 -m src.pipeline --size 50 --refreeze # 重新凍結賽季名單
+python3 tools/gen_spec.py                    # 重新生成規格現況文件
 python3 -m http.server 8899 --directory site # 本機預覽圖鑑頁
 ```

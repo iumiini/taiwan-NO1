@@ -397,6 +397,8 @@ def run(size: int, skip_ticker: bool, refreeze: bool = False,
     # 圖鑑頁的內嵌快照供離線與預覽使用，不同步就會顯示舊數字。
     subprocess.run([sys.executable, str(ROOT / "tools/embed_snapshot.py")],
                    check=False)
+    # 規格文件由 balance.json 生成，一併重跑確保與程式讀的數值一致。
+    subprocess.run([sys.executable, str(ROOT / "tools/gen_spec.py")], check=False)
 
     print(f"\n✅ 完成：{len(species)} 隻怪獸 → {OUT_DIR}")
     for w in warnings:

@@ -21,8 +21,9 @@
   --accent-deep: #C67A12;  /* 橘的文字版，米底上要夠深才讀得清 */
   --accent-soft: #FDEFD6;
 
-  --element:     #1E7FA8;  /* 屬性色（深化版，用於文字與線條） */
-  --element-tint:#4FC3F7;  /* 資料原色，用於填色 */
+  --element:     #1E7FA8;  /* 屬性色（深化版）——只用於屬性 chip 等小面積 */
+  --element-tint:#4FC3F7;  /* 資料原色，用於氣場核心與雷達的極淡底色 */
+  --stat-ink:    #6B5D52;  /* 數據視覺化的中性墨褐：能力條、雷達、招式分類 */
 
   --up:          #C8322A;  /* 台股：紅漲 */
   --down:        #0E8A5F;  /* 台股：綠跌 */
@@ -178,7 +179,7 @@ body {
 .statrow .nm { font-size: var(--step-0); color: var(--text-dim); }
 .statrow .vl { font-family: var(--mono); font-variant-numeric: tabular-nums; text-align: right; font-weight: 700; }
 .bar { height: 6px; background: var(--surface-2); border-radius: 999px; overflow: hidden; }
-.bar > i { display: block; height: 100%; background: var(--element); border-radius: 999px; opacity: 0.85; }
+.bar > i { display: block; height: 100%; background: var(--stat-ink); border-radius: 999px; opacity: 0.9; }
 
 .today { display: grid; grid-template-columns: repeat(auto-fit, minmax(158px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
 .tile { background: var(--surface); padding: 1.1rem 1.2rem; display: flex; flex-direction: column; gap: 0.3rem; }
@@ -207,12 +208,12 @@ tr:last-child td { border-bottom: none; }
 .missing { color: var(--text-faint); font-style: italic; }
 
 .moves { display: grid; grid-template-columns: repeat(auto-fill, minmax(235px, 1fr)); gap: 0.75rem; }
-.move { background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--element); border-radius: 8px; padding: 0.9rem 1.1rem; display: flex; flex-direction: column; gap: 0.35rem; }
+.move { background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--stat-ink); border-radius: 8px; padding: 0.9rem 1.1rem; display: flex; flex-direction: column; gap: 0.35rem; }
 .move.magical { border-left-color: #7B5EA7; }
 .move-top { display: flex; justify-content: space-between; align-items: baseline; gap: 0.75rem; }
 .move-name { font-weight: 700; font-family: var(--serif); font-size: 1.05rem; }
 .move-meta { display: flex; gap: 0.9rem; font-size: var(--step--1); color: var(--text-faint); }
-.cat { font-size: var(--step--1); padding: 0.1rem 0.5rem; border-radius: 999px; border: 1px solid #C9DFE9; color: var(--element); background: #F1F8FB; }
+.cat { font-size: var(--step--1); padding: 0.1rem 0.5rem; border-radius: 999px; border: 1px solid #DDD3C4; color: var(--stat-ink); background: var(--surface-2); }
 .cat.magical { color: #6B4F97; border-color: #D6CBE8; background: #F5F1FA; }
 
 .note {
@@ -414,6 +415,7 @@ const PE_TAG = {
   mysterious:  { name: "神秘系",         hint: "每股盈餘為負，無法鑑定身價" }
 };
 const SHIELD = { none: "無盾", silver: "銀盾", gold: "破淨金盾" };
+const STAT_INK = "#6B5D52";   // 與 CSS 的 --stat-ink 同值
 const STAT_META = {
   hp:   { name: "生命", from: "營收規模" },
   atk:  { name: "物攻", from: "每股盈餘" },
@@ -527,16 +529,17 @@ function drawRadar(canvas, stats, tint, ink) {
     i ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
   });
   ctx.closePath();
-  ctx.fillStyle = tint + "3D";
+  // 填色只放極淡的屬性色當底噪，形狀本身用中性墨褐——換屬性時版面不會變色
+  ctx.fillStyle = tint + "1F";
   ctx.fill();
-  ctx.strokeStyle = ink;
+  ctx.strokeStyle = STAT_INK;
   ctx.lineWidth = 1.5;
   ctx.stroke();
 
   keys.forEach((k, i) => {
     const [x, y] = pt(i, R * stats[k] / max);
     ctx.beginPath(); ctx.arc(x, y, 2.5, 0, Math.PI * 2);
-    ctx.fillStyle = ink; ctx.fill();
+    ctx.fillStyle = STAT_INK; ctx.fill();
   });
 
   ctx.fillStyle = "#7A6E62";
@@ -579,7 +582,7 @@ function render(data) {
     ["spd",  "週轉率",         sm.turnover_ratio != null ? num(sm.turnover_ratio) + "%" : null]
   ].map(([k, label, val]) => `<tr>
       <td>${STAT_META[k].name}</td>
-      <td class="n" style="color:${ink};font-weight:700">${s.base_stats[k]}</td>
+      <td class="n" style="color:var(--stat-ink);font-weight:700">${s.base_stats[k]}</td>
       <td class="arrow">←</td>
       <td>${label}</td>
       <td class="n">${dash(val)}</td>

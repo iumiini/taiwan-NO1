@@ -54,6 +54,7 @@ GitHub Pages（免費靜態託管）
 | `site/data/` | **輸出端**：管線產出，GitHub Pages 託管給遊戲與網頁讀取 |
 | `tools/` | 驗證與索引產生工具 |
 | `docs/schema-guide.md` | **契約導覽 —— 先讀這份** |
+| `docs/spec-current.md` | **規格現況**（由 `tools/gen_spec.py` 生成，勿手動編輯） |
 
 ---
 
@@ -69,6 +70,7 @@ python3 -m src.fundamentals refresh   # 更新財報快取
 export FUGLE_API_KEY=<你的金鑰>
 python3 -m src.pipeline --size 50
 python3 tools/validate.py site/data   # 驗證產出
+python3 tools/gen_spec.py             # 重新生成規格現況
 ```
 
 ---
