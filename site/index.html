@@ -21,9 +21,8 @@
   --accent-deep: #C67A12;  /* 橘的文字版，米底上要夠深才讀得清 */
   --accent-soft: #FDEFD6;
 
-  --element:     #1E7FA8;  /* 屬性色（深化版）——只用於屬性 chip 等小面積 */
-  --element-tint:#4FC3F7;  /* 資料原色，用於氣場核心與雷達的極淡底色 */
-  --stat-ink:    #6B5D52;  /* 數據視覺化的中性墨褐：能力條、雷達、招式分類 */
+  --element:     #1E7FA8;  /* 屬性色——只用於屬性標籤這類小面積 */
+  --stat-ink:    #6B5D52;  /* 數據視覺化的中性色：能力條、雷達形狀、招式分類 */
 
   --up:          #C8322A;  /* 台股：紅漲 */
   --down:        #0E8A5F;  /* 台股：綠跌 */
@@ -415,7 +414,8 @@ const PE_TAG = {
   mysterious:  { name: "神秘系",         hint: "每股盈餘為負，無法鑑定身價" }
 };
 const SHIELD = { none: "無盾", silver: "銀盾", gold: "破淨金盾" };
-const STAT_INK = "#6B5D52";   // 與 CSS 的 --stat-ink 同值
+const STAT_INK = "#6B5D52";     // 與 CSS 的 --stat-ink 同值
+const ACCENT_INK = "#C67A12";   // 與 CSS 的 --accent-deep 同值——圖鑑編號與怪獸本體共用
 const STAT_META = {
   hp:   { name: "生命", from: "營收規模" },
   atk:  { name: "物攻", from: "每股盈餘" },
@@ -437,16 +437,9 @@ const num  = (n, d = 2) => n == null ? null : n.toLocaleString("zh-TW", { minimu
 const esc  = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const dash = v => v == null ? '<span class="missing">未公布</span>' : v;
 
-/* 資料裡的屬性色是為深色底挑的，白底需要壓深才有足夠對比 */
-function darken(hex, amount) {
-  const n = parseInt(hex.slice(1), 16);
-  const f = c => Math.round(c * (1 - amount)).toString(16).padStart(2, "0");
-  return "#" + f((n >> 16) & 255) + f((n >> 8) & 255) + f(n & 255);
-}
-
 /* 氣場：本體色＝屬性，外圈環的疏密與濃度＝成交量，環的顏色＝當日漲跌。
    白底上不做霓虹光暈，改走標本圖的細線調性。 */
-function drawAura(canvas, changePct, volumeRatio, tint, ink) {
+function drawAura(canvas, changePct, volumeRatio) {
   const dpr = Math.min(window.devicePixelRatio || 1, 2);
   const size = 300;
   canvas.width = size * dpr; canvas.height = size * dpr;
@@ -478,19 +471,19 @@ function drawAura(canvas, changePct, volumeRatio, tint, ink) {
 
   ctx.beginPath();
   ctx.arc(cx, cy, core, 0, Math.PI * 2);
-  ctx.fillStyle = tint + "2E";
+  ctx.fillStyle = ACCENT_INK + "26";
   ctx.fill();
-  ctx.strokeStyle = ink;
+  ctx.strokeStyle = ACCENT_INK;
   ctx.lineWidth = 1.5;
   ctx.stroke();
 
-  ctx.fillStyle = ink;
+  ctx.fillStyle = ACCENT_INK;
   ctx.font = '700 30px ui-monospace, monospace';
   ctx.textAlign = "center"; ctx.textBaseline = "middle";
   ctx.fillText(canvas.dataset.symbol || "", cx, cy);
 }
 
-function drawRadar(canvas, stats, tint, ink) {
+function drawRadar(canvas, stats) {
   const keys = ["hp", "atk", "matk", "spd", "mdef", "def"];
   const dpr = Math.min(window.devicePixelRatio || 1, 2);
   const size = 260;
@@ -529,8 +522,8 @@ function drawRadar(canvas, stats, tint, ink) {
     i ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
   });
   ctx.closePath();
-  // 填色只放極淡的屬性色當底噪，形狀本身用中性墨褐——換屬性時版面不會變色
-  ctx.fillStyle = tint + "1F";
+  // 填色與氣場核心同一個橘褐，形狀本身仍用中性墨褐——換屬性時版面不會變色
+  ctx.fillStyle = ACCENT_INK + "33";
   ctx.fill();
   ctx.strokeStyle = STAT_INK;
   ctx.lineWidth = 1.5;
@@ -555,8 +548,6 @@ function render(data) {
   const s = data.species, d = data.daily, m = data.meta;
   const sm = s.source_metrics || {};
   const dir = d.price.change_percent >= 0 ? "up" : "down";
-  const tint = s.art?.placeholder_color || "#4FC3F7";
-  const ink = darken(tint, 0.45);
   const aura = AURA[d.aura.quadrant];
   const tag = PE_TAG[d.valuation.pe_tag];
 
@@ -760,9 +751,9 @@ function render(data) {
     </footer>
   `;
 
-  const auraCanvas = document.getElementById("aura");
-  drawAura(auraCanvas, d.price.change_percent, d.aura.volume_ratio, tint, ink);
-  drawRadar(document.getElementById("radar"), s.base_stats, tint, ink);
+  drawAura(document.getElementById("aura"),
+           d.price.change_percent, d.aura.volume_ratio);
+  drawRadar(document.getElementById("radar"), s.base_stats);
 }
 
 async function load() {
