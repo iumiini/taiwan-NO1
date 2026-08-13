@@ -12,7 +12,8 @@
 | 用途 | 頁面 |
 |---|---|
 | 設計規格總表 | [設計討論總結](https://app.notion.com/p/396fd52e67648143845ed7a667dd85ba) |
-| Q&A 協作紀錄 | [Claude 協作對話內容](https://app.notion.com/p/3bafd52e6764800c9fdcfd526923f090) |
+| Q&A 協作紀錄（現行） | [Claude 協作對話內容](https://app.notion.com/p/3bbfd52e676480728a2aed5ec901d79f) |
+| Q&A 協作紀錄（前一張） | [Claude 協作對話內容](https://app.notion.com/p/3bafd52e6764800c9fdcfd526923f090) |
 | 專案頁 | [台股寶可夢](https://app.notion.com/p/395fd52e67648010a05cdcfe9bf9b8c9) |
 
 專案頁的摺疊區塊**已凍結**，一切以《設計討論總結》為準。
@@ -36,6 +37,12 @@
 
 回填用 `notion-update-page` 的 `update_content`，以 `Q : ...\n\tA :` 當
 `old_str` 精準定位。寫入前務必先 `notion-fetch` 讀取現況。
+
+Q&A 卡片會**換新的一張**（使用者另開新卡繼續問），每次都以他給的網址為準，
+並回頭更新本表。卡片的屬性欄位「給AI的內容」是他對流程的要求，務必先讀。
+
+寫入注意：單次 `content_updates` 不要塞太多題，payload 過大會被截斷；逐題寫入。
+`<table>` 在 callout 內會被跳脫成字面文字，callout 裡改用清單。
 
 ### 規格書分三層，不要手寫規格
 
