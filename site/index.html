@@ -1,6 +1,9 @@
 <meta charset="utf-8">
 <title>圖鑑 No.2330 台積電 — 台股寶可夢</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 內嵌 favicon：沒有這行瀏覽器會去要 /favicon.ico 並在 console 留一筆 404，
+     真正的錯誤會被這種雜訊蓋掉。用 data URI 免掉額外檔案。 -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='13' font-size='14'>📈</text></svg>">
 <style>
 /* ------------------------------------------------------------------
    單一淺色主題。圖鑑是要讀的東西，取紙本百科的調性而非看盤終端。
@@ -402,6 +405,18 @@ const AURA = {
   phantom_surge: { name: "幻影暴走", desc: "量縮價漲。光亮但氣場薄而閃爍——騙局個體，烙印加成打折。" },
   dormant:       { name: "蓄力假寐", desc: "量縮價跌。買壓枯竭可能落底，好抓便宜還可能藏著加成。" }
 };
+// 收服段落的結語。原本寫死成「蓄力假寐」，樣本換成幻影暴走後整段與上方數字互相矛盾，
+// 因此改為跟著 aura.quadrant 走——四種象限各自對應成本、收服率、烙印區間的取捨。
+const CAPTURE_NOTE = {
+  true_surge:    { lead: "量增價漲的真暴走，氣勢正旺讓收服率打折，成本又被拉高的股價墊上去",
+                   tail: "全場最高的一段。又貴又難抓，代價換到的就是這個。" },
+  true_weak:     { lead: "量增價跌的真虛弱，恐慌賣壓讓牠好抓、成本也便宜",
+                   tail: "全場最低的一段。便宜有便宜的代價。" },
+  phantom_surge: { lead: "量縮價漲的幻影暴走，收服率不加不減，成本卻跟著漲上去的股價墊高",
+                   tail: "被打了折。看起來強，抓到的個體卻不強。" },
+  dormant:       { lead: "量縮價跌的蓄力假寐，收服機率提高、成本也比暴走日便宜",
+                   tail: "全場最低的一段。便宜有便宜的代價。" }
+};
 const WEATHER = {
   excited:   { name: "亢奮", desc: "站上 5 日線，爆擊率提升" },
   tailwind:  { name: "順風", desc: "站上月線，全能力小幅加成" },
@@ -549,6 +564,7 @@ function render(data) {
   const sm = s.source_metrics || {};
   const dir = d.price.change_percent >= 0 ? "up" : "down";
   const aura = AURA[d.aura.quadrant];
+  const cap = CAPTURE_NOTE[d.aura.quadrant];
   const tag = PE_TAG[d.valuation.pe_tag];
 
   // 遊戲規則數值尚未定案時，逐區標示暫定，與真實財報數字區隔。
@@ -736,7 +752,7 @@ function render(data) {
           <span class="n">個體值區間　收服當下擲出，定終身</span>
         </div>
       </div>
-      <p class="note" style="margin-top:1.1rem">今天是量縮價跌的蓄力假寐，收服機率提高、成本也比暴走日便宜，但烙印區間是最低的 ${d.capture.iv_range.min}–${d.capture.iv_range.max}。便宜有便宜的代價。</p>
+      <p class="note" style="margin-top:1.1rem">今天是${cap.lead}，烙印區間 ${d.capture.iv_range.min}–${d.capture.iv_range.max}——${cap.tail}</p>
     </section>
 
     <section class="legend">
