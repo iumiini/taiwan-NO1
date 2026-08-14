@@ -31,9 +31,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # enablement 讓這一步在 Pages 尚未設定成 Actions 模式時自己去開，
-      # 省掉手動進 Settings 的一次性動作。權限不足時仍會失敗，
-      # 那就得由 repo 擁有者在 Settings → Pages → Source 選 GitHub Actions。
+      # enablement 只負責在 Pages 完全沒開啟時把它開起來；已經設成分支模式的
+      # 站台它不會改。實測：Source 停在 Deploy from a branch 時，這一步會通過，
+      # 部署也會成功，但內建的 Jekyll 建置隨後又把根目錄 README 蓋回首頁。
+      # Source 必須由 repo 擁有者在 Settings → Pages 手動選 GitHub Actions，
+      # 選完內建建置就不再觸發，兩條管線互相覆蓋的情況才會消失。
       - uses: actions/configure-pages@v5
         with:
           enablement: true
