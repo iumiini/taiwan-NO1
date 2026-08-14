@@ -9,6 +9,22 @@
 
 ---
 
+## 網頁預覽
+
+圖鑑網頁在 `site/index.html`，本機預覽：
+
+```bash
+python3 -m http.server 8899 --directory site   # 開 http://localhost:8899
+```
+
+線上發布走 `.github/workflows/pages.yml`。**首次需在 repo 設定啟用一次**：
+Settings → Pages → Source 選 **GitHub Actions**。之後每次推送 `site/` 就會自動更新。
+
+> Pages 內建的分支發布只吃根目錄或 `/docs`，而網頁在 `site/`，
+> 因此改用 Actions 部署——可指定任意目錄，不必為了配合 Pages 搬動專案結構。
+
+---
+
 ## 架構
 
 ```
@@ -38,7 +54,7 @@ GitHub Pages（免費靜態託管）
 - [x] 財報資料層（多業別合併、欄位容錯、季度快取沿用上一季）
 - [x] 每日管線（選股 → 指標 → StatMapper → 輸出）
 - [x] GitHub Actions 排程
-- [ ] GitHub Pages 開啟
+- [x] GitHub Pages 部署 workflow（待在 repo 設定啟用一次）
 - [ ] 圖鑑網頁
 
 ---

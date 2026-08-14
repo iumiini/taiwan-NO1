@@ -1,0 +1,42 @@
+name: 發布圖鑑網頁
+
+# GitHub Pages 內建的分支發布只吃根目錄或 /docs，而圖鑑網頁在 site/。
+# 改用 Actions 部署可指定任意目錄，也不必為了配合 Pages 搬動專案結構。
+on:
+  push:
+    branches:
+      - main
+      - claude/github-connection-check-wiojxk
+    paths:
+      - "site/**"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 部署一次只跑一份；排隊中的舊版本可以取消，最後一次推送才是要上的。
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/configure-pages@v5
+
+      # site/ 底下就是完整的網站：index.html 與它讀取的 data/*.json
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
