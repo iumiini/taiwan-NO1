@@ -31,7 +31,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # enablement 讓這一步在 Pages 尚未設定成 Actions 模式時自己去開，
+      # 省掉手動進 Settings 的一次性動作。權限不足時仍會失敗，
+      # 那就得由 repo 擁有者在 Settings → Pages → Source 選 GitHub Actions。
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       # site/ 底下就是完整的網站：index.html 與它讀取的 data/*.json
       - uses: actions/upload-pages-artifact@v3
