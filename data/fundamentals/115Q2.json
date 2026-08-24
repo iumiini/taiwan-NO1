@@ -1,7 +1,7 @@
 {
   "period": "115Q2",
-  "updated_at": "2026-08-21T19:15:19+08:00",
-  "company_count": 987,
+  "updated_at": "2026-08-24T19:17:40+08:00",
+  "company_count": 992,
   "companies": {
     "1101": {
       "symbol": "1101",
@@ -4393,6 +4393,16 @@
       "eps": 3.84,
       "debt_ratio": 58.69
     },
+    "2637": {
+      "symbol": "2637",
+      "name": "慧洋-KY",
+      "total_assets": 84278467.0,
+      "total_liabilities": 34704280.0,
+      "share_capital": 7464092.0,
+      "book_value_per_share": 66.42,
+      "eps": 4.1,
+      "debt_ratio": 41.18
+    },
     "2642": {
       "symbol": "2642",
       "name": "宅配通",
@@ -4582,6 +4592,26 @@
       "book_value_per_share": 20.34,
       "eps": 0.87,
       "debt_ratio": 92.76
+    },
+    "2884": {
+      "symbol": "2884",
+      "name": "玉山金",
+      "total_assets": 4871065561.0,
+      "total_liabilities": 4588895075.0,
+      "share_capital": 161920000.0,
+      "book_value_per_share": 17.4,
+      "eps": 1.32,
+      "debt_ratio": 94.21
+    },
+    "2891": {
+      "symbol": "2891",
+      "name": "中信金",
+      "total_assets": 10257539606.0,
+      "total_liabilities": 9521518922.0,
+      "share_capital": 201768884.0,
+      "book_value_per_share": 34.99,
+      "eps": 1.96,
+      "debt_ratio": 92.82
     },
     "2901": {
       "symbol": "2901",
@@ -6553,6 +6583,16 @@
       "eps": 8.4,
       "debt_ratio": 43.45
     },
+    "4807": {
+      "symbol": "4807",
+      "name": "日成-KY",
+      "total_assets": 1727637.0,
+      "total_liabilities": 652182.0,
+      "share_capital": 489960.0,
+      "book_value_per_share": 19.96,
+      "eps": 2.0,
+      "debt_ratio": 37.75
+    },
     "4904": {
       "symbol": "4904",
       "name": "遠傳",
@@ -8222,6 +8262,16 @@
       "book_value_per_share": 17.16,
       "eps": 3.65,
       "debt_ratio": 72.52
+    },
+    "6768": {
+      "symbol": "6768",
+      "name": "志強-KY",
+      "total_assets": 24001389.0,
+      "total_liabilities": 9292326.0,
+      "share_capital": 2000951.0,
+      "book_value_per_share": 73.51,
+      "eps": 2.67,
+      "debt_ratio": 38.72
     },
     "6770": {
       "symbol": "6770",

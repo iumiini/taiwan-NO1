@@ -2,27 +2,27 @@
   "schema_version": "0.1.0",
   "generation": 1,
   "season": "2026-S3",
-  "market_date": "2026-08-21",
-  "generated_at": "2026-08-21T19:18:20+08:00",
-  "next_settlement_at": "2026-08-22T19:00:00+08:00",
+  "market_date": "2026-08-24",
+  "generated_at": "2026-08-24T19:20:58+08:00",
+  "next_settlement_at": "2026-08-25T19:00:00+08:00",
   "files": {
     "species": {
       "path": "species.json",
-      "sha256": "475b70c323cec8f1835195549e1728caf977be44916eb09bf02ad6b41ff4d129",
-      "bytes": 87217,
-      "updated_at": "2026-08-21T19:18:20.824406+08:00"
+      "sha256": "27536e43c1f990f634c443cab869b5959b301d83e760629d7ab15feddc8a82a8",
+      "bytes": 87271,
+      "updated_at": "2026-08-24T19:20:58.396291+08:00"
     },
     "daily": {
-      "path": "daily/2026-08-21.json",
-      "sha256": "57f0be0134180c39672a3df89168a46855b9b202e89d5c980276a163080fbeb5",
-      "bytes": 63044,
-      "updated_at": "2026-08-21T19:18:20.827618+08:00"
+      "path": "daily/2026-08-24.json",
+      "sha256": "51a04fdb2862f480fcf6ad9f035bfc0949f59196054441dbafacc2a6a91a27f2",
+      "bytes": 62254,
+      "updated_at": "2026-08-24T19:20:58.399332+08:00"
     },
     "balance": {
       "path": "balance.json",
       "sha256": "e9b08c7728ab5a79e5b44210afebea60224ef4c82a5874b1800baa18e54815bf",
       "bytes": 4493,
-      "updated_at": "2026-08-21T19:18:20.828157+08:00"
+      "updated_at": "2026-08-24T19:20:58.399716+08:00"
     }
   },
   "pipeline": {
@@ -30,7 +30,7 @@
       {
         "name": "fugle-snapshot-tse",
         "endpoint": "/snapshot/quotes/TSE",
-        "record_count": 1535
+        "record_count": 1536
       },
       {
         "name": "twse-company-profile",
@@ -55,7 +55,7 @@
       {
         "name": "twse-fundamentals-cache",
         "endpoint": "data/fundamentals",
-        "record_count": 38
+        "record_count": 40
       },
       {
         "name": "fugle-ticker",
@@ -66,16 +66,14 @@
     "warnings": [
       "hp（revenue）缺值 1 檔，以中位百分位替代：2883",
       "matk（revenue_yoy）缺值 1 檔，以中位百分位替代：2883",
-      "def（debt_ratio）缺值 12 檔，以中位百分位替代：2881, 2882, 2891, 2885, 2887, 2886, 2880, 2884…",
-      "12 檔的 EPS 由收盤價÷本益比回推（季報未公布）",
+      "def（debt_ratio）缺值 10 檔，以中位百分位替代：2881, 2882, 2885, 2887, 2886, 2880, 2890, 2883…",
+      "10 檔的 EPS 由收盤價÷本益比回推（季報未公布）",
       "2881：所有快取期別皆無財報資料",
       "2882：所有快取期別皆無財報資料",
-      "2891：所有快取期別皆無財報資料",
       "2885：所有快取期別皆無財報資料",
       "2887：所有快取期別皆無財報資料",
       "2886：所有快取期別皆無財報資料",
       "2880：所有快取期別皆無財報資料",
-      "2884：所有快取期別皆無財報資料",
       "2890：所有快取期別皆無財報資料",
       "2883：所有快取期別皆無財報資料",
       "2892：所有快取期別皆無財報資料",
