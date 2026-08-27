@@ -1,7 +1,7 @@
 {
   "period": "115Q2",
-  "updated_at": "2026-08-26T19:18:41+08:00",
-  "company_count": 1010,
+  "updated_at": "2026-08-28T04:50:09+08:00",
+  "company_count": 1020,
   "companies": {
     "1101": {
       "symbol": "1101",
@@ -4603,6 +4603,16 @@
       "eps": 0.87,
       "debt_ratio": 90.61
     },
+    "2834": {
+      "symbol": "2834",
+      "name": "臺企銀",
+      "total_assets": 2575949351.0,
+      "total_liabilities": 2421408313.0,
+      "share_capital": 103983261.0,
+      "book_value_per_share": 15.9,
+      "eps": 0.71,
+      "debt_ratio": 94.0
+    },
     "2836": {
       "symbol": "2836",
       "name": "高雄銀",
@@ -4613,6 +4623,26 @@
       "eps": 0.39,
       "debt_ratio": 92.04
     },
+    "2849": {
+      "symbol": "2849",
+      "name": "安泰銀",
+      "total_assets": 406084767.0,
+      "total_liabilities": 369966866.0,
+      "share_capital": 19576094.0,
+      "book_value_per_share": 18.45,
+      "eps": 0.54,
+      "debt_ratio": 91.11
+    },
+    "2850": {
+      "symbol": "2850",
+      "name": "新產",
+      "total_assets": 60727236.0,
+      "total_liabilities": 38722667.0,
+      "share_capital": 3159633.0,
+      "book_value_per_share": 69.64,
+      "eps": 8.51,
+      "debt_ratio": 63.76
+    },
     "2851": {
       "symbol": "2851",
       "name": "中再保",
@@ -4622,6 +4652,16 @@
       "book_value_per_share": 32.86,
       "eps": 7.91,
       "debt_ratio": 59.8
+    },
+    "2852": {
+      "symbol": "2852",
+      "name": "第一保",
+      "total_assets": 20087700.0,
+      "total_liabilities": 10845946.0,
+      "share_capital": 3011638.0,
+      "book_value_per_share": 30.69,
+      "eps": 1.91,
+      "debt_ratio": 53.99
     },
     "2855": {
       "symbol": "2855",
@@ -4662,6 +4702,16 @@
       "book_value_per_share": 28.73,
       "eps": 2.64,
       "debt_ratio": 92.04
+    },
+    "2889": {
+      "symbol": "2889",
+      "name": "國票金",
+      "total_assets": 508081084.0,
+      "total_liabilities": 451765803.0,
+      "share_capital": 36659022.0,
+      "book_value_per_share": 13.11,
+      "eps": 0.77,
+      "debt_ratio": 88.92
     },
     "2890": {
       "symbol": "2890",
@@ -6503,6 +6553,16 @@
       "eps": 1.92,
       "debt_ratio": 38.14
     },
+    "4581": {
+      "symbol": "4581",
+      "name": "光隆精密-KY",
+      "total_assets": 2666043.0,
+      "total_liabilities": 1426008.0,
+      "share_capital": 338990.0,
+      "book_value_per_share": 36.53,
+      "eps": 2.03,
+      "debt_ratio": 53.49
+    },
     "4582": {
       "symbol": "4582",
       "name": "聚恆-創",
@@ -6693,6 +6753,16 @@
       "eps": -0.42,
       "debt_ratio": 39.64
     },
+    "4912": {
+      "symbol": "4912",
+      "name": "聯德控股-KY",
+      "total_assets": 8629253.0,
+      "total_liabilities": 4406165.0,
+      "share_capital": 669931.0,
+      "book_value_per_share": 62.51,
+      "eps": 2.85,
+      "debt_ratio": 51.06
+    },
     "4915": {
       "symbol": "4915",
       "name": "致伸",
@@ -6772,6 +6842,16 @@
       "book_value_per_share": 64.87,
       "eps": 0.77,
       "debt_ratio": 18.47
+    },
+    "4943": {
+      "symbol": "4943",
+      "name": "康控-KY",
+      "total_assets": 3182621.0,
+      "total_liabilities": 3077693.0,
+      "share_capital": 1266944.0,
+      "book_value_per_share": 0.33,
+      "eps": -1.34,
+      "debt_ratio": 96.7
     },
     "4949": {
       "symbol": "4949",
@@ -7203,6 +7283,16 @@
       "eps": 1.79,
       "debt_ratio": 50.87
     },
+    "5880": {
+      "symbol": "5880",
+      "name": "合庫金",
+      "total_assets": 5445645722.0,
+      "total_liabilities": 5147777887.0,
+      "share_capital": 160729603.0,
+      "book_value_per_share": 18.51,
+      "eps": 0.8,
+      "debt_ratio": 94.53
+    },
     "5906": {
       "symbol": "5906",
       "name": "台南-KY",
@@ -7212,6 +7302,16 @@
       "book_value_per_share": 14.6,
       "eps": 0.01,
       "debt_ratio": 66.75
+    },
+    "6024": {
+      "symbol": "6024",
+      "name": "群益期",
+      "total_assets": 139485030.0,
+      "total_liabilities": 128693631.0,
+      "share_capital": 2666834.0,
+      "book_value_per_share": 43.18,
+      "eps": 4.09,
+      "debt_ratio": 92.26
     },
     "6108": {
       "symbol": "6108",
