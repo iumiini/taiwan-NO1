@@ -2,27 +2,27 @@
   "schema_version": "0.1.0",
   "generation": 1,
   "season": "2026-S3",
-  "market_date": "2026-08-27",
-  "generated_at": "2026-08-28T04:53:01+08:00",
-  "next_settlement_at": "2026-08-28T19:00:00+08:00",
+  "market_date": "2026-08-28",
+  "generated_at": "2026-08-29T05:20:16+08:00",
+  "next_settlement_at": "2026-08-29T19:00:00+08:00",
   "files": {
     "species": {
       "path": "species.json",
-      "sha256": "f5dc1dca7a3ed01414c1ee8fb861dfddd4db8fe8a8e7c1c9f5f0170b779ae516",
-      "bytes": 87362,
-      "updated_at": "2026-08-28T04:53:01.762185+08:00"
+      "sha256": "cd860cef0f193a7c9acf1e566bec24e39e1dde751e65522123b6e9e2885a594d",
+      "bytes": 87468,
+      "updated_at": "2026-08-29T05:20:16.448683+08:00"
     },
     "daily": {
-      "path": "daily/2026-08-27.json",
-      "sha256": "6db7d266c2827f1e1a086259294544dbd09b80da4c412a72802847127732880d",
-      "bytes": 62837,
-      "updated_at": "2026-08-28T04:53:01.764665+08:00"
+      "path": "daily/2026-08-28.json",
+      "sha256": "b8e08c68b08048d363d1becd7c55b28b2db5a72e93a3e2b55b7a7c79ef3da9e9",
+      "bytes": 63965,
+      "updated_at": "2026-08-29T05:20:16.451501+08:00"
     },
     "balance": {
       "path": "balance.json",
       "sha256": "e9b08c7728ab5a79e5b44210afebea60224ef4c82a5874b1800baa18e54815bf",
       "bytes": 4493,
-      "updated_at": "2026-08-28T04:53:01.764957+08:00"
+      "updated_at": "2026-08-29T05:20:16.452087+08:00"
     }
   },
   "pipeline": {
@@ -30,7 +30,7 @@
       {
         "name": "fugle-snapshot-tse",
         "endpoint": "/snapshot/quotes/TSE",
-        "record_count": 1537
+        "record_count": 1536
       },
       {
         "name": "twse-company-profile",
@@ -40,7 +40,7 @@
       {
         "name": "twse-bwibbu",
         "endpoint": "/exchangeReport/BWIBBU_ALL",
-        "record_count": 1082
+        "record_count": 1081
       },
       {
         "name": "twse-monthly-revenue",
@@ -55,7 +55,7 @@
       {
         "name": "twse-fundamentals-cache",
         "endpoint": "data/fundamentals",
-        "record_count": 43
+        "record_count": 47
       },
       {
         "name": "fugle-ticker",
@@ -66,15 +66,11 @@
     "warnings": [
       "hp（revenue）缺值 1 檔，以中位百分位替代：2883",
       "matk（revenue_yoy）缺值 1 檔，以中位百分位替代：2883",
-      "def（debt_ratio）缺值 7 檔，以中位百分位替代：2881, 2882, 2887, 2886, 2880, 2883, 2892",
-      "7 檔的 EPS 由收盤價÷本益比回推（季報未公布）",
+      "def（debt_ratio）缺值 3 檔，以中位百分位替代：2881, 2882, 2887",
+      "3 檔的 EPS 由收盤價÷本益比回推（季報未公布）",
       "2881：所有快取期別皆無財報資料",
       "2882：所有快取期別皆無財報資料",
-      "2887：所有快取期別皆無財報資料",
-      "2886：所有快取期別皆無財報資料",
-      "2880：所有快取期別皆無財報資料",
-      "2883：所有快取期別皆無財報資料",
-      "2892：所有快取期別皆無財報資料"
+      "2887：所有快取期別皆無財報資料"
     ]
   }
 }

@@ -1,7 +1,7 @@
 {
   "period": "115Q2",
-  "updated_at": "2026-08-28T04:50:09+08:00",
-  "company_count": 1020,
+  "updated_at": "2026-08-29T05:17:01+08:00",
+  "company_count": 1043,
   "companies": {
     "1101": {
       "symbol": "1101",
@@ -462,6 +462,16 @@
       "book_value_per_share": 13.32,
       "eps": -0.89,
       "debt_ratio": 43.66
+    },
+    "1338": {
+      "symbol": "1338",
+      "name": "廣華-KY",
+      "total_assets": 13730867.0,
+      "total_liabilities": 7486365.0,
+      "share_capital": 838400.0,
+      "book_value_per_share": 72.26,
+      "eps": -2.08,
+      "debt_ratio": 54.52
     },
     "1339": {
       "symbol": "1339",
@@ -4603,6 +4613,16 @@
       "eps": 0.87,
       "debt_ratio": 90.61
     },
+    "2820": {
+      "symbol": "2820",
+      "name": "華票",
+      "total_assets": 273028361.0,
+      "total_liabilities": 245155197.0,
+      "share_capital": 13429600.0,
+      "book_value_per_share": 20.76,
+      "eps": 1.07,
+      "debt_ratio": 89.79
+    },
     "2834": {
       "symbol": "2834",
       "name": "臺企銀",
@@ -4683,6 +4703,26 @@
       "eps": 0.87,
       "debt_ratio": 92.76
     },
+    "2880": {
+      "symbol": "2880",
+      "name": "華南金",
+      "total_assets": 4546467034.0,
+      "total_liabilities": 4304726423.0,
+      "share_capital": 140561348.0,
+      "book_value_per_share": 17.37,
+      "eps": 1.24,
+      "debt_ratio": 94.68
+    },
+    "2883": {
+      "symbol": "2883",
+      "name": "凱基金",
+      "total_assets": 4591103927.0,
+      "total_liabilities": 4121762162.0,
+      "share_capital": 185567558.0,
+      "book_value_per_share": 25.28,
+      "eps": 1.64,
+      "debt_ratio": 89.78
+    },
     "2884": {
       "symbol": "2884",
       "name": "玉山金",
@@ -4702,6 +4742,16 @@
       "book_value_per_share": 28.73,
       "eps": 2.64,
       "debt_ratio": 92.04
+    },
+    "2886": {
+      "symbol": "2886",
+      "name": "兆豐金",
+      "total_assets": 5232546775.0,
+      "total_liabilities": 4830190750.0,
+      "share_capital": 148333783.0,
+      "book_value_per_share": 27.13,
+      "eps": 1.44,
+      "debt_ratio": 92.31
     },
     "2889": {
       "symbol": "2889",
@@ -4732,6 +4782,16 @@
       "book_value_per_share": 34.99,
       "eps": 1.96,
       "debt_ratio": 92.82
+    },
+    "2892": {
+      "symbol": "2892",
+      "name": "第一金",
+      "total_assets": 5235189029.0,
+      "total_liabilities": 4933686461.0,
+      "share_capital": 143794686.0,
+      "book_value_per_share": 20.97,
+      "eps": 1.24,
+      "debt_ratio": 94.24
     },
     "2901": {
       "symbol": "2901",
@@ -6503,6 +6563,26 @@
       "eps": 0.69,
       "debt_ratio": 33.93
     },
+    "4557": {
+      "symbol": "4557",
+      "name": "永新-KY",
+      "total_assets": 5750833.0,
+      "total_liabilities": 2984782.0,
+      "share_capital": 479718.0,
+      "book_value_per_share": 52.89,
+      "eps": 0.84,
+      "debt_ratio": 51.9
+    },
+    "4560": {
+      "symbol": "4560",
+      "name": "強信-KY",
+      "total_assets": 2727443.0,
+      "total_liabilities": 686247.0,
+      "share_capital": 680972.0,
+      "book_value_per_share": 29.97,
+      "eps": 1.41,
+      "debt_ratio": 25.16
+    },
     "4562": {
       "symbol": "4562",
       "name": "穎漢",
@@ -6683,6 +6763,16 @@
       "eps": 2.33,
       "debt_ratio": 33.59
     },
+    "4763": {
+      "symbol": "4763",
+      "name": "材料*-KY",
+      "total_assets": 24229680.0,
+      "total_liabilities": 4500516.0,
+      "share_capital": 989147.0,
+      "book_value_per_share": 19.76,
+      "eps": 1.85,
+      "debt_ratio": 18.57
+    },
     "4764": {
       "symbol": "4764",
       "name": "雙鍵",
@@ -6823,6 +6913,16 @@
       "eps": -0.37,
       "debt_ratio": 23.14
     },
+    "4935": {
+      "symbol": "4935",
+      "name": "茂林-KY",
+      "total_assets": 10123077.0,
+      "total_liabilities": 2167240.0,
+      "share_capital": 1288641.0,
+      "book_value_per_share": 61.74,
+      "eps": 0.41,
+      "debt_ratio": 21.41
+    },
     "4938": {
       "symbol": "4938",
       "name": "和碩",
@@ -6943,6 +7043,16 @@
       "eps": -1.63,
       "debt_ratio": 13.98
     },
+    "4977": {
+      "symbol": "4977",
+      "name": "眾達-KY",
+      "total_assets": 7145208.0,
+      "total_liabilities": 2846070.0,
+      "share_capital": 826898.0,
+      "book_value_per_share": 51.99,
+      "eps": 1.5,
+      "debt_ratio": 39.83
+    },
     "4989": {
       "symbol": "4989",
       "name": "榮科",
@@ -7032,6 +7142,16 @@
       "book_value_per_share": 41.21,
       "eps": 5.86,
       "debt_ratio": 30.49
+    },
+    "5243": {
+      "symbol": "5243",
+      "name": "乙盛-KY",
+      "total_assets": 14375298.0,
+      "total_liabilities": 5722792.0,
+      "share_capital": 1685289.0,
+      "book_value_per_share": 51.34,
+      "eps": 3.0,
+      "debt_ratio": 39.81
     },
     "5244": {
       "symbol": "5244",
@@ -7302,6 +7422,16 @@
       "book_value_per_share": 14.6,
       "eps": 0.01,
       "debt_ratio": 66.75
+    },
+    "5907": {
+      "symbol": "5907",
+      "name": "大洋-KY",
+      "total_assets": 20612765.0,
+      "total_liabilities": 16953037.0,
+      "share_capital": 1955310.0,
+      "book_value_per_share": 18.72,
+      "eps": -2.03,
+      "debt_ratio": 82.25
     },
     "6024": {
       "symbol": "6024",
@@ -7893,6 +8023,16 @@
       "eps": 12.31,
       "debt_ratio": 64.66
     },
+    "6415": {
+      "symbol": "6415",
+      "name": "矽力*-KY",
+      "total_assets": 47800439.0,
+      "total_liabilities": 6964155.0,
+      "share_capital": 973632.0,
+      "book_value_per_share": 103.92,
+      "eps": 6.03,
+      "debt_ratio": 14.57
+    },
     "6416": {
       "symbol": "6416",
       "name": "瑞祺電通",
@@ -7962,6 +8102,16 @@
       "book_value_per_share": 76.2,
       "eps": 4.42,
       "debt_ratio": 39.73
+    },
+    "6451": {
+      "symbol": "6451",
+      "name": "訊芯-KY",
+      "total_assets": 21135946.0,
+      "total_liabilities": 11415013.0,
+      "share_capital": 1142555.0,
+      "book_value_per_share": 75.41,
+      "eps": -0.72,
+      "debt_ratio": 54.01
     },
     "6456": {
       "symbol": "6456",
@@ -8102,6 +8252,16 @@
       "book_value_per_share": 18.74,
       "eps": -2.91,
       "debt_ratio": 34.96
+    },
+    "6550": {
+      "symbol": "6550",
+      "name": "北極星藥業-KY",
+      "total_assets": 7383653.0,
+      "total_liabilities": 2842758.0,
+      "share_capital": 8947927.0,
+      "book_value_per_share": 5.07,
+      "eps": -1.62,
+      "debt_ratio": 38.5
     },
     "6552": {
       "symbol": "6552",
@@ -8332,6 +8492,16 @@
       "book_value_per_share": 111.41,
       "eps": 13.1,
       "debt_ratio": 40.17
+    },
+    "6671": {
+      "symbol": "6671",
+      "name": "三能-KY",
+      "total_assets": 2258286.0,
+      "total_liabilities": 456585.0,
+      "share_capital": 607500.0,
+      "book_value_per_share": 29.31,
+      "eps": 0.65,
+      "debt_ratio": 20.22
     },
     "6672": {
       "symbol": "6672",
@@ -8743,6 +8913,16 @@
       "eps": -1.39,
       "debt_ratio": 2.58
     },
+    "6887": {
+      "symbol": "6887",
+      "name": "寶綠特-KY",
+      "total_assets": 4968999.0,
+      "total_liabilities": 1959236.0,
+      "share_capital": 741755.0,
+      "book_value_per_share": 40.58,
+      "eps": 2.09,
+      "debt_ratio": 39.43
+    },
     "6890": {
       "symbol": "6890",
       "name": "來億-KY",
@@ -8892,6 +9072,16 @@
       "book_value_per_share": 19.61,
       "eps": 2.68,
       "debt_ratio": 52.41
+    },
+    "6933": {
+      "symbol": "6933",
+      "name": "AMAX-KY",
+      "total_assets": 6310342.0,
+      "total_liabilities": 3795907.0,
+      "share_capital": 424181.0,
+      "book_value_per_share": 59.28,
+      "eps": 6.43,
+      "debt_ratio": 60.15
     },
     "6934": {
       "symbol": "6934",
@@ -9143,6 +9333,16 @@
       "eps": 5.8,
       "debt_ratio": 73.91
     },
+    "7749": {
+      "symbol": "7749",
+      "name": "意騰-KY",
+      "total_assets": 4501598.0,
+      "total_liabilities": 799534.0,
+      "share_capital": 464857.0,
+      "book_value_per_share": 79.64,
+      "eps": 7.57,
+      "debt_ratio": 17.76
+    },
     "7750": {
       "symbol": "7750",
       "name": "新代",
@@ -9292,6 +9492,16 @@
       "book_value_per_share": 132.24,
       "eps": 10.12,
       "debt_ratio": 26.9
+    },
+    "7823": {
+      "symbol": "7823",
+      "name": "奧義賽博-KY創",
+      "total_assets": 765125.0,
+      "total_liabilities": 301730.0,
+      "share_capital": 334909.0,
+      "book_value_per_share": 14.12,
+      "eps": -0.8,
+      "debt_ratio": 39.44
     },
     "7835": {
       "symbol": "7835",
@@ -9643,6 +9853,16 @@
       "eps": 0.89,
       "debt_ratio": 49.12
     },
+    "8404": {
+      "symbol": "8404",
+      "name": "百和興業-KY",
+      "total_assets": 21514463.0,
+      "total_liabilities": 14217309.0,
+      "share_capital": 4199338.0,
+      "book_value_per_share": 17.38,
+      "eps": 0.1,
+      "debt_ratio": 66.08
+    },
     "8422": {
       "symbol": "8422",
       "name": "可寧衛*",
@@ -9772,6 +9992,16 @@
       "book_value_per_share": 25.47,
       "eps": 1.58,
       "debt_ratio": 17.98
+    },
+    "8482": {
+      "symbol": "8482",
+      "name": "商億-KY",
+      "total_assets": 4771620.0,
+      "total_liabilities": 1575411.0,
+      "share_capital": 1074440.0,
+      "book_value_per_share": 29.67,
+      "eps": 1.61,
+      "debt_ratio": 33.02
     },
     "8487": {
       "symbol": "8487",
