@@ -338,7 +338,11 @@ def build_daily(bundle: dict, species_by_symbol: dict, balance: dict) -> dict:
         monsters.append(entry)
 
     now = datetime.now(TZ).replace(microsecond=0)
-    settled = now.replace(hour=SETTLEMENT_HOUR, minute=0, second=0)
+    # 結算時刻＝「這一包資料所屬交易日」的開獎時間，不是執行當下那一天的。
+    # 原本用 now.replace(hour=...)，排程一旦延後到跨日執行（實測 8/31 那輪在
+    # 9/1 01:48 才跑），就會標成隔天 19:00 —— 一個還沒發生的未來時間。
+    settled = datetime.strptime(bundle["market_date"], "%Y-%m-%d").replace(
+        hour=SETTLEMENT_HOUR, tzinfo=TZ)
     return {
         "schema_version": SCHEMA_VERSION,
         "market_date": bundle["market_date"],
