@@ -12,6 +12,12 @@ on:
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 
+  # 每日結算是用 GITHUB_TOKEN 推 site/data 的，GitHub 刻意不讓這種推送觸發
+  # workflow（避免無限遞迴），因此上面的 push 事件收不到它。實測 8/14～8/31
+  # 共 12 次結算都正常產出資料，網站卻整整 19 天停在 8/12。改由 daily.yml
+  # 在結算完成後直接呼叫這支，資料更新才會真的上線。
+  workflow_call:
+
 permissions:
   contents: read
   pages: write
@@ -29,7 +35,11 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      # 不用預設的 github.sha：被 daily.yml 呼叫時，事件的 SHA 是結算開始「之前」
+      # 的版本，剛產生的當日資料還不在裡面。指定分支才會拿到 push 後的最新一版。
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
 
       # enablement 只負責在 Pages 完全沒開啟時把它開起來；已經設成分支模式的
       # 站台它不會改。實測：Source 停在 Deploy from a branch 時，這一步會通過，

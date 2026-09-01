@@ -54,3 +54,13 @@ jobs:
             git commit -m "圖鑑每日結算 $(date -u +%Y-%m-%d)"
             git push
           fi
+
+  # 結算只把資料推進版控，網站不會自己更新（見 pages.yml 的 workflow_call 註解）。
+  # 這一步把發布接上去，讓「資料產出」與「線上可見」是同一次執行的事。
+  publish:
+    needs: build
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/pages.yml
