@@ -2,27 +2,27 @@
   "schema_version": "0.1.0",
   "generation": 1,
   "season": "2026-S3",
-  "market_date": "2026-08-31",
-  "generated_at": "2026-09-01T01:48:05+08:00",
-  "next_settlement_at": "2026-09-01T19:00:00+08:00",
+  "market_date": "2026-09-01",
+  "generated_at": "2026-09-01T23:18:55+08:00",
+  "next_settlement_at": "2026-09-02T19:00:00+08:00",
   "files": {
     "species": {
       "path": "species.json",
-      "sha256": "f6a28d5ece248b35d69e972e23ca27b29654bc160c35e7d354985252f89a8fa9",
-      "bytes": 87492,
-      "updated_at": "2026-09-01T01:48:05.144899+08:00"
+      "sha256": "7d96a4ebbbdcf27d4162d06733e0f4d0a26cd1eed827901e5561ec4d49231fb8",
+      "bytes": 87547,
+      "updated_at": "2026-09-01T23:18:55.501180+08:00"
     },
     "daily": {
-      "path": "daily/2026-08-31.json",
-      "sha256": "e80304e8bc91f481bee46af067c8426f5aa798d86a9b12e3860df3dd7f4074d2",
-      "bytes": 63038,
-      "updated_at": "2026-09-01T01:48:05.148054+08:00"
+      "path": "daily/2026-09-01.json",
+      "sha256": "eed4d3283f045ad4de19d2c526079c217182230ddfdfd88bc148e0efadde0225",
+      "bytes": 64239,
+      "updated_at": "2026-09-01T23:18:55.503664+08:00"
     },
     "balance": {
       "path": "balance.json",
       "sha256": "e9b08c7728ab5a79e5b44210afebea60224ef4c82a5874b1800baa18e54815bf",
       "bytes": 4493,
-      "updated_at": "2026-09-01T01:48:05.148421+08:00"
+      "updated_at": "2026-09-01T23:18:55.503945+08:00"
     }
   },
   "pipeline": {
@@ -50,12 +50,12 @@
       {
         "name": "twse-turnover",
         "endpoint": "/exchangeReport/FMSRFK_ALL",
-        "record_count": 29253
+        "record_count": 31132
       },
       {
         "name": "twse-fundamentals-cache",
         "endpoint": "data/fundamentals",
-        "record_count": 48
+        "record_count": 50
       },
       {
         "name": "fugle-ticker",
@@ -65,11 +65,7 @@
     ],
     "warnings": [
       "hp（revenue）缺值 1 檔，以中位百分位替代：2883",
-      "matk（revenue_yoy）缺值 1 檔，以中位百分位替代：2883",
-      "def（debt_ratio）缺值 2 檔，以中位百分位替代：2882, 2887",
-      "2 檔的 EPS 由收盤價÷本益比回推（季報未公布）",
-      "2882：所有快取期別皆無財報資料",
-      "2887：所有快取期別皆無財報資料"
+      "matk（revenue_yoy）缺值 1 檔，以中位百分位替代：2883"
     ]
   }
 }
