@@ -2,27 +2,27 @@
   "schema_version": "0.1.0",
   "generation": 1,
   "season": "2026-S3",
-  "market_date": "2026-09-08",
-  "generated_at": "2026-09-08T22:51:23+08:00",
-  "next_settlement_at": "2026-09-09T19:00:00+08:00",
+  "market_date": "2026-09-09",
+  "generated_at": "2026-09-09T22:54:16+08:00",
+  "next_settlement_at": "2026-09-10T19:00:00+08:00",
   "files": {
     "species": {
       "path": "species.json",
-      "sha256": "ccea3dc12bd762ca6d1df7629db05be0d7a19a79e26ead032acb655ea0980cd3",
-      "bytes": 87545,
-      "updated_at": "2026-09-08T22:51:23.042202+08:00"
+      "sha256": "1472cf8663e16b2a6706af52fd7cb1c75c3011bb02fd14adc52f78922a5dfa74",
+      "bytes": 87544,
+      "updated_at": "2026-09-09T22:54:16.499032+08:00"
     },
     "daily": {
-      "path": "daily/2026-09-08.json",
-      "sha256": "9f7771a306d92a8b67e083e5adfb57ee098a0839272c4568c19d34fcbd8be0f2",
-      "bytes": 63348,
-      "updated_at": "2026-09-08T22:51:23.044717+08:00"
+      "path": "daily/2026-09-09.json",
+      "sha256": "44dd13854af01d705e30087b4fda1b74a4adbb1f1987756662b27763c2148df7",
+      "bytes": 63412,
+      "updated_at": "2026-09-09T22:54:16.500974+08:00"
     },
     "balance": {
       "path": "balance.json",
       "sha256": "e9b08c7728ab5a79e5b44210afebea60224ef4c82a5874b1800baa18e54815bf",
       "bytes": 4493,
-      "updated_at": "2026-09-08T22:51:23.045844+08:00"
+      "updated_at": "2026-09-09T22:54:16.501195+08:00"
     }
   },
   "pipeline": {
