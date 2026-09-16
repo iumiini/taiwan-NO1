@@ -2,7 +2,7 @@
   "schema_version": "0.1.0",
   "generation": 1,
   "season": "2026-S3",
-  "stats_as_of": "2026-09-15",
+  "stats_as_of": "2026-09-16",
   "fiscal_period": "2026Q2",
   "species": [
     {
@@ -14,11 +14,11 @@
       "rarity_rank": 1,
       "bst": 600,
       "base_stats": {
-        "hp": 143,
-        "atk": 143,
-        "matk": 86,
-        "def": 128,
-        "mdef": 86,
+        "hp": 139,
+        "atk": 139,
+        "matk": 98,
+        "def": 126,
+        "mdef": 84,
         "spd": 14
       },
       "growth_group": "slow",
@@ -66,14 +66,14 @@
       },
       "industry": "半導體業",
       "source_metrics": {
-        "market_cap": 61848702609795,
+        "market_cap": 61719040759460,
         "shares_outstanding": 25932370067.0,
         "revenue_monthly": 514805337000.0,
         "revenue_yoy": 53.32,
         "eps": 49.33,
         "debt_ratio": 30.94,
         "turnover_ratio": 1.83,
-        "volatility_60d": 36.26,
+        "volatility_60d": 36.23,
         "book_value_per_share": 248.05
       }
     },
@@ -86,12 +86,12 @@
       "rarity_rank": 2,
       "bst": 540,
       "base_stats": {
-        "hp": 114,
-        "atk": 128,
-        "matk": 57,
-        "def": 99,
-        "mdef": 71,
-        "spd": 71
+        "hp": 125,
+        "atk": 125,
+        "matk": 55,
+        "def": 97,
+        "mdef": 69,
+        "spd": 69
       },
       "growth_group": "slow",
       "move_pool": [
@@ -138,14 +138,14 @@
       },
       "industry": "半導體業",
       "source_metrics": {
-        "market_cap": 7109940075590,
+        "market_cap": 7270435336890,
         "shares_outstanding": 1604952613.0,
         "revenue_monthly": 64183361000.0,
         "revenue_yoy": 44.08,
         "eps": 30.44,
         "debt_ratio": 45.06,
         "turnover_ratio": 10.97,
-        "volatility_60d": 70.15,
+        "volatility_60d": 70.22,
         "book_value_per_share": 265.77
       }
     },
@@ -160,9 +160,9 @@
       "base_stats": {
         "hp": 139,
         "atk": 108,
-        "matk": 46,
-        "def": 93,
-        "mdef": 77,
+        "matk": 62,
+        "def": 92,
+        "mdef": 62,
         "spd": 77
       },
       "growth_group": "slow",
@@ -210,14 +210,14 @@
       },
       "industry": "電子零組件業",
       "source_metrics": {
-        "market_cap": 4337897359430,
+        "market_cap": 4441799092590,
         "shares_outstanding": 2597543329.0,
         "revenue_monthly": 64586049000.0,
         "revenue_yoy": 34.95,
         "eps": 17.59,
         "debt_ratio": 53.58,
         "turnover_ratio": 9.8,
-        "volatility_60d": 62.49,
+        "volatility_60d": 62.43,
         "book_value_per_share": 113.07
       }
     },
@@ -282,14 +282,14 @@
       },
       "industry": "其他電子業",
       "source_metrics": {
-        "market_cap": 3469671511510,
+        "market_cap": 3490785131256,
         "shares_outstanding": 14075746497.0,
         "revenue_monthly": 921766023000.0,
         "revenue_yoy": 51.98,
         "eps": 7.84,
         "debt_ratio": 62.3,
         "turnover_ratio": 6.56,
-        "volatility_60d": 37.27,
+        "volatility_60d": 36.68,
         "book_value_per_share": 136.02
       }
     },
@@ -302,12 +302,12 @@
       "rarity_rank": 5,
       "bst": 500,
       "base_stats": {
-        "hp": 136,
-        "atk": 91,
-        "matk": 61,
-        "def": 76,
-        "mdef": 76,
-        "spd": 60
+        "hp": 132,
+        "atk": 88,
+        "matk": 74,
+        "def": 74,
+        "mdef": 73,
+        "spd": 59
       },
       "growth_group": "medium",
       "move_pool": [
@@ -354,14 +354,14 @@
       },
       "industry": "半導體業",
       "source_metrics": {
-        "market_cap": 2646578790944,
+        "market_cap": 2704696230610,
         "shares_outstanding": 4470572282.0,
         "revenue_monthly": 82247374000.0,
         "revenue_yoy": 45.66,
         "eps": 8.04,
         "debt_ratio": 60.87,
         "turnover_ratio": 9.56,
-        "volatility_60d": 69.51,
+        "volatility_60d": 69.58,
         "book_value_per_share": 88.5
       }
     },
@@ -426,14 +426,14 @@
       },
       "industry": "電子零組件業",
       "source_metrics": {
-        "market_cap": 1832812498110,
+        "market_cap": 1822062864690,
         "shares_outstanding": 358321114.0,
         "revenue_monthly": 20145589000.0,
         "revenue_yoy": 129.85,
         "eps": 42.46,
         "debt_ratio": 63.23,
         "turnover_ratio": 13.66,
-        "volatility_60d": 71.84,
+        "volatility_60d": 71.72,
         "book_value_per_share": 162.8
       }
     },
@@ -497,12 +497,12 @@
         "sprite": null
       },
       "source_metrics": {
-        "market_cap": 2115112107752,
+        "market_cap": 2143126837656,
         "shares_outstanding": 14007364952.0,
         "eps": 6.67,
         "debt_ratio": 90.67,
         "turnover_ratio": 3.05,
-        "volatility_60d": 35.98,
+        "volatility_60d": 36.0,
         "book_value_per_share": 81.22
       }
     },
@@ -567,14 +567,14 @@
       },
       "industry": "半導體業",
       "source_metrics": {
-        "market_cap": 1606070843657,
+        "market_cap": 1699226402795,
         "shares_outstanding": 3450205894.0,
         "revenue_monthly": 44690268000.0,
         "revenue_yoy": 560.85,
         "eps": 23.38,
         "debt_ratio": 16.78,
         "turnover_ratio": 63.57,
-        "volatility_60d": 91.96,
+        "volatility_60d": 90.29,
         "book_value_per_share": 93.49
       }
     },
@@ -639,14 +639,14 @@
       },
       "industry": "電子零組件業",
       "source_metrics": {
-        "market_cap": 1560868307796,
+        "market_cap": 1577281223756,
         "shares_outstanding": 1641291596.0,
         "revenue_monthly": 17745519000.0,
         "revenue_yoy": 56.26,
         "eps": 11.7,
         "debt_ratio": 59.23,
         "turnover_ratio": 28.72,
-        "volatility_60d": 86.7,
+        "volatility_60d": 86.48,
         "book_value_per_share": 77.9
       }
     },
@@ -711,14 +711,14 @@
       },
       "industry": "半導體業",
       "source_metrics": {
-        "market_cap": 1740958005012,
+        "market_cap": 1784953333658,
         "shares_outstanding": 12570093899.0,
         "revenue_monthly": 25044641000.0,
         "revenue_yoy": 30.71,
         "eps": 4.68,
         "debt_ratio": 33.34,
         "turnover_ratio": 26.9,
-        "volatility_60d": 77.83,
+        "volatility_60d": 76.9,
         "book_value_per_share": 35.38
       }
     },
@@ -731,12 +731,12 @@
       "rarity_rank": 11,
       "bst": 500,
       "base_stats": {
-        "hp": 100,
-        "atk": 57,
-        "matk": 71,
-        "def": 129,
-        "mdef": 29,
-        "spd": 114
+        "hp": 103,
+        "atk": 59,
+        "matk": 73,
+        "def": 132,
+        "mdef": 15,
+        "spd": 118
       },
       "growth_group": "medium",
       "move_pool": [
@@ -783,7 +783,7 @@
       },
       "industry": "塑膠工業",
       "source_metrics": {
-        "market_cap": 1756676981964,
+        "market_cap": 1776504035936,
         "shares_outstanding": 7930821589.0,
         "revenue_monthly": 30601161000.0,
         "revenue_yoy": 46.75,
@@ -798,17 +798,17 @@
       "symbol": "2882",
       "name": "國泰金",
       "generation": 1,
-      "element": "steel",
+      "element": "gold",
       "rarity": "rare",
       "rarity_rank": 12,
       "bst": 460,
       "base_stats": {
-        "hp": 102,
-        "atk": 68,
-        "matk": 102,
-        "def": 34,
-        "mdef": 137,
-        "spd": 17
+        "hp": 140,
+        "atk": 80,
+        "matk": 20,
+        "def": 40,
+        "mdef": 160,
+        "spd": 20
       },
       "growth_group": "medium",
       "move_pool": [
@@ -819,7 +819,7 @@
           "pp": 15,
           "learn_level": 1,
           "category": "physical",
-          "element": "steel"
+          "element": "gold"
         },
         {
           "id": "gap_up",
@@ -828,7 +828,7 @@
           "pp": 10,
           "learn_level": 1,
           "category": "magical",
-          "element": "steel"
+          "element": "gold"
         },
         {
           "id": "long_red_engulfing",
@@ -837,7 +837,7 @@
           "pp": 10,
           "learn_level": 15,
           "category": "physical",
-          "element": "steel"
+          "element": "gold"
         },
         {
           "id": "long_black_engulfing",
@@ -846,20 +846,23 @@
           "pp": 10,
           "learn_level": 22,
           "category": "physical",
-          "element": "steel"
+          "element": "gold"
         }
       ],
       "art": {
-        "placeholder_color": "#90A4AE",
+        "placeholder_color": "#FFD54F",
         "sprite": null
       },
+      "industry": "金融保險業",
       "source_metrics": {
-        "market_cap": 1613613114080,
+        "market_cap": 1650286139400,
         "shares_outstanding": 14669210128.0,
+        "revenue_monthly": 29486864000.0,
+        "revenue_yoy": -69.47,
         "eps": 4.95,
         "debt_ratio": 92.45,
         "turnover_ratio": 3.0,
-        "volatility_60d": 36.12,
+        "volatility_60d": 36.41,
         "book_value_per_share": 69.37
       }
     },
@@ -923,12 +926,12 @@
         "sprite": null
       },
       "source_metrics": {
-        "market_cap": 1371412516578,
+        "market_cap": 1393056042665,
         "shares_outstanding": 19675932806.0,
         "eps": 1.96,
         "debt_ratio": 92.82,
         "turnover_ratio": 3.46,
-        "volatility_60d": 26.61,
+        "volatility_60d": 26.22,
         "book_value_per_share": 34.99
       }
     },
@@ -993,14 +996,14 @@
       },
       "industry": "電子零組件業",
       "source_metrics": {
-        "market_cap": 1105538379456,
+        "market_cap": 1103479648768,
         "shares_outstanding": 2058730688.0,
         "revenue_monthly": 16332196000.0,
         "revenue_yoy": 51.8,
         "eps": 8.48,
         "debt_ratio": 64.73,
         "turnover_ratio": 51.43,
-        "volatility_60d": 93.32,
+        "volatility_60d": 93.08,
         "book_value_per_share": 86.01
       }
     },
@@ -1065,14 +1068,14 @@
       },
       "industry": "電腦及週邊設備業",
       "source_metrics": {
-        "market_cap": 1367839934856,
+        "market_cap": 1398647140596,
         "shares_outstanding": 4107627432.0,
         "revenue_monthly": 423970932000.0,
         "revenue_yoy": 177.45,
         "eps": 12.93,
         "debt_ratio": 87.6,
         "turnover_ratio": 9.6,
-        "volatility_60d": 42.6,
+        "volatility_60d": 42.72,
         "book_value_per_share": 63.2
       }
     },
@@ -1085,12 +1088,12 @@
       "rarity_rank": 16,
       "bst": 460,
       "base_stats": {
-        "hp": 85,
-        "atk": 109,
-        "matk": 85,
-        "def": 48,
-        "mdef": 60,
-        "spd": 73
+        "hp": 92,
+        "atk": 104,
+        "matk": 92,
+        "def": 46,
+        "mdef": 57,
+        "spd": 69
       },
       "growth_group": "medium",
       "move_pool": [
@@ -1144,7 +1147,7 @@
         "eps": 34.7,
         "debt_ratio": 65.32,
         "turnover_ratio": 11.96,
-        "volatility_60d": 67.73,
+        "volatility_60d": 66.69,
         "book_value_per_share": 123.52
       }
     },
@@ -1209,14 +1212,14 @@
       },
       "industry": "電子零組件業",
       "source_metrics": {
-        "market_cap": 1116405198480,
+        "market_cap": 1147853232240,
         "shares_outstanding": 95297072.0,
         "revenue_monthly": 6466169000.0,
         "revenue_yoy": 344.42,
         "eps": 110.96,
         "debt_ratio": 28.35,
         "turnover_ratio": 13.32,
-        "volatility_60d": 74.2,
+        "volatility_60d": 74.21,
         "book_value_per_share": 354.2
       }
     },
@@ -1230,11 +1233,11 @@
       "bst": 460,
       "base_stats": {
         "hp": 13,
-        "atk": 131,
-        "matk": 105,
-        "def": 105,
-        "mdef": 53,
-        "spd": 53
+        "atk": 128,
+        "matk": 115,
+        "def": 102,
+        "mdef": 51,
+        "spd": 51
       },
       "growth_group": "medium",
       "move_pool": [
@@ -1281,14 +1284,14 @@
       },
       "industry": "半導體業",
       "source_metrics": {
-        "market_cap": 1103870550000,
+        "market_cap": 1102071250000,
         "shares_outstanding": 179930000.0,
         "revenue_monthly": 5218962000.0,
         "revenue_yoy": 91.58,
         "eps": 56.14,
         "debt_ratio": 33.36,
         "turnover_ratio": 7.48,
-        "volatility_60d": 73.85,
+        "volatility_60d": 73.79,
         "book_value_per_share": 315.68
       }
     },
@@ -1353,14 +1356,14 @@
       },
       "industry": "電腦及週邊設備業",
       "source_metrics": {
-        "market_cap": 430221431165,
+        "market_cap": 402345312515,
         "shares_outstanding": 185840791.0,
         "revenue_monthly": 144311808000.0,
         "revenue_yoy": 50.36,
         "eps": 156.38,
         "debt_ratio": 75.35,
         "turnover_ratio": 18.81,
-        "volatility_60d": 154.01,
+        "volatility_60d": 154.37,
         "book_value_per_share": 734.59
       }
     },
@@ -1425,14 +1428,14 @@
       },
       "industry": "電腦及週邊設備業",
       "source_metrics": {
-        "market_cap": 1223167383305,
+        "market_cap": 1246727589725,
         "shares_outstanding": 392670107.0,
         "revenue_monthly": 19481068000.0,
         "revenue_yoy": 54.34,
         "eps": 44.54,
         "debt_ratio": 68.07,
         "turnover_ratio": 25.25,
-        "volatility_60d": 77.66,
+        "volatility_60d": 77.71,
         "book_value_per_share": 140.57
       }
     },
@@ -1445,12 +1448,12 @@
       "rarity_rank": 21,
       "bst": 460,
       "base_stats": {
-        "hp": 89,
-        "atk": 44,
-        "matk": 30,
-        "def": 134,
-        "mdef": 148,
-        "spd": 15
+        "hp": 98,
+        "atk": 42,
+        "matk": 42,
+        "def": 125,
+        "mdef": 139,
+        "spd": 14
       },
       "growth_group": "medium",
       "move_pool": [
@@ -1504,7 +1507,7 @@
         "eps": 2.68,
         "debt_ratio": 30.99,
         "turnover_ratio": 2.5,
-        "volatility_60d": 13.77,
+        "volatility_60d": 13.75,
         "book_value_per_share": 47.26
       }
     },
@@ -1512,17 +1515,17 @@
       "symbol": "2885",
       "name": "元大金",
       "generation": 1,
-      "element": "steel",
+      "element": "gold",
       "rarity": "rare",
       "rarity_rank": 22,
       "bst": 460,
       "base_stats": {
-        "hp": 102,
-        "atk": 51,
-        "matk": 102,
-        "def": 34,
-        "mdef": 137,
-        "spd": 34
+        "hp": 99,
+        "atk": 49,
+        "matk": 115,
+        "def": 33,
+        "mdef": 131,
+        "spd": 33
       },
       "growth_group": "medium",
       "move_pool": [
@@ -1533,7 +1536,7 @@
           "pp": 15,
           "learn_level": 1,
           "category": "physical",
-          "element": "steel"
+          "element": "gold"
         },
         {
           "id": "gap_up",
@@ -1542,7 +1545,7 @@
           "pp": 10,
           "learn_level": 1,
           "category": "magical",
-          "element": "steel"
+          "element": "gold"
         },
         {
           "id": "long_red_engulfing",
@@ -1551,7 +1554,7 @@
           "pp": 10,
           "learn_level": 15,
           "category": "physical",
-          "element": "steel"
+          "element": "gold"
         },
         {
           "id": "long_black_engulfing",
@@ -1560,20 +1563,23 @@
           "pp": 10,
           "learn_level": 22,
           "category": "physical",
-          "element": "steel"
+          "element": "gold"
         }
       ],
       "art": {
-        "placeholder_color": "#90A4AE",
+        "placeholder_color": "#FFD54F",
         "sprite": null
       },
+      "industry": "金融保險業",
       "source_metrics": {
-        "market_cap": 946938242975,
+        "market_cap": 962189078514,
         "shares_outstanding": 13864395944.0,
+        "revenue_monthly": 19585535000.0,
+        "revenue_yoy": 57.94,
         "eps": 2.64,
         "debt_ratio": 92.04,
         "turnover_ratio": 3.84,
-        "volatility_60d": 35.14,
+        "volatility_60d": 35.26,
         "book_value_per_share": 28.73
       }
     },
@@ -1581,17 +1587,17 @@
       "symbol": "2887",
       "name": "台新新光金",
       "generation": 1,
-      "element": "steel",
+      "element": "gold",
       "rarity": "rare",
       "rarity_rank": 23,
       "bst": 460,
       "base_stats": {
-        "hp": 110,
-        "atk": 37,
-        "matk": 110,
-        "def": 37,
-        "mdef": 129,
-        "spd": 37
+        "hp": 102,
+        "atk": 51,
+        "matk": 26,
+        "def": 51,
+        "mdef": 179,
+        "spd": 51
       },
       "growth_group": "medium",
       "move_pool": [
@@ -1602,7 +1608,7 @@
           "pp": 15,
           "learn_level": 1,
           "category": "physical",
-          "element": "steel"
+          "element": "gold"
         },
         {
           "id": "gap_up",
@@ -1611,7 +1617,7 @@
           "pp": 10,
           "learn_level": 1,
           "category": "magical",
-          "element": "steel"
+          "element": "gold"
         },
         {
           "id": "long_red_engulfing",
@@ -1620,7 +1626,7 @@
           "pp": 10,
           "learn_level": 15,
           "category": "physical",
-          "element": "steel"
+          "element": "gold"
         },
         {
           "id": "long_black_engulfing",
@@ -1629,20 +1635,23 @@
           "pp": 10,
           "learn_level": 22,
           "category": "physical",
-          "element": "steel"
+          "element": "gold"
         }
       ],
       "art": {
-        "placeholder_color": "#90A4AE",
+        "placeholder_color": "#FFD54F",
         "sprite": null
       },
+      "industry": "金融保險業",
       "source_metrics": {
-        "market_cap": 1089993690670,
+        "market_cap": 1115108752667,
         "shares_outstanding": 25115061997.0,
+        "revenue_monthly": 15781347000.0,
+        "revenue_yoy": -44.54,
         "eps": 1.69,
         "debt_ratio": 92.4,
         "turnover_ratio": 4.68,
-        "volatility_60d": 35.03,
+        "volatility_60d": 35.22,
         "book_value_per_share": 27.16
       }
     },
@@ -1707,14 +1716,14 @@
       },
       "industry": "其他電子業",
       "source_metrics": {
-        "market_cap": 884511143360,
+        "market_cap": 888763600780,
         "shares_outstanding": 425245742.0,
         "revenue_monthly": 5632401000.0,
         "revenue_yoy": 156.3,
         "eps": 21.27,
         "debt_ratio": 47.08,
         "turnover_ratio": 12.85,
-        "volatility_60d": 70.57,
+        "volatility_60d": 70.47,
         "book_value_per_share": 77.88
       }
     },
@@ -1779,14 +1788,14 @@
       },
       "industry": "半導體業",
       "source_metrics": {
-        "market_cap": 717750030784,
+        "market_cap": 760500032617,
         "shares_outstanding": 4500000193.0,
         "revenue_monthly": 27308717000.0,
         "revenue_yoy": 289.43,
         "eps": 7.65,
         "debt_ratio": 40.78,
         "turnover_ratio": 77.29,
-        "volatility_60d": 84.67,
+        "volatility_60d": 85.17,
         "book_value_per_share": 36.67
       }
     },
@@ -1851,14 +1860,14 @@
       },
       "industry": "電子零組件業",
       "source_metrics": {
-        "market_cap": 701089553395,
+        "market_cap": 714012863135,
         "shares_outstanding": 646165487.0,
         "revenue_monthly": 5352700000.0,
         "revenue_yoy": 40.59,
         "eps": 5.53,
         "debt_ratio": 24.03,
         "turnover_ratio": 35.15,
-        "volatility_60d": 97.32,
+        "volatility_60d": 96.88,
         "book_value_per_share": 76.24
       }
     },
@@ -1866,17 +1875,17 @@
       "symbol": "2886",
       "name": "兆豐金",
       "generation": 1,
-      "element": "steel",
+      "element": "gold",
       "rarity": "common",
       "rarity_rank": 27,
       "bst": 420,
       "base_stats": {
-        "hp": 93,
-        "atk": 16,
-        "matk": 93,
-        "def": 31,
-        "mdef": 140,
-        "spd": 47
+        "hp": 63,
+        "atk": 21,
+        "matk": 42,
+        "def": 42,
+        "mdef": 189,
+        "spd": 63
       },
       "growth_group": "fast",
       "move_pool": [
@@ -1887,7 +1896,7 @@
           "pp": 15,
           "learn_level": 1,
           "category": "physical",
-          "element": "steel"
+          "element": "gold"
         },
         {
           "id": "gap_up",
@@ -1896,7 +1905,7 @@
           "pp": 10,
           "learn_level": 1,
           "category": "magical",
-          "element": "steel"
+          "element": "gold"
         },
         {
           "id": "long_red_engulfing",
@@ -1905,7 +1914,7 @@
           "pp": 10,
           "learn_level": 15,
           "category": "physical",
-          "element": "steel"
+          "element": "gold"
         },
         {
           "id": "long_black_engulfing",
@@ -1914,20 +1923,23 @@
           "pp": 10,
           "learn_level": 22,
           "category": "physical",
-          "element": "steel"
+          "element": "gold"
         }
       ],
       "art": {
-        "placeholder_color": "#90A4AE",
+        "placeholder_color": "#FFD54F",
         "sprite": null
       },
+      "industry": "金融保險業",
       "source_metrics": {
-        "market_cap": 768368995008,
+        "market_cap": 755018954554,
         "shares_outstanding": 14833378282.0,
+        "revenue_monthly": 7795912000.0,
+        "revenue_yoy": 15.55,
         "eps": 1.44,
         "debt_ratio": 92.31,
         "turnover_ratio": 4.94,
-        "volatility_60d": 29.34,
+        "volatility_60d": 29.58,
         "book_value_per_share": 27.13
       }
     },
@@ -1940,12 +1952,12 @@
       "rarity_rank": 28,
       "bst": 420,
       "base_stats": {
-        "hp": 105,
-        "atk": 47,
-        "matk": 58,
-        "def": 117,
-        "mdef": 58,
-        "spd": 35
+        "hp": 102,
+        "atk": 45,
+        "matk": 68,
+        "def": 114,
+        "mdef": 57,
+        "spd": 34
       },
       "growth_group": "fast",
       "move_pool": [
@@ -1992,14 +2004,14 @@
       },
       "industry": "油電燃氣業",
       "source_metrics": {
-        "market_cap": 789702055151,
+        "market_cap": 766839751986,
         "shares_outstanding": 9525959652.0,
         "revenue_monthly": 81905673000.0,
         "revenue_yoy": 50.29,
         "eps": 4.32,
         "debt_ratio": 16.6,
         "turnover_ratio": 4.71,
-        "volatility_60d": 70.02,
+        "volatility_60d": 69.86,
         "book_value_per_share": 51.11
       }
     },
@@ -2064,14 +2076,14 @@
       },
       "industry": "半導體業",
       "source_metrics": {
-        "market_cap": 808761882885,
+        "market_cap": 826853490870,
         "shares_outstanding": 134011911.0,
         "revenue_monthly": 5840094000.0,
         "revenue_yoy": 111.02,
         "eps": 23.89,
         "debt_ratio": 63.98,
         "turnover_ratio": 37.84,
-        "volatility_60d": 83.79,
+        "volatility_60d": 83.82,
         "book_value_per_share": 100.48
       }
     },
@@ -2136,14 +2148,14 @@
       },
       "industry": "電腦及週邊設備業",
       "source_metrics": {
-        "market_cap": 689281539840,
+        "market_cap": 697451902920,
         "shares_outstanding": 742760280.0,
         "revenue_monthly": 94955954000.0,
         "revenue_yoy": 51.17,
         "eps": 38.83,
         "debt_ratio": 62.01,
         "turnover_ratio": 11.45,
-        "volatility_60d": 54.11,
+        "volatility_60d": 54.12,
         "book_value_per_share": 405.73
       }
     },
@@ -2156,12 +2168,12 @@
       "rarity_rank": 31,
       "bst": 420,
       "base_stats": {
-        "hp": 81,
-        "atk": 54,
-        "matk": 27,
-        "def": 81,
-        "mdef": 68,
-        "spd": 109
+        "hp": 79,
+        "atk": 52,
+        "matk": 39,
+        "def": 79,
+        "mdef": 66,
+        "spd": 105
       },
       "growth_group": "fast",
       "move_pool": [
@@ -2208,14 +2220,14 @@
       },
       "industry": "電腦及週邊設備業",
       "source_metrics": {
-        "market_cap": 634613527062,
+        "market_cap": 641561850351,
         "shares_outstanding": 2316107763.0,
         "revenue_monthly": 19592400000.0,
         "revenue_yoy": 25.2,
         "eps": 4.8,
         "debt_ratio": 59.6,
         "turnover_ratio": 36.63,
-        "volatility_60d": 71.05,
+        "volatility_60d": 70.61,
         "book_value_per_share": 42.22
       }
     },
@@ -2300,12 +2312,12 @@
       "rarity_rank": 33,
       "bst": 420,
       "base_stats": {
-        "hp": 74,
-        "atk": 25,
-        "matk": 25,
-        "def": 25,
-        "mdef": 222,
-        "spd": 49
+        "hp": 53,
+        "atk": 26,
+        "matk": 53,
+        "def": 26,
+        "mdef": 210,
+        "spd": 52
       },
       "growth_group": "fast",
       "move_pool": [
@@ -2352,7 +2364,7 @@
       },
       "industry": "金融保險業",
       "source_metrics": {
-        "market_cap": 659232719259,
+        "market_cap": 665557979892,
         "shares_outstanding": 14056134739.0,
         "revenue_monthly": 7109220000.0,
         "revenue_yoy": 11.95,
@@ -2424,14 +2436,14 @@
       },
       "industry": "電腦及週邊設備業",
       "source_metrics": {
-        "market_cap": 580359535625,
+        "market_cap": 581949561750,
         "shares_outstanding": 3180052250.0,
         "revenue_monthly": 460065063000.0,
         "revenue_yoy": 166.48,
         "eps": 7.78,
         "debt_ratio": 82.37,
         "turnover_ratio": 43.43,
-        "volatility_60d": 52.3,
+        "volatility_60d": 52.0,
         "book_value_per_share": 61.01
       }
     },
@@ -2496,14 +2508,14 @@
       },
       "industry": "金融保險業",
       "source_metrics": {
-        "market_cap": 809078253001,
+        "market_cap": 823257061378,
         "shares_outstanding": 17723510471.0,
         "revenue_monthly": 9839301000.0,
         "revenue_yoy": 19.29,
         "eps": 1.32,
         "debt_ratio": 94.21,
         "turnover_ratio": 4.6,
-        "volatility_60d": 29.15,
+        "volatility_60d": 29.26,
         "book_value_per_share": 17.4
       }
     },
@@ -2568,14 +2580,14 @@
       },
       "industry": "電子零組件業",
       "source_metrics": {
-        "market_cap": 781652592180,
+        "market_cap": 771348320720,
         "shares_outstanding": 147203878.0,
         "revenue_monthly": 3225888000.0,
         "revenue_yoy": 90.9,
         "eps": 25.33,
         "debt_ratio": 28.69,
         "turnover_ratio": 25.43,
-        "volatility_60d": 77.17,
+        "volatility_60d": 77.26,
         "book_value_per_share": 160.69
       }
     },
@@ -2588,12 +2600,12 @@
       "rarity_rank": 37,
       "bst": 420,
       "base_stats": {
-        "hp": 76,
-        "atk": 38,
-        "matk": 96,
-        "def": 19,
-        "mdef": 172,
-        "spd": 19
+        "hp": 80,
+        "atk": 40,
+        "matk": 100,
+        "def": 20,
+        "mdef": 160,
+        "spd": 20
       },
       "growth_group": "fast",
       "move_pool": [
@@ -2640,14 +2652,14 @@
       },
       "industry": "金融保險業",
       "source_metrics": {
-        "market_cap": 658545616521,
+        "market_cap": 669632243061,
         "shares_outstanding": 14782168721.0,
         "revenue_monthly": 10051148000.0,
         "revenue_yoy": 49.48,
         "eps": 1.66,
         "debt_ratio": 93.3,
         "turnover_ratio": 3.37,
-        "volatility_60d": 26.15,
+        "volatility_60d": 26.32,
         "book_value_per_share": 18.29
       }
     },
@@ -2712,14 +2724,14 @@
       },
       "industry": "電腦及週邊設備業",
       "source_metrics": {
-        "market_cap": 595296515480,
+        "market_cap": 603986975560,
         "shares_outstanding": 869046008.0,
         "revenue_monthly": 10419341000.0,
         "revenue_yoy": 87.52,
         "eps": 9.05,
         "debt_ratio": 40.5,
         "turnover_ratio": 10.05,
-        "volatility_60d": 53.47,
+        "volatility_60d": 53.14,
         "book_value_per_share": 63.67
       }
     },
@@ -2784,14 +2796,14 @@
       },
       "industry": "光電業",
       "source_metrics": {
-        "market_cap": 791983082835,
+        "market_cap": 814218776325,
         "shares_outstanding": 130798197.0,
         "revenue_monthly": 5011942000.0,
         "revenue_yoy": -16.23,
         "eps": 82.35,
         "debt_ratio": 14.43,
         "turnover_ratio": 43.97,
-        "volatility_60d": 82.59,
+        "volatility_60d": 82.32,
         "book_value_per_share": 1464.41
       }
     },
@@ -2856,14 +2868,14 @@
       },
       "industry": "電子零組件業",
       "source_metrics": {
-        "market_cap": 533622586708,
+        "market_cap": 551503134116,
         "shares_outstanding": 1117534213.0,
         "revenue_monthly": 20666117000.0,
         "revenue_yoy": 41.05,
         "eps": 3.55,
         "debt_ratio": 39.71,
         "turnover_ratio": 66.32,
-        "volatility_60d": 83.21,
+        "volatility_60d": 82.79,
         "book_value_per_share": 139.13
       }
     },
@@ -2927,12 +2939,12 @@
         "sprite": null
       },
       "source_metrics": {
-        "market_cap": 647581465921,
+        "market_cap": 664556078396,
         "shares_outstanding": 16974612475.0,
         "eps": 1.64,
         "debt_ratio": 89.78,
         "turnover_ratio": 5.46,
-        "volatility_60d": 31.84,
+        "volatility_60d": 32.06,
         "book_value_per_share": 25.28
       }
     },
@@ -2997,14 +3009,14 @@
       },
       "industry": "電子零組件業",
       "source_metrics": {
-        "market_cap": 508290849756,
+        "market_cap": 518749509216,
         "shares_outstanding": 522932973.0,
         "revenue_monthly": 10383971000.0,
         "revenue_yoy": 76.39,
         "eps": 16.17,
         "debt_ratio": 56.53,
         "turnover_ratio": 44.43,
-        "volatility_60d": 77.92,
+        "volatility_60d": 75.87,
         "book_value_per_share": 81.49
       }
     },
@@ -3069,14 +3081,14 @@
       },
       "industry": "航運業",
       "source_metrics": {
-        "market_cap": 505537539566,
+        "market_cap": 517445276044,
         "shares_outstanding": 2165042996.0,
         "revenue_monthly": 48985697000.0,
         "revenue_yoy": 48.64,
         "eps": 11.24,
         "debt_ratio": 39.75,
         "turnover_ratio": 16.35,
-        "volatility_60d": 32.77,
+        "volatility_60d": 32.64,
         "book_value_per_share": 259.09
       }
     },
@@ -3141,14 +3153,14 @@
       },
       "industry": "金融保險業",
       "source_metrics": {
-        "market_cap": 568707985108,
+        "market_cap": 575178746000,
         "shares_outstanding": 14379468650.0,
         "revenue_monthly": 7582281000.0,
         "revenue_yoy": 13.9,
         "eps": 1.24,
         "debt_ratio": 94.24,
         "turnover_ratio": 6.41,
-        "volatility_60d": 26.33,
+        "volatility_60d": 26.38,
         "book_value_per_share": 20.97
       }
     },
@@ -3162,11 +3174,11 @@
       "bst": 420,
       "base_stats": {
         "hp": 16,
-        "atk": 49,
-        "matk": 48,
-        "def": 129,
+        "atk": 47,
+        "matk": 62,
+        "def": 124,
         "mdef": 16,
-        "spd": 162
+        "spd": 155
       },
       "growth_group": "fast",
       "move_pool": [
@@ -3213,14 +3225,14 @@
       },
       "industry": "半導體業",
       "source_metrics": {
-        "market_cap": 418893736200,
+        "market_cap": 432066495200,
         "shares_outstanding": 526910360.0,
         "revenue_monthly": 4809631000.0,
         "revenue_yoy": 40.58,
         "eps": 3.74,
         "debt_ratio": 37.32,
         "turnover_ratio": 67.36,
-        "volatility_60d": 93.8,
+        "volatility_60d": 92.15,
         "book_value_per_share": 84.39
       }
     },
@@ -3292,7 +3304,7 @@
         "eps": 2.56,
         "debt_ratio": 72.24,
         "turnover_ratio": 5.31,
-        "volatility_60d": 19.44,
+        "volatility_60d": 19.31,
         "book_value_per_share": 23.99
       }
     },
@@ -3357,14 +3369,14 @@
       },
       "industry": "其他電子業",
       "source_metrics": {
-        "market_cap": 395165241900,
+        "market_cap": 398158917975,
         "shares_outstanding": 199578405.0,
         "revenue_monthly": 8891805000.0,
         "revenue_yoy": 53.99,
         "eps": 26.94,
         "debt_ratio": 46.24,
         "turnover_ratio": 36.54,
-        "volatility_60d": 75.75,
+        "volatility_60d": 75.76,
         "book_value_per_share": 254.07
       }
     },
@@ -3377,12 +3389,12 @@
       "rarity_rank": 48,
       "bst": 420,
       "base_stats": {
-        "hp": 78,
-        "atk": 47,
-        "matk": 15,
-        "def": 78,
-        "mdef": 155,
-        "spd": 47
+        "hp": 75,
+        "atk": 45,
+        "matk": 30,
+        "def": 75,
+        "mdef": 150,
+        "spd": 45
       },
       "growth_group": "fast",
       "move_pool": [
@@ -3429,7 +3441,7 @@
       },
       "industry": "通信網路業",
       "source_metrics": {
-        "market_cap": 461705445860,
+        "market_cap": 463567161368,
         "shares_outstanding": 3723431015.0,
         "revenue_monthly": 16782864000.0,
         "revenue_yoy": 8.5,
@@ -3501,14 +3513,14 @@
       },
       "industry": "光電業",
       "source_metrics": {
-        "market_cap": 373894435372,
+        "market_cap": 389073910312,
         "shares_outstanding": 7989197337.0,
         "revenue_monthly": 18696603000.0,
         "revenue_yoy": 0.02,
         "eps": 0.77,
         "debt_ratio": 43.52,
         "turnover_ratio": 63.5,
-        "volatility_60d": 62.67,
+        "volatility_60d": 63.36,
         "book_value_per_share": 28.17
       }
     },
@@ -3573,14 +3585,14 @@
       },
       "industry": "半導體業",
       "source_metrics": {
-        "market_cap": 362405386623,
+        "market_cap": 371169101520,
         "shares_outstanding": 515512641.0,
         "revenue_monthly": 12459133000.0,
         "revenue_yoy": 28.08,
         "eps": 15.86,
         "debt_ratio": 65.75,
         "turnover_ratio": 10.98,
-        "volatility_60d": 53.57,
+        "volatility_60d": 53.28,
         "book_value_per_share": 97.83
       }
     }
