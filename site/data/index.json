@@ -2,27 +2,27 @@
   "schema_version": "0.1.0",
   "generation": 1,
   "season": "2026-S3",
-  "market_date": "2026-09-16",
-  "generated_at": "2026-09-16T23:15:39+08:00",
-  "next_settlement_at": "2026-09-17T19:00:00+08:00",
+  "market_date": "2026-09-17",
+  "generated_at": "2026-09-17T23:23:53+08:00",
+  "next_settlement_at": "2026-09-18T19:00:00+08:00",
   "files": {
     "species": {
       "path": "species.json",
-      "sha256": "f1af5c28d8a67dbd6dd272a91345fcaf02a12905c72a127711dd92bf2e263215",
-      "bytes": 87338,
-      "updated_at": "2026-09-16T23:15:39.589268+08:00"
+      "sha256": "1c32328885323c8b45f37bf9f91d5afa91935645e2849649ab9230d0eed775b1",
+      "bytes": 87650,
+      "updated_at": "2026-09-17T23:23:53.847401+08:00"
     },
     "daily": {
-      "path": "daily/2026-09-16.json",
-      "sha256": "d51f7bc49a7c04effbe2f78ef9b48ccbe8388a3ae1cd602b52ab0b4d1bf8e49a",
-      "bytes": 62057,
-      "updated_at": "2026-09-16T23:15:39.592241+08:00"
+      "path": "daily/2026-09-17.json",
+      "sha256": "dec2087ca7431d775360f7d31af27f407118e1a5fec377980098ec4975035f8a",
+      "bytes": 62193,
+      "updated_at": "2026-09-17T23:23:53.850405+08:00"
     },
     "balance": {
       "path": "balance.json",
       "sha256": "e9b08c7728ab5a79e5b44210afebea60224ef4c82a5874b1800baa18e54815bf",
       "bytes": 4493,
-      "updated_at": "2026-09-16T23:15:39.592585+08:00"
+      "updated_at": "2026-09-17T23:23:53.850747+08:00"
     }
   },
   "pipeline": {
@@ -45,7 +45,7 @@
       {
         "name": "twse-monthly-revenue",
         "endpoint": "/opendata/t187ap05_L",
-        "record_count": 1081
+        "record_count": 1086
       },
       {
         "name": "twse-turnover",
@@ -62,10 +62,6 @@
         "endpoint": "/stock/intraday/ticker",
         "record_count": 50
       }
-    ],
-    "warnings": [
-      "hp（revenue）缺值 3 檔，以中位百分位替代：2881, 2891, 2883",
-      "matk（revenue_yoy）缺值 3 檔，以中位百分位替代：2881, 2891, 2883"
     ]
   }
 }
