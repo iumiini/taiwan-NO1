@@ -1,0 +1,3054 @@
+{
+  "schema_version": "0.1.0",
+  "market_date": "2026-09-18",
+  "settled_at": "2026-09-18T19:00:00+08:00",
+  "generation": 1,
+  "season": "2026-S3",
+  "world": {
+    "index": {
+      "symbol": "IX0001",
+      "name": "發行量加權股價指數",
+      "close": 47180.75,
+      "change_percent": 1.93
+    },
+    "weather": "sunny",
+    "business_light": null,
+    "multipliers": {
+      "atk": 1.03,
+      "matk": 1.03
+    }
+  },
+  "monsters": [
+    {
+      "symbol": "2330",
+      "price": {
+        "open": 2460,
+        "high": 2460,
+        "low": 2435,
+        "close": 2460,
+        "change_percent": 1.44,
+        "volume": 40892688
+      },
+      "moving_averages": {
+        "ma5": 2406.0,
+        "ma20": 2416.75,
+        "ma60": 2397.0,
+        "ma240": 1954.08
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_surge",
+        "volume_ratio": 1.9,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 28.11,
+        "pb": 9.78,
+        "dividend_yield": 0.91,
+        "pe_tag": "fair",
+        "market_cap": 63793630364820
+      },
+      "capture": {
+        "cost": 24600,
+        "rate_modifier": 0.7,
+        "iv_range": {
+          "min": 15,
+          "max": 30
+        }
+      },
+      "encounter_weight": 1.0,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 38.23,
+        "d": 33.89,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "2454",
+      "price": {
+        "open": 4600,
+        "high": 4735,
+        "low": 4545,
+        "close": 4710,
+        "change_percent": 4.67,
+        "volume": 10365174
+      },
+      "moving_averages": {
+        "ma5": 4546.0,
+        "ma20": 4334.75,
+        "ma60": 4011.5,
+        "ma240": 2553.33
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_surge",
+        "volume_ratio": 1.29,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 74.32,
+        "pb": 16.93,
+        "dividend_yield": 1.19,
+        "pe_tag": "popular",
+        "market_cap": 7559326807230
+      },
+      "capture": {
+        "cost": 47100,
+        "rate_modifier": 0.7,
+        "iv_range": {
+          "min": 15,
+          "max": 30
+        }
+      },
+      "encounter_weight": 1.12,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 1.0,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 48.17,
+        "d": 51.25,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2308",
+      "price": {
+        "open": 1730,
+        "high": 1750,
+        "low": 1715,
+        "close": 1735,
+        "change_percent": 2.97,
+        "volume": 13051318
+      },
+      "moving_averages": {
+        "ma5": 1684.0,
+        "ma20": 1749.0,
+        "ma60": 1783.67,
+        "ma240": 1506.5
+      },
+      "weather": [
+        "excited"
+      ],
+      "aura": {
+        "quadrant": "true_surge",
+        "volume_ratio": 1.2,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 53.63,
+        "pb": 14.9,
+        "dividend_yield": 0.69,
+        "pe_tag": "popular",
+        "market_cap": 4506737675815
+      },
+      "capture": {
+        "cost": 17350,
+        "rate_modifier": 0.7,
+        "iv_range": {
+          "min": 15,
+          "max": 30
+        }
+      },
+      "encounter_weight": 1.0,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85
+      },
+      "kd": {
+        "k": 43.09,
+        "d": 37.54,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "2317",
+      "price": {
+        "open": 252.5,
+        "high": 253,
+        "low": 249,
+        "close": 250.5,
+        "change_percent": 0.0,
+        "volume": 44803117
+      },
+      "moving_averages": {
+        "ma5": 248.8,
+        "ma20": 250.05,
+        "ma60": 248.53,
+        "ma240": 236.11
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_surge",
+        "volume_ratio": 1.42,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 16.51,
+        "pb": 1.84,
+        "dividend_yield": 2.86,
+        "pe_tag": "fair",
+        "market_cap": 3525974497498
+      },
+      "capture": {
+        "cost": 2505.0,
+        "rate_modifier": 0.7,
+        "iv_range": {
+          "min": 15,
+          "max": 30
+        }
+      },
+      "encounter_weight": 0.67,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 41.99,
+        "d": 38.53,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "3711",
+      "price": {
+        "open": 631,
+        "high": 643,
+        "low": 627,
+        "close": 638,
+        "change_percent": 3.91,
+        "volume": 27928565
+      },
+      "moving_averages": {
+        "ma5": 612.2,
+        "ma20": 608.45,
+        "ma60": 618.0,
+        "ma240": 415.15
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_surge",
+        "volume_ratio": 1.63,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 44.43,
+        "pb": 6.94,
+        "dividend_yield": 1.07,
+        "pe_tag": "popular",
+        "market_cap": 2852225115916
+      },
+      "capture": {
+        "cost": 6380,
+        "rate_modifier": 0.7,
+        "iv_range": {
+          "min": 15,
+          "max": 30
+        }
+      },
+      "encounter_weight": 0.36,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 52.84,
+        "d": 51.5,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "2383",
+      "price": {
+        "open": 4910,
+        "high": 5000,
+        "low": 4810,
+        "close": 4890,
+        "change_percent": 4.15,
+        "volume": 3783127
+      },
+      "moving_averages": {
+        "ma5": 5026.0,
+        "ma20": 5363.25,
+        "ma60": 5293.33,
+        "ma240": 3306.29
+      },
+      "weather": [],
+      "aura": {
+        "quadrant": "true_surge",
+        "volume_ratio": 1.85,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 73.42,
+        "pb": 28.84,
+        "dividend_yield": 0.53,
+        "pe_tag": "popular",
+        "market_cap": 1752190247460
+      },
+      "capture": {
+        "cost": 48900,
+        "rate_modifier": 0.7,
+        "iv_range": {
+          "min": 15,
+          "max": 30
+        }
+      },
+      "encounter_weight": 0.51,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 1.0
+      },
+      "kd": {
+        "k": 16.43,
+        "d": 17.13,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2881",
+      "price": {
+        "open": 152.5,
+        "high": 152.5,
+        "low": 148,
+        "close": 150.5,
+        "change_percent": -0.66,
+        "volume": 28248424
+      },
+      "moving_averages": {
+        "ma5": 152.0,
+        "ma20": 146.5,
+        "ma60": 133.33,
+        "ma240": 105.01
+      },
+      "weather": [
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_weak",
+        "volume_ratio": 1.39,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 14.16,
+        "pb": 1.87,
+        "dividend_yield": 2.81,
+        "pe_tag": "fair",
+        "market_cap": 2108108425276
+      },
+      "capture": {
+        "cost": 1505.0,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 0.11,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 1.0,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 66.37,
+        "d": 67.64,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2408",
+      "price": {
+        "open": 508,
+        "high": 525,
+        "low": 508,
+        "close": 525,
+        "change_percent": 7.58,
+        "volume": 79512606
+      },
+      "moving_averages": {
+        "ma5": 488.8,
+        "ma20": 509.23,
+        "ma60": 463.42,
+        "ma240": 285.7
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_surge",
+        "volume_ratio": 1.15,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 18.94,
+        "pb": 5.22,
+        "dividend_yield": 0.28,
+        "pe_tag": "fair",
+        "market_cap": 1811358094350
+      },
+      "capture": {
+        "cost": 5250,
+        "rate_modifier": 0.7,
+        "iv_range": {
+          "min": 15,
+          "max": 30
+        }
+      },
+      "encounter_weight": 2.36,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 44.54,
+        "d": 34.36,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "3037",
+      "price": {
+        "open": 973,
+        "high": 990,
+        "low": 971,
+        "close": 981,
+        "change_percent": 4.36,
+        "volume": 14576719
+      },
+      "moving_averages": {
+        "ma5": 960.6,
+        "ma20": 1002.9,
+        "ma60": 954.68,
+        "ma240": 583.07
+      },
+      "weather": [
+        "excited"
+      ],
+      "aura": {
+        "quadrant": "phantom_surge",
+        "volume_ratio": 0.63,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 62.58,
+        "pb": 12.07,
+        "dividend_yield": 0.21,
+        "pe_tag": "popular",
+        "market_cap": 1610107055676
+      },
+      "capture": {
+        "cost": 9810,
+        "rate_modifier": 1.0,
+        "iv_range": {
+          "min": 5,
+          "max": 25
+        }
+      },
+      "encounter_weight": 1.07,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85
+      },
+      "kd": {
+        "k": 57.34,
+        "d": 55.63,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "2303",
+      "price": {
+        "open": 155,
+        "high": 160.5,
+        "low": 153.5,
+        "close": 156,
+        "change_percent": 5.76,
+        "volume": 306815637
+      },
+      "moving_averages": {
+        "ma5": 145.3,
+        "ma20": 134.7,
+        "ma60": 135.79,
+        "ma240": 86.34
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_surge",
+        "volume_ratio": 1.6,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 22.18,
+        "pb": 4.17,
+        "dividend_yield": 1.77,
+        "pe_tag": "fair",
+        "market_cap": 1960934648244
+      },
+      "capture": {
+        "cost": 1560,
+        "rate_modifier": 0.7,
+        "iv_range": {
+          "min": 15,
+          "max": 30
+        }
+      },
+      "encounter_weight": 1.0,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 82.02,
+        "d": 80.67,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "1303",
+      "price": {
+        "open": 240.5,
+        "high": 245,
+        "low": 234,
+        "close": 238,
+        "change_percent": 0.85,
+        "volume": 82174219
+      },
+      "moving_averages": {
+        "ma5": 230.7,
+        "ma20": 225.93,
+        "ma60": 198.01,
+        "ma240": 104.61
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "phantom_surge",
+        "volume_ratio": 0.9,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 38.06,
+        "pb": 3.92,
+        "dividend_yield": 0.34,
+        "pe_tag": "popular",
+        "market_cap": 1887535538182
+      },
+      "capture": {
+        "cost": 2380,
+        "rate_modifier": 1.0,
+        "iv_range": {
+          "min": 5,
+          "max": 25
+        }
+      },
+      "encounter_weight": 1.04,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 53.59,
+        "d": 50.82,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "2882",
+      "price": {
+        "open": 113,
+        "high": 113,
+        "low": 109,
+        "close": 110.5,
+        "change_percent": -1.34,
+        "volume": 43826072
+      },
+      "moving_averages": {
+        "ma5": 111.5,
+        "ma20": 109.37,
+        "ma60": 101.65,
+        "ma240": 81.87
+      },
+      "weather": [
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_weak",
+        "volume_ratio": 1.78,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 13.21,
+        "pb": 1.61,
+        "dividend_yield": 3.13,
+        "pe_tag": "fair",
+        "market_cap": 1620947719144
+      },
+      "capture": {
+        "cost": 1105.0,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 0.25,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 1.0,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 40.65,
+        "d": 46.12,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2891",
+      "price": {
+        "open": 72,
+        "high": 72,
+        "low": 68.9,
+        "close": 69.5,
+        "change_percent": -2.39,
+        "volume": 75667472
+      },
+      "moving_averages": {
+        "ma5": 69.86,
+        "ma20": 67.02,
+        "ma60": 66.34,
+        "ma240": 55.01
+      },
+      "weather": [
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_weak",
+        "volume_ratio": 2.14,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 17.03,
+        "pb": 2.03,
+        "dividend_yield": 3.51,
+        "pe_tag": "fair",
+        "market_cap": 1367477330017
+      },
+      "capture": {
+        "cost": 695.0,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 0.29,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 1.0,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 75.6,
+        "d": 76.23,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2327",
+      "price": {
+        "open": 543,
+        "high": 550,
+        "low": 533,
+        "close": 550,
+        "change_percent": 3.97,
+        "volume": 26963850
+      },
+      "moving_averages": {
+        "ma5": 539.4,
+        "ma20": 552.2,
+        "ma60": 663.33,
+        "ma240": 423.32
+      },
+      "weather": [
+        "excited"
+      ],
+      "aura": {
+        "quadrant": "phantom_surge",
+        "volume_ratio": 0.67,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 35.62,
+        "pb": 6.15,
+        "dividend_yield": 1.13,
+        "pe_tag": "popular",
+        "market_cap": 1132301878400
+      },
+      "capture": {
+        "cost": 5500,
+        "rate_modifier": 1.0,
+        "iv_range": {
+          "min": 5,
+          "max": 25
+        }
+      },
+      "encounter_weight": 3.0,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 1.0
+      },
+      "kd": {
+        "k": 32.16,
+        "d": 34.51,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2382",
+      "price": {
+        "open": 346.5,
+        "high": 346.5,
+        "low": 340,
+        "close": 343,
+        "change_percent": -0.29,
+        "volume": 21601445
+      },
+      "moving_averages": {
+        "ma5": 338.6,
+        "ma20": 336.62,
+        "ma60": 336.03,
+        "ma240": 310.4
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_weak",
+        "volume_ratio": 1.43,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 14.99,
+        "pb": 5.44,
+        "dividend_yield": 4.53,
+        "pe_tag": "fair",
+        "market_cap": 1408916209176
+      },
+      "capture": {
+        "cost": 3430,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 0.8,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 59.63,
+        "d": 49.88,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "2345",
+      "price": {
+        "open": 1810,
+        "high": 1855,
+        "low": 1810,
+        "close": 1855,
+        "change_percent": 3.06,
+        "volume": 5848473
+      },
+      "moving_averages": {
+        "ma5": 1842.0,
+        "ma20": 2003.5,
+        "ma60": 2196.17,
+        "ma240": 1702.61
+      },
+      "weather": [
+        "excited"
+      ],
+      "aura": {
+        "quadrant": "true_surge",
+        "volume_ratio": 1.67,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 28.28,
+        "pb": 14.57,
+        "dividend_yield": 0.83,
+        "pe_tag": "fair",
+        "market_cap": 1040873698935
+      },
+      "capture": {
+        "cost": 18550,
+        "rate_modifier": 0.7,
+        "iv_range": {
+          "min": 15,
+          "max": 30
+        }
+      },
+      "encounter_weight": 1.0,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 1.0
+      },
+      "kd": {
+        "k": 10.46,
+        "d": 11.98,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2059",
+      "price": {
+        "open": 12600,
+        "high": 12730,
+        "low": 12230,
+        "close": 12495,
+        "change_percent": 1.63,
+        "volume": 486160
+      },
+      "moving_averages": {
+        "ma5": 12108.0,
+        "ma20": 13269.75,
+        "ma60": 10681.33,
+        "ma240": 5645.69
+      },
+      "weather": [
+        "excited"
+      ],
+      "aura": {
+        "quadrant": "phantom_surge",
+        "volume_ratio": 0.97,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 67.78,
+        "pb": 34.71,
+        "dividend_yield": 0.41,
+        "pe_tag": "popular",
+        "market_cap": 1190736914640
+      },
+      "capture": {
+        "cost": 124950,
+        "rate_modifier": 1.0,
+        "iv_range": {
+          "min": 5,
+          "max": 25
+        }
+      },
+      "encounter_weight": 1.11,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85
+      },
+      "kd": {
+        "k": 21.17,
+        "d": 16.77,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "7769",
+      "price": {
+        "open": 6225,
+        "high": 6540,
+        "low": 6140,
+        "close": 6540,
+        "change_percent": 6.6,
+        "volume": 3329210
+      },
+      "moving_averages": {
+        "ma5": 6248.0,
+        "ma20": 6260.25,
+        "ma60": 6349.33,
+        "ma240": 4664.19
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_surge",
+        "volume_ratio": 3.69,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 63.34,
+        "pb": 19.43,
+        "dividend_yield": 1.06,
+        "pe_tag": "popular",
+        "market_cap": 1176742200000
+      },
+      "capture": {
+        "cost": 65400,
+        "rate_modifier": 0.7,
+        "iv_range": {
+          "min": 15,
+          "max": 30
+        }
+      },
+      "encounter_weight": 0.63,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 1.0,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 32.69,
+        "d": 37.65,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "6669",
+      "price": {
+        "open": 2195,
+        "high": 2195,
+        "low": 2115,
+        "close": 2140,
+        "change_percent": 0.23,
+        "volume": 4839353
+      },
+      "moving_averages": {
+        "ma5": 2205.0,
+        "ma20": 3946.0,
+        "ma60": 4978.92,
+        "ma240": 4429.73
+      },
+      "weather": [
+        "depressed"
+      ],
+      "aura": {
+        "quadrant": "true_surge",
+        "volume_ratio": 1.25,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 6.84,
+        "pb": 2.91,
+        "dividend_yield": 7.69,
+        "pe_tag": "undervalued",
+        "market_cap": 397699292740
+      },
+      "capture": {
+        "cost": 21400,
+        "rate_modifier": 0.7,
+        "iv_range": {
+          "min": 15,
+          "max": 30
+        }
+      },
+      "encounter_weight": 1.57,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 0.85,
+        "atk": 0.95,
+        "matk": 0.95,
+        "def": 0.95,
+        "mdef": 0.95,
+        "spd": 0.95
+      },
+      "kd": {
+        "k": 12.3,
+        "d": 11.35,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "3017",
+      "price": {
+        "open": 3345,
+        "high": 3450,
+        "low": 3290,
+        "close": 3430,
+        "change_percent": 7.69,
+        "volume": 3785048
+      },
+      "moving_averages": {
+        "ma5": 3243.0,
+        "ma20": 3290.25,
+        "ma60": 2800.75,
+        "ma240": 2052.53
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_surge",
+        "volume_ratio": 1.1,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 42.46,
+        "pb": 22.66,
+        "dividend_yield": 0.66,
+        "pe_tag": "popular",
+        "market_cap": 1346858467010
+      },
+      "capture": {
+        "cost": 34300,
+        "rate_modifier": 0.7,
+        "iv_range": {
+          "min": 15,
+          "max": 30
+        }
+      },
+      "encounter_weight": 2.11,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 44.21,
+        "d": 36.24,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "2412",
+      "price": {
+        "open": 145,
+        "high": 145.5,
+        "low": 144,
+        "close": 145.5,
+        "change_percent": 0.34,
+        "volume": 28080563
+      },
+      "moving_averages": {
+        "ma5": 144.0,
+        "ma20": 139.07,
+        "ma60": 138.41,
+        "ma240": 135.59
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_surge",
+        "volume_ratio": 2.38,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 28.49,
+        "pb": 3.07,
+        "dividend_yield": 3.59,
+        "pe_tag": "fair",
+        "market_cap": 1128708472298
+      },
+      "capture": {
+        "cost": 1455.0,
+        "rate_modifier": 0.7,
+        "iv_range": {
+          "min": 15,
+          "max": 30
+        }
+      },
+      "encounter_weight": 0.21,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 98.37,
+        "d": 96.19,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "2885",
+      "price": {
+        "open": 69.2,
+        "high": 70,
+        "low": 68.6,
+        "close": 70,
+        "change_percent": 1.45,
+        "volume": 51889026
+      },
+      "moving_averages": {
+        "ma5": 69.5,
+        "ma20": 67.48,
+        "ma60": 66.67,
+        "ma240": 50.35
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_surge",
+        "volume_ratio": 2.3,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 16.16,
+        "pb": 2.4,
+        "dividend_yield": 3.19,
+        "pe_tag": "fair",
+        "market_cap": 970507716080
+      },
+      "capture": {
+        "cost": 700,
+        "rate_modifier": 0.7,
+        "iv_range": {
+          "min": 15,
+          "max": 30
+        }
+      },
+      "encounter_weight": 0.32,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 1.0,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 58.35,
+        "d": 65.29,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2887",
+      "price": {
+        "open": 44.7,
+        "high": 44.7,
+        "low": 42.6,
+        "close": 44.4,
+        "change_percent": 0.79,
+        "volume": 139346857
+      },
+      "moving_averages": {
+        "ma5": 43.96,
+        "ma20": 40.99,
+        "ma60": 37.07,
+        "ma240": 26.18
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_surge",
+        "volume_ratio": 2.15,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 16.31,
+        "pb": 1.62,
+        "dividend_yield": 2.5,
+        "pe_tag": "fair",
+        "market_cap": 1115108752667
+      },
+      "capture": {
+        "cost": 444.0,
+        "rate_modifier": 0.7,
+        "iv_range": {
+          "min": 15,
+          "max": 30
+        }
+      },
+      "encounter_weight": 0.39,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 1.0,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 88.25,
+        "d": 88.59,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2360",
+      "price": {
+        "open": 2135,
+        "high": 2290,
+        "low": 2135,
+        "close": 2290,
+        "change_percent": 9.83,
+        "volume": 2681171
+      },
+      "moving_averages": {
+        "ma5": 2137.0,
+        "ma20": 2094.0,
+        "ma60": 2065.58,
+        "ma240": 1528.1
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_surge",
+        "volume_ratio": 1.27,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 53.19,
+        "pb": 26.77,
+        "dividend_yield": 0.94,
+        "pe_tag": "popular",
+        "market_cap": 973812749180
+      },
+      "capture": {
+        "cost": 22900,
+        "rate_modifier": 0.7,
+        "iv_range": {
+          "min": 15,
+          "max": 30
+        }
+      },
+      "encounter_weight": 1.07,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 1.0,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 33.07,
+        "d": 35.9,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2344",
+      "price": {
+        "open": 177,
+        "high": 179.5,
+        "low": 173.5,
+        "close": 179.5,
+        "change_percent": 5.59,
+        "volume": 138585216
+      },
+      "moving_averages": {
+        "ma5": 167.6,
+        "ma20": 176.28,
+        "ma60": 171.65,
+        "ma240": 115.33
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_surge",
+        "volume_ratio": 1.06,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 18.74,
+        "pb": 4.64,
+        "dividend_yield": 0.29,
+        "pe_tag": "fair",
+        "market_cap": 807750034644
+      },
+      "capture": {
+        "cost": 1795.0,
+        "rate_modifier": 0.7,
+        "iv_range": {
+          "min": 15,
+          "max": 30
+        }
+      },
+      "encounter_weight": 3.0,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 39.45,
+        "d": 33.71,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "8046",
+      "price": {
+        "open": 1105,
+        "high": 1120,
+        "low": 1065,
+        "close": 1100,
+        "change_percent": 3.29,
+        "volume": 10172303
+      },
+      "moving_averages": {
+        "ma5": 1082.0,
+        "ma20": 1127.25,
+        "ma60": 1137.5,
+        "ma240": 655.74
+      },
+      "weather": [
+        "excited"
+      ],
+      "aura": {
+        "quadrant": "phantom_surge",
+        "volume_ratio": 0.92,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 125.15,
+        "pb": 13.97,
+        "dividend_yield": 0.19,
+        "pe_tag": "popular",
+        "market_cap": 710782035700
+      },
+      "capture": {
+        "cost": 11000,
+        "rate_modifier": 1.0,
+        "iv_range": {
+          "min": 5,
+          "max": 25
+        }
+      },
+      "encounter_weight": 2.94,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85
+      },
+      "kd": {
+        "k": 54.12,
+        "d": 41.47,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "2886",
+      "price": {
+        "open": 51.9,
+        "high": 51.9,
+        "low": 50.1,
+        "close": 51.1,
+        "change_percent": -1.54,
+        "volume": 47531956
+      },
+      "moving_averages": {
+        "ma5": 51.64,
+        "ma20": 49.58,
+        "ma60": 48.57,
+        "ma240": 42.5
+      },
+      "weather": [
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_weak",
+        "volume_ratio": 1.64,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 20.19,
+        "pb": 1.91,
+        "dividend_yield": 3.37,
+        "pe_tag": "fair",
+        "market_cap": 757985630210
+      },
+      "capture": {
+        "cost": 511.0,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 0.36,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 1.0,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 63.74,
+        "d": 72.62,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "6505",
+      "price": {
+        "open": 85.2,
+        "high": 86.5,
+        "low": 84.1,
+        "close": 86.5,
+        "change_percent": 0.35,
+        "volume": 23493760
+      },
+      "moving_averages": {
+        "ma5": 83.78,
+        "ma20": 78.72,
+        "ma60": 72.65,
+        "ma240": 56.41
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "phantom_surge",
+        "volume_ratio": 0.89,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 14.97,
+        "pb": 1.69,
+        "dividend_yield": 1.39,
+        "pe_tag": "fair",
+        "market_cap": 823995509898
+      },
+      "capture": {
+        "cost": 865.0,
+        "rate_modifier": 1.0,
+        "iv_range": {
+          "min": 5,
+          "max": 25
+        }
+      },
+      "encounter_weight": 0.34,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 1.0,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 59.66,
+        "d": 60.76,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "3443",
+      "price": {
+        "open": 6600,
+        "high": 7150,
+        "low": 6510,
+        "close": 7150,
+        "change_percent": 10.0,
+        "volume": 2735598
+      },
+      "moving_averages": {
+        "ma5": 6451.0,
+        "ma20": 6050.75,
+        "ma60": 5043.25,
+        "ma240": 3369.17
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_surge",
+        "volume_ratio": 1.43,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 166.62,
+        "pb": 64.69,
+        "dividend_yield": 0.31,
+        "pe_tag": "popular",
+        "market_cap": 958185163650
+      },
+      "capture": {
+        "cost": 71500,
+        "rate_modifier": 0.7,
+        "iv_range": {
+          "min": 15,
+          "max": 30
+        }
+      },
+      "encounter_weight": 2.72,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 76.86,
+        "d": 63.9,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "2357",
+      "price": {
+        "open": 964,
+        "high": 964,
+        "low": 947,
+        "close": 960,
+        "change_percent": 1.27,
+        "volume": 4548145
+      },
+      "moving_averages": {
+        "ma5": 941.8,
+        "ma20": 966.75,
+        "ma60": 838.95,
+        "ma240": 674.57
+      },
+      "weather": [
+        "excited"
+      ],
+      "aura": {
+        "quadrant": "true_surge",
+        "volume_ratio": 1.3,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 13.86,
+        "pb": 2.34,
+        "dividend_yield": 4.43,
+        "pe_tag": "fair",
+        "market_cap": 713049868800
+      },
+      "capture": {
+        "cost": 9600,
+        "rate_modifier": 0.7,
+        "iv_range": {
+          "min": 15,
+          "max": 30
+        }
+      },
+      "encounter_weight": 0.82,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85
+      },
+      "kd": {
+        "k": 43.43,
+        "d": 38.06,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "2301",
+      "price": {
+        "open": 284,
+        "high": 288.5,
+        "low": 280.5,
+        "close": 282,
+        "change_percent": 1.44,
+        "volume": 24262502
+      },
+      "moving_averages": {
+        "ma5": 277.7,
+        "ma20": 293.75,
+        "ma60": 250.75,
+        "ma240": 194.38
+      },
+      "weather": [
+        "excited"
+      ],
+      "aura": {
+        "quadrant": "phantom_surge",
+        "volume_ratio": 0.84,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 32.51,
+        "pb": 6.58,
+        "dividend_yield": 1.8,
+        "pe_tag": "popular",
+        "market_cap": 653142389166
+      },
+      "capture": {
+        "cost": 2820,
+        "rate_modifier": 1.0,
+        "iv_range": {
+          "min": 5,
+          "max": 25
+        }
+      },
+      "encounter_weight": 2.64,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85
+      },
+      "kd": {
+        "k": 21.04,
+        "d": 18.2,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "6446",
+      "price": {
+        "open": 1205,
+        "high": 1215,
+        "low": 1180,
+        "close": 1180,
+        "change_percent": -1.26,
+        "volume": 12722966
+      },
+      "moving_averages": {
+        "ma5": 1195.0,
+        "ma20": 1348.75,
+        "ma60": 1309.42,
+        "ma240": 808.98
+      },
+      "weather": [],
+      "aura": {
+        "quadrant": "true_weak",
+        "volume_ratio": 2.72,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 58.52,
+        "pb": 12.13,
+        "dividend_yield": 0.22,
+        "pe_tag": "popular",
+        "market_cap": 498472870480
+      },
+      "capture": {
+        "cost": 11800,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 1.55,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 1.0
+      },
+      "kd": {
+        "k": 9.67,
+        "d": 11.98,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2880",
+      "price": {
+        "open": 47.55,
+        "high": 48,
+        "low": 46.25,
+        "close": 47.65,
+        "change_percent": -0.52,
+        "volume": 35776337
+      },
+      "moving_averages": {
+        "ma5": 47.22,
+        "ma20": 43.63,
+        "ma60": 41.45,
+        "ma240": 34.71
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_weak",
+        "volume_ratio": 1.92,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 20.74,
+        "pb": 2.76,
+        "dividend_yield": 3.03,
+        "pe_tag": "fair",
+        "market_cap": 669774820313
+      },
+      "capture": {
+        "cost": 476.5,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 0.31,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 1.0,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 89.83,
+        "d": 91.58,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "3231",
+      "price": {
+        "open": 189.5,
+        "high": 190.5,
+        "low": 186.5,
+        "close": 186.5,
+        "change_percent": 0.0,
+        "volume": 44060071
+      },
+      "moving_averages": {
+        "ma5": 183.9,
+        "ma20": 184.4,
+        "ma60": 173.92,
+        "ma240": 149.83
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "phantom_surge",
+        "volume_ratio": 0.83,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 14.81,
+        "pb": 3.06,
+        "dividend_yield": 2.95,
+        "pe_tag": "fair",
+        "market_cap": 593079744625
+      },
+      "capture": {
+        "cost": 1865.0,
+        "rate_modifier": 1.0,
+        "iv_range": {
+          "min": 5,
+          "max": 25
+        }
+      },
+      "encounter_weight": 3.0,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 36.75,
+        "d": 34.16,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "2884",
+      "price": {
+        "open": 47.3,
+        "high": 47.3,
+        "low": 45,
+        "close": 46.4,
+        "change_percent": -1.9,
+        "volume": 91400807
+      },
+      "moving_averages": {
+        "ma5": 46.43,
+        "ma20": 42.84,
+        "ma60": 38.41,
+        "ma240": 34.0
+      },
+      "weather": [
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_weak",
+        "volume_ratio": 1.78,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 19.63,
+        "pb": 2.72,
+        "dividend_yield": 2.96,
+        "pe_tag": "fair",
+        "market_cap": 822370885854
+      },
+      "capture": {
+        "cost": 464.0,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 0.33,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 1.0,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 88.97,
+        "d": 91.91,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "3653",
+      "price": {
+        "open": 5520,
+        "high": 5650,
+        "low": 5415,
+        "close": 5525,
+        "change_percent": 3.17,
+        "volume": 1052328
+      },
+      "moving_averages": {
+        "ma5": 5450.0,
+        "ma20": 5621.0,
+        "ma60": 4437.92,
+        "ma240": 3492.92
+      },
+      "weather": [
+        "excited"
+      ],
+      "aura": {
+        "quadrant": "phantom_surge",
+        "volume_ratio": 0.84,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 120.85,
+        "pb": 33.33,
+        "dividend_yield": 0.41,
+        "pe_tag": "popular",
+        "market_cap": 813301425950
+      },
+      "capture": {
+        "cost": 55250,
+        "rate_modifier": 1.0,
+        "iv_range": {
+          "min": 5,
+          "max": 25
+        }
+      },
+      "encounter_weight": 1.83,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 1.0
+      },
+      "kd": {
+        "k": 30.98,
+        "d": 34.24,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2890",
+      "price": {
+        "open": 46.05,
+        "high": 46.05,
+        "low": 44.8,
+        "close": 45.25,
+        "change_percent": -1.52,
+        "volume": 52002471
+      },
+      "moving_averages": {
+        "ma5": 45.17,
+        "ma20": 42.42,
+        "ma60": 40.61,
+        "ma240": 32.45
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_weak",
+        "volume_ratio": 1.8,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 17.34,
+        "pb": 2.51,
+        "dividend_yield": 2.83,
+        "pe_tag": "fair",
+        "market_cap": 668893134625
+      },
+      "capture": {
+        "cost": 452.5,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 0.24,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 1.0,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 85.02,
+        "d": 86.62,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2395",
+      "price": {
+        "open": 695,
+        "high": 697,
+        "low": 682,
+        "close": 690,
+        "change_percent": 0.58,
+        "volume": 3490854
+      },
+      "moving_averages": {
+        "ma5": 685.2,
+        "ma20": 678.7,
+        "ma60": 612.08,
+        "ma240": 413.43
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_surge",
+        "volume_ratio": 1.16,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 43.45,
+        "pb": 10.77,
+        "dividend_yield": 1.63,
+        "pe_tag": "popular",
+        "market_cap": 599641745520
+      },
+      "capture": {
+        "cost": 6900,
+        "rate_modifier": 0.7,
+        "iv_range": {
+          "min": 15,
+          "max": 30
+        }
+      },
+      "encounter_weight": 0.72,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 55.72,
+        "d": 45.36,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "3008",
+      "price": {
+        "open": 6280,
+        "high": 6500,
+        "low": 6150,
+        "close": 6430,
+        "change_percent": 6.81,
+        "volume": 2850571
+      },
+      "moving_averages": {
+        "ma5": 6145.0,
+        "ma20": 6655.0,
+        "ma60": 5120.75,
+        "ma240": 3244.75
+      },
+      "weather": [
+        "excited"
+      ],
+      "aura": {
+        "quadrant": "true_surge",
+        "volume_ratio": 1.15,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 32.02,
+        "pb": 4.11,
+        "dividend_yield": 1.33,
+        "pe_tag": "popular",
+        "market_cap": 841032406710
+      },
+      "capture": {
+        "cost": 64300,
+        "rate_modifier": 0.7,
+        "iv_range": {
+          "min": 15,
+          "max": 30
+        }
+      },
+      "encounter_weight": 3.0,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85
+      },
+      "kd": {
+        "k": 25.75,
+        "d": 22.88,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "4958",
+      "price": {
+        "open": 486,
+        "high": 491,
+        "low": 472,
+        "close": 473,
+        "change_percent": -0.63,
+        "volume": 29899628
+      },
+      "moving_averages": {
+        "ma5": 481.9,
+        "ma20": 483.3,
+        "ma60": 503.45,
+        "ma240": 314.15
+      },
+      "weather": [],
+      "aura": {
+        "quadrant": "true_weak",
+        "volume_ratio": 1.06,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 56.33,
+        "pb": 3.42,
+        "dividend_yield": 0.72,
+        "pe_tag": "popular",
+        "market_cap": 528593682749
+      },
+      "capture": {
+        "cost": 4730,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 3.0,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 1.0
+      },
+      "kd": {
+        "k": 26.85,
+        "d": 39.76,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2883",
+      "price": {
+        "open": 40,
+        "high": 40,
+        "low": 38.4,
+        "close": 39.3,
+        "change_percent": -0.88,
+        "volume": 84041486
+      },
+      "moving_averages": {
+        "ma5": 39.01,
+        "ma20": 35.89,
+        "ma60": 32.1,
+        "ma240": 22.54
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_weak",
+        "volume_ratio": 1.66,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 13.86,
+        "pb": 1.57,
+        "dividend_yield": 2.52,
+        "pe_tag": "fair",
+        "market_cap": 667102270268
+      },
+      "capture": {
+        "cost": 393.0,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 0.39,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 1.0,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 86.69,
+        "d": 89.46,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2368",
+      "price": {
+        "open": 978,
+        "high": 1020,
+        "low": 969,
+        "close": 1020,
+        "change_percent": 7.37,
+        "volume": 11142009
+      },
+      "moving_averages": {
+        "ma5": 990.8,
+        "ma20": 1057.65,
+        "ma60": 1023.28,
+        "ma240": 891.76
+      },
+      "weather": [
+        "excited"
+      ],
+      "aura": {
+        "quadrant": "true_surge",
+        "volume_ratio": 1.36,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 34.1,
+        "pb": 11.66,
+        "dividend_yield": 1.03,
+        "pe_tag": "popular",
+        "market_cap": 533391632460
+      },
+      "capture": {
+        "cost": 10200,
+        "rate_modifier": 0.7,
+        "iv_range": {
+          "min": 15,
+          "max": 30
+        }
+      },
+      "encounter_weight": 3.0,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 1.0
+      },
+      "kd": {
+        "k": 18.63,
+        "d": 18.81,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2603",
+      "price": {
+        "open": 242,
+        "high": 245.5,
+        "low": 238.5,
+        "close": 240.5,
+        "change_percent": -0.82,
+        "volume": 10734765
+      },
+      "moving_averages": {
+        "ma5": 238.5,
+        "ma20": 236.18,
+        "ma60": 215.72,
+        "ma240": 200.96
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "dormant",
+        "volume_ratio": 0.85,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "gold",
+        "amount": 15
+      },
+      "valuation": {
+        "pe": 9.62,
+        "pb": 0.94,
+        "dividend_yield": 6.6,
+        "pe_tag": "undervalued",
+        "market_cap": 520692840538
+      },
+      "capture": {
+        "cost": 2405.0,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 1.18,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 75.17,
+        "d": 65.63,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "2892",
+      "price": {
+        "open": 40.75,
+        "high": 40.75,
+        "low": 38.9,
+        "close": 39.8,
+        "change_percent": -2.33,
+        "volume": 52942496
+      },
+      "moving_averages": {
+        "ma5": 39.99,
+        "ma20": 36.99,
+        "ma60": 34.99,
+        "ma240": 30.53
+      },
+      "weather": [
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_weak",
+        "volume_ratio": 1.39,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 19.04,
+        "pb": 1.94,
+        "dividend_yield": 3.19,
+        "pe_tag": "fair",
+        "market_cap": 572302852270
+      },
+      "capture": {
+        "cost": 398.0,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 0.46,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 1.0,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 85.15,
+        "d": 89.38,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "3189",
+      "price": {
+        "open": 828,
+        "high": 850,
+        "low": 815,
+        "close": 832,
+        "change_percent": 3.35,
+        "volume": 18317821
+      },
+      "moving_averages": {
+        "ma5": 810.0,
+        "ma20": 829.05,
+        "ma60": 798.6,
+        "ma240": 433.63
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_surge",
+        "volume_ratio": 1.02,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 149.35,
+        "pb": 9.54,
+        "dividend_yield": 0.19,
+        "pe_tag": "popular",
+        "market_cap": 438389419520
+      },
+      "capture": {
+        "cost": 8320,
+        "rate_modifier": 0.7,
+        "iv_range": {
+          "min": 15,
+          "max": 30
+        }
+      },
+      "encounter_weight": 3.0,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 53.96,
+        "d": 44.19,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "1216",
+      "price": {
+        "open": 75.5,
+        "high": 75.5,
+        "low": 74.9,
+        "close": 75,
+        "change_percent": -0.66,
+        "volume": 17030035
+      },
+      "moving_averages": {
+        "ma5": 74.82,
+        "ma20": 75.93,
+        "ma60": 76.38,
+        "ma240": 74.95
+      },
+      "weather": [
+        "excited"
+      ],
+      "aura": {
+        "quadrant": "true_weak",
+        "volume_ratio": 1.71,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 18.24,
+        "pb": 3.15,
+        "dividend_yield": 3.97,
+        "pe_tag": "fair",
+        "market_cap": 426151156575
+      },
+      "capture": {
+        "cost": 750,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 0.38,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85
+      },
+      "kd": {
+        "k": 35.22,
+        "d": 30.49,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "3665",
+      "price": {
+        "open": 2060,
+        "high": 2210,
+        "low": 2045,
+        "close": 2210,
+        "change_percent": 9.95,
+        "volume": 6471964
+      },
+      "moving_averages": {
+        "ma5": 2030.0,
+        "ma20": 2064.0,
+        "ma60": 2069.92,
+        "ma240": 1806.86
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_surge",
+        "volume_ratio": 2.07,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 36.91,
+        "pb": 7.91,
+        "dividend_yield": 0.76,
+        "pe_tag": "popular",
+        "market_cap": 441068275050
+      },
+      "capture": {
+        "cost": 22100,
+        "rate_modifier": 0.7,
+        "iv_range": {
+          "min": 15,
+          "max": 30
+        }
+      },
+      "encounter_weight": 2.63,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 61.17,
+        "d": 42.69,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "3045",
+      "price": {
+        "open": 124.5,
+        "high": 125.5,
+        "low": 123,
+        "close": 124,
+        "change_percent": 0.0,
+        "volume": 18171327
+      },
+      "moving_averages": {
+        "ma5": 123.6,
+        "ma20": 118.7,
+        "ma60": 114.68,
+        "ma240": 110.97
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_surge",
+        "volume_ratio": 2.22,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 23.44,
+        "pb": 4.49,
+        "dividend_yield": 3.82,
+        "pe_tag": "fair",
+        "market_cap": 461705445860
+      },
+      "capture": {
+        "cost": 1240,
+        "rate_modifier": 0.7,
+        "iv_range": {
+          "min": 15,
+          "max": 30
+        }
+      },
+      "encounter_weight": 0.45,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 1.0,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 92.27,
+        "d": 95.63,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "3481",
+      "price": {
+        "open": 49.4,
+        "high": 49.4,
+        "low": 48.25,
+        "close": 48.25,
+        "change_percent": -0.52,
+        "volume": 128581460
+      },
+      "moving_averages": {
+        "ma5": 47.98,
+        "ma20": 48.2,
+        "ma60": 52.05,
+        "ma240": 32.02
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "dormant",
+        "volume_ratio": 0.73,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 62.18,
+        "pb": 1.72,
+        "dividend_yield": 2.06,
+        "pe_tag": "popular",
+        "market_cap": 385478771510
+      },
+      "capture": {
+        "cost": 482.5,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 3.0,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 35.64,
+        "d": 34.77,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "2379",
+      "price": {
+        "open": 724,
+        "high": 728,
+        "low": 716,
+        "close": 727,
+        "change_percent": 1.68,
+        "volume": 2568530
+      },
+      "moving_averages": {
+        "ma5": 715.6,
+        "ma20": 718.25,
+        "ma60": 739.05,
+        "ma240": 585.83
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_surge",
+        "volume_ratio": 1.07,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 25.92,
+        "pb": 7.31,
+        "dividend_yield": 3.5,
+        "pe_tag": "fair",
+        "market_cap": 374777690007
+      },
+      "capture": {
+        "cost": 7270,
+        "rate_modifier": 0.7,
+        "iv_range": {
+          "min": 15,
+          "max": 30
+        }
+      },
+      "encounter_weight": 0.79,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 61.8,
+        "d": 45.94,
+        "cross": null,
+        "shield": true
+      }
+    }
+  ]
+}
