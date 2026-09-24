@@ -101,6 +101,14 @@ def check_cross_rules(root: Path, errors: list) -> None:
             if tier != expect:
                 errors.append(
                     f"{daily_path.name} {m['symbol']} PB {pb} 應為 {expect} 盾，實為 {tier}")
+
+        # 估值必須屬於目標交易日（V-T01）。舊檔沒有 as_of，無從判斷，略過。
+        for m in daily["monsters"]:  # noqa: PLW2901
+            as_of = m["valuation"].get("as_of")
+            if as_of is not None and as_of != daily["market_date"]:
+                errors.append(
+                    f"{daily_path.name} {m['symbol']} 估值屬於 {as_of}，"
+                    f"不是市場日 {daily['market_date']}")
         print(f"  ✅ {daily_path.name} 通過每日層交叉檢查")
 
 

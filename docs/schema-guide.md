@@ -51,7 +51,7 @@
 | `atk` | 物攻 | EPS | TWSE `t187ap06_L_ci`（依業別分端點） |
 | `matk` | 魔攻 | 營收 YoY | TWSE `t187ap05_L`（官方直接給） |
 | `def` | 物防 | 負債比（反向） | TWSE `t187ap07_L_ci`（依業別分端點） |
-| `mdef` | 魔防 | 波動率（反向）＋殖利率 | 富果 K 線自算 ＋ TWSE `BWIBBU_ALL` |
+| `mdef` | 魔防 | 波動率（反向）＋殖利率 | 富果 K 線自算 ＋ TWSE `BWIBBU_d`（指定交易日） |
 | `spd` | 速度 | 周轉率 | TWSE `FMSRFK_ALL`（官方直接給） |
 
 財報端點依業別拆成多支，管線需合併處理：
