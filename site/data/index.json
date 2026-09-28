@@ -3,26 +3,26 @@
   "generation": 1,
   "season": "2026-S3",
   "market_date": "2026-09-24",
-  "generated_at": "2026-09-25T23:39:49+08:00",
+  "generated_at": "2026-09-29T02:21:20+08:00",
   "next_settlement_at": "2026-09-25T19:00:00+08:00",
   "files": {
     "species": {
       "path": "species.json",
       "sha256": "d0beb432364b9aefce88ed772c98ffe467ca6d9ff9daadc4f4beeec829a644f6",
       "bytes": 87654,
-      "updated_at": "2026-09-25T23:39:49.148985+08:00"
+      "updated_at": "2026-09-29T02:21:20.037549+08:00"
     },
     "daily": {
       "path": "daily/2026-09-24.json",
       "sha256": "d31294ec783bad84a3bf3216f4cea53046895ca3c4b406e9e561dfe2cdc3d03e",
       "bytes": 62833,
-      "updated_at": "2026-09-25T23:39:49.151441+08:00"
+      "updated_at": "2026-09-29T02:21:20.041090+08:00"
     },
     "balance": {
       "path": "balance.json",
       "sha256": "e9b08c7728ab5a79e5b44210afebea60224ef4c82a5874b1800baa18e54815bf",
       "bytes": 4493,
-      "updated_at": "2026-09-25T23:39:49.151873+08:00"
+      "updated_at": "2026-09-29T02:21:20.042020+08:00"
     }
   },
   "pipeline": {
