@@ -32,8 +32,16 @@ jobs:
 
       # 財報快取必須進版控：runner 是全新容器，本機檔案不會跨執行保留。
       # 每日併入當季新公布的公司，公布空窗期則沿用上一季。
+      # 財報是季更，抓不到新的就沿用快取——這正是快取存在的理由。
+      # 2026-09-29 TWSE 以「安全性考量」擋掉財報端點，整晚結算因此中斷。
       - name: 更新財報快取
+        id: refresh
+        continue-on-error: true
         run: python3 -m src.fundamentals refresh
+
+      - name: 財報更新失敗時註記
+        if: steps.refresh.outcome == 'failure'
+        run: echo "::warning::財報端點無法取得，本次沿用既有快取"
 
       - name: 產生圖鑑資料
         env:

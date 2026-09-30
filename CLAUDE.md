@@ -12,8 +12,8 @@
 | 用途 | 頁面 |
 |---|---|
 | 設計規格總表 | [設計討論總結](https://app.notion.com/p/396fd52e67648143845ed7a667dd85ba) |
-| Q&A 協作紀錄（現行） | [Claude 協作對話內容](https://app.notion.com/p/3bbfd52e676480728a2aed5ec901d79f) |
-| Q&A 協作紀錄（前一張） | [Claude 協作對話內容](https://app.notion.com/p/3bafd52e6764800c9fdcfd526923f090) |
+| Q&A 協作紀錄（現行） | [Claude 協作對話內容](https://app.notion.com/p/3ebfd52e6764805380a4c98745ca03a3) |
+| Q&A 協作紀錄（前一張） | [Claude 協作對話內容](https://app.notion.com/p/3bbfd52e676480728a2aed5ec901d79f) |
 | 專案頁 | [台股寶可夢](https://app.notion.com/p/395fd52e67648010a05cdcfe9bf9b8c9) |
 
 專案頁的摺疊區塊**已凍結**，一切以《設計討論總結》為準。
