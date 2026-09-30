@@ -183,9 +183,10 @@ def collect(size: int, skip_ticker: bool, refreeze: bool = False,
         f"（{f'以 {freeze_date} 收盤凍結' if created else '沿用已凍結名單'}）："
         f"{'、'.join(symbols[:6])}…")
 
-    log("④ 估值（本益比／殖利率／淨值比）…")
-    vals = sources.valuations()
-    note("twse-bwibbu", "/exchangeReport/BWIBBU_ALL", len(vals))
+    log(f"④ 估值（本益比／殖利率／淨值比，指名 {market_date}）…")
+    # 向來源指名目標交易日；原本的 BWIBBU_ALL 給「最新可得」，實測永遠晚一天。
+    vals = sources.market_stats_on(market_date)
+    note("twse-bwibbu-d", "/rwd/zh/afterTrading/BWIBBU_d", len(vals))
 
     log("⑤ 月營收與 YoY…")
     revenue = sources.monthly_revenue()
@@ -204,6 +205,7 @@ def collect(size: int, skip_ticker: bool, refreeze: bool = False,
 
     log(f"⑧ 歷史 K 線與指標（{len(symbols)} 檔，分段抓取）…")
     missing_quote: list[str] = []
+    close_mismatch: list[str] = []
     for i, symbol in enumerate(symbols, 1):
         if symbol not in quotes:
             # 凍結名單的成員可能因下市、暫停交易或轉板而從當日行情消失。
@@ -222,8 +224,16 @@ def collect(size: int, skip_ticker: bool, refreeze: bool = False,
         val = vals.get(symbol, {})
         f = fund.get(symbol, {})
         close = rows[0]["close"]
-        pe = _f(val.get("PEratio"))
-        pb = _f(val.get("PBratio"))
+        pe, pb = val.get("pe"), val.get("pb")
+        # 跨來源核對（V-X01）：TWSE 估值表的收盤價應等於富果 K 線收盤價。
+        # 不一致代表兩邊不是同一個交易日，淨值比就不能拿來回推每股淨值。
+        same_day = (rows[0].get("date") == market_date
+                    and val.get("close") is not None
+                    and abs(val["close"] - close) < 1e-6)
+        if val and not same_day:
+            close_mismatch.append(
+                f"{symbol}（K 線 {rows[0].get('date')} {close}／"
+                f"TWSE {val.get('date')} {val.get('close')}）")
 
         # 空窗期回推：季報未公布時，EPS 與每股淨值改由每日估值端點反推。
         eps = f.get("eps")
@@ -245,13 +255,18 @@ def collect(size: int, skip_ticker: bool, refreeze: bool = False,
             "eps": eps,
             "eps_source": eps_source,
             "debt_ratio": f.get("debt_ratio"),
+            # 回推每股淨值僅限淨值比與收盤價屬同一交易日（S3），否則寧可留空。
             "book_value_per_share": (f.get("book_value_per_share")
-                                     or (round(close / pb, 2) if pb else None)),
+                                     or (round(close / pb, 2) if pb and same_day
+                                         else None)),
             "fiscal_period": f.get("fiscal_period"),
             "turnover_ratio": _f(turnover.get(symbol, {}).get("TurnoverRatio")),
             "volatility_60d": ind["volatility_60d"],
             "pe": pe, "pb": pb,
-            "dividend_yield": _f(val.get("DividendYield")),
+            "dividend_yield": val.get("dividend_yield"),
+            "valuation_as_of": val.get("date"),
+            "dividend_year": val.get("dividend_year"),
+            "valuation_fiscal_period": val.get("fiscal_period"),
             "close": close,
             "change_percent": change_pct,
             "candle": rows[0],
@@ -271,6 +286,10 @@ def collect(size: int, skip_ticker: bool, refreeze: bool = False,
                 "detention" if t.get("isDisposition")
                 else "hyper_evolution" if t.get("isAttention") else None)
         note("fugle-ticker", "/stock/intraday/ticker", len(symbols))
+
+    if close_mismatch:
+        fund_warnings.append(
+            f"{len(close_mismatch)} 檔估值表與 K 線收盤價不一致：{'、'.join(close_mismatch)}")
 
     if missing_quote:
         fund_warnings.append(
@@ -323,6 +342,9 @@ def build_daily(bundle: dict, species_by_symbol: dict, balance: dict) -> dict:
                 "dividend_yield": m["dividend_yield"],
                 "pe_tag": pe_tag(m["pe"], balance["valuation_tags"]),
                 "market_cap": m["market_cap"],
+                "as_of": m["valuation_as_of"],
+                "dividend_year": m["dividend_year"],
+                "fiscal_period": m["valuation_fiscal_period"],
             },
             "capture": {
                 "cost": round(m["close"] * cap_cfg["price_multiplier"], 2),

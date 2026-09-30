@@ -135,34 +135,66 @@ def _twse(path: str, timeout: int = 120) -> list[dict]:
     return body if isinstance(body, list) else []
 
 
-def valuations() -> dict[str, dict]:
-    """本益比、殖利率、股價淨值比。每日全市場，是空窗期回推 EPS 的依據。"""
-    return {r["Code"]: r for r in _twse("exchangeReport/BWIBBU_ALL")}
+def _num(text) -> float | None:
+    """TWSE web API 的數字欄：千分位逗號、無值時為「-」或空字串。"""
+    try:
+        return float(str(text).replace(",", ""))
+    except ValueError:
+        return None
 
 
-def closing_prices_on(date_str: str) -> dict[str, float]:
-    """指定日期的全市場收盤價，供賽季名單以過去某一天凍結。
+def market_stats_on(date_str: str) -> dict[str, dict]:
+    """**指定交易日**的全市場估值與收盤價（本益比、殖利率、淨值比）。
 
-    走 TWSE 的 web API（非 OpenAPI），因為只有它支援日期參數；OpenAPI 的
-    對應端點只給最新一日。回傳的是個股（約 1084 檔），不含 ETF——正好是
-    選股需要的母體。
+    取代原本的 OpenAPI `BWIBBU_ALL`：那支只給「最新可得」的一日，在管線
+    執行時點結構性地落後一個交易日，導致每份已發布檔的估值都晚一天。
+    目標日由呼叫端指名，資料不是那一天就直接失敗，不拿別天的數字頂替。
+
+    **只涵蓋上市**（約 1080 檔個股，不含 ETF）。殖利率的股利年度與本益比的
+    財報期間一併保留——沒有它們，數值無法被正確解讀。
 
     date_str 為 ISO 格式（2026-08-11）。
     """
     ymd = date_str.replace("-", "")
     body = _request(
-        "https://www.twse.com.tw/exchangeReport/BWIBBU_d"
+        "https://www.twse.com.tw/rwd/zh/afterTrading/BWIBBU_d"
         f"?response=json&date={ymd}&selectType=ALL")
     if body.get("stat") != "OK":
-        raise SourceError(f"{date_str} 無交易資料：{body.get('stat')}")
+        raise SourceError(f"{date_str} 無估值資料：{body.get('stat')}")
+    if body.get("date") != ymd:
+        raise SourceError(f"要求 {date_str} 的估值，TWSE 回傳的是 {body.get('date')}")
 
-    out: dict[str, float] = {}
+    # 欄位順序依 fields 對應，不寫死索引。
+    idx = {name: i for i, name in enumerate(body.get("fields") or [])}
+    need = ["證券代號", "收盤價", "殖利率(%)", "股利年度", "本益比", "股價淨值比", "財報年/季"]
+    if missing := [n for n in need if n not in idx]:
+        raise SourceError(f"BWIBBU_d 欄位變動，缺少：{'、'.join(missing)}")
+
+    out: dict[str, dict] = {}
     for row in body.get("data") or []:
-        try:
-            out[row[0]] = float(row[2].replace(",", ""))
-        except (IndexError, ValueError):
-            continue
+        year = row[idx["股利年度"]]
+        out[row[idx["證券代號"]]] = {
+            "date": date_str,
+            "close": _num(row[idx["收盤價"]]),
+            "dividend_yield": _num(row[idx["殖利率(%)"]]),
+            # 民國年，例：114。空值時為 None。
+            "dividend_year": int(year) if str(year).strip().isdigit() else None,
+            "pe": _num(row[idx["本益比"]]),
+            "pb": _num(row[idx["股價淨值比"]]),
+            # 例：「115/2」＝民國 115 年第 2 季。
+            "fiscal_period": (row[idx["財報年/季"]] or None),
+        }
     return out
+
+
+def closing_prices_on(date_str: str) -> dict[str, float]:
+    """指定日期的全市場收盤價，供賽季名單以過去某一天凍結。
+
+    由 market_stats_on() 衍生，因此同樣**只涵蓋上市**個股、不含 ETF——
+    正好是選股需要的母體。
+    """
+    return {code: r["close"] for code, r in market_stats_on(date_str).items()
+            if r["close"] is not None}
 
 
 def company_profiles() -> dict[str, dict]:

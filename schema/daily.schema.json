@@ -177,7 +177,10 @@
           "enum": ["undervalued", "fair", "popular", "mysterious"],
           "description": "身價標籤。undervalued 💎 被低估的實力派；fair ⚖️ 身價合理；popular 🔥 人氣王（含人氣稅）；mysterious ❓ 神秘系（EPS 為負無法鑑定）。只管錢包決策，不影響收服機率。"
         },
-        "market_cap": { "type": ["number", "null"], "description": "當日市值＝收盤價×股本。供圖鑑顯示，不影響本賽季稀有度。" }
+        "market_cap": { "type": ["number", "null"], "description": "當日市值＝收盤價×股本。供圖鑑顯示，不影響本賽季稀有度。" },
+        "as_of": { "type": ["string", "null"], "format": "date", "description": "本益比／淨值比／殖利率實際所屬的交易日，應等於 market_date。null＝該檔不在 TWSE 估值表。2026-09-24 前的檔案無此欄。" },
+        "dividend_year": { "type": ["integer", "null"], "description": "殖利率採用的股利年度（民國年，例：114）。殖利率沒有股利年度就無法解讀。" },
+        "fiscal_period": { "type": ["string", "null"], "description": "本益比採用的財報期間（民國年/季，例：115/2）。" }
       }
     },
 

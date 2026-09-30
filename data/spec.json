@@ -41,7 +41,7 @@
     {
       "id": "stat_mdef", "category": "六圍", "name": "魔防",
       "definition": "殖利率百分位與波動率反向百分位的平均。抗市場恐慌情緒",
-      "sources": ["TWSE BWIBBU_ALL 殖利率", "富果歷史 K 線自算 60 日年化波動率"],
+      "sources": ["TWSE BWIBBU_d 指定交易日殖利率", "富果歷史 K 線自算 60 日年化波動率"],
       "status": "locked", "decided_on": "2026-08-12",
       "supersedes": "第十章「僅波動率（反向）」的寫法",
       "implemented_in": "src/statmapper.py STAT_SOURCES",
