@@ -66,6 +66,7 @@ body {
 }
 
 .label {
+  white-space: nowrap;
   font-size: var(--step--1);
   letter-spacing: 0.16em;
   color: var(--text-faint);
@@ -121,12 +122,15 @@ body {
 }
 .masthead .meta { margin-left: auto; display: flex; gap: 1.25rem; flex-wrap: wrap; }
 
+/* 左右兩欄等高：右欄＝種族值＋今日狀態，總高度與肖像卡相當，
+   肖像卡再拉伸到同一條底線，氣場置中填滿多出的空間。 */
 .specimen {
   display: grid;
   grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
   gap: 2rem;
-  align-items: start;
+  align-items: stretch;
 }
+.side { display: flex; flex-direction: column; gap: 1.25rem; min-width: 0; }
 @media (max-width: 820px) { .specimen { grid-template-columns: 1fr; } }
 
 .portrait {
@@ -138,7 +142,8 @@ body {
   flex-direction: column;
   gap: 1.5rem;
 }
-#aura { width: 100%; height: auto; display: block; }
+.aura-box { flex: 1; display: flex; align-items: center; justify-content: center; }
+#aura { width: 100%; max-width: 380px; height: auto; display: block; }
 
 .dexno {
   font-family: var(--mono);
@@ -173,7 +178,7 @@ body {
 
 .stats { display: flex; flex-direction: column; gap: 1.5rem; }
 .stats-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
-.stats-head .left { display: flex; align-items: baseline; gap: 0.6rem; }
+.stats-head .left { display: flex; align-items: baseline; gap: 0.4rem 0.6rem; flex-wrap: wrap; min-width: 0; }
 .bst { font-family: var(--mono); font-size: var(--step-2); color: var(--accent-deep); font-variant-numeric: tabular-nums; font-weight: 700; }
 
 .radar-row {
@@ -192,6 +197,32 @@ body {
 .bar { height: 6px; background: var(--surface-2); border-radius: 999px; overflow: hidden; }
 .bar > i { display: block; height: 100%; background: var(--stat-ink); border-radius: 999px; opacity: 0.9; }
 
+.today-card { padding: 1.25rem 1.4rem 1.1rem; display: flex; flex-direction: column; gap: 0.9rem; }
+.today-card .today { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 480px) { .today-card .today { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.today-card .tile { padding: 0.8rem 0.9rem; }
+.today-card .tile .v { font-size: 1.15rem; }
+.card-head { display: flex; align-items: baseline; gap: 0.6rem; flex-wrap: wrap; }
+.card-head h2 { font-family: var(--serif); font-size: 1.15rem; margin: 0; letter-spacing: 0.03em; }
+/* 說明性文字收合：預設只看數字，想知道「為什麼」再展開 */
+details.fold > summary {
+  cursor: pointer; list-style: none;
+  color: var(--text-dim); font-size: var(--step-0);
+  display: flex; align-items: center; gap: 0.45rem;
+}
+details.fold > summary::-webkit-details-marker { display: none; }
+details.fold > summary::before {
+  content: "▸"; color: var(--accent-deep); font-size: 0.8em;
+  transition: transform 0.15s; display: inline-block;
+}
+details.fold[open] > summary::before { transform: rotate(90deg); }
+details.fold > summary:hover { color: var(--text); }
+details.fold > .note, details.fold > .fold-body { margin-top: 0.7rem; }
+details.section-fold > summary { gap: 0.4rem 0.9rem; flex-wrap: wrap; }
+details.section-fold > summary::before { font-size: 1rem; }
+details.section-fold > summary h2 { white-space: nowrap; font-family: var(--serif); font-size: var(--step-2); font-weight: 700; margin: 0; color: var(--text); letter-spacing: 0.03em; }
+details.section-fold > summary .hint { color: var(--text-dim); font-size: var(--step-0); }
+details.section-fold > .fold-body { margin-top: 1.1rem; }
 .today { display: grid; grid-template-columns: repeat(auto-fit, minmax(158px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
 .tile { background: var(--surface); padding: 1.1rem 1.2rem; display: flex; flex-direction: column; gap: 0.3rem; }
 .tile .v { font-size: var(--step-2); font-weight: 700; line-height: 1.25; }
@@ -644,7 +675,7 @@ function render(data) {
 
     <section class="specimen">
       <div class="portrait">
-        <canvas id="aura" data-symbol="${esc(s.symbol)}" aria-label="氣場：${aura.name}"></canvas>
+        <div class="aura-box"><canvas id="aura" data-symbol="${esc(s.symbol)}" aria-label="氣場：${aura.name}"></canvas></div>
         <div>
           <div class="dexno">No.${esc(s.symbol)}</div>
           <h2 class="creature-name">${esc(s.name)}</h2>
@@ -657,6 +688,7 @@ function render(data) {
         </div>
       </div>
 
+      <div class="side">
       <div class="stats card">
         <div class="stats-head">
           <span class="left"><span class="label">種族值</span>${P}<span class="datestamp">${slowStamp}</span></span>
@@ -666,15 +698,16 @@ function render(data) {
           <canvas id="radar" aria-label="六圍雷達圖"></canvas>
           <div class="statlist">${statRows}</div>
         </div>
-        <p class="note">同稀有度的怪獸總點數相同，差別只在形狀。台積電把點數壓在生命與物攻，速度只有 ${s.base_stats.spd} —— 週轉率 ${num(sm.turnover_ratio)}%，大戶抱著不動，股性最慢。</p>
+        <details class="fold">
+          <summary>形狀怎麼看</summary>
+          <p class="note">同稀有度的怪獸總點數相同，差別只在形狀。台積電把點數壓在生命與物攻，速度只有 ${s.base_stats.spd} —— 週轉率 ${num(sm.turnover_ratio)}%，大戶抱著不動，股性最慢。</p>
+        </details>
       </div>
-    </section>
 
-    <section>
-      <div class="section-head">
-        <h2>今日狀態</h2><span class="datestamp">${fastStamp}</span>
-        <p>每個交易日晚間結算一次，只影響當日表現，不改動種族值</p>
-      </div>
+      <div class="card today-card">
+        <div class="card-head">
+          <h2>今日狀態</h2><span class="datestamp">${fastStamp}</span>
+        </div>
       <div class="today">
         <div class="tile">
           <span class="v num ${dir}">${num(d.price.close, 0)}</span>
@@ -701,14 +734,17 @@ function render(data) {
           <span class="n">身價　本益比 <span class="num">${num(d.valuation.pe)}</span></span>
         </div>
       </div>
-      <p class="note" style="margin-top:1.1rem">${aura.desc}<br>${weatherDesc}。</p>
+        <details class="fold">
+          <summary>今天為什麼是這樣</summary>
+          <p class="note">${aura.desc}<br>${weatherDesc}。<br>每個交易日晚間結算一次，只影響當日表現，不改動種族值。</p>
+        </details>
+      </div>
+      </div>
     </section>
 
-    <section>
-      <div class="section-head">
-        <h2>牠為什麼長這樣</h2>
-        <p>每一項能力值都對應一個真實的財報或行情數字</p>
-      </div>
+    <details class="fold section-fold">
+      <summary><h2>牠為什麼長這樣</h2><span class="hint">每一項能力值都對應一個真實的財報或行情數字</span></summary>
+      <div class="fold-body">
       <div class="card tablewrap">
         <table>
           <thead>
@@ -718,13 +754,12 @@ function render(data) {
         </table>
       </div>
       ${sm.debt_ratio == null ? `<p class="note warn" style="margin-top:1.1rem">負債比取自季報，${esc(m.fiscal_period)} 尚未公布，物防暫以名單中位數代替。財報公布後會自動補上。</p>` : ""}
-    </section>
-
-    <section>
-      <div class="section-head">
-        <h2>公司檔案</h2>
-        <p>圖鑑同時是一份真實的公司資料</p>
       </div>
+    </details>
+
+    <details class="fold section-fold">
+      <summary><h2>公司檔案</h2><span class="hint">圖鑑同時是一份真實的公司資料</span></summary>
+      <div class="fold-body">
       <div class="card tablewrap">
         <table>
           <tbody>
@@ -739,7 +774,8 @@ function render(data) {
         </table>
       </div>
       <p class="note" style="margin-top:1.1rem">貴不貴看的是本益比，不是股價。台積電一股 ${num(d.price.close, 0)} 元，本益比 ${num(d.valuation.pe)} 倍 —— 你付的是價格，牠的實力來自每股盈餘 ${num(sm.eps)} 元。兩者的落差就是人氣稅。</p>
-    </section>
+      </div>
+    </details>
 
     <section>
       <div class="section-head">
