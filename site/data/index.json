@@ -1,28 +1,28 @@
 {
   "schema_version": "0.1.0",
   "generation": 1,
-  "season": "2026-S3",
+  "season": "2026-S4",
   "market_date": "2026-09-30",
-  "generated_at": "2026-09-30T19:11:21+08:00",
+  "generated_at": "2026-10-01T00:54:02+08:00",
   "next_settlement_at": "2026-10-01T19:00:00+08:00",
   "files": {
     "species": {
       "path": "species.json",
-      "sha256": "e1a07413b15eb3ed544cb3bcd404a502314ea7b738e97756ed437db8fe95bdd1",
-      "bytes": 87650,
-      "updated_at": "2026-09-30T19:11:21.526558+08:00"
+      "sha256": "41c8a96436c5a7886888b3eeebbe6abef9d538642a7c990ab2e74f6be2e4c24d",
+      "bytes": 87617,
+      "updated_at": "2026-10-01T00:54:02.292672+08:00"
     },
     "daily": {
       "path": "daily/2026-09-30.json",
-      "sha256": "76affb2f5aeea24256b1be76c28a28059831ae8347318ef89cd5b8e8f633f4a8",
-      "bytes": 67006,
-      "updated_at": "2026-09-30T19:11:21.529694+08:00"
+      "sha256": "8a5beb950da0da5f8c2ee54cd2bcd5bf809a388ac76614a8b6b51fa5a4acc9e9",
+      "bytes": 66873,
+      "updated_at": "2026-10-01T00:54:02.296684+08:00"
     },
     "balance": {
       "path": "balance.json",
       "sha256": "e9b08c7728ab5a79e5b44210afebea60224ef4c82a5874b1800baa18e54815bf",
       "bytes": 4493,
-      "updated_at": "2026-09-30T19:11:21.530133+08:00"
+      "updated_at": "2026-10-01T00:54:02.297137+08:00"
     }
   },
   "pipeline": {
