@@ -11,7 +11,7 @@
 
 ## 網頁預覽
 
-圖鑑網頁在 `site/index.html`，本機預覽：
+圖鑑網頁：`site/index.html` 是總覽（卡片牆），`site/detail.html?symbol=代號` 是詳細頁。本機預覽：
 
 ```bash
 python3 -m http.server 8899 --directory site   # 開 http://localhost:8899
@@ -38,7 +38,7 @@ GitHub Pages（免費靜態託管）
   ├ /data/species.json  ← 種族層，整季不變
   ├ /data/daily/*.json  ← 每日層
   ├ /data/balance.json  ← 平衡參數
-  └ /index.html         ← 圖鑑網頁（B 階段）
+  └ /index.html         ← 圖鑑總覽；/detail.html?symbol=代號 ← 詳細頁
 ```
 
 **沒有伺服器程式在運作。** 運算在前一晚的排程就完成，寫成檔案。

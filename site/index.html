@@ -33,8 +33,6 @@ body { margin: 0; background: var(--ground); color: var(--text); font-family: va
 .toolbar { display: flex; flex-wrap: wrap; gap: .6rem 1rem; align-items: center; margin-bottom: 1.2rem; font-size: .9rem; }
 .toolbar select { font: inherit; padding: .3rem .6rem; border: 1px solid var(--line); border-radius: 6px;
                   background: var(--card); color: var(--text); }
-.proto { background: #FDEFD6; border: 1px dashed var(--accent-deep); color: var(--accent-deep);
-         padding: .35rem .7rem; border-radius: 6px; font-size: .82rem; }
 
 /* 卡片是固定比例設計：設計寬 240 單位，所有尺寸（含字級）都以卡片自身寬度換算。
    不論欄寬或裝置，卡片比例與文字比例一致，也不會折行。 */
@@ -91,7 +89,6 @@ body { margin: 0; background: var(--ground); color: var(--text); font-family: va
       <option value="rank">市值排名</option>
       <option value="symbol">編號</option>
     </select></label>
-    <span class="proto" id="proto" hidden>試作版：目前只顯示 2330，加 <code>?all=1</code> 預覽全部 50 檔的排版</span>
     <span id="count" class="dim"></span>
   </div>
   <main class="grid" id="grid"></main>
@@ -977,9 +974,7 @@ async function load() {
 }
 
 load().then(data => {
-  const all = new URLSearchParams(location.search).get("all") === "1";
-  let list = data.monsters;
-  if (!all) { list = list.filter(m => m.symbol === "2330"); document.getElementById("proto").hidden = false; }
+  const list = data.monsters;
   document.getElementById("meta").textContent = `${data.season}　·　市場日 ${data.market_date}`;
   const sel = document.getElementById("sort");
   const grid = document.getElementById("grid");
