@@ -36,10 +36,14 @@ body { margin: 0; background: var(--ground); color: var(--text); font-family: va
 .proto { background: #FDEFD6; border: 1px dashed var(--accent-deep); color: var(--accent-deep);
          padding: .35rem .7rem; border-radius: 6px; font-size: .82rem; }
 
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 18px; }
+/* 卡片是固定比例設計：設計寬 240 單位，所有尺寸（含字級）都以卡片自身寬度換算。
+   不論欄寬或裝置，卡片比例與文字比例一致，也不會折行。 */
+:root { --u: calc(100cqw / 240); }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 18px; }
 
-/* 卡片：紙質顆粒（SVG 雜訊疊在米色上）＋ 細邊 */
-.mon { display: block; text-decoration: none; color: inherit; border-radius: 14px; overflow: hidden;
+.cardbox { container-type: inline-size; }
+.mon { display: block; aspect-ratio: 240 / 388; text-decoration: none; color: inherit;
+       border-radius: calc(var(--u) * 14); overflow: hidden;
        background-color: var(--card);
        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .45  0 0 0 0 .36  0 0 0 0 .25  0 0 0 .09 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
        border: 1px solid var(--line); box-shadow: 0 1px 2px rgba(80,60,30,.08), 0 6px 14px rgba(80,60,30,.07);
@@ -47,31 +51,31 @@ body { margin: 0; background: var(--ground); color: var(--text); font-family: va
 .mon:hover, .mon:focus-visible { transform: translateY(-3px); box-shadow: 0 2px 4px rgba(80,60,30,.1), 0 12px 22px rgba(80,60,30,.13); outline: none; }
 .mon:focus-visible { outline: 2px solid var(--accent-deep); outline-offset: 2px; }
 
-.art { position: relative; margin: 10px 10px 0; border-radius: 9px; overflow: hidden; aspect-ratio: 4 / 3;
-       background: #FFFDF8; border: 1px solid var(--line); }
+.art { position: relative; margin: calc(var(--u) * 12) calc(var(--u) * 14) 0; border-radius: calc(var(--u) * 9);
+       overflow: hidden; aspect-ratio: 1 / 1; background: #FFFDF8; border: 1px solid var(--line); }
 .art canvas { width: 100%; height: 100%; display: block; }
-.art .tag { position: absolute; top: 6px; left: 6px; font-size: .68rem; padding: 0 .45rem; border-radius: 999px;
+.art .tag { position: absolute; top: calc(var(--u) * 7); left: calc(var(--u) * 7); font-size: calc(var(--u) * 11);
+            line-height: 1.5; padding: 0 calc(var(--u) * 8); border-radius: 999px; white-space: nowrap;
             background: rgba(255,255,255,.85); border: 1px solid var(--line); color: var(--accent-deep); }
-.art .wave { position: absolute; left: 0; right: 0; bottom: 0; height: 18px; }
+.art .wave { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: calc(var(--u) * 20); }
 
-.head { padding: .55rem .9rem .1rem; }
-.title { display: flex; justify-content: space-between; align-items: baseline; gap: .5rem; }
-.title .name { font-family: var(--serif); font-size: 1.2rem; font-weight: 700; letter-spacing: .03em; }
-.title .no { font-family: var(--mono); font-size: .85rem; color: var(--accent-deep); font-weight: 700; }
-.sub { font-size: .76rem; color: var(--text-dim); }
+.head { padding: calc(var(--u) * 6) calc(var(--u) * 14) 0; }
+.title { display: flex; justify-content: space-between; align-items: baseline; white-space: nowrap; }
+.title .name { font-family: var(--serif); font-size: calc(var(--u) * 19); line-height: 1.25; font-weight: 700; letter-spacing: .03em; }
+.title .no { font-family: var(--mono); font-size: calc(var(--u) * 14); color: var(--accent-deep); font-weight: 700; }
+.sub { font-size: calc(var(--u) * 12); line-height: 1.4; color: var(--text-dim); white-space: nowrap; }
 
-.facts { display: grid; grid-template-columns: 1fr 1fr; gap: .45rem .6rem; padding: .6rem .9rem .9rem;
-         margin: 0; border-top: 1px dashed var(--line); margin-top: .5rem; }
+.facts { display: grid; grid-template-columns: 1fr 1fr; gap: calc(var(--u) * 3) calc(var(--u) * 8);
+         margin: calc(var(--u) * 6) calc(var(--u) * 14) 0; padding-top: calc(var(--u) * 6); border-top: 1px dashed var(--line); }
 .facts div { min-width: 0; }
-.facts dt { font-size: .68rem; color: var(--text-faint); letter-spacing: .06em; }
-.facts dd { margin: 0; font-size: .86rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.facts dt { font-size: calc(var(--u) * 10); line-height: 1.2; color: var(--text-faint); letter-spacing: .06em; white-space: nowrap; }
+.facts dd { margin: 0; font-size: calc(var(--u) * 13.5); line-height: 1.25; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .facts .num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
 .up { color: var(--up); } .down { color: var(--down); }
 .dim { color: var(--text-dim); font-weight: 400; }
 
 .foot { margin-top: 2rem; font-size: .76rem; color: var(--text-faint); text-align: center; }
-@media (max-width: 480px) { .grid { grid-template-columns: repeat(2, 1fr); gap: 12px; } .facts dd { font-size: .8rem; } }
-@media (max-width: 340px) { .grid { grid-template-columns: 1fr; } }
+@media (max-width: 480px) { .grid { grid-template-columns: repeat(2, 1fr); gap: 12px; } }
 </style>
 </head>
 <body>
@@ -102,10 +106,9 @@ const SNAPSHOT = {
     {
       "symbol": "2330",
       "name": "台積電",
-      "industry": "半導體業",
+      "element": "electric",
       "rarity": "mythical",
       "rank": 1,
-      "close": 2480,
       "chg": 0.2,
       "vr": 1.51,
       "aura": "true_surge",
@@ -115,16 +118,14 @@ const SNAPSHOT = {
       ],
       "kd": true,
       "nvs": "none",
-      "pe_tag": "fair",
-      "pe": 28.75
+      "pe_tag": "fair"
     },
     {
       "symbol": "2454",
       "name": "聯發科",
-      "industry": "半導體業",
+      "element": "electric",
       "rarity": "legendary",
       "rank": 2,
-      "close": 4920,
       "chg": 0.2,
       "vr": 0.89,
       "aura": "phantom_surge",
@@ -133,16 +134,14 @@ const SNAPSHOT = {
       ],
       "kd": false,
       "nvs": "none",
-      "pe_tag": "popular",
-      "pe": 81.26
+      "pe_tag": "popular"
     },
     {
       "symbol": "2308",
       "name": "台達電",
-      "industry": "電子零組件業",
+      "element": "fire",
       "rarity": "legendary",
       "rank": 3,
-      "close": 1890,
       "chg": 3.0,
       "vr": 0.92,
       "aura": "phantom_surge",
@@ -152,16 +151,14 @@ const SNAPSHOT = {
       ],
       "kd": true,
       "nvs": "none",
-      "pe_tag": "popular",
-      "pe": 60.15
+      "pe_tag": "popular"
     },
     {
       "symbol": "2317",
       "name": "鴻海",
-      "industry": "其他電子業",
+      "element": "steel",
       "rarity": "legendary",
       "rank": 4,
-      "close": 251.5,
       "chg": 0.4,
       "vr": 0.88,
       "aura": "phantom_surge",
@@ -170,16 +167,14 @@ const SNAPSHOT = {
       ],
       "kd": false,
       "nvs": "none",
-      "pe_tag": "fair",
-      "pe": 16.58
+      "pe_tag": "fair"
     },
     {
       "symbol": "3711",
       "name": "日月光投控",
-      "industry": "半導體業",
+      "element": "electric",
       "rarity": "epic",
       "rank": 5,
-      "close": 703,
       "chg": 2.33,
       "vr": 0.85,
       "aura": "phantom_surge",
@@ -189,16 +184,14 @@ const SNAPSHOT = {
       ],
       "kd": true,
       "nvs": "none",
-      "pe_tag": "popular",
-      "pe": 50.87
+      "pe_tag": "popular"
     },
     {
       "symbol": "2881",
       "name": "富邦金",
-      "industry": "金融保險業",
+      "element": "gold",
       "rarity": "epic",
       "rank": 6,
-      "close": 151,
       "chg": -0.33,
       "vr": 0.7,
       "aura": "dormant",
@@ -207,16 +200,14 @@ const SNAPSHOT = {
       ],
       "kd": false,
       "nvs": "none",
-      "pe_tag": "fair",
-      "pe": 14.11
+      "pe_tag": "fair"
     },
     {
       "symbol": "1303",
       "name": "南亞",
-      "industry": "塑膠工業",
+      "element": "earth",
       "rarity": "epic",
       "rank": 7,
-      "close": 255.5,
       "chg": 3.44,
       "vr": 1.62,
       "aura": "true_surge",
@@ -226,16 +217,14 @@ const SNAPSHOT = {
       ],
       "kd": true,
       "nvs": "none",
-      "pe_tag": "popular",
-      "pe": 41.21
+      "pe_tag": "popular"
     },
     {
       "symbol": "2303",
       "name": "聯電",
-      "industry": "半導體業",
+      "element": "electric",
       "rarity": "epic",
       "rank": 8,
-      "close": 154.5,
       "chg": 0.65,
       "vr": 0.56,
       "aura": "phantom_surge",
@@ -244,16 +233,14 @@ const SNAPSHOT = {
       ],
       "kd": false,
       "nvs": "none",
-      "pe_tag": "fair",
-      "pe": 23.23
+      "pe_tag": "fair"
     },
     {
       "symbol": "3037",
       "name": "欣興",
-      "industry": "電子零組件業",
+      "element": "fire",
       "rarity": "epic",
       "rank": 9,
-      "close": 1175,
       "chg": 0.86,
       "vr": 0.49,
       "aura": "phantom_surge",
@@ -263,16 +250,14 @@ const SNAPSHOT = {
       ],
       "kd": true,
       "nvs": "none",
-      "pe_tag": "popular",
-      "pe": 78.23
+      "pe_tag": "popular"
     },
     {
       "symbol": "2408",
       "name": "南亞科",
-      "industry": "半導體業",
+      "element": "electric",
       "rarity": "epic",
       "rank": 10,
-      "close": 519,
       "chg": 2.57,
       "vr": 0.73,
       "aura": "phantom_surge",
@@ -282,64 +267,56 @@ const SNAPSHOT = {
       ],
       "kd": true,
       "nvs": "none",
-      "pe_tag": "fair",
-      "pe": 20.14
+      "pe_tag": "fair"
     },
     {
       "symbol": "2383",
       "name": "台光電",
-      "industry": "電子零組件業",
+      "element": "fire",
       "rarity": "epic",
       "rank": 11,
-      "close": 4935,
       "chg": 0.3,
       "vr": 0.76,
       "aura": "phantom_surge",
       "weather": [],
       "kd": true,
       "nvs": "none",
-      "pe_tag": "popular",
-      "pe": 77.17
+      "pe_tag": "popular"
     },
     {
       "symbol": "2882",
       "name": "國泰金",
-      "industry": "金融保險業",
+      "element": "gold",
       "rarity": "rare",
       "rank": 12,
-      "close": 111,
       "chg": -0.45,
       "vr": 1.02,
       "aura": "true_weak",
       "weather": [],
       "kd": false,
       "nvs": "none",
-      "pe_tag": "fair",
-      "pe": 13.09
+      "pe_tag": "fair"
     },
     {
       "symbol": "2382",
       "name": "廣達",
-      "industry": "電腦及週邊設備業",
+      "element": "steel",
       "rarity": "rare",
       "rank": 13,
-      "close": 333.5,
       "chg": -0.89,
       "vr": 0.83,
       "aura": "dormant",
       "weather": [],
       "kd": false,
       "nvs": "none",
-      "pe_tag": "fair",
-      "pe": 14.53
+      "pe_tag": "fair"
     },
     {
       "symbol": "3017",
       "name": "奇鋐",
-      "industry": "電腦及週邊設備業",
+      "element": "steel",
       "rarity": "rare",
       "rank": 14,
-      "close": 3435,
       "chg": 1.03,
       "vr": 1.21,
       "aura": "true_surge",
@@ -348,64 +325,56 @@ const SNAPSHOT = {
       ],
       "kd": true,
       "nvs": "none",
-      "pe_tag": "popular",
-      "pe": 45.79
+      "pe_tag": "popular"
     },
     {
       "symbol": "2891",
       "name": "中信金",
-      "industry": "金融保險業",
+      "element": "gold",
       "rarity": "rare",
       "rank": 15,
-      "close": 68.4,
       "chg": -0.44,
       "vr": 0.79,
       "aura": "dormant",
       "weather": [],
       "kd": false,
       "nvs": "none",
-      "pe_tag": "fair",
-      "pe": 16.36
+      "pe_tag": "fair"
     },
     {
       "symbol": "2059",
       "name": "川湖",
-      "industry": "電子零組件業",
+      "element": "fire",
       "rarity": "rare",
       "rank": 16,
-      "close": 12055,
       "chg": -0.5,
       "vr": 0.83,
       "aura": "dormant",
       "weather": [],
       "kd": false,
       "nvs": "none",
-      "pe_tag": "popular",
-      "pe": 66.46
+      "pe_tag": "popular"
     },
     {
       "symbol": "2327",
       "name": "國巨*",
-      "industry": "電子零組件業",
+      "element": "fire",
       "rarity": "rare",
       "rank": 17,
-      "close": 548,
       "chg": 0.0,
       "vr": 0.68,
       "aura": "phantom_surge",
       "weather": [],
       "kd": false,
       "nvs": "none",
-      "pe_tag": "popular",
-      "pe": 36.9
+      "pe_tag": "popular"
     },
     {
       "symbol": "2412",
       "name": "中華電",
-      "industry": "通信網路業",
+      "element": "psychic",
       "rarity": "rare",
       "rank": 18,
-      "close": 143.5,
       "chg": -0.35,
       "vr": 0.9,
       "aura": "dormant",
@@ -414,16 +383,14 @@ const SNAPSHOT = {
       ],
       "kd": false,
       "nvs": "none",
-      "pe_tag": "fair",
-      "pe": 28.19
+      "pe_tag": "fair"
     },
     {
       "symbol": "3443",
       "name": "創意",
-      "industry": "半導體業",
+      "element": "electric",
       "rarity": "rare",
       "rank": 19,
-      "close": 8040,
       "chg": 1.45,
       "vr": 0.38,
       "aura": "phantom_surge",
@@ -432,32 +399,28 @@ const SNAPSHOT = {
       ],
       "kd": false,
       "nvs": "none",
-      "pe_tag": "popular",
-      "pe": 206.1
+      "pe_tag": "popular"
     },
     {
       "symbol": "2887",
       "name": "台新新光金",
-      "industry": "金融保險業",
+      "element": "gold",
       "rarity": "rare",
       "rank": 20,
-      "close": 41.95,
       "chg": 0.36,
       "vr": 0.59,
       "aura": "phantom_surge",
       "weather": [],
       "kd": false,
       "nvs": "none",
-      "pe_tag": "fair",
-      "pe": 15.54
+      "pe_tag": "fair"
     },
     {
       "symbol": "3653",
       "name": "健策",
-      "industry": "電子零組件業",
+      "element": "fire",
       "rarity": "rare",
       "rank": 21,
-      "close": 6800,
       "chg": -1.38,
       "vr": 1.06,
       "aura": "true_weak",
@@ -467,64 +430,56 @@ const SNAPSHOT = {
       ],
       "kd": true,
       "nvs": "none",
-      "pe_tag": "popular",
-      "pe": 153.46
+      "pe_tag": "popular"
     },
     {
       "symbol": "2345",
       "name": "智邦",
-      "industry": "通信網路業",
+      "element": "steel",
       "rarity": "rare",
       "rank": 22,
-      "close": 1775,
       "chg": -1.93,
       "vr": 1.82,
       "aura": "true_weak",
       "weather": [],
       "kd": false,
       "nvs": "none",
-      "pe_tag": "fair",
-      "pe": 27.89
+      "pe_tag": "fair"
     },
     {
       "symbol": "7769",
       "name": "鴻勁",
-      "industry": "半導體業",
+      "element": "electric",
       "rarity": "rare",
       "rank": 23,
-      "close": 5505,
       "chg": -1.43,
       "vr": 0.87,
       "aura": "dormant",
       "weather": [],
       "kd": false,
       "nvs": "none",
-      "pe_tag": "popular",
-      "pe": 56.83
+      "pe_tag": "popular"
     },
     {
       "symbol": "2885",
       "name": "元大金",
-      "industry": "金融保險業",
+      "element": "gold",
       "rarity": "rare",
       "rank": 24,
-      "close": 68.5,
       "chg": -0.29,
       "vr": 0.8,
       "aura": "dormant",
       "weather": [],
       "kd": false,
       "nvs": "none",
-      "pe_tag": "fair",
-      "pe": 16.04
+      "pe_tag": "fair"
     },
     {
       "symbol": "6505",
       "name": "台塑化",
-      "industry": "油電燃氣業",
+      "element": "earth",
       "rarity": "rare",
       "rank": 25,
-      "close": 97.3,
       "chg": 3.18,
       "vr": 1.37,
       "aura": "true_surge",
@@ -534,32 +489,28 @@ const SNAPSHOT = {
       ],
       "kd": true,
       "nvs": "none",
-      "pe_tag": "fair",
-      "pe": 16.89
+      "pe_tag": "fair"
     },
     {
       "symbol": "2360",
       "name": "致茂",
-      "industry": "其他電子業",
+      "element": "electric",
       "rarity": "rare",
       "rank": 26,
-      "close": 2135,
       "chg": -2.29,
       "vr": 1.17,
       "aura": "true_weak",
       "weather": [],
       "kd": false,
       "nvs": "none",
-      "pe_tag": "popular",
-      "pe": 54.46
+      "pe_tag": "popular"
     },
     {
       "symbol": "8046",
       "name": "南電",
-      "industry": "電子零組件業",
+      "element": "fire",
       "rarity": "common",
       "rank": 27,
-      "close": 1340,
       "chg": 5.51,
       "vr": 1.17,
       "aura": "true_surge",
@@ -569,16 +520,14 @@ const SNAPSHOT = {
       ],
       "kd": true,
       "nvs": "none",
-      "pe_tag": "popular",
-      "pe": 157.46
+      "pe_tag": "popular"
     },
     {
       "symbol": "2344",
       "name": "華邦電",
-      "industry": "半導體業",
+      "element": "electric",
       "rarity": "common",
       "rank": 28,
-      "close": 179.5,
       "chg": 3.16,
       "vr": 0.82,
       "aura": "phantom_surge",
@@ -588,64 +537,56 @@ const SNAPSHOT = {
       ],
       "kd": true,
       "nvs": "none",
-      "pe_tag": "fair",
-      "pe": 19.79
+      "pe_tag": "fair"
     },
     {
       "symbol": "2884",
       "name": "玉山金",
-      "industry": "金融保險業",
+      "element": "gold",
       "rarity": "common",
       "rank": 29,
-      "close": 44.85,
       "chg": -0.11,
       "vr": 0.64,
       "aura": "dormant",
       "weather": [],
       "kd": false,
       "nvs": "none",
-      "pe_tag": "fair",
-      "pe": 18.61
+      "pe_tag": "fair"
     },
     {
       "symbol": "3008",
       "name": "大立光",
-      "industry": "光電業",
+      "element": "fire",
       "rarity": "common",
       "rank": 30,
-      "close": 5945,
       "chg": -1.25,
       "vr": 0.78,
       "aura": "dormant",
       "weather": [],
       "kd": false,
       "nvs": "none",
-      "pe_tag": "popular",
-      "pe": 31.62
+      "pe_tag": "popular"
     },
     {
       "symbol": "2886",
       "name": "兆豐金",
-      "industry": "金融保險業",
+      "element": "gold",
       "rarity": "common",
       "rank": 31,
-      "close": 49.15,
       "chg": 0.1,
       "vr": 0.65,
       "aura": "phantom_surge",
       "weather": [],
       "kd": false,
       "nvs": "none",
-      "pe_tag": "fair",
-      "pe": 19.12
+      "pe_tag": "fair"
     },
     {
       "symbol": "2357",
       "name": "華碩",
-      "industry": "電腦及週邊設備業",
+      "element": "steel",
       "rarity": "common",
       "rank": 32,
-      "close": 961,
       "chg": -0.21,
       "vr": 0.64,
       "aura": "dormant",
@@ -654,16 +595,14 @@ const SNAPSHOT = {
       ],
       "kd": true,
       "nvs": "none",
-      "pe_tag": "fair",
-      "pe": 14.05
+      "pe_tag": "fair"
     },
     {
       "symbol": "2883",
       "name": "凱基金",
-      "industry": "金融保險業",
+      "element": "gold",
       "rarity": "common",
       "rank": 33,
-      "close": 38.85,
       "chg": -0.26,
       "vr": 0.73,
       "aura": "dormant",
@@ -672,16 +611,14 @@ const SNAPSHOT = {
       ],
       "kd": false,
       "nvs": "none",
-      "pe_tag": "fair",
-      "pe": 13.58
+      "pe_tag": "fair"
     },
     {
       "symbol": "2890",
       "name": "永豐金",
-      "industry": "金融保險業",
+      "element": "gold",
       "rarity": "common",
       "rank": 34,
-      "close": 44.25,
       "chg": 0.8,
       "vr": 0.67,
       "aura": "phantom_surge",
@@ -690,48 +627,42 @@ const SNAPSHOT = {
       ],
       "kd": false,
       "nvs": "none",
-      "pe_tag": "fair",
-      "pe": 16.7
+      "pe_tag": "fair"
     },
     {
       "symbol": "2301",
       "name": "光寶科",
-      "industry": "電腦及週邊設備業",
+      "element": "steel",
       "rarity": "common",
       "rank": 35,
-      "close": 279.5,
       "chg": -0.53,
       "vr": 0.66,
       "aura": "dormant",
       "weather": [],
       "kd": false,
       "nvs": "none",
-      "pe_tag": "popular",
-      "pe": 32.69
+      "pe_tag": "popular"
     },
     {
       "symbol": "2880",
       "name": "華南金",
-      "industry": "金融保險業",
+      "element": "gold",
       "rarity": "common",
       "rank": 36,
-      "close": 45.35,
       "chg": 1.0,
       "vr": 0.9,
       "aura": "phantom_surge",
       "weather": [],
       "kd": false,
       "nvs": "none",
-      "pe_tag": "fair",
-      "pe": 19.63
+      "pe_tag": "fair"
     },
     {
       "symbol": "2395",
       "name": "研華",
-      "industry": "電腦及週邊設備業",
+      "element": "steel",
       "rarity": "common",
       "rank": 37,
-      "close": 726,
       "chg": -0.55,
       "vr": 0.71,
       "aura": "dormant",
@@ -741,16 +672,14 @@ const SNAPSHOT = {
       ],
       "kd": true,
       "nvs": "none",
-      "pe_tag": "popular",
-      "pe": 45.98
+      "pe_tag": "popular"
     },
     {
       "symbol": "3231",
       "name": "緯創",
-      "industry": "電腦及週邊設備業",
+      "element": "steel",
       "rarity": "common",
       "rank": 38,
-      "close": 184.5,
       "chg": -0.54,
       "vr": 0.39,
       "aura": "dormant",
@@ -759,16 +688,14 @@ const SNAPSHOT = {
       ],
       "kd": true,
       "nvs": "none",
-      "pe_tag": "fair",
-      "pe": 14.65
+      "pe_tag": "fair"
     },
     {
       "symbol": "2368",
       "name": "金像電",
-      "industry": "電子零組件業",
+      "element": "fire",
       "rarity": "common",
       "rank": 39,
-      "close": 1120,
       "chg": 0.0,
       "vr": 2.14,
       "aura": "true_surge",
@@ -778,16 +705,14 @@ const SNAPSHOT = {
       ],
       "kd": true,
       "nvs": "none",
-      "pe_tag": "popular",
-      "pe": 40.2
+      "pe_tag": "popular"
     },
     {
       "symbol": "4958",
       "name": "臻鼎-KY",
-      "industry": "電子零組件業",
+      "element": "fire",
       "rarity": "common",
       "rank": 40,
-      "close": 507,
       "chg": 1.71,
       "vr": 1.0,
       "aura": "true_surge",
@@ -797,16 +722,14 @@ const SNAPSHOT = {
       ],
       "kd": true,
       "nvs": "none",
-      "pe_tag": "popular",
-      "pe": 60.0
+      "pe_tag": "popular"
     },
     {
       "symbol": "2892",
       "name": "第一金",
-      "industry": "金融保險業",
+      "element": "gold",
       "rarity": "common",
       "rank": 41,
-      "close": 38.65,
       "chg": 0.13,
       "vr": 0.96,
       "aura": "phantom_surge",
@@ -815,16 +738,14 @@ const SNAPSHOT = {
       ],
       "kd": false,
       "nvs": "none",
-      "pe_tag": "fair",
-      "pe": 18.06
+      "pe_tag": "fair"
     },
     {
       "symbol": "2603",
       "name": "長榮",
-      "industry": "航運業",
+      "element": "water",
       "rarity": "common",
       "rank": 42,
-      "close": 239.5,
       "chg": 0.63,
       "vr": 0.55,
       "aura": "phantom_surge",
@@ -833,16 +754,14 @@ const SNAPSHOT = {
       ],
       "kd": false,
       "nvs": "gold",
-      "pe_tag": "undervalued",
-      "pe": 9.5
+      "pe_tag": "undervalued"
     },
     {
       "symbol": "3665",
       "name": "貿聯-KY",
-      "industry": "其他電子業",
+      "element": "steel",
       "rarity": "common",
       "rank": 43,
-      "close": 2595,
       "chg": 6.13,
       "vr": 1.77,
       "aura": "true_surge",
@@ -852,16 +771,14 @@ const SNAPSHOT = {
       ],
       "kd": true,
       "nvs": "none",
-      "pe_tag": "popular",
-      "pe": 47.65
+      "pe_tag": "popular"
     },
     {
       "symbol": "6446",
       "name": "藥華藥",
-      "industry": "生技醫療業",
+      "element": "grass",
       "rarity": "common",
       "rank": 44,
-      "close": 1215,
       "chg": 1.67,
       "vr": 0.44,
       "aura": "phantom_surge",
@@ -870,16 +787,14 @@ const SNAPSHOT = {
       ],
       "kd": true,
       "nvs": "none",
-      "pe_tag": "popular",
-      "pe": 59.5
+      "pe_tag": "popular"
     },
     {
       "symbol": "3189",
       "name": "景碩",
-      "industry": "半導體業",
+      "element": "electric",
       "rarity": "common",
       "rank": 45,
-      "close": 970,
       "chg": 1.57,
       "vr": 1.21,
       "aura": "true_surge",
@@ -889,32 +804,28 @@ const SNAPSHOT = {
       ],
       "kd": true,
       "nvs": "none",
-      "pe_tag": "popular",
-      "pe": 179.96
+      "pe_tag": "popular"
     },
     {
       "symbol": "3045",
       "name": "台灣大",
-      "industry": "通信網路業",
+      "element": "psychic",
       "rarity": "common",
       "rank": 46,
-      "close": 119.5,
       "chg": -1.24,
       "vr": 1.25,
       "aura": "true_weak",
       "weather": [],
       "kd": false,
       "nvs": "none",
-      "pe_tag": "fair",
-      "pe": 22.59
+      "pe_tag": "fair"
     },
     {
       "symbol": "3481",
       "name": "群創",
-      "industry": "光電業",
+      "element": "fire",
       "rarity": "common",
       "rank": 47,
-      "close": 54.7,
       "chg": 9.95,
       "vr": 2.38,
       "aura": "true_surge",
@@ -924,16 +835,14 @@ const SNAPSHOT = {
       ],
       "kd": true,
       "nvs": "none",
-      "pe_tag": "popular",
-      "pe": 70.13
+      "pe_tag": "popular"
     },
     {
       "symbol": "1301",
       "name": "台塑",
-      "industry": "塑膠工業",
+      "element": "earth",
       "rarity": "common",
       "rank": 48,
-      "close": 68.1,
       "chg": 5.42,
       "vr": 1.79,
       "aura": "true_surge",
@@ -943,16 +852,14 @@ const SNAPSHOT = {
       ],
       "kd": true,
       "nvs": "gold",
-      "pe_tag": "popular",
-      "pe": 41.52
+      "pe_tag": "popular"
     },
     {
       "symbol": "1216",
       "name": "統一",
-      "industry": "食品工業",
+      "element": "grass",
       "rarity": "common",
       "rank": 49,
-      "close": 74.2,
       "chg": 0.41,
       "vr": 0.83,
       "aura": "phantom_surge",
@@ -961,24 +868,21 @@ const SNAPSHOT = {
       ],
       "kd": false,
       "nvs": "none",
-      "pe_tag": "fair",
-      "pe": 17.92
+      "pe_tag": "fair"
     },
     {
       "symbol": "5880",
       "name": "合庫金",
-      "industry": "金融保險業",
+      "element": "gold",
       "rarity": "common",
       "rank": 50,
-      "close": 26.1,
       "chg": 0.19,
       "vr": 0.89,
       "aura": "phantom_surge",
       "weather": [],
       "kd": false,
       "nvs": "silver",
-      "pe_tag": "fair",
-      "pe": 17.06
+      "pe_tag": "fair"
     }
   ]
 };
@@ -987,6 +891,8 @@ const RARITY  = { mythical: "幻獸", legendary: "傳說", epic: "史詩", rare:
 const AURA    = { true_surge: "真暴走", true_weak: "真虛弱", phantom_surge: "幻影暴走", dormant: "蓄力假寐" };
 const WEATHER = { excited: "亢奮", tailwind: "順風", depressed: "低迷" };
 const PE_TAG  = { undervalued: "被低估", fair: "身價合理", popular: "人氣王", mysterious: "神秘系" };
+const ELEMENT = { electric: "電", fire: "火", steel: "鋼", wind: "風", grass: "草",
+                  water: "水", earth: "地", gold: "金", psychic: "超能力" };
 const SHIELD  = { none: "無盾", silver: "銀盾", gold: "破淨金盾" };
 const UP = "#C8322A", DOWN = "#0E8A5F", INK = "#C67A12";
 
@@ -995,24 +901,24 @@ const sign = n => (n > 0 ? "+" : "") + n.toFixed(2) + "%";
 
 function drawArt(canvas, m) {
   const dpr = Math.min(window.devicePixelRatio || 1, 2);
-  const W = 240, H = 180;
-  canvas.width = W * dpr; canvas.height = H * dpr;
+  const S = 220;                       // 邏輯尺寸固定為正方形，顯示時整體縮放
+  canvas.width = S * dpr; canvas.height = S * dpr;
   const ctx = canvas.getContext("2d"); ctx.scale(dpr, dpr);
   const c = m.chg >= 0 ? UP : DOWN;
   const t = Math.max(0.3, Math.min(1.6, m.vr));
-  const cx = W / 2, cy = H / 2 - 6, core = 30;
+  const cx = S / 2, cy = S / 2 - 6, core = 36;
   const rings = Math.round(3 + t * 3);
   for (let i = rings; i >= 1; i--) {
-    ctx.beginPath(); ctx.arc(cx, cy, core + 6 + i * 8 * Math.max(.55, t), 0, Math.PI * 2);
+    ctx.beginPath(); ctx.arc(cx, cy, core + 8 + i * 9 * Math.max(.55, t), 0, Math.PI * 2);
     ctx.strokeStyle = c; ctx.globalAlpha = .06 + (rings - i) / rings * .22 * t; ctx.lineWidth = 1; ctx.stroke();
   }
   ctx.globalAlpha = 1;
-  const g = ctx.createRadialGradient(cx, cy, core, cx, cy, core + 50 * t);
+  const g = ctx.createRadialGradient(cx, cy, core, cx, cy, core + 55 * t);
   g.addColorStop(0, c + "26"); g.addColorStop(1, c + "00");
-  ctx.fillStyle = g; ctx.beginPath(); ctx.arc(cx, cy, core + 50 * t, 0, Math.PI * 2); ctx.fill();
+  ctx.fillStyle = g; ctx.beginPath(); ctx.arc(cx, cy, core + 55 * t, 0, Math.PI * 2); ctx.fill();
   ctx.beginPath(); ctx.arc(cx, cy, core, 0, Math.PI * 2);
   ctx.fillStyle = INK + "26"; ctx.fill(); ctx.strokeStyle = INK; ctx.lineWidth = 1.5; ctx.stroke();
-  ctx.fillStyle = INK; ctx.font = "700 17px ui-monospace, monospace";
+  ctx.fillStyle = INK; ctx.font = "700 20px ui-monospace, monospace";
   ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillText(m.symbol, cx, cy);
 }
 
@@ -1024,22 +930,21 @@ function wave(color) {
 function card(m) {
   const cls = m.chg > 0 ? "up" : m.chg < 0 ? "down" : "";
   const w = m.weather.length ? m.weather.map(k => WEATHER[k]).join("、") : "平常";
-  return `<a class="mon" href="detail.html?symbol=${esc(m.symbol)}" aria-label="${esc(m.name)} ${esc(m.symbol)} 詳細頁">
+  return `<div class="cardbox"><a class="mon" href="detail.html?symbol=${esc(m.symbol)}" aria-label="${esc(m.name)} ${esc(m.symbol)} 詳細頁">
     <div class="art"><canvas data-symbol="${esc(m.symbol)}"></canvas>
       <span class="tag">${RARITY[m.rarity] || ""}</span>${wave(m.chg >= 0 ? UP : DOWN)}</div>
     <div class="head">
       <div class="title"><span class="name">${esc(m.name)}</span><span class="no">${esc(m.symbol)}</span></div>
-      <div class="sub">${esc(m.industry || "")} · 市值第 ${m.rank} 名</div>
+      <div class="sub">${ELEMENT[m.element] || ""}屬性 · 市值第 ${m.rank} 名</div>
     </div>
     <dl class="facts">
-      <div><dt>收盤</dt><dd class="num">${m.close}</dd></div>
       <div><dt>漲跌</dt><dd class="num ${cls}">${sign(m.chg)}</dd></div>
       <div><dt>氣場</dt><dd>${AURA[m.aura]}</dd></div>
       <div><dt>均線天氣</dt><dd>${w}</dd></div>
       <div><dt>KD 護盾</dt><dd>${m.kd ? "有盾" : "無盾"}</dd></div>
       <div><dt>淨值盾</dt><dd>${SHIELD[m.nvs]}</dd></div>
-      <div style="grid-column:1/-1"><dt>身價</dt><dd>${PE_TAG[m.pe_tag]}${m.pe != null ? ` <span class="dim num">PE ${m.pe}</span>` : ""}</dd></div>
-    </dl></a>`;
+      <div><dt>身價</dt><dd>${PE_TAG[m.pe_tag]}</dd></div>
+    </dl></a></div>`;
 }
 
 const SORTS = {
@@ -1053,8 +958,8 @@ function flatten(sp, dy) {
   const by = Object.fromEntries(sp.species.map(s => [s.symbol, s]));
   return dy.monsters.map(d => {
     const s = by[d.symbol];
-    return { symbol: d.symbol, name: s.name, industry: s.industry, rarity: s.rarity, rank: s.rarity_rank,
-             close: d.price.close, chg: d.price.change_percent, vr: d.aura.volume_ratio, aura: d.aura.quadrant,
+    return { symbol: d.symbol, name: s.name, element: s.element, rarity: s.rarity, rank: s.rarity_rank,
+             chg: d.price.change_percent, vr: d.aura.volume_ratio, aura: d.aura.quadrant,
              weather: d.weather, kd: !!(d.kd && d.kd.shield), nvs: d.net_value_shield.tier,
              pe_tag: d.valuation.pe_tag, pe: d.valuation.pe };
   });

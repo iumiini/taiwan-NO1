@@ -58,13 +58,13 @@ def build_overview() -> dict:
     for d in dy["monsters"]:
         s = by[d["symbol"]]
         mons.append({
-            "symbol": d["symbol"], "name": s["name"], "industry": s.get("industry"),
+            "symbol": d["symbol"], "name": s["name"], "element": s["element"],
             "rarity": s["rarity"], "rank": s["rarity_rank"],
-            "close": d["price"]["close"], "chg": d["price"]["change_percent"],
+            "chg": d["price"]["change_percent"],
             "vr": d["aura"]["volume_ratio"], "aura": d["aura"]["quadrant"],
             "weather": d["weather"], "kd": bool(d.get("kd", {}).get("shield")),
             "nvs": d["net_value_shield"]["tier"],
-            "pe_tag": d["valuation"]["pe_tag"], "pe": d["valuation"].get("pe"),
+            "pe_tag": d["valuation"]["pe_tag"],
         })
     return {"market_date": dy["market_date"], "season": sp["season"], "monsters": mons}
 
