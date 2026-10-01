@@ -18,7 +18,8 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-PAGE = ROOT / "site" / "index.html"
+DETAIL = ROOT / "site" / "detail.html"
+OVERVIEW = ROOT / "site" / "index.html"
 DATA = ROOT / "site" / "data"
 BEGIN = "const SNAPSHOT = "
 END = "\n};\n"
@@ -47,8 +48,43 @@ def build(symbol: str) -> dict:
     }
 
 
+def build_overview() -> dict:
+    """總覽頁用的精簡快照：只放卡片需要的欄位。"""
+    index = json.loads((DATA / "index.json").read_text())
+    sp = json.loads((DATA / "species.json").read_text())
+    dy = json.loads((DATA / index["files"]["daily"]["path"]).read_text())
+    by = {s["symbol"]: s for s in sp["species"]}
+    mons = []
+    for d in dy["monsters"]:
+        s = by[d["symbol"]]
+        mons.append({
+            "symbol": d["symbol"], "name": s["name"], "element": s["element"],
+            "rarity": s["rarity"], "rank": s["rarity_rank"],
+            "chg": d["price"]["change_percent"],
+            "vr": d["aura"]["volume_ratio"], "aura": d["aura"]["quadrant"],
+            "weather": d["weather"], "kd": bool(d.get("kd", {}).get("shield")),
+            "nvs": d["net_value_shield"]["tier"],
+            "pe_tag": d["valuation"]["pe_tag"],
+        })
+    return {"market_date": dy["market_date"], "season": sp["season"], "monsters": mons}
+
+
+def embed(page: Path, payload: dict) -> bool:
+    html = page.read_text()
+    start = html.index(BEGIN)
+    end = html.index(END, start) + len(END)
+    body = json.dumps(payload, ensure_ascii=False, indent=2)
+    updated = html[:start] + f"{BEGIN}{body};\n" + html[end:]
+    if updated == html:
+        return False
+    page.write_text(updated)
+    return True
+
+
 def main(symbol: str = "2330") -> int:
-    html = PAGE.read_text()
+    changed = embed(OVERVIEW, build_overview())
+    print("總覽頁快照" + ("已更新" if changed else "已是最新"))
+    html = DETAIL.read_text()
     start = html.index(BEGIN)
     end = html.index(END, start) + len(END)
 
@@ -59,7 +95,7 @@ def main(symbol: str = "2330") -> int:
     if updated == html:
         print("內嵌快照已是最新")
         return 0
-    PAGE.write_text(updated)
+    DETAIL.write_text(updated)
     data = build(symbol)
     print(f"已更新內嵌快照：{symbol} {data['species']['name']} "
           f"／{data['meta']['market_date']}／收盤 {data['daily']['price']['close']}")
