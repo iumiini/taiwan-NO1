@@ -2,27 +2,27 @@
   "schema_version": "0.1.0",
   "generation": 1,
   "season": "2026-S4",
-  "market_date": "2026-10-07",
-  "generated_at": "2026-10-08T01:55:47+08:00",
-  "next_settlement_at": "2026-10-08T19:00:00+08:00",
+  "market_date": "2026-10-08",
+  "generated_at": "2026-10-09T01:56:01+08:00",
+  "next_settlement_at": "2026-10-09T19:00:00+08:00",
   "files": {
     "species": {
       "path": "species.json",
-      "sha256": "f7dc0447182fd2be8ed1c0343c4d0c6627e2d6d88b3ee780b99eb1c501411ff9",
-      "bytes": 87643,
-      "updated_at": "2026-10-08T01:55:47.927372+08:00"
+      "sha256": "d23c99f3f1bd087f56ab5bbd65a3c84145b7ee76e6cb2e0489de100bf8b43b07",
+      "bytes": 87644,
+      "updated_at": "2026-10-09T01:56:01.722646+08:00"
     },
     "daily": {
-      "path": "daily/2026-10-07.json",
-      "sha256": "4795e6c54de924fbcb6bd04a3ae9719ffd8b0b7c9854bbada39cd67e12865d0a",
-      "bytes": 68845,
-      "updated_at": "2026-10-08T01:55:47.929518+08:00"
+      "path": "daily/2026-10-08.json",
+      "sha256": "93f50fcb40e75060c5fc6e626c7368239e0a77f00bc3437c201ff4187e8371bc",
+      "bytes": 67424,
+      "updated_at": "2026-10-09T01:56:01.725227+08:00"
     },
     "balance": {
       "path": "balance.json",
       "sha256": "e9b08c7728ab5a79e5b44210afebea60224ef4c82a5874b1800baa18e54815bf",
       "bytes": 4493,
-      "updated_at": "2026-10-08T01:55:47.929877+08:00"
+      "updated_at": "2026-10-09T01:56:01.725650+08:00"
     }
   },
   "pipeline": {
@@ -30,7 +30,7 @@
       {
         "name": "fugle-snapshot-tse",
         "endpoint": "/snapshot/quotes/TSE",
-        "record_count": 1538
+        "record_count": 1537
       },
       {
         "name": "twse-company-profile",
