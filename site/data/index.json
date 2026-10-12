@@ -2,27 +2,27 @@
   "schema_version": "0.1.0",
   "generation": 1,
   "season": "2026-S4",
-  "market_date": "2026-10-08",
-  "generated_at": "2026-10-10T01:34:23+08:00",
-  "next_settlement_at": "2026-10-09T19:00:00+08:00",
+  "market_date": "2026-10-12",
+  "generated_at": "2026-10-13T04:20:42+08:00",
+  "next_settlement_at": "2026-10-13T19:00:00+08:00",
   "files": {
     "species": {
       "path": "species.json",
-      "sha256": "d23c99f3f1bd087f56ab5bbd65a3c84145b7ee76e6cb2e0489de100bf8b43b07",
-      "bytes": 87644,
-      "updated_at": "2026-10-10T01:34:23.366321+08:00"
+      "sha256": "d271461e4cae0267ff2430d9158e1c27c25ec94fd8a137ab86a5019bd2eef510",
+      "bytes": 85628,
+      "updated_at": "2026-10-13T04:20:42.426729+08:00"
     },
     "daily": {
-      "path": "daily/2026-10-08.json",
-      "sha256": "93f50fcb40e75060c5fc6e626c7368239e0a77f00bc3437c201ff4187e8371bc",
-      "bytes": 67424,
-      "updated_at": "2026-10-10T01:34:23.369653+08:00"
+      "path": "daily/2026-10-12.json",
+      "sha256": "9c17572ee359eb9701777d702f07c2a07ef3e32916df64ff1c6e91116af7f95e",
+      "bytes": 68862,
+      "updated_at": "2026-10-13T04:20:42.429935+08:00"
     },
     "balance": {
       "path": "balance.json",
       "sha256": "e9b08c7728ab5a79e5b44210afebea60224ef4c82a5874b1800baa18e54815bf",
       "bytes": 4493,
-      "updated_at": "2026-10-10T01:34:23.370150+08:00"
+      "updated_at": "2026-10-13T04:20:42.430368+08:00"
     }
   },
   "pipeline": {
@@ -30,7 +30,7 @@
       {
         "name": "fugle-snapshot-tse",
         "endpoint": "/snapshot/quotes/TSE",
-        "record_count": 1537
+        "record_count": 1538
       },
       {
         "name": "twse-company-profile",
@@ -40,12 +40,12 @@
       {
         "name": "twse-bwibbu-d",
         "endpoint": "/rwd/zh/afterTrading/BWIBBU_d",
-        "record_count": 1082
+        "record_count": 1083
       },
       {
         "name": "twse-monthly-revenue",
         "endpoint": "/opendata/t187ap05_L",
-        "record_count": 1086
+        "record_count": 868
       },
       {
         "name": "twse-turnover",
@@ -62,6 +62,10 @@
         "endpoint": "/stock/intraday/ticker",
         "record_count": 50
       }
+    ],
+    "warnings": [
+      "hp（revenue）缺值 19 檔，以中位百分位替代：2308, 3711, 1303, 2881, 2882, 2891, 2412, 2887…",
+      "matk（revenue_yoy）缺值 19 檔，以中位百分位替代：2308, 3711, 1303, 2881, 2882, 2891, 2412, 2887…"
     ]
   }
 }
