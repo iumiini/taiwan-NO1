@@ -2,27 +2,27 @@
   "schema_version": "0.1.0",
   "generation": 1,
   "season": "2026-S4",
-  "market_date": "2026-10-13",
-  "generated_at": "2026-10-14T02:21:02+08:00",
-  "next_settlement_at": "2026-10-14T19:00:00+08:00",
+  "market_date": "2026-10-14",
+  "generated_at": "2026-10-14T23:52:42+08:00",
+  "next_settlement_at": "2026-10-15T19:00:00+08:00",
   "files": {
     "species": {
       "path": "species.json",
-      "sha256": "63f09be494dd6b9213d9e4ec29b9c6a93118eb723786d0d1de2e9fe95eed5dcd",
-      "bytes": 85628,
-      "updated_at": "2026-10-14T02:21:02.813102+08:00"
+      "sha256": "e82e2adb8a961bfe2172495a6643a8d01343b2ee41e4a6c23a170b02d8600b7e",
+      "bytes": 86613,
+      "updated_at": "2026-10-14T23:52:42.985190+08:00"
     },
     "daily": {
-      "path": "daily/2026-10-13.json",
-      "sha256": "31ef156be8db8d650cf0fe637253273ded5dfcd1993d094a3ad2910672f07d19",
-      "bytes": 68060,
-      "updated_at": "2026-10-14T02:21:02.815754+08:00"
+      "path": "daily/2026-10-14.json",
+      "sha256": "827be6bddab5d7f58f38c7275fab99b39511717eeb3f19139e84865ecf53892c",
+      "bytes": 68136,
+      "updated_at": "2026-10-14T23:52:42.987495+08:00"
     },
     "balance": {
       "path": "balance.json",
       "sha256": "e9b08c7728ab5a79e5b44210afebea60224ef4c82a5874b1800baa18e54815bf",
       "bytes": 4493,
-      "updated_at": "2026-10-14T02:21:02.816162+08:00"
+      "updated_at": "2026-10-14T23:52:42.988419+08:00"
     }
   },
   "pipeline": {
@@ -45,7 +45,7 @@
       {
         "name": "twse-monthly-revenue",
         "endpoint": "/opendata/t187ap05_L",
-        "record_count": 869
+        "record_count": 1072
       },
       {
         "name": "twse-turnover",
@@ -64,8 +64,8 @@
       }
     ],
     "warnings": [
-      "hp（revenue）缺值 19 檔，以中位百分位替代：2308, 3711, 1303, 2881, 2882, 2891, 2412, 6505…",
-      "matk（revenue_yoy）缺值 19 檔，以中位百分位替代：2308, 3711, 1303, 2881, 2882, 2891, 2412, 6505…"
+      "hp（revenue）缺值 10 檔，以中位百分位替代：2881, 2882, 2891, 2887, 2885, 2884, 2886, 2880…",
+      "matk（revenue_yoy）缺值 10 檔，以中位百分位替代：2881, 2882, 2891, 2887, 2885, 2884, 2886, 2880…"
     ]
   }
 }
