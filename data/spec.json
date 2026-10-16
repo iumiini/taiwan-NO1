@@ -1,7 +1,7 @@
 {
   "_note": "規格現況的單一真相。每一項只出現一次——結構上不可能出現兩個版本互相矛盾。歷史與決策理由留在 Notion《設計討論總結》，那份是 append-only 的討論紀錄；這份只描述「現在是什麼」，會被覆寫。數值以 values 指向 data/balance.json 的路徑，由 tools/gen_spec.py 於產生文件時代入，因此文件與程式不會漂移。",
   "spec_version": "0.1.0",
-  "updated_on": "2026-08-13",
+  "updated_on": "2026-10-16",
   "status_legend": {
     "locked": "已定案",
     "playtest": "測試中",
@@ -179,6 +179,14 @@
       "sources": ["富果 ticker isAttention / isDisposition"],
       "status": "draft", "decided_on": "2026-07-08",
       "implemented_in": "src/pipeline.py collect"
+    },
+    {
+      "id": "turnover_value", "category": "每日層", "name": "成交金額",
+      "definition": "當日官方成交金額（元），來自證交所指定交易日的成交統計，是真實行情數字，不是遊戲規則。供圖鑑首頁依資金流向排序；只補 2026-10 之後的每日檔，更早的檔案沒有此欄",
+      "sources": ["TWSE rwd/afterTrading/MI_INDEX 指定交易日（成交股數、成交金額、成交筆數）"],
+      "status": "locked", "decided_on": "2026-10-16",
+      "implemented_in": "src/sources.py trades_on、src/pipeline.py collect",
+      "caveat": "TWSE 成交股數必須等於 K 線成交量才寫入，否則留空並記警告（V-X03）；端點取不到時整批留空、不中斷結算；成交均價須落在當日最低～最高價（V-X04，容許 1%）"
     },
 
     {
