@@ -466,7 +466,7 @@ def run(size: int, skip_ticker: bool, refreeze: bool = False,
 
 
 def main() -> int:
-    ap = argparse.ArgumentParser(description="台股寶可夢圖鑑每日管線")
+    ap = argparse.ArgumentParser(description="呆玩W寶貝圖鑑每日管線")
     ap.add_argument("--size", type=int, default=50, help="名單檔數（預設 50）")
     ap.add_argument("--skip-ticker", action="store_true",
                     help="略過注意股／處置股查詢（逐檔請求，較慢）")

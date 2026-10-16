@@ -1,4 +1,4 @@
-# 台股寶可夢 — 圖鑑端
+# 呆玩W寶貝 — 圖鑑端
 
 真實台股資料驅動的怪獸收集養成遊戲。本 repo 是圖鑑端（資料服務 + 圖鑑網頁），
 遊戲端（Unity）為另一專案。詳見 `README.md` 與 `docs/schema-guide.md`。
@@ -14,7 +14,7 @@
 | 設計規格總表 | [設計討論總結](https://app.notion.com/p/396fd52e67648143845ed7a667dd85ba) |
 | Q&A 協作紀錄（現行） | [Claude 協作對話內容](https://app.notion.com/p/3ebfd52e6764805380a4c98745ca03a3) |
 | Q&A 協作紀錄（前一張） | [Claude 協作對話內容](https://app.notion.com/p/3bbfd52e676480728a2aed5ec901d79f) |
-| 專案頁 | [台股寶可夢](https://app.notion.com/p/395fd52e67648010a05cdcfe9bf9b8c9) |
+| 專案頁 | [呆玩W寶貝](https://app.notion.com/p/395fd52e67648010a05cdcfe9bf9b8c9) |
 
 專案頁的摺疊區塊**已凍結**，一切以《設計討論總結》為準。
 
