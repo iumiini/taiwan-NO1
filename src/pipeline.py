@@ -247,7 +247,7 @@ def collect(size: int, skip_ticker: bool, refreeze: bool = False,
                 f"{symbol}（K 線 {rows[0].get('date')} {close}／"
                 f"TWSE {val.get('date')} {val.get('close')}）")
 
-        # 成交金額：TWSE 成交股數必須等於 K 線成交量才採用（同 V-X01 的跨來源核對），
+        # 成交金額：TWSE 成交股數必須等於 K 線成交量才採用（V-X03，同 V-X01 的跨來源核對），
         # 否則兩邊不是同一個交易日或統計口徑，寧可留空。
         trade = trades.get(symbol)
         turnover_value = None
