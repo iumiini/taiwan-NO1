@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<title>圖鑑 No.2330 台積電 — 台股寶可夢</title>
+<title>圖鑑 No.2330 台積電 — 呆玩W寶貝</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- 內嵌 favicon：沒有這行瀏覽器會去要 /favicon.ico 並在 console 留一筆 404，
      真正的錯誤會被這種雜訊蓋掉。用 data URI 免掉額外檔案。 -->
@@ -296,10 +296,10 @@ const SNAPSHOT = {
   "meta": {
     "generation": 1,
     "season": "2026-S4",
-    "market_date": "2026-10-13",
-    "settled_at": "2026-10-13T19:00:00+08:00",
+    "market_date": "2026-10-15",
+    "settled_at": "2026-10-15T19:00:00+08:00",
     "fiscal_period": "2026Q2",
-    "stats_as_of": "2026-10-13"
+    "stats_as_of": "2026-10-15"
   },
   "balance": {
     "status": "draft"
@@ -365,39 +365,37 @@ const SNAPSHOT = {
     },
     "industry": "半導體業",
     "source_metrics": {
-      "market_cap": 64571601466830,
+      "market_cap": 63274982963480,
       "shares_outstanding": 25932370067.0,
       "revenue_monthly": 511857399000.0,
       "revenue_yoy": 54.65,
       "eps": 49.33,
       "debt_ratio": 30.94,
       "turnover_ratio": 1.74,
-      "volatility_60d": 34.63,
+      "volatility_60d": 31.3,
       "book_value_per_share": 248.05
     }
   },
   "daily": {
     "symbol": "2330",
     "price": {
-      "open": 2500,
-      "high": 2510,
-      "low": 2490,
-      "close": 2490,
-      "change_percent": -1.97,
-      "volume": 40796261
+      "open": 2420,
+      "high": 2450,
+      "low": 2420,
+      "close": 2440,
+      "change_percent": -2.01,
+      "volume": 58486711
     },
     "moving_averages": {
-      "ma5": 2550.0,
-      "ma20": 2482.25,
-      "ma60": 2415.67,
-      "ma240": 2020.4
+      "ma5": 2502.0,
+      "ma20": 2489.25,
+      "ma60": 2421.0,
+      "ma240": 2028.71
     },
-    "weather": [
-      "tailwind"
-    ],
+    "weather": [],
     "aura": {
       "quadrant": "true_weak",
-      "volume_ratio": 1.76,
+      "volume_ratio": 2.31,
       "awakening_omen": false
     },
     "net_value_shield": {
@@ -405,17 +403,17 @@ const SNAPSHOT = {
       "amount": 0
     },
     "valuation": {
-      "pe": 28.86,
-      "pb": 10.04,
-      "dividend_yield": 0.88,
+      "pe": 28.28,
+      "pb": 9.84,
+      "dividend_yield": 0.9,
       "pe_tag": "fair",
-      "market_cap": 64571601466830,
-      "as_of": "2026-10-13",
+      "market_cap": 63274982963480,
+      "as_of": "2026-10-15",
       "dividend_year": 114,
       "fiscal_period": "115/2"
     },
     "capture": {
-      "cost": 24900,
+      "cost": 24400,
       "rate_modifier": 1.3,
       "iv_range": {
         "min": 0,
@@ -426,17 +424,11 @@ const SNAPSHOT = {
     "special_state": null,
     "multipliers": {
       "crit_rate": 0.1,
-      "damage_taken": 1.0,
-      "hp": 1.05,
-      "atk": 1.05,
-      "matk": 1.05,
-      "def": 1.05,
-      "mdef": 1.05,
-      "spd": 1.05
+      "damage_taken": 1.0
     },
     "kd": {
-      "k": 52.71,
-      "d": 71.97,
+      "k": 28.41,
+      "d": 49.62,
       "cross": null,
       "shield": false
     }
@@ -612,6 +604,7 @@ const hhmm = iso => (iso || "").slice(11, 16);
 
 function render(data) {
   const s = data.species, d = data.daily, m = data.meta;
+  document.title = `圖鑑 No.${s.symbol} ${s.name} — 呆玩W寶貝`;   // 靜態標題只對 2330 正確
   // 兩層資料各自的日期戳：慢層走財報季別、快層走收盤日。
   const slowStamp = [m.fiscal_period ? esc(m.fiscal_period) + " 財報" : "",
                      m.stats_as_of ? esc(m.stats_as_of) + " 更新" : ""]
@@ -670,7 +663,7 @@ function render(data) {
 
   document.getElementById("app").innerHTML = `
     <header class="masthead">
-      <h1 class="title"><a class="back" href="./" aria-label="回到全部圖鑑">‹</a>台股寶可夢 圖鑑</h1>
+      <h1 class="title"><a class="back" href="./" aria-label="回到全部圖鑑">‹</a>呆玩W寶貝 圖鑑</h1>
       <div class="meta">
         <span class="label">第 ${m.generation} 世代</span>
         <span class="label">賽季 ${esc(m.season)}</span>
@@ -825,7 +818,7 @@ function render(data) {
 
     <footer>
       資料來源：臺灣證券交易所公開資料、富果 MarketData API　·　結算日 ${esc(m.market_date)}　·　本頁與 Unity 遊戲讀取同一份圖鑑 JSON<br>
-      「寶可夢」為任天堂商標，此為開發期內部代號，公開發布前將更名。
+      名稱「呆玩W寶貝」尚未完成商標檢索，公開發布前須完成。
     </footer>
   `;
 
