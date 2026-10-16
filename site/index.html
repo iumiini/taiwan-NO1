@@ -55,6 +55,9 @@ body { margin: 0; background: var(--ground); color: var(--text); font-family: va
 .art .tag { position: absolute; top: calc(var(--u) * 7); left: calc(var(--u) * 7); font-size: calc(var(--u) * 11);
             line-height: 1.5; padding: 0 calc(var(--u) * 8); border-radius: 999px; white-space: nowrap;
             background: rgba(255,255,255,.85); border: 1px solid var(--line); color: var(--accent-deep); }
+.art .metric { position: absolute; top: calc(var(--u) * 7); right: calc(var(--u) * 7); font-size: calc(var(--u) * 11);
+              line-height: 1.5; padding: 0 calc(var(--u) * 8); border-radius: 999px; white-space: nowrap; font-weight: 700;
+              font-family: var(--mono); background: var(--accent-deep); color: #fff; }
 .art .wave { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: calc(var(--u) * 20); }
 
 .head { padding: calc(var(--u) * 6) calc(var(--u) * 14) 0; }
@@ -86,6 +89,8 @@ body { margin: 0; background: var(--ground); color: var(--text); font-family: va
     <label>排序　<select id="sort">
       <option value="chg_desc">今日漲跌幅 高→低</option>
       <option value="chg_asc">今日漲跌幅 低→高</option>
+      <option value="tv_desc">成交金額 高→低</option>
+      <option value="vr_desc">量比 高→低</option>
       <option value="rank">市值排名</option>
       <option value="symbol">編號</option>
     </select></label>
@@ -97,7 +102,7 @@ body { margin: 0; background: var(--ground); color: var(--text); font-family: va
 
 <script>
 const SNAPSHOT = {
-  "market_date": "2026-09-30",
+  "market_date": "2026-10-13",
   "season": "2026-S4",
   "monsters": [
     {
@@ -106,14 +111,14 @@ const SNAPSHOT = {
       "element": "electric",
       "rarity": "mythical",
       "rank": 1,
-      "chg": 0.2,
-      "vr": 1.51,
-      "aura": "true_surge",
+      "chg": -1.97,
+      "vr": 1.76,
+      "tv": null,
+      "aura": "true_weak",
       "weather": [
-        "excited",
         "tailwind"
       ],
-      "kd": true,
+      "kd": false,
       "nvs": "none",
       "pe_tag": "fair"
     },
@@ -123,12 +128,11 @@ const SNAPSHOT = {
       "element": "electric",
       "rarity": "legendary",
       "rank": 2,
-      "chg": 0.2,
-      "vr": 0.89,
-      "aura": "phantom_surge",
-      "weather": [
-        "tailwind"
-      ],
+      "chg": -2.16,
+      "vr": 1.01,
+      "tv": null,
+      "aura": "true_weak",
+      "weather": [],
       "kd": false,
       "nvs": "none",
       "pe_tag": "popular"
@@ -136,17 +140,15 @@ const SNAPSHOT = {
     {
       "symbol": "2308",
       "name": "台達電",
-      "element": "fire",
+      "element": "steel",
       "rarity": "legendary",
       "rank": 3,
-      "chg": 3.0,
-      "vr": 0.92,
-      "aura": "phantom_surge",
-      "weather": [
-        "excited",
-        "tailwind"
-      ],
-      "kd": true,
+      "chg": -6.58,
+      "vr": 1.25,
+      "tv": null,
+      "aura": "true_weak",
+      "weather": [],
+      "kd": false,
       "nvs": "none",
       "pe_tag": "popular"
     },
@@ -156,12 +158,11 @@ const SNAPSHOT = {
       "element": "steel",
       "rarity": "legendary",
       "rank": 4,
-      "chg": 0.4,
-      "vr": 0.88,
-      "aura": "phantom_surge",
-      "weather": [
-        "tailwind"
-      ],
+      "chg": -1.84,
+      "vr": 1.24,
+      "tv": null,
+      "aura": "true_weak",
+      "weather": [],
       "kd": false,
       "nvs": "none",
       "pe_tag": "fair"
@@ -169,12 +170,30 @@ const SNAPSHOT = {
     {
       "symbol": "3711",
       "name": "日月光投控",
-      "element": "electric",
+      "element": "steel",
       "rarity": "epic",
       "rank": 5,
-      "chg": 2.33,
-      "vr": 0.85,
-      "aura": "phantom_surge",
+      "chg": -2.89,
+      "vr": 1.1,
+      "tv": null,
+      "aura": "true_weak",
+      "weather": [
+        "tailwind"
+      ],
+      "kd": false,
+      "nvs": "none",
+      "pe_tag": "popular"
+    },
+    {
+      "symbol": "1303",
+      "name": "南亞",
+      "element": "steel",
+      "rarity": "epic",
+      "rank": 6,
+      "chg": 5.28,
+      "vr": 1.6,
+      "tv": null,
+      "aura": "true_surge",
       "weather": [
         "excited",
         "tailwind"
@@ -186,78 +205,13 @@ const SNAPSHOT = {
     {
       "symbol": "2881",
       "name": "富邦金",
-      "element": "gold",
-      "rarity": "epic",
-      "rank": 6,
-      "chg": -0.33,
-      "vr": 0.7,
-      "aura": "dormant",
-      "weather": [
-        "tailwind"
-      ],
-      "kd": false,
-      "nvs": "none",
-      "pe_tag": "fair"
-    },
-    {
-      "symbol": "1303",
-      "name": "南亞",
-      "element": "earth",
+      "element": "steel",
       "rarity": "epic",
       "rank": 7,
-      "chg": 3.44,
-      "vr": 1.62,
+      "chg": 0.95,
+      "vr": 1.26,
+      "tv": null,
       "aura": "true_surge",
-      "weather": [
-        "excited",
-        "tailwind"
-      ],
-      "kd": true,
-      "nvs": "none",
-      "pe_tag": "popular"
-    },
-    {
-      "symbol": "2303",
-      "name": "聯電",
-      "element": "electric",
-      "rarity": "epic",
-      "rank": 8,
-      "chg": 0.65,
-      "vr": 0.56,
-      "aura": "phantom_surge",
-      "weather": [
-        "tailwind"
-      ],
-      "kd": false,
-      "nvs": "none",
-      "pe_tag": "fair"
-    },
-    {
-      "symbol": "3037",
-      "name": "欣興",
-      "element": "fire",
-      "rarity": "epic",
-      "rank": 9,
-      "chg": 0.86,
-      "vr": 0.49,
-      "aura": "phantom_surge",
-      "weather": [
-        "excited",
-        "tailwind"
-      ],
-      "kd": true,
-      "nvs": "none",
-      "pe_tag": "popular"
-    },
-    {
-      "symbol": "2408",
-      "name": "南亞科",
-      "element": "electric",
-      "rarity": "epic",
-      "rank": 10,
-      "chg": 2.57,
-      "vr": 0.73,
-      "aura": "phantom_surge",
       "weather": [
         "excited",
         "tailwind"
@@ -271,26 +225,98 @@ const SNAPSHOT = {
       "name": "台光電",
       "element": "fire",
       "rarity": "epic",
-      "rank": 11,
-      "chg": 0.3,
-      "vr": 0.76,
-      "aura": "phantom_surge",
-      "weather": [],
-      "kd": true,
+      "rank": 8,
+      "chg": -9.84,
+      "vr": 1.94,
+      "tv": null,
+      "aura": "true_weak",
+      "weather": [
+        "tailwind"
+      ],
+      "kd": false,
       "nvs": "none",
       "pe_tag": "popular"
     },
     {
-      "symbol": "2882",
-      "name": "國泰金",
-      "element": "gold",
-      "rarity": "rare",
-      "rank": 12,
-      "chg": -0.45,
-      "vr": 1.02,
+      "symbol": "3037",
+      "name": "欣興",
+      "element": "fire",
+      "rarity": "epic",
+      "rank": 9,
+      "chg": -5.98,
+      "vr": 1.12,
+      "tv": null,
+      "aura": "true_weak",
+      "weather": [
+        "tailwind"
+      ],
+      "kd": false,
+      "nvs": "none",
+      "pe_tag": "popular"
+    },
+    {
+      "symbol": "2303",
+      "name": "聯電",
+      "element": "electric",
+      "rarity": "epic",
+      "rank": 10,
+      "chg": -2.75,
+      "vr": 0.83,
+      "tv": null,
+      "aura": "dormant",
+      "weather": [],
+      "kd": false,
+      "nvs": "none",
+      "pe_tag": "fair"
+    },
+    {
+      "symbol": "2408",
+      "name": "南亞科",
+      "element": "electric",
+      "rarity": "epic",
+      "rank": 11,
+      "chg": -7.4,
+      "vr": 2.12,
+      "tv": null,
       "aura": "true_weak",
       "weather": [],
       "kd": false,
+      "nvs": "none",
+      "pe_tag": "fair"
+    },
+    {
+      "symbol": "2882",
+      "name": "國泰金",
+      "element": "steel",
+      "rarity": "rare",
+      "rank": 12,
+      "chg": 1.33,
+      "vr": 1.04,
+      "tv": null,
+      "aura": "true_surge",
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "kd": true,
+      "nvs": "none",
+      "pe_tag": "fair"
+    },
+    {
+      "symbol": "2891",
+      "name": "中信金",
+      "element": "steel",
+      "rarity": "rare",
+      "rank": 13,
+      "chg": 2.58,
+      "vr": 1.87,
+      "tv": null,
+      "aura": "true_surge",
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "kd": true,
       "nvs": "none",
       "pe_tag": "fair"
     },
@@ -299,10 +325,11 @@ const SNAPSHOT = {
       "name": "廣達",
       "element": "steel",
       "rarity": "rare",
-      "rank": 13,
-      "chg": -0.89,
-      "vr": 0.83,
-      "aura": "dormant",
+      "rank": 14,
+      "chg": 0.31,
+      "vr": 0.94,
+      "tv": null,
+      "aura": "phantom_surge",
       "weather": [],
       "kd": false,
       "nvs": "none",
@@ -313,39 +340,10 @@ const SNAPSHOT = {
       "name": "奇鋐",
       "element": "steel",
       "rarity": "rare",
-      "rank": 14,
-      "chg": 1.03,
-      "vr": 1.21,
-      "aura": "true_surge",
-      "weather": [
-        "tailwind"
-      ],
-      "kd": true,
-      "nvs": "none",
-      "pe_tag": "popular"
-    },
-    {
-      "symbol": "2891",
-      "name": "中信金",
-      "element": "gold",
-      "rarity": "rare",
       "rank": 15,
-      "chg": -0.44,
-      "vr": 0.79,
-      "aura": "dormant",
-      "weather": [],
-      "kd": false,
-      "nvs": "none",
-      "pe_tag": "fair"
-    },
-    {
-      "symbol": "2059",
-      "name": "川湖",
-      "element": "fire",
-      "rarity": "rare",
-      "rank": 16,
-      "chg": -0.5,
-      "vr": 0.83,
+      "chg": -3.1,
+      "vr": 0.93,
+      "tv": null,
       "aura": "dormant",
       "weather": [],
       "kd": false,
@@ -357,14 +355,35 @@ const SNAPSHOT = {
       "name": "國巨*",
       "element": "fire",
       "rarity": "rare",
-      "rank": 17,
-      "chg": 0.0,
-      "vr": 0.68,
-      "aura": "phantom_surge",
-      "weather": [],
+      "rank": 16,
+      "chg": -5.82,
+      "vr": 1.38,
+      "tv": null,
+      "aura": "true_weak",
+      "weather": [
+        "tailwind"
+      ],
       "kd": false,
       "nvs": "none",
       "pe_tag": "popular"
+    },
+    {
+      "symbol": "6669",
+      "name": "緯穎",
+      "element": "steel",
+      "rarity": "rare",
+      "rank": 17,
+      "chg": -3.52,
+      "vr": 0.83,
+      "tv": null,
+      "aura": "dormant",
+      "weather": [
+        "tailwind",
+        "depressed"
+      ],
+      "kd": true,
+      "nvs": "none",
+      "pe_tag": "undervalued"
     },
     {
       "symbol": "2412",
@@ -372,113 +391,9 @@ const SNAPSHOT = {
       "element": "psychic",
       "rarity": "rare",
       "rank": 18,
-      "chg": -0.35,
-      "vr": 0.9,
-      "aura": "dormant",
-      "weather": [
-        "tailwind"
-      ],
-      "kd": false,
-      "nvs": "none",
-      "pe_tag": "fair"
-    },
-    {
-      "symbol": "3443",
-      "name": "創意",
-      "element": "electric",
-      "rarity": "rare",
-      "rank": 19,
-      "chg": 1.45,
-      "vr": 0.38,
-      "aura": "phantom_surge",
-      "weather": [
-        "tailwind"
-      ],
-      "kd": false,
-      "nvs": "none",
-      "pe_tag": "popular"
-    },
-    {
-      "symbol": "2887",
-      "name": "台新新光金",
-      "element": "gold",
-      "rarity": "rare",
-      "rank": 20,
-      "chg": 0.36,
-      "vr": 0.59,
-      "aura": "phantom_surge",
-      "weather": [],
-      "kd": false,
-      "nvs": "none",
-      "pe_tag": "fair"
-    },
-    {
-      "symbol": "3653",
-      "name": "健策",
-      "element": "fire",
-      "rarity": "rare",
-      "rank": 21,
-      "chg": -1.38,
-      "vr": 1.06,
-      "aura": "true_weak",
-      "weather": [
-        "excited",
-        "tailwind"
-      ],
-      "kd": true,
-      "nvs": "none",
-      "pe_tag": "popular"
-    },
-    {
-      "symbol": "2345",
-      "name": "智邦",
-      "element": "steel",
-      "rarity": "rare",
-      "rank": 22,
-      "chg": -1.93,
-      "vr": 1.82,
-      "aura": "true_weak",
-      "weather": [],
-      "kd": false,
-      "nvs": "none",
-      "pe_tag": "fair"
-    },
-    {
-      "symbol": "7769",
-      "name": "鴻勁",
-      "element": "electric",
-      "rarity": "rare",
-      "rank": 23,
-      "chg": -1.43,
-      "vr": 0.87,
-      "aura": "dormant",
-      "weather": [],
-      "kd": false,
-      "nvs": "none",
-      "pe_tag": "popular"
-    },
-    {
-      "symbol": "2885",
-      "name": "元大金",
-      "element": "gold",
-      "rarity": "rare",
-      "rank": 24,
-      "chg": -0.29,
-      "vr": 0.8,
-      "aura": "dormant",
-      "weather": [],
-      "kd": false,
-      "nvs": "none",
-      "pe_tag": "fair"
-    },
-    {
-      "symbol": "6505",
-      "name": "台塑化",
-      "element": "earth",
-      "rarity": "rare",
-      "rank": 25,
-      "chg": 3.18,
-      "vr": 1.37,
+      "chg": 1.02,
+      "vr": 1.16,
+      "tv": null,
       "aura": "true_surge",
       "weather": [
         "excited",
@@ -489,13 +404,170 @@ const SNAPSHOT = {
       "pe_tag": "fair"
     },
     {
+      "symbol": "2345",
+      "name": "智邦",
+      "element": "steel",
+      "rarity": "rare",
+      "rank": 19,
+      "chg": -4.23,
+      "vr": 1.24,
+      "tv": null,
+      "aura": "true_weak",
+      "weather": [
+        "tailwind"
+      ],
+      "kd": true,
+      "nvs": "none",
+      "pe_tag": "popular"
+    },
+    {
+      "symbol": "6505",
+      "name": "台塑化",
+      "element": "steel",
+      "rarity": "rare",
+      "rank": 20,
+      "chg": 9.68,
+      "vr": 2.28,
+      "tv": null,
+      "aura": "true_surge",
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "kd": true,
+      "nvs": "none",
+      "pe_tag": "fair"
+    },
+    {
+      "symbol": "7769",
+      "name": "鴻勁",
+      "element": "electric",
+      "rarity": "rare",
+      "rank": 21,
+      "chg": -6.47,
+      "vr": 0.81,
+      "tv": null,
+      "aura": "dormant",
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "kd": true,
+      "nvs": "none",
+      "pe_tag": "popular"
+    },
+    {
+      "symbol": "3443",
+      "name": "創意",
+      "element": "electric",
+      "rarity": "rare",
+      "rank": 22,
+      "chg": -0.06,
+      "vr": 0.86,
+      "tv": null,
+      "aura": "dormant",
+      "weather": [
+        "tailwind"
+      ],
+      "kd": false,
+      "nvs": "none",
+      "pe_tag": "popular"
+    },
+    {
+      "symbol": "2887",
+      "name": "台新新光金",
+      "element": "steel",
+      "rarity": "rare",
+      "rank": 23,
+      "chg": 0.0,
+      "vr": 1.0,
+      "tv": null,
+      "aura": "true_surge",
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "kd": true,
+      "nvs": "none",
+      "pe_tag": "fair"
+    },
+    {
+      "symbol": "3653",
+      "name": "健策",
+      "element": "fire",
+      "rarity": "rare",
+      "rank": 24,
+      "chg": -2.37,
+      "vr": 0.79,
+      "tv": null,
+      "aura": "dormant",
+      "weather": [
+        "tailwind"
+      ],
+      "kd": false,
+      "nvs": "none",
+      "pe_tag": "popular"
+    },
+    {
+      "symbol": "2885",
+      "name": "元大金",
+      "element": "steel",
+      "rarity": "rare",
+      "rank": 25,
+      "chg": 0.71,
+      "vr": 1.81,
+      "tv": null,
+      "aura": "true_surge",
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "kd": true,
+      "nvs": "none",
+      "pe_tag": "fair"
+    },
+    {
+      "symbol": "2059",
+      "name": "川湖",
+      "element": "fire",
+      "rarity": "rare",
+      "rank": 26,
+      "chg": -4.91,
+      "vr": 1.69,
+      "tv": null,
+      "aura": "true_weak",
+      "weather": [],
+      "kd": false,
+      "nvs": "none",
+      "pe_tag": "popular"
+    },
+    {
+      "symbol": "3008",
+      "name": "大立光",
+      "element": "fire",
+      "rarity": "common",
+      "rank": 27,
+      "chg": -0.68,
+      "vr": 2.16,
+      "tv": null,
+      "aura": "true_weak",
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "kd": true,
+      "nvs": "none",
+      "pe_tag": "popular"
+    },
+    {
       "symbol": "2360",
       "name": "致茂",
       "element": "electric",
-      "rarity": "rare",
-      "rank": 26,
-      "chg": -2.29,
-      "vr": 1.17,
+      "rarity": "common",
+      "rank": 28,
+      "chg": -6.98,
+      "vr": 1.16,
+      "tv": null,
       "aura": "true_weak",
       "weather": [],
       "kd": false,
@@ -507,9 +579,45 @@ const SNAPSHOT = {
       "name": "南電",
       "element": "fire",
       "rarity": "common",
-      "rank": 27,
-      "chg": 5.51,
-      "vr": 1.17,
+      "rank": 29,
+      "chg": 0.0,
+      "vr": 0.69,
+      "tv": null,
+      "aura": "phantom_surge",
+      "weather": [
+        "tailwind"
+      ],
+      "kd": false,
+      "nvs": "none",
+      "pe_tag": "popular"
+    },
+    {
+      "symbol": "2884",
+      "name": "玉山金",
+      "element": "steel",
+      "rarity": "common",
+      "rank": 30,
+      "chg": 1.09,
+      "vr": 0.88,
+      "tv": null,
+      "aura": "phantom_surge",
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "kd": true,
+      "nvs": "none",
+      "pe_tag": "fair"
+    },
+    {
+      "symbol": "2886",
+      "name": "兆豐金",
+      "element": "steel",
+      "rarity": "common",
+      "rank": 31,
+      "chg": 1.8,
+      "vr": 1.18,
+      "tv": null,
       "aura": "true_surge",
       "weather": [
         "excited",
@@ -517,62 +625,18 @@ const SNAPSHOT = {
       ],
       "kd": true,
       "nvs": "none",
-      "pe_tag": "popular"
+      "pe_tag": "fair"
     },
     {
       "symbol": "2344",
       "name": "華邦電",
       "element": "electric",
       "rarity": "common",
-      "rank": 28,
-      "chg": 3.16,
-      "vr": 0.82,
-      "aura": "phantom_surge",
-      "weather": [
-        "excited",
-        "tailwind"
-      ],
-      "kd": true,
-      "nvs": "none",
-      "pe_tag": "fair"
-    },
-    {
-      "symbol": "2884",
-      "name": "玉山金",
-      "element": "gold",
-      "rarity": "common",
-      "rank": 29,
-      "chg": -0.11,
-      "vr": 0.64,
-      "aura": "dormant",
-      "weather": [],
-      "kd": false,
-      "nvs": "none",
-      "pe_tag": "fair"
-    },
-    {
-      "symbol": "3008",
-      "name": "大立光",
-      "element": "fire",
-      "rarity": "common",
-      "rank": 30,
-      "chg": -1.25,
-      "vr": 0.78,
-      "aura": "dormant",
-      "weather": [],
-      "kd": false,
-      "nvs": "none",
-      "pe_tag": "popular"
-    },
-    {
-      "symbol": "2886",
-      "name": "兆豐金",
-      "element": "gold",
-      "rarity": "common",
-      "rank": 31,
-      "chg": 0.1,
-      "vr": 0.65,
-      "aura": "phantom_surge",
+      "rank": 32,
+      "chg": -7.18,
+      "vr": 1.52,
+      "tv": null,
+      "aura": "true_weak",
       "weather": [],
       "kd": false,
       "nvs": "none",
@@ -583,25 +647,10 @@ const SNAPSHOT = {
       "name": "華碩",
       "element": "steel",
       "rarity": "common",
-      "rank": 32,
-      "chg": -0.21,
-      "vr": 0.64,
-      "aura": "dormant",
-      "weather": [
-        "excited"
-      ],
-      "kd": true,
-      "nvs": "none",
-      "pe_tag": "fair"
-    },
-    {
-      "symbol": "2883",
-      "name": "凱基金",
-      "element": "gold",
-      "rarity": "common",
       "rank": 33,
-      "chg": -0.26,
-      "vr": 0.73,
+      "chg": -1.13,
+      "vr": 0.86,
+      "tv": null,
       "aura": "dormant",
       "weather": [
         "tailwind"
@@ -611,14 +660,68 @@ const SNAPSHOT = {
       "pe_tag": "fair"
     },
     {
+      "symbol": "2880",
+      "name": "華南金",
+      "element": "steel",
+      "rarity": "common",
+      "rank": 34,
+      "chg": 3.57,
+      "vr": 1.73,
+      "tv": null,
+      "aura": "true_surge",
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "kd": true,
+      "nvs": "none",
+      "pe_tag": "fair"
+    },
+    {
       "symbol": "2890",
       "name": "永豐金",
       "element": "gold",
       "rarity": "common",
-      "rank": 34,
-      "chg": 0.8,
-      "vr": 0.67,
-      "aura": "phantom_surge",
+      "rank": 35,
+      "chg": -1.0,
+      "vr": 0.95,
+      "tv": null,
+      "aura": "dormant",
+      "weather": [
+        "tailwind"
+      ],
+      "kd": true,
+      "nvs": "none",
+      "pe_tag": "fair"
+    },
+    {
+      "symbol": "2883",
+      "name": "凱基金",
+      "element": "steel",
+      "rarity": "common",
+      "rank": 36,
+      "chg": -0.13,
+      "vr": 0.79,
+      "tv": null,
+      "aura": "dormant",
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "kd": true,
+      "nvs": "none",
+      "pe_tag": "fair"
+    },
+    {
+      "symbol": "3231",
+      "name": "緯創",
+      "element": "steel",
+      "rarity": "common",
+      "rank": 37,
+      "chg": -1.32,
+      "vr": 1.13,
+      "tv": null,
+      "aura": "true_weak",
       "weather": [
         "tailwind"
       ],
@@ -631,76 +734,13 @@ const SNAPSHOT = {
       "name": "光寶科",
       "element": "steel",
       "rarity": "common",
-      "rank": 35,
-      "chg": -0.53,
-      "vr": 0.66,
-      "aura": "dormant",
-      "weather": [],
-      "kd": false,
-      "nvs": "none",
-      "pe_tag": "popular"
-    },
-    {
-      "symbol": "2880",
-      "name": "華南金",
-      "element": "gold",
-      "rarity": "common",
-      "rank": 36,
-      "chg": 1.0,
-      "vr": 0.9,
-      "aura": "phantom_surge",
-      "weather": [],
-      "kd": false,
-      "nvs": "none",
-      "pe_tag": "fair"
-    },
-    {
-      "symbol": "2395",
-      "name": "研華",
-      "element": "steel",
-      "rarity": "common",
-      "rank": 37,
-      "chg": -0.55,
-      "vr": 0.71,
-      "aura": "dormant",
-      "weather": [
-        "excited",
-        "tailwind"
-      ],
-      "kd": true,
-      "nvs": "none",
-      "pe_tag": "popular"
-    },
-    {
-      "symbol": "3231",
-      "name": "緯創",
-      "element": "steel",
-      "rarity": "common",
       "rank": 38,
-      "chg": -0.54,
-      "vr": 0.39,
-      "aura": "dormant",
-      "weather": [
-        "excited"
-      ],
-      "kd": true,
-      "nvs": "none",
-      "pe_tag": "fair"
-    },
-    {
-      "symbol": "2368",
-      "name": "金像電",
-      "element": "fire",
-      "rarity": "common",
-      "rank": 39,
-      "chg": 0.0,
-      "vr": 2.14,
-      "aura": "true_surge",
-      "weather": [
-        "excited",
-        "tailwind"
-      ],
-      "kd": true,
+      "chg": -4.17,
+      "vr": 1.08,
+      "tv": null,
+      "aura": "true_weak",
+      "weather": [],
+      "kd": false,
       "nvs": "none",
       "pe_tag": "popular"
     },
@@ -709,31 +749,67 @@ const SNAPSHOT = {
       "name": "臻鼎-KY",
       "element": "fire",
       "rarity": "common",
-      "rank": 40,
-      "chg": 1.71,
-      "vr": 1.0,
-      "aura": "true_surge",
+      "rank": 39,
+      "chg": -4.99,
+      "vr": 1.1,
+      "tv": null,
+      "aura": "true_weak",
       "weather": [
-        "excited",
         "tailwind"
       ],
-      "kd": true,
+      "kd": false,
+      "nvs": "none",
+      "pe_tag": "popular"
+    },
+    {
+      "symbol": "2395",
+      "name": "研華",
+      "element": "steel",
+      "rarity": "common",
+      "rank": 40,
+      "chg": -0.42,
+      "vr": 0.77,
+      "tv": null,
+      "aura": "dormant",
+      "weather": [
+        "tailwind"
+      ],
+      "kd": false,
+      "nvs": "none",
+      "pe_tag": "popular"
+    },
+    {
+      "symbol": "2368",
+      "name": "金像電",
+      "element": "fire",
+      "rarity": "common",
+      "rank": 41,
+      "chg": -5.26,
+      "vr": 1.27,
+      "tv": null,
+      "aura": "true_weak",
+      "weather": [
+        "tailwind"
+      ],
+      "kd": false,
       "nvs": "none",
       "pe_tag": "popular"
     },
     {
       "symbol": "2892",
       "name": "第一金",
-      "element": "gold",
+      "element": "steel",
       "rarity": "common",
-      "rank": 41,
-      "chg": 0.13,
-      "vr": 0.96,
-      "aura": "phantom_surge",
+      "rank": 42,
+      "chg": 2.02,
+      "vr": 1.08,
+      "tv": null,
+      "aura": "true_surge",
       "weather": [
+        "excited",
         "tailwind"
       ],
-      "kd": false,
+      "kd": true,
       "nvs": "none",
       "pe_tag": "fair"
     },
@@ -742,32 +818,52 @@ const SNAPSHOT = {
       "name": "長榮",
       "element": "water",
       "rarity": "common",
-      "rank": 42,
-      "chg": 0.63,
-      "vr": 0.55,
-      "aura": "phantom_surge",
-      "weather": [
-        "tailwind"
-      ],
-      "kd": false,
-      "nvs": "gold",
-      "pe_tag": "undervalued"
-    },
-    {
-      "symbol": "3665",
-      "name": "貿聯-KY",
-      "element": "steel",
-      "rarity": "common",
       "rank": 43,
-      "chg": 6.13,
-      "vr": 1.77,
+      "chg": 3.33,
+      "vr": 5.24,
+      "tv": null,
       "aura": "true_surge",
       "weather": [
         "excited",
         "tailwind"
       ],
       "kd": true,
+      "nvs": "silver",
+      "pe_tag": "undervalued"
+    },
+    {
+      "symbol": "3189",
+      "name": "景碩",
+      "element": "electric",
+      "rarity": "common",
+      "rank": 44,
+      "chg": -1.89,
+      "vr": 0.47,
+      "tv": null,
+      "aura": "dormant",
+      "weather": [
+        "tailwind"
+      ],
+      "kd": false,
       "nvs": "none",
+      "pe_tag": "popular"
+    },
+    {
+      "symbol": "1301",
+      "name": "台塑",
+      "element": "steel",
+      "rarity": "common",
+      "rank": 45,
+      "chg": 0.25,
+      "vr": 2.47,
+      "tv": null,
+      "aura": "true_surge",
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "kd": true,
+      "nvs": "gold",
       "pe_tag": "popular"
     },
     {
@@ -775,31 +871,13 @@ const SNAPSHOT = {
       "name": "藥華藥",
       "element": "grass",
       "rarity": "common",
-      "rank": 44,
-      "chg": 1.67,
-      "vr": 0.44,
-      "aura": "phantom_surge",
-      "weather": [
-        "excited"
-      ],
-      "kd": true,
-      "nvs": "none",
-      "pe_tag": "popular"
-    },
-    {
-      "symbol": "3189",
-      "name": "景碩",
-      "element": "electric",
-      "rarity": "common",
-      "rank": 45,
-      "chg": 1.57,
-      "vr": 1.21,
-      "aura": "true_surge",
-      "weather": [
-        "excited",
-        "tailwind"
-      ],
-      "kd": true,
+      "rank": 46,
+      "chg": -1.69,
+      "vr": 0.41,
+      "tv": null,
+      "aura": "dormant",
+      "weather": [],
+      "kd": false,
       "nvs": "none",
       "pe_tag": "popular"
     },
@@ -808,40 +886,28 @@ const SNAPSHOT = {
       "name": "台灣大",
       "element": "psychic",
       "rarity": "common",
-      "rank": 46,
-      "chg": -1.24,
-      "vr": 1.25,
-      "aura": "true_weak",
-      "weather": [],
-      "kd": false,
-      "nvs": "none",
-      "pe_tag": "fair"
-    },
-    {
-      "symbol": "3481",
-      "name": "群創",
-      "element": "fire",
-      "rarity": "common",
       "rank": 47,
-      "chg": 9.95,
-      "vr": 2.38,
-      "aura": "true_surge",
+      "chg": 2.88,
+      "vr": 0.99,
+      "tv": null,
+      "aura": "phantom_surge",
       "weather": [
         "excited",
         "tailwind"
       ],
       "kd": true,
       "nvs": "none",
-      "pe_tag": "popular"
+      "pe_tag": "fair"
     },
     {
-      "symbol": "1301",
-      "name": "台塑",
-      "element": "earth",
+      "symbol": "1326",
+      "name": "台化",
+      "element": "steel",
       "rarity": "common",
       "rank": 48,
-      "chg": 5.42,
-      "vr": 1.79,
+      "chg": 1.3,
+      "vr": 1.71,
+      "tv": null,
       "aura": "true_surge",
       "weather": [
         "excited",
@@ -852,33 +918,36 @@ const SNAPSHOT = {
       "pe_tag": "popular"
     },
     {
-      "symbol": "1216",
-      "name": "統一",
-      "element": "grass",
+      "symbol": "3665",
+      "name": "貿聯-KY",
+      "element": "steel",
       "rarity": "common",
       "rank": 49,
-      "chg": 0.41,
-      "vr": 0.83,
-      "aura": "phantom_surge",
-      "weather": [
-        "depressed"
-      ],
-      "kd": false,
-      "nvs": "none",
-      "pe_tag": "fair"
-    },
-    {
-      "symbol": "5880",
-      "name": "合庫金",
-      "element": "gold",
-      "rarity": "common",
-      "rank": 50,
-      "chg": 0.19,
-      "vr": 0.89,
-      "aura": "phantom_surge",
+      "chg": -4.03,
+      "vr": 0.68,
+      "tv": null,
+      "aura": "dormant",
       "weather": [],
       "kd": false,
-      "nvs": "silver",
+      "nvs": "none",
+      "pe_tag": "popular"
+    },
+    {
+      "symbol": "1216",
+      "name": "統一",
+      "element": "steel",
+      "rarity": "common",
+      "rank": 50,
+      "chg": 1.45,
+      "vr": 1.73,
+      "tv": null,
+      "aura": "true_surge",
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "kd": true,
+      "nvs": "none",
       "pe_tag": "fair"
     }
   ]
@@ -924,12 +993,13 @@ function wave(color) {
     <path d="M0 9 Q15 0 30 9 T60 9 T90 9 T120 9 T150 9 T180 9 T210 9 T240 9 V18 H0Z" fill="${color}" opacity=".85"/></svg>`;
 }
 
-function card(m) {
+function card(m, sortKey) {
+  const metric = METRIC[sortKey] ? `<span class="metric">${esc(METRIC[sortKey](m))}</span>` : "";
   const cls = m.chg > 0 ? "up" : m.chg < 0 ? "down" : "";
   const w = m.weather.length ? m.weather.map(k => WEATHER[k]).join("、") : "平常";
   return `<div class="cardbox"><a class="mon" href="detail.html?symbol=${esc(m.symbol)}" aria-label="${esc(m.name)} ${esc(m.symbol)} 詳細頁">
     <div class="art"><canvas data-symbol="${esc(m.symbol)}"></canvas>
-      <span class="tag">${RARITY[m.rarity] || ""}</span>${wave(m.chg >= 0 ? UP : DOWN)}</div>
+      <span class="tag">${RARITY[m.rarity] || ""}</span>${metric}${wave(m.chg >= 0 ? UP : DOWN)}</div>
     <div class="head">
       <div class="title"><span class="name">${esc(m.name)}</span><span class="no">${esc(m.symbol)}</span></div>
       <div class="sub">${ELEMENT[m.element] || ""}屬性 · 市值第 ${m.rank} 名</div>
@@ -944,7 +1014,23 @@ function card(m) {
     </dl></a></div>`;
 }
 
+// 沒有成交金額的檔（來源取不到、或舊資料）一律排最後，不當成 0 參與排序。
+const byValue = (key, dir) => (a, b) =>
+  (a[key] == null) - (b[key] == null) || (a[key] == null ? 0 : dir * (b[key] - a[key])) ||
+  a.symbol.localeCompare(b.symbol);
+
+const fmtValue = v => v >= 1e8 ? Math.round(v / 1e8).toLocaleString("en-US") + " 億"
+                    : Math.round(v / 1e4).toLocaleString("en-US") + " 萬";
+
+// 排序依據是漲跌以外的指標時，在圖像區角落標出該檔的數值，否則看不出為什麼排在這裡。
+const METRIC = {
+  tv_desc: m => m.tv != null ? "成交 " + fmtValue(m.tv) : "成交 —",
+  vr_desc: m => "量比 " + m.vr.toFixed(2) + "×"
+};
+
 const SORTS = {
+  tv_desc:  byValue("tv", 1),
+  vr_desc:  byValue("vr", 1),
   chg_desc: (a, b) => b.chg - a.chg || a.symbol.localeCompare(b.symbol),
   chg_asc:  (a, b) => a.chg - b.chg || a.symbol.localeCompare(b.symbol),
   rank:     (a, b) => a.rank - b.rank,
@@ -956,7 +1042,7 @@ function flatten(sp, dy) {
   return dy.monsters.map(d => {
     const s = by[d.symbol];
     return { symbol: d.symbol, name: s.name, element: s.element, rarity: s.rarity, rank: s.rarity_rank,
-             chg: d.price.change_percent, vr: d.aura.volume_ratio, aura: d.aura.quadrant,
+             chg: d.price.change_percent, vr: d.aura.volume_ratio, tv: d.price.turnover_value ?? null, aura: d.aura.quadrant,
              weather: d.weather, kd: !!(d.kd && d.kd.shield), nvs: d.net_value_shield.tier,
              pe_tag: d.valuation.pe_tag, pe: d.valuation.pe };
   });
@@ -977,10 +1063,15 @@ load().then(data => {
   const list = data.monsters;
   document.getElementById("meta").textContent = `${data.season}　·　市場日 ${data.market_date}`;
   const sel = document.getElementById("sort");
+  // 成交金額從 2026-10 起才有；整批都沒有時停用該選項，免得選了是一整排「—」。
+  if (list.every(m => m.tv == null)) {
+    const o = sel.querySelector('option[value="tv_desc"]');
+    o.disabled = true; o.textContent += "（資料累積中）";
+  }
   const grid = document.getElementById("grid");
   const draw = () => {
     const rows = list.slice().sort(SORTS[sel.value]);
-    grid.innerHTML = rows.map(card).join("");
+    grid.innerHTML = rows.map(m => card(m, sel.value)).join("");
     const by = Object.fromEntries(rows.map(m => [m.symbol, m]));
     grid.querySelectorAll("canvas").forEach(cv => drawArt(cv, by[cv.dataset.symbol]));
     document.getElementById("count").textContent = `共 ${rows.length} 檔`;

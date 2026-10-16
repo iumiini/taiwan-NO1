@@ -61,7 +61,7 @@ def build_overview() -> dict:
             "symbol": d["symbol"], "name": s["name"], "element": s["element"],
             "rarity": s["rarity"], "rank": s["rarity_rank"],
             "chg": d["price"]["change_percent"],
-            "vr": d["aura"]["volume_ratio"], "aura": d["aura"]["quadrant"],
+            "vr": d["aura"]["volume_ratio"], "tv": d["price"].get("turnover_value"), "aura": d["aura"]["quadrant"],
             "weather": d["weather"], "kd": bool(d.get("kd", {}).get("shield")),
             "nvs": d["net_value_shield"]["tier"],
             "pe_tag": d["valuation"]["pe_tag"],

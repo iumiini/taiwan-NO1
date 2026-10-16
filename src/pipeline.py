@@ -188,6 +188,17 @@ def collect(size: int, skip_ticker: bool, refreeze: bool = False,
     vals = sources.market_stats_on(market_date)
     note("twse-bwibbu-d", "/rwd/zh/afterTrading/BWIBBU_d", len(vals))
 
+    # 成交金額是輔助資料（供圖鑑排序），抓不到不讓整晚結算中斷：欄位留空、記一筆警告。
+    # 日期仍由來源嚴格比對，不會拿別天的數字頂替。
+    trades: dict[str, dict] = {}
+    trades_error: str | None = None
+    try:
+        trades = sources.trades_on(market_date)
+        note("twse-mi-index", "/rwd/zh/afterTrading/MI_INDEX", len(trades))
+    except sources.SourceError as e:
+        trades_error = str(e)
+        log(f"   ⚠️ 成交金額取不到，本次留空：{e}")
+
     log("⑤ 月營收與 YoY…")
     revenue = sources.monthly_revenue()
     note("twse-monthly-revenue", "/opendata/t187ap05_L", len(revenue))
@@ -206,6 +217,7 @@ def collect(size: int, skip_ticker: bool, refreeze: bool = False,
     log(f"⑧ 歷史 K 線與指標（{len(symbols)} 檔，分段抓取）…")
     missing_quote: list[str] = []
     close_mismatch: list[str] = []
+    trade_mismatch: list[str] = []
     for i, symbol in enumerate(symbols, 1):
         if symbol not in quotes:
             # 凍結名單的成員可能因下市、暫停交易或轉板而從當日行情消失。
@@ -234,6 +246,17 @@ def collect(size: int, skip_ticker: bool, refreeze: bool = False,
             close_mismatch.append(
                 f"{symbol}（K 線 {rows[0].get('date')} {close}／"
                 f"TWSE {val.get('date')} {val.get('close')}）")
+
+        # 成交金額：TWSE 成交股數必須等於 K 線成交量才採用（同 V-X01 的跨來源核對），
+        # 否則兩邊不是同一個交易日或統計口徑，寧可留空。
+        trade = trades.get(symbol)
+        turnover_value = None
+        if trade:
+            if trade["volume"] == rows[0].get("volume"):
+                turnover_value = trade["turnover_value"]
+            else:
+                trade_mismatch.append(
+                    f"{symbol}（K 線量 {rows[0].get('volume')}／TWSE {trade['volume']}）")
 
         # 空窗期回推：季報未公布時，EPS 與每股淨值改由每日估值端點反推。
         eps = f.get("eps")
@@ -269,6 +292,7 @@ def collect(size: int, skip_ticker: bool, refreeze: bool = False,
             "valuation_fiscal_period": val.get("fiscal_period"),
             "close": close,
             "change_percent": change_pct,
+            "turnover_value": turnover_value,
             "candle": rows[0],
             "indicators": ind,
             "special_state": None,
@@ -290,6 +314,13 @@ def collect(size: int, skip_ticker: bool, refreeze: bool = False,
     if close_mismatch:
         fund_warnings.append(
             f"{len(close_mismatch)} 檔估值表與 K 線收盤價不一致：{'、'.join(close_mismatch)}")
+
+    if trades_error:
+        fund_warnings.append(f"成交金額端點取不到，本次 turnover_value 全部留空：{trades_error}")
+    if trade_mismatch:
+        fund_warnings.append(
+            f"{len(trade_mismatch)} 檔成交股數與 K 線不一致，成交金額留空："
+            f"{'、'.join(trade_mismatch)}")
 
     if missing_quote:
         fund_warnings.append(
@@ -331,6 +362,8 @@ def build_daily(bundle: dict, species_by_symbol: dict, balance: dict) -> dict:
                 "low": candle["low"], "close": candle["close"],
                 "change_percent": m["change_percent"],
                 "volume": candle["volume"],
+                **({"turnover_value": m["turnover_value"]}
+                   if m.get("turnover_value") is not None else {}),
             },
             "moving_averages": ind["moving_averages"],
             "weather": ind["weather"],

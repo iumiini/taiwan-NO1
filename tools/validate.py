@@ -109,6 +109,19 @@ def check_cross_rules(root: Path, errors: list) -> None:
                 errors.append(
                     f"{daily_path.name} {m['symbol']} 估值屬於 {as_of}，"
                     f"不是市場日 {daily['market_date']}")
+        # 成交金額（V-T02）：平均成交價必須落在當日最低～最高價之間（容許 1% 誤差，
+        # 吸收盤後定價與零股）。成交金額是官方值，對不上通常代表單位或欄位對錯了。
+        # 舊檔沒有 turnover_value，略過。
+        for m in daily["monsters"]:  # noqa: PLW2901
+            pr = m["price"]
+            tv = pr.get("turnover_value")
+            if tv is None or not pr["volume"]:
+                continue
+            avg = tv / pr["volume"]
+            if not (pr["low"] * 0.99 <= avg <= pr["high"] * 1.01):
+                errors.append(
+                    f"{daily_path.name} {m['symbol']} 成交均價 {avg:.2f} "
+                    f"落在最低 {pr['low']}～最高 {pr['high']} 之外")
         print(f"  ✅ {daily_path.name} 通過每日層交叉檢查")
 
 
