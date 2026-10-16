@@ -187,6 +187,49 @@ def market_stats_on(date_str: str) -> dict[str, dict]:
     return out
 
 
+def trades_on(date_str: str) -> dict[str, dict]:
+    """**指定交易日**的全市場成交統計（成交股數、成交金額、成交筆數）。
+
+    來源是 TWSE 每日收盤行情（MI_INDEX），與估值端點同屬 rwd 網域，同樣由
+    呼叫端指名日期、回傳日期不符就失敗，不拿別天的數字頂替。
+
+    成交金額是**官方統計值**，不是「成交量 × 收盤價」的估算——後者對低價股、
+    盤中價差大的股票會有明顯誤差。涵蓋上市證券（含 ETF），呼叫端自行取名單。
+    """
+    ymd = date_str.replace("-", "")
+    body = _request(
+        "https://www.twse.com.tw/rwd/zh/afterTrading/MI_INDEX"
+        f"?response=json&date={ymd}&type=ALLBUT0999")
+    if body.get("stat") != "OK":
+        raise SourceError(f"{date_str} 無成交統計：{body.get('stat')}")
+    if body.get("date") != ymd:
+        raise SourceError(f"要求 {date_str} 的成交統計，TWSE 回傳的是 {body.get('date')}")
+
+    # 同一回應含指數、大盤統計等多張表，以「每日收盤行情」那張為準（標題含該字樣）。
+    tables = [t for t in body.get("tables") or []
+              if "每日收盤行情" in (t.get("title") or "")]
+    if not tables:
+        raise SourceError("MI_INDEX 找不到「每日收盤行情」表，端點格式可能變動")
+    table = tables[0]
+    idx = {name: i for i, name in enumerate(table.get("fields") or [])}
+    need = ["證券代號", "成交股數", "成交筆數", "成交金額"]
+    if missing := [n for n in need if n not in idx]:
+        raise SourceError(f"MI_INDEX 欄位變動，缺少：{'、'.join(missing)}")
+
+    out: dict[str, dict] = {}
+    for row in table.get("data") or []:
+        volume, value = _num(row[idx["成交股數"]]), _num(row[idx["成交金額"]])
+        if volume is None or value is None:
+            continue
+        out[row[idx["證券代號"]]] = {
+            "date": date_str,
+            "volume": int(volume),
+            "turnover_value": int(value),
+            "transactions": int(_num(row[idx["成交筆數"]]) or 0),
+        }
+    return out
+
+
 def closing_prices_on(date_str: str) -> dict[str, float]:
     """指定日期的全市場收盤價，供賽季名單以過去某一天凍結。
 

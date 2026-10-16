@@ -100,6 +100,7 @@ python3 tools/gen_spec.py             # 重新生成規格現況
 | 大盤指數（世界天氣） | 富果 `stock/intraday/quote/IX0001` | 是 |
 | **注意股／處置股**（超進化、禁閉室） | 富果 `stock/intraday/ticker/{代號}` | 是 |
 | 本益比／殖利率／淨值比 | TWSE `BWIBBU_d?date=`（指定交易日，只涵蓋上市） | 否 |
+| 成交金額（圖鑑排序用，官方統計值） | TWSE `MI_INDEX?date=`（指定交易日；取不到時留空、不中斷結算） | 否 |
 | 月營收＋YoY | TWSE `t187ap05_L` | 否 |
 | 週轉率 | TWSE `FMSRFK_ALL` | 否 |
 | 已發行股數（市值） | TWSE `t187ap03_L` | 否 |
