@@ -2,7 +2,7 @@
   "schema_version": "0.1.0",
   "generation": 1,
   "season": "2026-S4",
-  "stats_as_of": "2026-10-19",
+  "stats_as_of": "2026-10-20",
   "fiscal_period": "2026Q2",
   "species": [
     {
@@ -66,14 +66,14 @@
       },
       "industry": "半導體業",
       "source_metrics": {
-        "market_cap": 62756335562140,
+        "market_cap": 62367350011135,
         "shares_outstanding": 25932370067.0,
         "revenue_monthly": 511857399000.0,
         "revenue_yoy": 54.65,
         "eps": 49.33,
         "debt_ratio": 30.94,
         "turnover_ratio": 1.74,
-        "volatility_60d": 30.33,
+        "volatility_60d": 30.36,
         "book_value_per_share": 248.05
       }
     },
@@ -138,14 +138,14 @@
       },
       "industry": "半導體業",
       "source_metrics": {
-        "market_cap": 6748825737665,
+        "market_cap": 6660553343950,
         "shares_outstanding": 1604952613.0,
         "revenue_monthly": 55399497000.0,
         "revenue_yoy": 1.97,
         "eps": 30.44,
         "debt_ratio": 45.06,
         "turnover_ratio": 11.58,
-        "volatility_60d": 63.06,
+        "volatility_60d": 63.13,
         "book_value_per_share": 265.77
       }
     },
@@ -210,14 +210,14 @@
       },
       "industry": "電子零組件業",
       "source_metrics": {
-        "market_cap": 4259971059560,
+        "market_cap": 4169057043045,
         "shares_outstanding": 2597543329.0,
         "revenue_monthly": 65399563000.0,
         "revenue_yoy": 14.61,
         "eps": 17.59,
         "debt_ratio": 53.58,
         "turnover_ratio": 9.3,
-        "volatility_60d": 60.43,
+        "volatility_60d": 60.56,
         "book_value_per_share": 113.07
       }
     },
@@ -282,14 +282,14 @@
       },
       "industry": "其他電子業",
       "source_metrics": {
-        "market_cap": 3371141286032,
+        "market_cap": 3399292779026,
         "shares_outstanding": 14075746497.0,
         "revenue_monthly": 1158633235000.0,
         "revenue_yoy": 38.42,
         "eps": 7.84,
         "debt_ratio": 62.3,
         "turnover_ratio": 4.39,
-        "volatility_60d": 33.64,
+        "volatility_60d": 33.31,
         "book_value_per_share": 136.02
       }
     },
@@ -354,14 +354,14 @@
       },
       "industry": "半導體業",
       "source_metrics": {
-        "market_cap": 2995283428940,
+        "market_cap": 2950577706120,
         "shares_outstanding": 4470572282.0,
         "revenue_monthly": 88130084000.0,
         "revenue_yoy": 45.52,
         "eps": 8.04,
         "debt_ratio": 60.87,
         "turnover_ratio": 7.69,
-        "volatility_60d": 60.93,
+        "volatility_60d": 60.98,
         "book_value_per_share": 88.5
       }
     },
@@ -426,14 +426,14 @@
       },
       "industry": "塑膠工業",
       "source_metrics": {
-        "market_cap": 2407004352262,
+        "market_cap": 2347523190344,
         "shares_outstanding": 7930821589.0,
         "revenue_monthly": 34423266000.0,
         "revenue_yoy": 55.26,
         "eps": 5.17,
         "debt_ratio": 31.17,
         "turnover_ratio": 19.24,
-        "volatility_60d": 82.77,
+        "volatility_60d": 82.09,
         "book_value_per_share": 60.24
       }
     },
@@ -498,87 +498,15 @@
       },
       "industry": "金融保險業",
       "source_metrics": {
-        "market_cap": 2220167344892,
+        "market_cap": 2150130520132,
         "shares_outstanding": 14007364952.0,
         "revenue_monthly": 19467727000.0,
         "revenue_yoy": -63.8,
         "eps": 6.67,
         "debt_ratio": 90.67,
         "turnover_ratio": 2.32,
-        "volatility_60d": 31.7,
+        "volatility_60d": 32.48,
         "book_value_per_share": 81.22
-      }
-    },
-    {
-      "symbol": "3037",
-      "name": "欣興",
-      "generation": 1,
-      "element": "fire",
-      "rarity": "epic",
-      "rarity_rank": 8,
-      "bst": 500,
-      "base_stats": {
-        "hp": 71,
-        "atk": 100,
-        "matk": 100,
-        "def": 86,
-        "mdef": 29,
-        "spd": 114
-      },
-      "growth_group": "medium",
-      "move_pool": [
-        {
-          "id": "gap_up",
-          "name": "向上跳空",
-          "power": 85,
-          "pp": 10,
-          "learn_level": 1,
-          "category": "magical",
-          "element": "fire"
-        },
-        {
-          "id": "red_three_soldiers",
-          "name": "紅三兵",
-          "power": 80,
-          "pp": 15,
-          "learn_level": 1,
-          "category": "physical",
-          "element": "fire"
-        },
-        {
-          "id": "upper_shadow_thrust",
-          "name": "上影線突刺",
-          "power": 70,
-          "pp": 15,
-          "learn_level": 8,
-          "category": "magical",
-          "element": "fire"
-        },
-        {
-          "id": "lower_shadow_probe",
-          "name": "下影線試探",
-          "power": 65,
-          "pp": 20,
-          "learn_level": 18,
-          "category": "magical",
-          "element": "fire"
-        }
-      ],
-      "art": {
-        "placeholder_color": "#FF8A65",
-        "sprite": null
-      },
-      "industry": "電子零組件業",
-      "source_metrics": {
-        "market_cap": 1838246587520,
-        "shares_outstanding": 1641291596.0,
-        "revenue_monthly": 18650679000.0,
-        "revenue_yoy": 64.67,
-        "eps": 11.7,
-        "debt_ratio": 59.23,
-        "turnover_ratio": 26.91,
-        "volatility_60d": 74.45,
-        "book_value_per_share": 77.9
       }
     },
     {
@@ -587,7 +515,7 @@
       "generation": 1,
       "element": "fire",
       "rarity": "epic",
-      "rarity_rank": 9,
+      "rarity_rank": 8,
       "bst": 500,
       "base_stats": {
         "hp": 77,
@@ -642,15 +570,87 @@
       },
       "industry": "電子零組件業",
       "source_metrics": {
-        "market_cap": 1836395709250,
+        "market_cap": 1771897908730,
         "shares_outstanding": 358321114.0,
         "revenue_monthly": 21532230000.0,
         "revenue_yoy": 168.87,
         "eps": 42.46,
         "debt_ratio": 63.23,
         "turnover_ratio": 11.39,
-        "volatility_60d": 67.69,
+        "volatility_60d": 68.08,
         "book_value_per_share": 162.8
+      }
+    },
+    {
+      "symbol": "3037",
+      "name": "欣興",
+      "generation": 1,
+      "element": "fire",
+      "rarity": "epic",
+      "rarity_rank": 9,
+      "bst": 500,
+      "base_stats": {
+        "hp": 71,
+        "atk": 100,
+        "matk": 100,
+        "def": 86,
+        "mdef": 29,
+        "spd": 114
+      },
+      "growth_group": "medium",
+      "move_pool": [
+        {
+          "id": "gap_up",
+          "name": "向上跳空",
+          "power": 85,
+          "pp": 10,
+          "learn_level": 1,
+          "category": "magical",
+          "element": "fire"
+        },
+        {
+          "id": "red_three_soldiers",
+          "name": "紅三兵",
+          "power": 80,
+          "pp": 15,
+          "learn_level": 1,
+          "category": "physical",
+          "element": "fire"
+        },
+        {
+          "id": "upper_shadow_thrust",
+          "name": "上影線突刺",
+          "power": 70,
+          "pp": 15,
+          "learn_level": 8,
+          "category": "magical",
+          "element": "fire"
+        },
+        {
+          "id": "lower_shadow_probe",
+          "name": "下影線試探",
+          "power": 65,
+          "pp": 20,
+          "learn_level": 18,
+          "category": "magical",
+          "element": "fire"
+        }
+      ],
+      "art": {
+        "placeholder_color": "#FF8A65",
+        "sprite": null
+      },
+      "industry": "電子零組件業",
+      "source_metrics": {
+        "market_cap": 1731562633780,
+        "shares_outstanding": 1641291596.0,
+        "revenue_monthly": 18650679000.0,
+        "revenue_yoy": 64.67,
+        "eps": 11.7,
+        "debt_ratio": 59.23,
+        "turnover_ratio": 26.91,
+        "volatility_60d": 75.48,
+        "book_value_per_share": 77.9
       }
     },
     {
@@ -714,14 +714,14 @@
       },
       "industry": "金融保險業",
       "source_metrics": {
-        "market_cap": 1679624559656,
+        "market_cap": 1613613114080,
         "shares_outstanding": 14669210128.0,
         "revenue_monthly": 20405136000.0,
         "revenue_yoy": -47.39,
         "eps": 4.95,
         "debt_ratio": 92.45,
         "turnover_ratio": 2.94,
-        "volatility_60d": 31.2,
+        "volatility_60d": 32.38,
         "book_value_per_share": 69.37
       }
     },
@@ -786,14 +786,14 @@
       },
       "industry": "半導體業",
       "source_metrics": {
-        "market_cap": 1652967347718,
+        "market_cap": 1596401925173,
         "shares_outstanding": 12570093899.0,
         "revenue_monthly": 25350431000.0,
         "revenue_yoy": 27.22,
         "eps": 4.68,
         "debt_ratio": 33.34,
         "turnover_ratio": 29.04,
-        "volatility_60d": 66.12,
+        "volatility_60d": 66.48,
         "book_value_per_share": 35.38
       }
     },
@@ -858,14 +858,14 @@
       },
       "industry": "半導體業",
       "source_metrics": {
-        "market_cap": 1504289769784,
+        "market_cap": 1455986887268,
         "shares_outstanding": 3450205894.0,
         "revenue_monthly": 45091089000.0,
         "revenue_yoy": 576.62,
         "eps": 23.38,
         "debt_ratio": 16.78,
         "turnover_ratio": 35.24,
-        "volatility_60d": 79.08,
+        "volatility_60d": 78.83,
         "book_value_per_share": 93.49
       }
     },
@@ -930,15 +930,87 @@
       },
       "industry": "金融保險業",
       "source_metrics": {
-        "market_cap": 1444213467960,
+        "market_cap": 1408796788910,
         "shares_outstanding": 19675932806.0,
         "revenue_monthly": 21331939000.0,
         "revenue_yoy": 12.82,
         "eps": 1.96,
         "debt_ratio": 92.82,
         "turnover_ratio": 3.4,
-        "volatility_60d": 23.51,
+        "volatility_60d": 24.06,
         "book_value_per_share": 34.99
+      }
+    },
+    {
+      "symbol": "2382",
+      "name": "廣達",
+      "generation": 1,
+      "element": "steel",
+      "rarity": "rare",
+      "rarity_rank": 14,
+      "bst": 460,
+      "base_stats": {
+        "hp": 112,
+        "atk": 78,
+        "matk": 90,
+        "def": 34,
+        "mdef": 101,
+        "spd": 45
+      },
+      "growth_group": "medium",
+      "move_pool": [
+        {
+          "id": "red_three_soldiers",
+          "name": "紅三兵",
+          "power": 80,
+          "pp": 15,
+          "learn_level": 1,
+          "category": "physical",
+          "element": "steel"
+        },
+        {
+          "id": "gap_up",
+          "name": "向上跳空",
+          "power": 85,
+          "pp": 10,
+          "learn_level": 1,
+          "category": "magical",
+          "element": "steel"
+        },
+        {
+          "id": "long_red_engulfing",
+          "name": "長紅吞噬",
+          "power": 95,
+          "pp": 10,
+          "learn_level": 15,
+          "category": "physical",
+          "element": "steel"
+        },
+        {
+          "id": "long_black_engulfing",
+          "name": "長黑吞噬",
+          "power": 95,
+          "pp": 10,
+          "learn_level": 22,
+          "category": "physical",
+          "element": "steel"
+        }
+      ],
+      "art": {
+        "placeholder_color": "#90A4AE",
+        "sprite": null
+      },
+      "industry": "電腦及週邊設備業",
+      "source_metrics": {
+        "market_cap": 1316494591956,
+        "shares_outstanding": 4107627432.0,
+        "revenue_monthly": 325299509000.0,
+        "revenue_yoy": 76.69,
+        "eps": 12.93,
+        "debt_ratio": 87.6,
+        "turnover_ratio": 7.05,
+        "volatility_60d": 36.04,
+        "book_value_per_share": 63.2
       }
     },
     {
@@ -947,7 +1019,7 @@
       "generation": 1,
       "element": "steel",
       "rarity": "rare",
-      "rarity_rank": 14,
+      "rarity_rank": 15,
       "bst": 460,
       "base_stats": {
         "hp": 79,
@@ -1002,87 +1074,15 @@
       },
       "industry": "電腦及週邊設備業",
       "source_metrics": {
-        "market_cap": 1303664755240,
+        "market_cap": 1305628105775,
         "shares_outstanding": 392670107.0,
         "revenue_monthly": 21018128000.0,
         "revenue_yoy": 44.92,
         "eps": 44.54,
         "debt_ratio": 68.07,
         "turnover_ratio": 15.3,
-        "volatility_60d": 70.18,
+        "volatility_60d": 68.66,
         "book_value_per_share": 140.57
-      }
-    },
-    {
-      "symbol": "2382",
-      "name": "廣達",
-      "generation": 1,
-      "element": "steel",
-      "rarity": "rare",
-      "rarity_rank": 15,
-      "bst": 460,
-      "base_stats": {
-        "hp": 115,
-        "atk": 81,
-        "matk": 92,
-        "def": 34,
-        "mdef": 92,
-        "spd": 46
-      },
-      "growth_group": "medium",
-      "move_pool": [
-        {
-          "id": "red_three_soldiers",
-          "name": "紅三兵",
-          "power": 80,
-          "pp": 15,
-          "learn_level": 1,
-          "category": "physical",
-          "element": "steel"
-        },
-        {
-          "id": "gap_up",
-          "name": "向上跳空",
-          "power": 85,
-          "pp": 10,
-          "learn_level": 1,
-          "category": "magical",
-          "element": "steel"
-        },
-        {
-          "id": "long_red_engulfing",
-          "name": "長紅吞噬",
-          "power": 95,
-          "pp": 10,
-          "learn_level": 15,
-          "category": "physical",
-          "element": "steel"
-        },
-        {
-          "id": "long_black_engulfing",
-          "name": "長黑吞噬",
-          "power": 95,
-          "pp": 10,
-          "learn_level": 22,
-          "category": "physical",
-          "element": "steel"
-        }
-      ],
-      "art": {
-        "placeholder_color": "#90A4AE",
-        "sprite": null
-      },
-      "industry": "電腦及週邊設備業",
-      "source_metrics": {
-        "market_cap": 1291848827364,
-        "shares_outstanding": 4107627432.0,
-        "revenue_monthly": 325299509000.0,
-        "revenue_yoy": 76.69,
-        "eps": 12.93,
-        "debt_ratio": 87.6,
-        "turnover_ratio": 7.05,
-        "volatility_60d": 36.09,
-        "book_value_per_share": 63.2
       }
     },
     {
@@ -1153,7 +1153,7 @@
         "eps": 2.68,
         "debt_ratio": 30.99,
         "turnover_ratio": 3.03,
-        "volatility_60d": 10.86,
+        "volatility_60d": 10.81,
         "book_value_per_share": 47.26
       }
     },
@@ -1218,87 +1218,15 @@
       },
       "industry": "通信網路業",
       "source_metrics": {
-        "market_cap": 1125041383485,
+        "market_cap": 1105402257090,
         "shares_outstanding": 561117897.0,
         "revenue_monthly": 40398562000.0,
         "revenue_yoy": 66.13,
         "eps": 34.7,
         "debt_ratio": 65.32,
         "turnover_ratio": 13.94,
-        "volatility_60d": 61.95,
+        "volatility_60d": 61.91,
         "book_value_per_share": 123.52
-      }
-    },
-    {
-      "symbol": "6505",
-      "name": "台塑化",
-      "generation": 1,
-      "element": "earth",
-      "rarity": "rare",
-      "rarity_rank": 18,
-      "bst": 460,
-      "base_stats": {
-        "hp": 109,
-        "atk": 49,
-        "matk": 85,
-        "def": 121,
-        "mdef": 48,
-        "spd": 48
-      },
-      "growth_group": "medium",
-      "move_pool": [
-        {
-          "id": "gap_up",
-          "name": "向上跳空",
-          "power": 85,
-          "pp": 10,
-          "learn_level": 1,
-          "category": "magical",
-          "element": "earth"
-        },
-        {
-          "id": "red_three_soldiers",
-          "name": "紅三兵",
-          "power": 80,
-          "pp": 15,
-          "learn_level": 1,
-          "category": "physical",
-          "element": "earth"
-        },
-        {
-          "id": "upper_shadow_thrust",
-          "name": "上影線突刺",
-          "power": 70,
-          "pp": 15,
-          "learn_level": 8,
-          "category": "magical",
-          "element": "earth"
-        },
-        {
-          "id": "lower_shadow_probe",
-          "name": "下影線試探",
-          "power": 65,
-          "pp": 20,
-          "learn_level": 18,
-          "category": "magical",
-          "element": "earth"
-        }
-      ],
-      "art": {
-        "placeholder_color": "#A1887F",
-        "sprite": null
-      },
-      "industry": "油電燃氣業",
-      "source_metrics": {
-        "market_cap": 1105011319632,
-        "shares_outstanding": 9525959652.0,
-        "revenue_monthly": 86928034000.0,
-        "revenue_yoy": 65.59,
-        "eps": 4.32,
-        "debt_ratio": 16.6,
-        "turnover_ratio": 5.81,
-        "volatility_60d": 69.06,
-        "book_value_per_share": 51.11
       }
     },
     {
@@ -1307,7 +1235,7 @@
       "generation": 1,
       "element": "fire",
       "rarity": "rare",
-      "rarity_rank": 19,
+      "rarity_rank": 18,
       "bst": 460,
       "base_stats": {
         "hp": 70,
@@ -1362,87 +1290,15 @@
       },
       "industry": "電子零組件業",
       "source_metrics": {
-        "market_cap": 1101710598708,
+        "market_cap": 1079016185626,
         "shares_outstanding": 2063128462.0,
         "revenue_monthly": 17068153000.0,
         "revenue_yoy": 46.12,
         "eps": 8.48,
         "debt_ratio": 64.73,
         "turnover_ratio": 35.74,
-        "volatility_60d": 82.95,
+        "volatility_60d": 83.01,
         "book_value_per_share": 86.01
-      }
-    },
-    {
-      "symbol": "2887",
-      "name": "台新新光金",
-      "generation": 1,
-      "element": "gold",
-      "rarity": "rare",
-      "rarity_rank": 20,
-      "bst": 460,
-      "base_stats": {
-        "hp": 97,
-        "atk": 48,
-        "matk": 24,
-        "def": 48,
-        "mdef": 170,
-        "spd": 73
-      },
-      "growth_group": "medium",
-      "move_pool": [
-        {
-          "id": "red_three_soldiers",
-          "name": "紅三兵",
-          "power": 80,
-          "pp": 15,
-          "learn_level": 1,
-          "category": "physical",
-          "element": "gold"
-        },
-        {
-          "id": "gap_up",
-          "name": "向上跳空",
-          "power": 85,
-          "pp": 10,
-          "learn_level": 1,
-          "category": "magical",
-          "element": "gold"
-        },
-        {
-          "id": "long_red_engulfing",
-          "name": "長紅吞噬",
-          "power": 95,
-          "pp": 10,
-          "learn_level": 15,
-          "category": "physical",
-          "element": "gold"
-        },
-        {
-          "id": "long_black_engulfing",
-          "name": "長黑吞噬",
-          "power": 95,
-          "pp": 10,
-          "learn_level": 22,
-          "category": "physical",
-          "element": "gold"
-        }
-      ],
-      "art": {
-        "placeholder_color": "#FFD54F",
-        "sprite": null
-      },
-      "industry": "金融保險業",
-      "source_metrics": {
-        "market_cap": 1063622875573,
-        "shares_outstanding": 25115061997.0,
-        "revenue_monthly": 13620078000.0,
-        "revenue_yoy": -18.58,
-        "eps": 1.69,
-        "debt_ratio": 92.4,
-        "turnover_ratio": 4.67,
-        "volatility_60d": 35.75,
-        "book_value_per_share": 27.16
       }
     },
     {
@@ -1451,7 +1307,7 @@
       "generation": 1,
       "element": "steel",
       "rarity": "rare",
-      "rarity_rank": 21,
+      "rarity_rank": 19,
       "bst": 460,
       "base_stats": {
         "hp": 96,
@@ -1506,14 +1362,14 @@
       },
       "industry": "電腦及週邊設備業",
       "source_metrics": {
-        "market_cap": 1055976570220,
+        "market_cap": 1078384561100,
         "shares_outstanding": 560199772.0,
         "revenue_monthly": 172620352000.0,
         "revenue_yoy": 99.99,
         "eps": 156.38,
         "debt_ratio": 75.35,
         "turnover_ratio": 46.74,
-        "volatility_60d": 150.24,
+        "volatility_60d": 150.38,
         "book_value_per_share": 734.59
       }
     },
@@ -1523,7 +1379,7 @@
       "generation": 1,
       "element": "electric",
       "rarity": "rare",
-      "rarity_rank": 22,
+      "rarity_rank": 20,
       "bst": 460,
       "base_stats": {
         "hp": 42,
@@ -1578,32 +1434,32 @@
       },
       "industry": "半導體業",
       "source_metrics": {
-        "market_cap": 1049313263130,
+        "market_cap": 1037922250695,
         "shares_outstanding": 134011911.0,
         "revenue_monthly": 7145236000.0,
         "revenue_yoy": 97.78,
         "eps": 23.89,
         "debt_ratio": 63.98,
         "turnover_ratio": 26.03,
-        "volatility_60d": 79.87,
+        "volatility_60d": 79.98,
         "book_value_per_share": 100.48
       }
     },
     {
-      "symbol": "2885",
-      "name": "元大金",
+      "symbol": "2887",
+      "name": "台新新光金",
       "generation": 1,
       "element": "gold",
       "rarity": "rare",
-      "rarity_rank": 23,
+      "rarity_rank": 21,
       "bst": 460,
       "base_stats": {
-        "hp": 68,
-        "atk": 51,
-        "matk": 137,
-        "def": 34,
-        "mdef": 136,
-        "spd": 34
+        "hp": 97,
+        "atk": 48,
+        "matk": 24,
+        "def": 48,
+        "mdef": 170,
+        "spd": 73
       },
       "growth_group": "medium",
       "move_pool": [
@@ -1650,32 +1506,32 @@
       },
       "industry": "金融保險業",
       "source_metrics": {
-        "market_cap": 994077189185,
-        "shares_outstanding": 13864395944.0,
-        "revenue_monthly": 14927852000.0,
-        "revenue_yoy": 67.25,
-        "eps": 2.64,
-        "debt_ratio": 92.04,
-        "turnover_ratio": 3.03,
-        "volatility_60d": 31.91,
-        "book_value_per_share": 28.73
+        "market_cap": 1029717541877,
+        "shares_outstanding": 25115061997.0,
+        "revenue_monthly": 13620078000.0,
+        "revenue_yoy": -18.58,
+        "eps": 1.69,
+        "debt_ratio": 92.4,
+        "turnover_ratio": 4.67,
+        "volatility_60d": 36.46,
+        "book_value_per_share": 27.16
       }
     },
     {
-      "symbol": "7769",
-      "name": "鴻勁",
+      "symbol": "6505",
+      "name": "台塑化",
       "generation": 1,
-      "element": "electric",
+      "element": "earth",
       "rarity": "rare",
-      "rarity_rank": 24,
+      "rarity_rank": 22,
       "bst": 460,
       "base_stats": {
-        "hp": 24,
-        "atk": 118,
-        "matk": 106,
-        "def": 94,
-        "mdef": 47,
-        "spd": 71
+        "hp": 109,
+        "atk": 49,
+        "matk": 85,
+        "def": 121,
+        "mdef": 48,
+        "spd": 48
       },
       "growth_group": "medium",
       "move_pool": [
@@ -1686,7 +1542,7 @@
           "pp": 10,
           "learn_level": 1,
           "category": "magical",
-          "element": "electric"
+          "element": "earth"
         },
         {
           "id": "red_three_soldiers",
@@ -1695,7 +1551,7 @@
           "pp": 15,
           "learn_level": 1,
           "category": "physical",
-          "element": "electric"
+          "element": "earth"
         },
         {
           "id": "upper_shadow_thrust",
@@ -1704,7 +1560,7 @@
           "pp": 15,
           "learn_level": 8,
           "category": "magical",
-          "element": "electric"
+          "element": "earth"
         },
         {
           "id": "lower_shadow_probe",
@@ -1713,24 +1569,24 @@
           "pp": 20,
           "learn_level": 18,
           "category": "magical",
-          "element": "electric"
+          "element": "earth"
         }
       ],
       "art": {
-        "placeholder_color": "#4FC3F7",
+        "placeholder_color": "#A1887F",
         "sprite": null
       },
-      "industry": "半導體業",
+      "industry": "油電燃氣業",
       "source_metrics": {
-        "market_cap": 971622000000,
-        "shares_outstanding": 179930000.0,
-        "revenue_monthly": 5729331000.0,
-        "revenue_yoy": 100.22,
-        "eps": 56.14,
-        "debt_ratio": 33.36,
-        "turnover_ratio": 11.87,
-        "volatility_60d": 71.66,
-        "book_value_per_share": 315.68
+        "market_cap": 1014514702938,
+        "shares_outstanding": 9525959652.0,
+        "revenue_monthly": 86928034000.0,
+        "revenue_yoy": 65.59,
+        "eps": 4.32,
+        "debt_ratio": 16.6,
+        "turnover_ratio": 5.81,
+        "volatility_60d": 68.84,
+        "book_value_per_share": 51.11
       }
     },
     {
@@ -1739,7 +1595,7 @@
       "generation": 1,
       "element": "fire",
       "rarity": "rare",
-      "rarity_rank": 25,
+      "rarity_rank": 23,
       "bst": 460,
       "base_stats": {
         "hp": 13,
@@ -1794,15 +1650,87 @@
       },
       "industry": "電子零組件業",
       "source_metrics": {
-        "market_cap": 965657439680,
+        "market_cap": 978905788700,
         "shares_outstanding": 147203878.0,
         "revenue_monthly": 3054167000.0,
         "revenue_yoy": 79.97,
         "eps": 25.33,
         "debt_ratio": 28.69,
         "turnover_ratio": 16.84,
-        "volatility_60d": 75.44,
+        "volatility_60d": 74.76,
         "book_value_per_share": 160.69
+      }
+    },
+    {
+      "symbol": "2885",
+      "name": "元大金",
+      "generation": 1,
+      "element": "gold",
+      "rarity": "rare",
+      "rarity_rank": 24,
+      "bst": 460,
+      "base_stats": {
+        "hp": 68,
+        "atk": 51,
+        "matk": 137,
+        "def": 34,
+        "mdef": 136,
+        "spd": 34
+      },
+      "growth_group": "medium",
+      "move_pool": [
+        {
+          "id": "red_three_soldiers",
+          "name": "紅三兵",
+          "power": 80,
+          "pp": 15,
+          "learn_level": 1,
+          "category": "physical",
+          "element": "gold"
+        },
+        {
+          "id": "gap_up",
+          "name": "向上跳空",
+          "power": 85,
+          "pp": 10,
+          "learn_level": 1,
+          "category": "magical",
+          "element": "gold"
+        },
+        {
+          "id": "long_red_engulfing",
+          "name": "長紅吞噬",
+          "power": 95,
+          "pp": 10,
+          "learn_level": 15,
+          "category": "physical",
+          "element": "gold"
+        },
+        {
+          "id": "long_black_engulfing",
+          "name": "長黑吞噬",
+          "power": 95,
+          "pp": 10,
+          "learn_level": 22,
+          "category": "physical",
+          "element": "gold"
+        }
+      ],
+      "art": {
+        "placeholder_color": "#FFD54F",
+        "sprite": null
+      },
+      "industry": "金融保險業",
+      "source_metrics": {
+        "market_cap": 977439914052,
+        "shares_outstanding": 13864395944.0,
+        "revenue_monthly": 14927852000.0,
+        "revenue_yoy": 67.25,
+        "eps": 2.64,
+        "debt_ratio": 92.04,
+        "turnover_ratio": 3.03,
+        "volatility_60d": 32.15,
+        "book_value_per_share": 28.73
       }
     },
     {
@@ -1811,7 +1739,7 @@
       "generation": 1,
       "element": "fire",
       "rarity": "rare",
-      "rarity_rank": 26,
+      "rarity_rank": 25,
       "bst": 460,
       "base_stats": {
         "hp": 12,
@@ -1866,34 +1794,34 @@
       },
       "industry": "電子零組件業",
       "source_metrics": {
-        "market_cap": 945346954240,
+        "market_cap": 962500427200,
         "shares_outstanding": 95297072.0,
         "revenue_monthly": 4464393000.0,
         "revenue_yoy": 196.22,
         "eps": 110.96,
         "debt_ratio": 28.35,
         "turnover_ratio": 9.5,
-        "volatility_60d": 78.36,
+        "volatility_60d": 78.4,
         "book_value_per_share": 354.2
       }
     },
     {
-      "symbol": "8046",
-      "name": "南電",
+      "symbol": "7769",
+      "name": "鴻勁",
       "generation": 1,
-      "element": "fire",
-      "rarity": "common",
-      "rarity_rank": 27,
-      "bst": 420,
+      "element": "electric",
+      "rarity": "rare",
+      "rarity_rank": 26,
+      "bst": 460,
       "base_stats": {
-        "hp": 25,
-        "atk": 62,
-        "matk": 86,
-        "def": 111,
-        "mdef": 12,
-        "spd": 124
+        "hp": 24,
+        "atk": 118,
+        "matk": 106,
+        "def": 94,
+        "mdef": 47,
+        "spd": 71
       },
-      "growth_group": "fast",
+      "growth_group": "medium",
       "move_pool": [
         {
           "id": "gap_up",
@@ -1902,7 +1830,7 @@
           "pp": 10,
           "learn_level": 1,
           "category": "magical",
-          "element": "fire"
+          "element": "electric"
         },
         {
           "id": "red_three_soldiers",
@@ -1911,7 +1839,7 @@
           "pp": 15,
           "learn_level": 1,
           "category": "physical",
-          "element": "fire"
+          "element": "electric"
         },
         {
           "id": "upper_shadow_thrust",
@@ -1920,7 +1848,7 @@
           "pp": 15,
           "learn_level": 8,
           "category": "magical",
-          "element": "fire"
+          "element": "electric"
         },
         {
           "id": "lower_shadow_probe",
@@ -1929,24 +1857,24 @@
           "pp": 20,
           "learn_level": 18,
           "category": "magical",
-          "element": "fire"
+          "element": "electric"
         }
       ],
       "art": {
-        "placeholder_color": "#FF8A65",
+        "placeholder_color": "#4FC3F7",
         "sprite": null
       },
-      "industry": "電子零組件業",
+      "industry": "半導體業",
       "source_metrics": {
-        "market_cap": 891708372060,
-        "shares_outstanding": 646165487.0,
-        "revenue_monthly": 5585816000.0,
-        "revenue_yoy": 57.82,
-        "eps": 5.53,
-        "debt_ratio": 24.03,
-        "turnover_ratio": 35.96,
-        "volatility_60d": 79.05,
-        "book_value_per_share": 76.24
+        "market_cap": 936535650000,
+        "shares_outstanding": 179930000.0,
+        "revenue_monthly": 5729331000.0,
+        "revenue_yoy": 100.22,
+        "eps": 56.14,
+        "debt_ratio": 33.36,
+        "turnover_ratio": 11.87,
+        "volatility_60d": 71.97,
+        "book_value_per_share": 315.68
       }
     },
     {
@@ -1955,7 +1883,7 @@
       "generation": 1,
       "element": "gold",
       "rarity": "common",
-      "rarity_rank": 28,
+      "rarity_rank": 27,
       "bst": 420,
       "base_stats": {
         "hp": 80,
@@ -2010,14 +1938,14 @@
       },
       "industry": "金融保險業",
       "source_metrics": {
-        "market_cap": 874655241744,
+        "market_cap": 856931731273,
         "shares_outstanding": 17723510471.0,
         "revenue_monthly": 8591317000.0,
         "revenue_yoy": 7.18,
         "eps": 1.32,
         "debt_ratio": 94.21,
         "turnover_ratio": 5.44,
-        "volatility_60d": 26.68,
+        "volatility_60d": 26.98,
         "book_value_per_share": 17.4
       }
     },
@@ -2027,7 +1955,7 @@
       "generation": 1,
       "element": "electric",
       "rarity": "common",
-      "rarity_rank": 29,
+      "rarity_rank": 28,
       "bst": 420,
       "base_stats": {
         "hp": 34,
@@ -2082,32 +2010,32 @@
       },
       "industry": "其他電子業",
       "source_metrics": {
-        "market_cap": 852617712710,
+        "market_cap": 850491484000,
         "shares_outstanding": 425245742.0,
         "revenue_monthly": 6859602000.0,
         "revenue_yoy": 206.47,
         "eps": 21.27,
         "debt_ratio": 47.08,
         "turnover_ratio": 10.91,
-        "volatility_60d": 67.89,
+        "volatility_60d": 67.83,
         "book_value_per_share": 77.88
       }
     },
     {
-      "symbol": "3008",
-      "name": "大立光",
+      "symbol": "8046",
+      "name": "南電",
       "generation": 1,
       "element": "fire",
       "rarity": "common",
-      "rarity_rank": 30,
+      "rarity_rank": 29,
       "bst": 420,
       "base_stats": {
-        "hp": 23,
-        "atk": 117,
-        "matk": 12,
-        "def": 117,
-        "mdef": 46,
-        "spd": 105
+        "hp": 25,
+        "atk": 62,
+        "matk": 86,
+        "def": 111,
+        "mdef": 12,
+        "spd": 124
       },
       "growth_group": "fast",
       "move_pool": [
@@ -2152,17 +2080,17 @@
         "placeholder_color": "#FF8A65",
         "sprite": null
       },
-      "industry": "光電業",
+      "industry": "電子零組件業",
       "source_metrics": {
-        "market_cap": 816834740265,
-        "shares_outstanding": 130798197.0,
-        "revenue_monthly": 5779179000.0,
-        "revenue_yoy": -7.31,
-        "eps": 82.35,
-        "debt_ratio": 14.43,
-        "turnover_ratio": 32.54,
-        "volatility_60d": 78.9,
-        "book_value_per_share": 1464.41
+        "market_cap": 843245960535,
+        "shares_outstanding": 646165487.0,
+        "revenue_monthly": 5585816000.0,
+        "revenue_yoy": 57.82,
+        "eps": 5.53,
+        "debt_ratio": 24.03,
+        "turnover_ratio": 35.96,
+        "volatility_60d": 78.96,
+        "book_value_per_share": 76.24
       }
     },
     {
@@ -2171,7 +2099,7 @@
       "generation": 1,
       "element": "gold",
       "rarity": "common",
-      "rarity_rank": 31,
+      "rarity_rank": 30,
       "bst": 420,
       "base_stats": {
         "hp": 60,
@@ -2226,15 +2154,87 @@
       },
       "industry": "金融保險業",
       "source_metrics": {
-        "market_cap": 799519089400,
+        "market_cap": 789135724602,
         "shares_outstanding": 14833378282.0,
         "revenue_monthly": 8344036000.0,
         "revenue_yoy": 16.45,
         "eps": 1.44,
         "debt_ratio": 92.31,
         "turnover_ratio": 3.31,
-        "volatility_60d": 28.76,
+        "volatility_60d": 28.92,
         "book_value_per_share": 27.13
+      }
+    },
+    {
+      "symbol": "3008",
+      "name": "大立光",
+      "generation": 1,
+      "element": "fire",
+      "rarity": "common",
+      "rarity_rank": 31,
+      "bst": 420,
+      "base_stats": {
+        "hp": 23,
+        "atk": 117,
+        "matk": 12,
+        "def": 117,
+        "mdef": 46,
+        "spd": 105
+      },
+      "growth_group": "fast",
+      "move_pool": [
+        {
+          "id": "gap_up",
+          "name": "向上跳空",
+          "power": 85,
+          "pp": 10,
+          "learn_level": 1,
+          "category": "magical",
+          "element": "fire"
+        },
+        {
+          "id": "red_three_soldiers",
+          "name": "紅三兵",
+          "power": 80,
+          "pp": 15,
+          "learn_level": 1,
+          "category": "physical",
+          "element": "fire"
+        },
+        {
+          "id": "upper_shadow_thrust",
+          "name": "上影線突刺",
+          "power": 70,
+          "pp": 15,
+          "learn_level": 8,
+          "category": "magical",
+          "element": "fire"
+        },
+        {
+          "id": "lower_shadow_probe",
+          "name": "下影線試探",
+          "power": 65,
+          "pp": 20,
+          "learn_level": 18,
+          "category": "magical",
+          "element": "fire"
+        }
+      ],
+      "art": {
+        "placeholder_color": "#FF8A65",
+        "sprite": null
+      },
+      "industry": "光電業",
+      "source_metrics": {
+        "market_cap": 781519227075,
+        "shares_outstanding": 130798197.0,
+        "revenue_monthly": 5779179000.0,
+        "revenue_yoy": -7.31,
+        "eps": 82.35,
+        "debt_ratio": 14.43,
+        "turnover_ratio": 32.54,
+        "volatility_60d": 79.41,
+        "book_value_per_share": 1464.41
       }
     },
     {
@@ -2298,14 +2298,14 @@
       },
       "industry": "電腦及週邊設備業",
       "source_metrics": {
-        "market_cap": 720477471600,
+        "market_cap": 728647834680,
         "shares_outstanding": 742760280.0,
         "revenue_monthly": 97243019000.0,
         "revenue_yoy": 17.73,
         "eps": 38.83,
         "debt_ratio": 62.01,
         "turnover_ratio": 8.67,
-        "volatility_60d": 47.88,
+        "volatility_60d": 47.84,
         "book_value_per_share": 405.73
       }
     },
@@ -2370,14 +2370,14 @@
       },
       "industry": "半導體業",
       "source_metrics": {
-        "market_cap": 699750030012,
+        "market_cap": 686250029432,
         "shares_outstanding": 4500000193.0,
         "revenue_monthly": 28248909000.0,
         "revenue_yoy": 256.67,
         "eps": 7.65,
         "debt_ratio": 40.78,
         "turnover_ratio": 45.98,
-        "volatility_60d": 74.26,
+        "volatility_60d": 73.38,
         "book_value_per_share": 36.67
       }
     },
@@ -2442,14 +2442,14 @@
       },
       "industry": "金融保險業",
       "source_metrics": {
-        "market_cap": 684533761789,
+        "market_cap": 676100080946,
         "shares_outstanding": 14056134739.0,
         "revenue_monthly": 6206398000.0,
         "revenue_yoy": 6.53,
         "eps": 1.24,
         "debt_ratio": 94.68,
         "turnover_ratio": 2.14,
-        "volatility_60d": 31.38,
+        "volatility_60d": 31.53,
         "book_value_per_share": 17.37
       }
     },
@@ -2462,12 +2462,12 @@
       "rarity_rank": 35,
       "bst": 420,
       "base_stats": {
-        "hp": 57,
-        "atk": 38,
-        "matk": 96,
-        "def": 19,
-        "mdef": 153,
-        "spd": 57
+        "hp": 55,
+        "atk": 37,
+        "matk": 91,
+        "def": 18,
+        "mdef": 164,
+        "spd": 55
       },
       "growth_group": "fast",
       "move_pool": [
@@ -2514,44 +2514,35 @@
       },
       "industry": "金融保險業",
       "source_metrics": {
-        "market_cap": 668893134625,
+        "market_cap": 654110965904,
         "shares_outstanding": 14782168721.0,
         "revenue_monthly": 8442029000.0,
         "revenue_yoy": 29.84,
         "eps": 1.66,
         "debt_ratio": 93.3,
         "turnover_ratio": 3.64,
-        "volatility_60d": 27.5,
+        "volatility_60d": 25.38,
         "book_value_per_share": 18.29
       }
     },
     {
-      "symbol": "2368",
-      "name": "金像電",
+      "symbol": "3231",
+      "name": "緯創",
       "generation": 1,
-      "element": "fire",
+      "element": "steel",
       "rarity": "common",
       "rarity_rank": 36,
       "bst": 420,
       "base_stats": {
-        "hp": 46,
-        "atk": 82,
-        "matk": 82,
-        "def": 70,
-        "mdef": 35,
-        "spd": 105
+        "hp": 95,
+        "atk": 57,
+        "matk": 86,
+        "def": 29,
+        "mdef": 67,
+        "spd": 86
       },
       "growth_group": "fast",
       "move_pool": [
-        {
-          "id": "gap_up",
-          "name": "向上跳空",
-          "power": 85,
-          "pp": 10,
-          "learn_level": 1,
-          "category": "magical",
-          "element": "fire"
-        },
         {
           "id": "red_three_soldiers",
           "name": "紅三兵",
@@ -2559,42 +2550,51 @@
           "pp": 15,
           "learn_level": 1,
           "category": "physical",
-          "element": "fire"
+          "element": "steel"
         },
         {
-          "id": "upper_shadow_thrust",
-          "name": "上影線突刺",
-          "power": 70,
-          "pp": 15,
-          "learn_level": 8,
+          "id": "gap_up",
+          "name": "向上跳空",
+          "power": 85,
+          "pp": 10,
+          "learn_level": 1,
           "category": "magical",
-          "element": "fire"
+          "element": "steel"
         },
         {
-          "id": "lower_shadow_probe",
-          "name": "下影線試探",
-          "power": 65,
-          "pp": 20,
-          "learn_level": 18,
-          "category": "magical",
-          "element": "fire"
+          "id": "long_red_engulfing",
+          "name": "長紅吞噬",
+          "power": 95,
+          "pp": 10,
+          "learn_level": 15,
+          "category": "physical",
+          "element": "steel"
+        },
+        {
+          "id": "long_black_engulfing",
+          "name": "長黑吞噬",
+          "power": 95,
+          "pp": 10,
+          "learn_level": 22,
+          "category": "physical",
+          "element": "steel"
         }
       ],
       "art": {
-        "placeholder_color": "#FF8A65",
+        "placeholder_color": "#90A4AE",
         "sprite": null
       },
-      "industry": "電子零組件業",
+      "industry": "電腦及週邊設備業",
       "source_metrics": {
-        "market_cap": 663243715000,
-        "shares_outstanding": 530594972.0,
-        "revenue_monthly": 9319805000.0,
-        "revenue_yoy": 55.46,
-        "eps": 16.17,
-        "debt_ratio": 56.53,
-        "turnover_ratio": 34.1,
-        "volatility_60d": 78.79,
-        "book_value_per_share": 81.49
+        "market_cap": 648240185250,
+        "shares_outstanding": 3429842250.0,
+        "revenue_monthly": 380806168000.0,
+        "revenue_yoy": 87.19,
+        "eps": 7.78,
+        "debt_ratio": 82.37,
+        "turnover_ratio": 30.43,
+        "volatility_60d": 46.42,
+        "book_value_per_share": 61.01
       }
     },
     {
@@ -2658,15 +2658,87 @@
       },
       "industry": "金融保險業",
       "source_metrics": {
-        "market_cap": 648430196545,
+        "market_cap": 632304314694,
         "shares_outstanding": 16974612475.0,
         "revenue_monthly": 7598077000.0,
         "revenue_yoy": -61.19,
         "eps": 1.64,
         "debt_ratio": 89.78,
         "turnover_ratio": 5.54,
-        "volatility_60d": 32.46,
+        "volatility_60d": 32.93,
         "book_value_per_share": 25.28
+      }
+    },
+    {
+      "symbol": "2368",
+      "name": "金像電",
+      "generation": 1,
+      "element": "fire",
+      "rarity": "common",
+      "rarity_rank": 38,
+      "bst": 420,
+      "base_stats": {
+        "hp": 46,
+        "atk": 82,
+        "matk": 82,
+        "def": 70,
+        "mdef": 35,
+        "spd": 105
+      },
+      "growth_group": "fast",
+      "move_pool": [
+        {
+          "id": "gap_up",
+          "name": "向上跳空",
+          "power": 85,
+          "pp": 10,
+          "learn_level": 1,
+          "category": "magical",
+          "element": "fire"
+        },
+        {
+          "id": "red_three_soldiers",
+          "name": "紅三兵",
+          "power": 80,
+          "pp": 15,
+          "learn_level": 1,
+          "category": "physical",
+          "element": "fire"
+        },
+        {
+          "id": "upper_shadow_thrust",
+          "name": "上影線突刺",
+          "power": 70,
+          "pp": 15,
+          "learn_level": 8,
+          "category": "magical",
+          "element": "fire"
+        },
+        {
+          "id": "lower_shadow_probe",
+          "name": "下影線試探",
+          "power": 65,
+          "pp": 20,
+          "learn_level": 18,
+          "category": "magical",
+          "element": "fire"
+        }
+      ],
+      "art": {
+        "placeholder_color": "#FF8A65",
+        "sprite": null
+      },
+      "industry": "電子零組件業",
+      "source_metrics": {
+        "market_cap": 628755041820,
+        "shares_outstanding": 530594972.0,
+        "revenue_monthly": 9319805000.0,
+        "revenue_yoy": 55.46,
+        "eps": 16.17,
+        "debt_ratio": 56.53,
+        "turnover_ratio": 34.1,
+        "volatility_60d": 79.68,
+        "book_value_per_share": 81.49
       }
     },
     {
@@ -2675,7 +2747,7 @@
       "generation": 1,
       "element": "fire",
       "rarity": "common",
-      "rarity_rank": 38,
+      "rarity_rank": 39,
       "bst": 420,
       "base_stats": {
         "hp": 82,
@@ -2737,80 +2809,8 @@
         "eps": 3.55,
         "debt_ratio": 39.71,
         "turnover_ratio": 55.34,
-        "volatility_60d": 73.85,
+        "volatility_60d": 71.12,
         "book_value_per_share": 139.13
-      }
-    },
-    {
-      "symbol": "3231",
-      "name": "緯創",
-      "generation": 1,
-      "element": "steel",
-      "rarity": "common",
-      "rarity_rank": 39,
-      "bst": 420,
-      "base_stats": {
-        "hp": 95,
-        "atk": 57,
-        "matk": 86,
-        "def": 29,
-        "mdef": 67,
-        "spd": 86
-      },
-      "growth_group": "fast",
-      "move_pool": [
-        {
-          "id": "red_three_soldiers",
-          "name": "紅三兵",
-          "power": 80,
-          "pp": 15,
-          "learn_level": 1,
-          "category": "physical",
-          "element": "steel"
-        },
-        {
-          "id": "gap_up",
-          "name": "向上跳空",
-          "power": 85,
-          "pp": 10,
-          "learn_level": 1,
-          "category": "magical",
-          "element": "steel"
-        },
-        {
-          "id": "long_red_engulfing",
-          "name": "長紅吞噬",
-          "power": 95,
-          "pp": 10,
-          "learn_level": 15,
-          "category": "physical",
-          "element": "steel"
-        },
-        {
-          "id": "long_black_engulfing",
-          "name": "長黑吞噬",
-          "power": 95,
-          "pp": 10,
-          "learn_level": 22,
-          "category": "physical",
-          "element": "steel"
-        }
-      ],
-      "art": {
-        "placeholder_color": "#90A4AE",
-        "sprite": null
-      },
-      "industry": "電腦及週邊設備業",
-      "source_metrics": {
-        "market_cap": 617371605000,
-        "shares_outstanding": 3429842250.0,
-        "revenue_monthly": 380806168000.0,
-        "revenue_yoy": 87.19,
-        "eps": 7.78,
-        "debt_ratio": 82.37,
-        "turnover_ratio": 30.43,
-        "volatility_60d": 46.8,
-        "book_value_per_share": 61.01
       }
     },
     {
@@ -2874,87 +2874,15 @@
       },
       "industry": "電腦及週邊設備業",
       "source_metrics": {
-        "market_cap": 611452449432,
+        "market_cap": 606820233906,
         "shares_outstanding": 2316107763.0,
         "revenue_monthly": 18848445000.0,
         "revenue_yoy": 22.15,
         "eps": 4.8,
         "debt_ratio": 59.6,
         "turnover_ratio": 16.9,
-        "volatility_60d": 63.47,
+        "volatility_60d": 63.51,
         "book_value_per_share": 42.22
-      }
-    },
-    {
-      "symbol": "2892",
-      "name": "第一金",
-      "generation": 1,
-      "element": "gold",
-      "rarity": "common",
-      "rarity_rank": 41,
-      "bst": 420,
-      "base_stats": {
-        "hp": 47,
-        "atk": 23,
-        "matk": 47,
-        "def": 23,
-        "mdef": 210,
-        "spd": 70
-      },
-      "growth_group": "fast",
-      "move_pool": [
-        {
-          "id": "red_three_soldiers",
-          "name": "紅三兵",
-          "power": 80,
-          "pp": 15,
-          "learn_level": 1,
-          "category": "physical",
-          "element": "gold"
-        },
-        {
-          "id": "gap_up",
-          "name": "向上跳空",
-          "power": 85,
-          "pp": 10,
-          "learn_level": 1,
-          "category": "magical",
-          "element": "gold"
-        },
-        {
-          "id": "long_red_engulfing",
-          "name": "長紅吞噬",
-          "power": 95,
-          "pp": 10,
-          "learn_level": 15,
-          "category": "physical",
-          "element": "gold"
-        },
-        {
-          "id": "long_black_engulfing",
-          "name": "長黑吞噬",
-          "power": 95,
-          "pp": 10,
-          "learn_level": 22,
-          "category": "physical",
-          "element": "gold"
-        }
-      ],
-      "art": {
-        "placeholder_color": "#FFD54F",
-        "sprite": null
-      },
-      "industry": "金融保險業",
-      "source_metrics": {
-        "market_cap": 590996161515,
-        "shares_outstanding": 14379468650.0,
-        "revenue_monthly": 6110987000.0,
-        "revenue_yoy": -1.28,
-        "eps": 1.24,
-        "debt_ratio": 94.24,
-        "turnover_ratio": 4.2,
-        "volatility_60d": 25.8,
-        "book_value_per_share": 20.97
       }
     },
     {
@@ -2963,7 +2891,7 @@
       "generation": 1,
       "element": "steel",
       "rarity": "common",
-      "rarity_rank": 42,
+      "rarity_rank": 41,
       "bst": 420,
       "base_stats": {
         "hp": 48,
@@ -3018,7 +2946,7 @@
       },
       "industry": "電腦及週邊設備業",
       "source_metrics": {
-        "market_cap": 590082239432,
+        "market_cap": 594427469472,
         "shares_outstanding": 869046008.0,
         "revenue_monthly": 10748681000.0,
         "revenue_yoy": 73.14,
@@ -3027,6 +2955,78 @@
         "turnover_ratio": 7.13,
         "volatility_60d": 40.99,
         "book_value_per_share": 63.67
+      }
+    },
+    {
+      "symbol": "2892",
+      "name": "第一金",
+      "generation": 1,
+      "element": "gold",
+      "rarity": "common",
+      "rarity_rank": 42,
+      "bst": 420,
+      "base_stats": {
+        "hp": 47,
+        "atk": 23,
+        "matk": 47,
+        "def": 23,
+        "mdef": 210,
+        "spd": 70
+      },
+      "growth_group": "fast",
+      "move_pool": [
+        {
+          "id": "red_three_soldiers",
+          "name": "紅三兵",
+          "power": 80,
+          "pp": 15,
+          "learn_level": 1,
+          "category": "physical",
+          "element": "gold"
+        },
+        {
+          "id": "gap_up",
+          "name": "向上跳空",
+          "power": 85,
+          "pp": 10,
+          "learn_level": 1,
+          "category": "magical",
+          "element": "gold"
+        },
+        {
+          "id": "long_red_engulfing",
+          "name": "長紅吞噬",
+          "power": 95,
+          "pp": 10,
+          "learn_level": 15,
+          "category": "physical",
+          "element": "gold"
+        },
+        {
+          "id": "long_black_engulfing",
+          "name": "長黑吞噬",
+          "power": 95,
+          "pp": 10,
+          "learn_level": 22,
+          "category": "physical",
+          "element": "gold"
+        }
+      ],
+      "art": {
+        "placeholder_color": "#FFD54F",
+        "sprite": null
+      },
+      "industry": "金融保險業",
+      "source_metrics": {
+        "market_cap": 585963347488,
+        "shares_outstanding": 14379468650.0,
+        "revenue_monthly": 6110987000.0,
+        "revenue_yoy": -1.28,
+        "eps": 1.24,
+        "debt_ratio": 94.24,
+        "turnover_ratio": 4.2,
+        "volatility_60d": 25.82,
+        "book_value_per_share": 20.97
       }
     },
     {
@@ -3090,14 +3090,14 @@
       },
       "industry": "航運業",
       "source_metrics": {
-        "market_cap": 567241264952,
+        "market_cap": 561828657462,
         "shares_outstanding": 2165042996.0,
         "revenue_monthly": 49711309000.0,
         "revenue_yoy": 63.75,
         "eps": 11.24,
         "debt_ratio": 39.75,
         "turnover_ratio": 7.95,
-        "volatility_60d": 35.79,
+        "volatility_60d": 35.74,
         "book_value_per_share": 259.09
       }
     },
@@ -3162,87 +3162,15 @@
       },
       "industry": "半導體業",
       "source_metrics": {
-        "market_cap": 517425973520,
+        "market_cap": 497930290200,
         "shares_outstanding": 526910360.0,
         "revenue_monthly": 5181276000.0,
         "revenue_yoy": 44.47,
         "eps": 3.74,
         "debt_ratio": 37.32,
         "turnover_ratio": 74.77,
-        "volatility_60d": 76.22,
+        "volatility_60d": 76.63,
         "book_value_per_share": 84.39
-      }
-    },
-    {
-      "symbol": "1301",
-      "name": "台塑",
-      "generation": 1,
-      "element": "earth",
-      "rarity": "common",
-      "rarity_rank": 45,
-      "bst": 420,
-      "base_stats": {
-        "hp": 70,
-        "atk": 42,
-        "matk": 42,
-        "def": 126,
-        "mdef": 70,
-        "spd": 70
-      },
-      "growth_group": "fast",
-      "move_pool": [
-        {
-          "id": "red_three_soldiers",
-          "name": "紅三兵",
-          "power": 80,
-          "pp": 15,
-          "learn_level": 1,
-          "category": "physical",
-          "element": "earth"
-        },
-        {
-          "id": "gap_up",
-          "name": "向上跳空",
-          "power": 85,
-          "pp": 10,
-          "learn_level": 1,
-          "category": "magical",
-          "element": "earth"
-        },
-        {
-          "id": "long_red_engulfing",
-          "name": "長紅吞噬",
-          "power": 95,
-          "pp": 10,
-          "learn_level": 15,
-          "category": "physical",
-          "element": "earth"
-        },
-        {
-          "id": "long_black_engulfing",
-          "name": "長黑吞噬",
-          "power": 95,
-          "pp": 10,
-          "learn_level": 22,
-          "category": "physical",
-          "element": "earth"
-        }
-      ],
-      "art": {
-        "placeholder_color": "#A1887F",
-        "sprite": null
-      },
-      "industry": "塑膠工業",
-      "source_metrics": {
-        "market_cap": 497800929074,
-        "shares_outstanding": 6365740781.0,
-        "revenue_monthly": 15018323000.0,
-        "revenue_yoy": 7.14,
-        "eps": 2.19,
-        "debt_ratio": 26.47,
-        "turnover_ratio": 9.29,
-        "volatility_60d": 55.19,
-        "book_value_per_share": 90.21
       }
     },
     {
@@ -3251,7 +3179,7 @@
       "generation": 1,
       "element": "grass",
       "rarity": "common",
-      "rarity_rank": 46,
+      "rarity_rank": 45,
       "bst": 420,
       "base_stats": {
         "hp": 11,
@@ -3306,14 +3234,14 @@
       },
       "industry": "生技醫療業",
       "source_metrics": {
-        "market_cap": 496360697300,
+        "market_cap": 487912004580,
         "shares_outstanding": 422434636.0,
         "revenue_monthly": 2635360000.0,
         "revenue_yoy": 99.98,
         "eps": 11.35,
         "debt_ratio": 16.54,
         "turnover_ratio": 17.97,
-        "volatility_60d": 66.34,
+        "volatility_60d": 66.22,
         "book_value_per_share": 98.54
       }
     },
@@ -3323,7 +3251,7 @@
       "generation": 1,
       "element": "psychic",
       "rarity": "common",
-      "rarity_rank": 47,
+      "rarity_rank": 46,
       "bst": 420,
       "base_stats": {
         "hp": 72,
@@ -3385,8 +3313,80 @@
         "eps": 2.86,
         "debt_ratio": 61.22,
         "turnover_ratio": 4.28,
-        "volatility_60d": 17.27,
+        "volatility_60d": 17.22,
         "book_value_per_share": 27.61
+      }
+    },
+    {
+      "symbol": "1301",
+      "name": "台塑",
+      "generation": 1,
+      "element": "earth",
+      "rarity": "common",
+      "rarity_rank": 47,
+      "bst": 420,
+      "base_stats": {
+        "hp": 70,
+        "atk": 42,
+        "matk": 42,
+        "def": 126,
+        "mdef": 70,
+        "spd": 70
+      },
+      "growth_group": "fast",
+      "move_pool": [
+        {
+          "id": "red_three_soldiers",
+          "name": "紅三兵",
+          "power": 80,
+          "pp": 15,
+          "learn_level": 1,
+          "category": "physical",
+          "element": "earth"
+        },
+        {
+          "id": "gap_up",
+          "name": "向上跳空",
+          "power": 85,
+          "pp": 10,
+          "learn_level": 1,
+          "category": "magical",
+          "element": "earth"
+        },
+        {
+          "id": "long_red_engulfing",
+          "name": "長紅吞噬",
+          "power": 95,
+          "pp": 10,
+          "learn_level": 15,
+          "category": "physical",
+          "element": "earth"
+        },
+        {
+          "id": "long_black_engulfing",
+          "name": "長黑吞噬",
+          "power": 95,
+          "pp": 10,
+          "learn_level": 22,
+          "category": "physical",
+          "element": "earth"
+        }
+      ],
+      "art": {
+        "placeholder_color": "#A1887F",
+        "sprite": null
+      },
+      "industry": "塑膠工業",
+      "source_metrics": {
+        "market_cap": 476793984497,
+        "shares_outstanding": 6365740781.0,
+        "revenue_monthly": 15018323000.0,
+        "revenue_yoy": 7.14,
+        "eps": 2.19,
+        "debt_ratio": 26.47,
+        "turnover_ratio": 9.29,
+        "volatility_60d": 55.4,
+        "book_value_per_share": 90.21
       }
     },
     {
@@ -3450,14 +3450,14 @@
       },
       "industry": "食品工業",
       "source_metrics": {
-        "market_cap": 452288427512,
+        "market_cap": 445470009006,
         "shares_outstanding": 5682015421.0,
         "revenue_monthly": 61805124000.0,
         "revenue_yoy": 5.8,
         "eps": 2.56,
         "debt_ratio": 72.24,
         "turnover_ratio": 2.93,
-        "volatility_60d": 18.52,
+        "volatility_60d": 18.79,
         "book_value_per_share": 23.99
       }
     },
@@ -3522,14 +3522,14 @@
       },
       "industry": "金融保險業",
       "source_metrics": {
-        "market_cap": 450846537453,
+        "market_cap": 441202761251,
         "shares_outstanding": 16072960337.0,
         "revenue_monthly": 5448285000.0,
         "revenue_yoy": -3.74,
         "eps": 0.8,
         "debt_ratio": 94.53,
         "turnover_ratio": 2.49,
-        "volatility_60d": 25.27,
+        "volatility_60d": 25.71,
         "book_value_per_share": 18.51
       }
     },
@@ -3594,14 +3594,14 @@
       },
       "industry": "塑膠工業",
       "source_metrics": {
-        "market_cap": 442519564970,
+        "market_cap": 432555548276,
         "shares_outstanding": 5861186291.0,
         "revenue_monthly": 33399645000.0,
         "revenue_yoy": 44.78,
         "eps": 2.11,
         "debt_ratio": 23.33,
         "turnover_ratio": 12.02,
-        "volatility_60d": 59.46,
+        "volatility_60d": 59.6,
         "book_value_per_share": 88.71
       }
     }
