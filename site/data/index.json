@@ -2,27 +2,27 @@
   "schema_version": "0.1.0",
   "generation": 1,
   "season": "2026-S4",
-  "market_date": "2026-10-20",
-  "generated_at": "2026-10-20T23:42:04+08:00",
-  "next_settlement_at": "2026-10-21T19:00:00+08:00",
+  "market_date": "2026-10-21",
+  "generated_at": "2026-10-22T00:00:44+08:00",
+  "next_settlement_at": "2026-10-22T19:00:00+08:00",
   "files": {
     "species": {
       "path": "species.json",
-      "sha256": "f3cbe521c3f5223d62b723682ff3d38e2a834908f2fae8388a6151e1d6f3cf9f",
-      "bytes": 87626,
-      "updated_at": "2026-10-20T23:42:04.416720+08:00"
+      "sha256": "46c4f51c75b37e18eeb4f3bd29c570fc4fe7d488d2f9143f72495b694ac94973",
+      "bytes": 87624,
+      "updated_at": "2026-10-22T00:00:44.881645+08:00"
     },
     "daily": {
-      "path": "daily/2026-10-20.json",
-      "sha256": "302291d67a2a9af11dcf3107ed8013f46c3ff3dd8e29414c7f330c8751d78b13",
-      "bytes": 67207,
-      "updated_at": "2026-10-20T23:42:04.418666+08:00"
+      "path": "daily/2026-10-21.json",
+      "sha256": "a38ff7313e0e8629947c49b05e57a6e34a8a2c28198c7605814131f7c760e346",
+      "bytes": 68351,
+      "updated_at": "2026-10-22T00:00:44.884670+08:00"
     },
     "balance": {
       "path": "balance.json",
       "sha256": "e9b08c7728ab5a79e5b44210afebea60224ef4c82a5874b1800baa18e54815bf",
       "bytes": 4493,
-      "updated_at": "2026-10-20T23:42:04.419020+08:00"
+      "updated_at": "2026-10-22T00:00:44.885147+08:00"
     }
   },
   "pipeline": {
@@ -35,7 +35,7 @@
       {
         "name": "twse-company-profile",
         "endpoint": "/opendata/t187ap03_L",
-        "record_count": 1096
+        "record_count": 1097
       },
       {
         "name": "twse-bwibbu-d",
