@@ -1,0 +1,3125 @@
+{
+  "schema_version": "0.1.0",
+  "market_date": "2026-10-22",
+  "settled_at": "2026-10-22T19:00:00+08:00",
+  "generation": 1,
+  "season": "2026-S4",
+  "world": {
+    "index": {
+      "symbol": "IX0001",
+      "name": "發行量加權股價指數",
+      "close": 46041.43,
+      "change_percent": -1.81
+    },
+    "weather": "storm",
+    "business_light": null
+  },
+  "monsters": [
+    {
+      "symbol": "2330",
+      "price": {
+        "open": 2435,
+        "high": 2435,
+        "low": 2385,
+        "close": 2385,
+        "change_percent": -1.45,
+        "volume": 29796590,
+        "turnover_value": 71536783195
+      },
+      "moving_averages": {
+        "ma5": 2410.0,
+        "ma20": 2485.25,
+        "ma60": 2423.25,
+        "ma240": 2048.29
+      },
+      "weather": [],
+      "aura": {
+        "quadrant": "true_weak",
+        "volume_ratio": 1.09,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 27.65,
+        "pb": 9.61,
+        "dividend_yield": 0.92,
+        "pe_tag": "fair",
+        "market_cap": 61848702609795,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 23850,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 1.0,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 1.0
+      },
+      "kd": {
+        "k": 9.97,
+        "d": 18.29,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2454",
+      "price": {
+        "open": 4230,
+        "high": 4230,
+        "low": 4005,
+        "close": 4010,
+        "change_percent": -3.14,
+        "volume": 7074445,
+        "turnover_value": 29076357970
+      },
+      "moving_averages": {
+        "ma5": 4151.0,
+        "ma20": 4678.25,
+        "ma60": 4297.0,
+        "ma240": 2848.23
+      },
+      "weather": [],
+      "aura": {
+        "quadrant": "dormant",
+        "volume_ratio": 0.82,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 66.23,
+        "pb": 15.09,
+        "dividend_yield": 1.33,
+        "pe_tag": "popular",
+        "market_cap": 6435859978130,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 40100,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 1.25,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 1.0
+      },
+      "kd": {
+        "k": 4.35,
+        "d": 6.91,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2308",
+      "price": {
+        "open": 1640,
+        "high": 1650,
+        "low": 1560,
+        "close": 1560,
+        "change_percent": -4.0,
+        "volume": 10133625,
+        "turnover_value": 16121839875
+      },
+      "moving_averages": {
+        "ma5": 1613.0,
+        "ma20": 1819.5,
+        "ma60": 1763.58,
+        "ma240": 1581.6
+      },
+      "weather": [
+        "depressed"
+      ],
+      "aura": {
+        "quadrant": "dormant",
+        "volume_ratio": 0.87,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 49.65,
+        "pb": 13.8,
+        "dividend_yield": 0.74,
+        "pe_tag": "popular",
+        "market_cap": 4052167593240,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 15600,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 1.0,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 1.0,
+        "atk": 0.95,
+        "matk": 0.95,
+        "def": 0.95,
+        "mdef": 0.95,
+        "spd": 0.95
+      },
+      "kd": {
+        "k": 6.13,
+        "d": 12.48,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2317",
+      "price": {
+        "open": 249.5,
+        "high": 250.5,
+        "low": 244.5,
+        "close": 245,
+        "change_percent": -2.0,
+        "volume": 26653604,
+        "turnover_value": 6596707385
+      },
+      "moving_averages": {
+        "ma5": 244.0,
+        "ma20": 248.22,
+        "ma60": 250.28,
+        "ma240": 238.11
+      },
+      "weather": [
+        "excited"
+      ],
+      "aura": {
+        "quadrant": "dormant",
+        "volume_ratio": 0.65,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 16.15,
+        "pb": 1.8,
+        "dividend_yield": 2.93,
+        "pe_tag": "fair",
+        "market_cap": 3448557891765,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 2450,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 0.47,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85
+      },
+      "kd": {
+        "k": 47.76,
+        "d": 32.78,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "3711",
+      "price": {
+        "open": 690,
+        "high": 699,
+        "low": 652,
+        "close": 654,
+        "change_percent": -4.39,
+        "volume": 17955681,
+        "turnover_value": 12045518329
+      },
+      "moving_averages": {
+        "ma5": 667.8,
+        "ma20": 706.05,
+        "ma60": 635.58,
+        "ma240": 461.07
+      },
+      "weather": [],
+      "aura": {
+        "quadrant": "true_weak",
+        "volume_ratio": 1.14,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 47.32,
+        "pb": 7.39,
+        "dividend_yield": 1.01,
+        "pe_tag": "popular",
+        "market_cap": 2923754272428,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 6540,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 0.68,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 1.0
+      },
+      "kd": {
+        "k": 24.72,
+        "d": 34.8,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "1303",
+      "price": {
+        "open": 324,
+        "high": 324.5,
+        "low": 299,
+        "close": 301,
+        "change_percent": -6.08,
+        "volume": 101068589,
+        "turnover_value": 31346770710
+      },
+      "moving_averages": {
+        "ma5": 305.6,
+        "ma20": 286.5,
+        "ma60": 231.61,
+        "ma240": 125.9
+      },
+      "weather": [
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_weak",
+        "volume_ratio": 1.05,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 48.55,
+        "pb": 5.0,
+        "dividend_yield": 0.27,
+        "pe_tag": "popular",
+        "market_cap": 2387177298289,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 3010,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 1.69,
+      "special_state": "hyper_evolution",
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 1.0,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 32.38,
+        "d": 48.46,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2881",
+      "price": {
+        "open": 158.5,
+        "high": 160,
+        "low": 157.5,
+        "close": 158.5,
+        "change_percent": 0.0,
+        "volume": 10455330,
+        "turnover_value": 1660184566
+      },
+      "moving_averages": {
+        "ma5": 158.1,
+        "ma20": 155.25,
+        "ma60": 143.66,
+        "ma240": 110.82
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "phantom_surge",
+        "volume_ratio": 0.65,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 14.81,
+        "pb": 1.95,
+        "dividend_yield": 2.68,
+        "pe_tag": "fair",
+        "market_cap": 2220167344892,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 1585.0,
+        "rate_modifier": 1.0,
+        "iv_range": {
+          "min": 5,
+          "max": 25
+        }
+      },
+      "encounter_weight": 0.2,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 1.0,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 50.55,
+        "d": 58.63,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2383",
+      "price": {
+        "open": 5335,
+        "high": 5485,
+        "low": 5060,
+        "close": 5070,
+        "change_percent": 1.6,
+        "volume": 4750904,
+        "turnover_value": 25469921135
+      },
+      "moving_averages": {
+        "ma5": 5059.0,
+        "ma20": 5311.0,
+        "ma60": 5339.5,
+        "ma240": 3664.06
+      },
+      "weather": [
+        "excited"
+      ],
+      "aura": {
+        "quadrant": "true_surge",
+        "volume_ratio": 1.73,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 79.28,
+        "pb": 31.14,
+        "dividend_yield": 0.49,
+        "pe_tag": "popular",
+        "market_cap": 1816688047980,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 50700,
+        "rate_modifier": 0.7,
+        "iv_range": {
+          "min": 15,
+          "max": 30
+        }
+      },
+      "encounter_weight": 1.0,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 1.0
+      },
+      "kd": {
+        "k": 12.95,
+        "d": 23.16,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "3037",
+      "price": {
+        "open": 1160,
+        "high": 1180,
+        "low": 1065,
+        "close": 1085,
+        "change_percent": -1.36,
+        "volume": 21289785,
+        "turnover_value": 24016641790
+      },
+      "moving_averages": {
+        "ma5": 1090.0,
+        "ma20": 1184.0,
+        "ma60": 1050.38,
+        "ma240": 672.24
+      },
+      "weather": [],
+      "aura": {
+        "quadrant": "true_weak",
+        "volume_ratio": 1.34,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 72.24,
+        "pb": 13.93,
+        "dividend_yield": 0.18,
+        "pe_tag": "popular",
+        "market_cap": 1780801381660,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 10850,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 2.36,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 1.0
+      },
+      "kd": {
+        "k": 17.91,
+        "d": 20.78,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2882",
+      "price": {
+        "open": 114,
+        "high": 115,
+        "low": 113,
+        "close": 113.5,
+        "change_percent": -0.44,
+        "volume": 17343296,
+        "turnover_value": 1971684665
+      },
+      "moving_averages": {
+        "ma5": 113.6,
+        "ma20": 112.4,
+        "ma60": 107.11,
+        "ma240": 85.97
+      },
+      "weather": [
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "dormant",
+        "volume_ratio": 0.87,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 13.38,
+        "pb": 1.64,
+        "dividend_yield": 3.08,
+        "pe_tag": "fair",
+        "market_cap": 1664955349528,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 1135.0,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 0.26,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 1.0,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 45.7,
+        "d": 52.38,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2303",
+      "price": {
+        "open": 129,
+        "high": 131,
+        "low": 125,
+        "close": 125.5,
+        "change_percent": -1.95,
+        "volume": 88575441,
+        "turnover_value": 11280077221
+      },
+      "moving_averages": {
+        "ma5": 129.0,
+        "ma20": 145.43,
+        "ma60": 133.42,
+        "ma240": 95.18
+      },
+      "weather": [],
+      "aura": {
+        "quadrant": "dormant",
+        "volume_ratio": 0.61,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 18.87,
+        "pb": 3.55,
+        "dividend_yield": 2.08,
+        "pe_tag": "fair",
+        "market_cap": 1577546784324,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 1255.0,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 2.55,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 1.0
+      },
+      "kd": {
+        "k": 6.95,
+        "d": 9.87,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2891",
+      "price": {
+        "open": 73.9,
+        "high": 75.5,
+        "low": 73.9,
+        "close": 74.9,
+        "change_percent": 0.13,
+        "volume": 33144399,
+        "turnover_value": 2490347669
+      },
+      "moving_averages": {
+        "ma5": 73.66,
+        "ma20": 70.25,
+        "ma60": 67.53,
+        "ma240": 57.44
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_surge",
+        "volume_ratio": 1.01,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 17.92,
+        "pb": 2.14,
+        "dividend_yield": 3.34,
+        "pe_tag": "fair",
+        "market_cap": 1473727367169,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 749.0,
+        "rate_modifier": 0.7,
+        "iv_range": {
+          "min": 15,
+          "max": 30
+        }
+      },
+      "encounter_weight": 0.29,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 82.42,
+        "d": 75.46,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "2408",
+      "price": {
+        "open": 442.5,
+        "high": 442.5,
+        "low": 412,
+        "close": 414,
+        "change_percent": -5.15,
+        "volume": 32363455,
+        "turnover_value": 13745416614
+      },
+      "moving_averages": {
+        "ma5": 431.2,
+        "ma20": 488.85,
+        "ma60": 486.17,
+        "ma240": 320.59
+      },
+      "weather": [],
+      "aura": {
+        "quadrant": "dormant",
+        "volume_ratio": 0.7,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 16.07,
+        "pb": 4.43,
+        "dividend_yield": 0.33,
+        "pe_tag": "fair",
+        "market_cap": 1428385240116,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 4140,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 2.97,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 1.0
+      },
+      "kd": {
+        "k": 11.35,
+        "d": 19.55,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2382",
+      "price": {
+        "open": 325,
+        "high": 326.5,
+        "low": 321,
+        "close": 322,
+        "change_percent": -1.98,
+        "volume": 8727905,
+        "turnover_value": 2824664179
+      },
+      "moving_averages": {
+        "ma5": 321.5,
+        "ma20": 328.75,
+        "ma60": 326.56,
+        "ma240": 313.62
+      },
+      "weather": [
+        "excited"
+      ],
+      "aura": {
+        "quadrant": "dormant",
+        "volume_ratio": 0.77,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 14.03,
+        "pb": 5.09,
+        "dividend_yield": 4.84,
+        "pe_tag": "fair",
+        "market_cap": 1322656033104,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 3220,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 0.59,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85
+      },
+      "kd": {
+        "k": 54.81,
+        "d": 40.17,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "3017",
+      "price": {
+        "open": 3285,
+        "high": 3395,
+        "low": 3145,
+        "close": 3145,
+        "change_percent": -2.78,
+        "volume": 2517842,
+        "turnover_value": 8231773680
+      },
+      "moving_averages": {
+        "ma5": 3268.0,
+        "ma20": 3393.0,
+        "ma60": 3157.5,
+        "ma240": 2252.19
+      },
+      "weather": [],
+      "aura": {
+        "quadrant": "dormant",
+        "volume_ratio": 0.8,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 41.92,
+        "pb": 22.37,
+        "dividend_yield": 0.66,
+        "pe_tag": "popular",
+        "market_cap": 1234947486515,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 31450,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 1.29,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 1.0
+      },
+      "kd": {
+        "k": 32.71,
+        "d": 33.82,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2412",
+      "price": {
+        "open": 153,
+        "high": 158,
+        "low": 152.5,
+        "close": 158,
+        "change_percent": 2.6,
+        "volume": 15797921,
+        "turnover_value": 2476135067
+      },
+      "moving_averages": {
+        "ma5": 154.8,
+        "ma20": 148.35,
+        "ma60": 141.72,
+        "ma240": 136.9
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_surge",
+        "volume_ratio": 1.48,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 31.04,
+        "pb": 3.34,
+        "dividend_yield": 3.29,
+        "pe_tag": "popular",
+        "market_cap": 1225676554110,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 1580,
+        "rate_modifier": 0.7,
+        "iv_range": {
+          "min": 15,
+          "max": 30
+        }
+      },
+      "encounter_weight": 0.26,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 92.06,
+        "d": 88.68,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "2887",
+      "price": {
+        "open": 41.55,
+        "high": 42.55,
+        "low": 41.55,
+        "close": 42.1,
+        "change_percent": 0.36,
+        "volume": 43659790,
+        "turnover_value": 1841516128
+      },
+      "moving_averages": {
+        "ma5": 41.97,
+        "ma20": 41.97,
+        "ma60": 39.66,
+        "ma240": 28.22
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "phantom_surge",
+        "volume_ratio": 0.94,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 15.59,
+        "pb": 1.55,
+        "dividend_yield": 2.61,
+        "pe_tag": "fair",
+        "market_cap": 1057344110074,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 421.0,
+        "rate_modifier": 1.0,
+        "iv_range": {
+          "min": 5,
+          "max": 25
+        }
+      },
+      "encounter_weight": 0.39,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 1.0,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 42.24,
+        "d": 46.34,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2327",
+      "price": {
+        "open": 558,
+        "high": 558,
+        "low": 506,
+        "close": 507,
+        "change_percent": -6.46,
+        "volume": 46116929,
+        "turnover_value": 24221215636
+      },
+      "moving_averages": {
+        "ma5": 534.6,
+        "ma20": 584.45,
+        "ma60": 567.94,
+        "ma240": 458.08
+      },
+      "weather": [],
+      "aura": {
+        "quadrant": "dormant",
+        "volume_ratio": 0.92,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 34.14,
+        "pb": 5.89,
+        "dividend_yield": 1.18,
+        "pe_tag": "popular",
+        "market_cap": 1046006130234,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 5070,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 3.0,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 1.0
+      },
+      "kd": {
+        "k": 11.03,
+        "d": 20.1,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "6669",
+      "price": {
+        "open": 1940,
+        "high": 1945,
+        "low": 1830,
+        "close": 1840,
+        "change_percent": -2.13,
+        "volume": 4732956,
+        "turnover_value": 8864437950
+      },
+      "moving_averages": {
+        "ma5": 1875.0,
+        "ma20": 2075.25,
+        "ma60": 3940.5,
+        "ma240": 4300.69
+      },
+      "weather": [
+        "depressed"
+      ],
+      "aura": {
+        "quadrant": "true_weak",
+        "volume_ratio": 1.0,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 5.9,
+        "pb": 2.5,
+        "dividend_yield": 8.93,
+        "pe_tag": "undervalued",
+        "market_cap": 1030767580480,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 18400,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 3.0,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 1.0,
+        "atk": 0.95,
+        "matk": 0.95,
+        "def": 0.95,
+        "mdef": 0.95,
+        "spd": 0.95
+      },
+      "kd": {
+        "k": 16.14,
+        "d": 21.84,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "3443",
+      "price": {
+        "open": 8220,
+        "high": 8275,
+        "low": 7530,
+        "close": 7585,
+        "change_percent": -5.19,
+        "volume": 1513570,
+        "turnover_value": 11964599645
+      },
+      "moving_averages": {
+        "ma5": 7728.0,
+        "ma20": 8079.75,
+        "ma60": 6328.67,
+        "ma240": 3947.27
+      },
+      "weather": [],
+      "aura": {
+        "quadrant": "true_weak",
+        "volume_ratio": 1.08,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 194.44,
+        "pb": 75.49,
+        "dividend_yield": 0.26,
+        "pe_tag": "popular",
+        "market_cap": 1016480344935,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 75850,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 2.19,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 0.85
+      },
+      "kd": {
+        "k": 41.73,
+        "d": 41.24,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "6505",
+      "price": {
+        "open": 112,
+        "high": 114,
+        "low": 105.5,
+        "close": 106.5,
+        "change_percent": -2.74,
+        "volume": 36642198,
+        "turnover_value": 3933257050
+      },
+      "moving_averages": {
+        "ma5": 112.2,
+        "ma20": 104.23,
+        "ma60": 84.9,
+        "ma240": 61.81
+      },
+      "weather": [
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "dormant",
+        "volume_ratio": 0.85,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 18.49,
+        "pb": 2.08,
+        "dividend_yield": 1.13,
+        "pe_tag": "fair",
+        "market_cap": 1014514702938,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 1065.0,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 0.49,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 1.0,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 29.67,
+        "d": 49.18,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2885",
+      "price": {
+        "open": 70.9,
+        "high": 73.2,
+        "low": 70.9,
+        "close": 72.4,
+        "change_percent": 1.54,
+        "volume": 24663082,
+        "turnover_value": 1785200362
+      },
+      "moving_averages": {
+        "ma5": 71.76,
+        "ma20": 70.05,
+        "ma60": 68.08,
+        "ma240": 53.45
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_surge",
+        "volume_ratio": 1.06,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 16.96,
+        "pb": 2.52,
+        "dividend_yield": 3.04,
+        "pe_tag": "fair",
+        "market_cap": 1003782266346,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 724.0,
+        "rate_modifier": 0.7,
+        "iv_range": {
+          "min": 15,
+          "max": 30
+        }
+      },
+      "encounter_weight": 0.26,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 1.0,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 61.67,
+        "d": 65.01,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2345",
+      "price": {
+        "open": 1835,
+        "high": 1880,
+        "low": 1770,
+        "close": 1775,
+        "change_percent": -2.2,
+        "volume": 3503891,
+        "turnover_value": 6354143740
+      },
+      "moving_averages": {
+        "ma5": 1909.0,
+        "ma20": 1953.75,
+        "ma60": 2042.08,
+        "ma240": 1785.15
+      },
+      "weather": [
+        "depressed"
+      ],
+      "aura": {
+        "quadrant": "dormant",
+        "volume_ratio": 0.73,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 27.89,
+        "pb": 14.37,
+        "dividend_yield": 0.85,
+        "pe_tag": "fair",
+        "market_cap": 995984267175,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 17750,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 1.17,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 1.0,
+        "atk": 0.95,
+        "matk": 0.95,
+        "def": 0.95,
+        "mdef": 0.95,
+        "spd": 0.95
+      },
+      "kd": {
+        "k": 18.33,
+        "d": 34.53,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "7769",
+      "price": {
+        "open": 5250,
+        "high": 5480,
+        "low": 5220,
+        "close": 5275,
+        "change_percent": 2.83,
+        "volume": 860657,
+        "turnover_value": 4599115375
+      },
+      "moving_averages": {
+        "ma5": 5259.0,
+        "ma20": 5667.5,
+        "ma60": 6071.17,
+        "ma240": 4993.42
+      },
+      "weather": [
+        "excited"
+      ],
+      "aura": {
+        "quadrant": "true_surge",
+        "volume_ratio": 1.01,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 54.46,
+        "pb": 16.71,
+        "dividend_yield": 1.23,
+        "pe_tag": "popular",
+        "market_cap": 949130750000,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 52750,
+        "rate_modifier": 0.7,
+        "iv_range": {
+          "min": 15,
+          "max": 30
+        }
+      },
+      "encounter_weight": 1.0,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 1.0
+      },
+      "kd": {
+        "k": 16.39,
+        "d": 23.1,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2059",
+      "price": {
+        "open": 10100,
+        "high": 10255,
+        "low": 9755,
+        "close": 9755,
+        "change_percent": -3.22,
+        "volume": 442742,
+        "turnover_value": 4415331755
+      },
+      "moving_averages": {
+        "ma5": 9962.0,
+        "ma20": 11229.75,
+        "ma60": 11861.83,
+        "ma240": 6322.56
+      },
+      "weather": [],
+      "aura": {
+        "quadrant": "dormant",
+        "volume_ratio": 0.71,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 53.78,
+        "pb": 27.54,
+        "dividend_yield": 0.52,
+        "pe_tag": "popular",
+        "market_cap": 929622937360,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 97550,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 0.8,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 0.85
+      },
+      "kd": {
+        "k": 23.22,
+        "d": 19.2,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "3653",
+      "price": {
+        "open": 6555,
+        "high": 6675,
+        "low": 5995,
+        "close": 6070,
+        "change_percent": -7.12,
+        "volume": 1721691,
+        "turnover_value": 10762285580
+      },
+      "moving_averages": {
+        "ma5": 6509.0,
+        "ma20": 6765.75,
+        "ma60": 5616.25,
+        "ma240": 3880.42
+      },
+      "weather": [],
+      "aura": {
+        "quadrant": "true_weak",
+        "volume_ratio": 1.34,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 136.99,
+        "pb": 37.77,
+        "dividend_yield": 0.36,
+        "pe_tag": "popular",
+        "market_cap": 893527539460,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 60700,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 1.42,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 1.0
+      },
+      "kd": {
+        "k": 19.75,
+        "d": 29.7,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2884",
+      "price": {
+        "open": 49.05,
+        "high": 49.9,
+        "low": 49,
+        "close": 49.75,
+        "change_percent": 1.12,
+        "volume": 29233032,
+        "turnover_value": 1452339084
+      },
+      "moving_averages": {
+        "ma5": 49.16,
+        "ma20": 46.66,
+        "ma60": 42.52,
+        "ma240": 35.2
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_surge",
+        "volume_ratio": 1.08,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 20.64,
+        "pb": 2.86,
+        "dividend_yield": 2.81,
+        "pe_tag": "fair",
+        "market_cap": 881744645932,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 497.5,
+        "rate_modifier": 0.7,
+        "iv_range": {
+          "min": 15,
+          "max": 30
+        }
+      },
+      "encounter_weight": 0.61,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 86.24,
+        "d": 82.27,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "2360",
+      "price": {
+        "open": 2090,
+        "high": 2110,
+        "low": 1975,
+        "close": 1980,
+        "change_percent": -1.49,
+        "volume": 2278383,
+        "turnover_value": 4634660670
+      },
+      "moving_averages": {
+        "ma5": 1999.0,
+        "ma20": 2194.5,
+        "ma60": 2127.25,
+        "ma240": 1664.44
+      },
+      "weather": [],
+      "aura": {
+        "quadrant": "dormant",
+        "volume_ratio": 0.84,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 50.51,
+        "pb": 25.42,
+        "dividend_yield": 0.98,
+        "pe_tag": "popular",
+        "market_cap": 841986569160,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 19800,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 1.21,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 1.0
+      },
+      "kd": {
+        "k": 12.76,
+        "d": 19.0,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2886",
+      "price": {
+        "open": 52.8,
+        "high": 55.4,
+        "low": 52.7,
+        "close": 55.2,
+        "change_percent": 2.99,
+        "volume": 22065241,
+        "turnover_value": 1211258364
+      },
+      "moving_averages": {
+        "ma5": 53.92,
+        "ma20": 50.85,
+        "ma60": 49.91,
+        "ma240": 43.29
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_surge",
+        "volume_ratio": 1.01,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 21.48,
+        "pb": 2.03,
+        "dividend_yield": 3.17,
+        "pe_tag": "fair",
+        "market_cap": 818802481166,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 552.0,
+        "rate_modifier": 0.7,
+        "iv_range": {
+          "min": 15,
+          "max": 30
+        }
+      },
+      "encounter_weight": 0.37,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 89.01,
+        "d": 84.61,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "8046",
+      "price": {
+        "open": 1370,
+        "high": 1400,
+        "low": 1265,
+        "close": 1265,
+        "change_percent": -5.6,
+        "volume": 7971097,
+        "turnover_value": 10586891300
+      },
+      "moving_averages": {
+        "ma5": 1329.0,
+        "ma20": 1368.0,
+        "ma60": 1198.92,
+        "ma240": 751.81
+      },
+      "weather": [],
+      "aura": {
+        "quadrant": "dormant",
+        "volume_ratio": 0.73,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 148.65,
+        "pb": 16.59,
+        "dividend_yield": 0.16,
+        "pe_tag": "popular",
+        "market_cap": 817399341055,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 12650,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 3.0,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 1.0
+      },
+      "kd": {
+        "k": 16.23,
+        "d": 28.23,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "3008",
+      "price": {
+        "open": 6300,
+        "high": 6330,
+        "low": 6090,
+        "close": 6175,
+        "change_percent": 0.08,
+        "volume": 1827096,
+        "turnover_value": 11360607975
+      },
+      "moving_averages": {
+        "ma5": 6193.0,
+        "ma20": 6472.0,
+        "ma60": 5933.08,
+        "ma240": 3607.35
+      },
+      "weather": [],
+      "aura": {
+        "quadrant": "phantom_surge",
+        "volume_ratio": 0.66,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 32.84,
+        "pb": 4.22,
+        "dividend_yield": 1.3,
+        "pe_tag": "popular",
+        "market_cap": 807678866475,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 61750,
+        "rate_modifier": 1.0,
+        "iv_range": {
+          "min": 5,
+          "max": 25
+        }
+      },
+      "encounter_weight": 3.0,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 1.0
+      },
+      "kd": {
+        "k": 18.87,
+        "d": 31.45,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2880",
+      "price": {
+        "open": 49.45,
+        "high": 50.3,
+        "low": 49.35,
+        "close": 50.3,
+        "change_percent": 1.0,
+        "volume": 17527978,
+        "turnover_value": 877630144
+      },
+      "moving_averages": {
+        "ma5": 49.16,
+        "ma20": 47.13,
+        "ma60": 44.25,
+        "ma240": 36.25
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_surge",
+        "volume_ratio": 1.35,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 21.77,
+        "pb": 2.9,
+        "dividend_yield": 2.88,
+        "pe_tag": "fair",
+        "market_cap": 707023577372,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 503.0,
+        "rate_modifier": 0.7,
+        "iv_range": {
+          "min": 15,
+          "max": 30
+        }
+      },
+      "encounter_weight": 0.24,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 86.74,
+        "d": 80.36,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "2357",
+      "price": {
+        "open": 984,
+        "high": 992,
+        "low": 946,
+        "close": 946,
+        "change_percent": -3.67,
+        "volume": 2657092,
+        "turnover_value": 2554109889
+      },
+      "moving_averages": {
+        "ma5": 974.6,
+        "ma20": 973.8,
+        "ma60": 932.12,
+        "ma240": 699.5
+      },
+      "weather": [],
+      "aura": {
+        "quadrant": "true_weak",
+        "volume_ratio": 1.2,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 13.83,
+        "pb": 2.33,
+        "dividend_yield": 4.44,
+        "pe_tag": "fair",
+        "market_cap": 702651224880,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 9460,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 0.97,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 1.0
+      },
+      "kd": {
+        "k": 35.75,
+        "d": 46.86,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2344",
+      "price": {
+        "open": 160,
+        "high": 161,
+        "low": 154,
+        "close": 154.5,
+        "change_percent": -3.13,
+        "volume": 43722058,
+        "turnover_value": 6879097774
+      },
+      "moving_averages": {
+        "ma5": 156.7,
+        "ma20": 169.07,
+        "ma60": 169.76,
+        "ma240": 126.6
+      },
+      "weather": [],
+      "aura": {
+        "quadrant": "dormant",
+        "volume_ratio": 0.66,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 17.03,
+        "pb": 4.21,
+        "dividend_yield": 0.32,
+        "pe_tag": "fair",
+        "market_cap": 695250029818,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 1545.0,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 3.0,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 1.0
+      },
+      "kd": {
+        "k": 18.05,
+        "d": 22.83,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2890",
+      "price": {
+        "open": 45.5,
+        "high": 46.7,
+        "low": 45.35,
+        "close": 46.35,
+        "change_percent": 2.09,
+        "volume": 27825518,
+        "turnover_value": 1287746878
+      },
+      "moving_averages": {
+        "ma5": 45.4,
+        "ma20": 44.81,
+        "ma60": 42.33,
+        "ma240": 34.12
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_surge",
+        "volume_ratio": 1.2,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 17.49,
+        "pb": 2.53,
+        "dividend_yield": 2.8,
+        "pe_tag": "fair",
+        "market_cap": 685153520218,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 463.5,
+        "rate_modifier": 0.7,
+        "iv_range": {
+          "min": 15,
+          "max": 30
+        }
+      },
+      "encounter_weight": 0.41,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 67.67,
+        "d": 62.4,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "3231",
+      "price": {
+        "open": 198.5,
+        "high": 199,
+        "low": 189.5,
+        "close": 190,
+        "change_percent": -2.56,
+        "volume": 36614475,
+        "turnover_value": 7076878748
+      },
+      "moving_averages": {
+        "ma5": 187.3,
+        "ma20": 186.03,
+        "ma60": 184.85,
+        "ma240": 153.78
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "dormant",
+        "volume_ratio": 0.86,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 15.09,
+        "pb": 3.11,
+        "dividend_yield": 2.89,
+        "pe_tag": "fair",
+        "market_cap": 651670027500,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 1900,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 3.0,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 61.92,
+        "d": 54.15,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "4958",
+      "price": {
+        "open": 598,
+        "high": 614,
+        "low": 564,
+        "close": 567,
+        "change_percent": -1.9,
+        "volume": 46056903,
+        "turnover_value": 27129980635
+      },
+      "moving_averages": {
+        "ma5": 559.2,
+        "ma20": 543.3,
+        "ma60": 494.48,
+        "ma240": 347.26
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_weak",
+        "volume_ratio": 1.31,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 67.1,
+        "pb": 4.08,
+        "dividend_yield": 0.6,
+        "pe_tag": "popular",
+        "market_cap": 642636198225,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 5670,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 3.0,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 47.43,
+        "d": 46.85,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "2883",
+      "price": {
+        "open": 38.45,
+        "high": 38.45,
+        "low": 37.7,
+        "close": 37.75,
+        "change_percent": -1.31,
+        "volume": 38039317,
+        "turnover_value": 1444578019
+      },
+      "moving_averages": {
+        "ma5": 38.11,
+        "ma20": 38.29,
+        "ma60": 35.13,
+        "ma240": 24.56
+      },
+      "weather": [],
+      "aura": {
+        "quadrant": "dormant",
+        "volume_ratio": 0.84,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "silver",
+        "amount": 1
+      },
+      "valuation": {
+        "pe": 13.2,
+        "pb": 1.49,
+        "dividend_yield": 2.65,
+        "pe_tag": "fair",
+        "market_cap": 640791620931,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 377.5,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 0.62,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 1.0
+      },
+      "kd": {
+        "k": 39.65,
+        "d": 49.0,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2892",
+      "price": {
+        "open": 41,
+        "high": 42.4,
+        "low": 41,
+        "close": 42.35,
+        "change_percent": 2.54,
+        "volume": 20439045,
+        "turnover_value": 861087227
+      },
+      "moving_averages": {
+        "ma5": 41.4,
+        "ma20": 39.87,
+        "ma60": 37.2,
+        "ma240": 31.45
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_surge",
+        "volume_ratio": 1.04,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 19.79,
+        "pb": 2.02,
+        "dividend_yield": 3.07,
+        "pe_tag": "fair",
+        "market_cap": 608970497328,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 423.5,
+        "rate_modifier": 0.7,
+        "iv_range": {
+          "min": 15,
+          "max": 30
+        }
+      },
+      "encounter_weight": 0.47,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 83.39,
+        "d": 77.63,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "2301",
+      "price": {
+        "open": 263.5,
+        "high": 266.5,
+        "low": 254.5,
+        "close": 255.5,
+        "change_percent": -3.04,
+        "volume": 7263674,
+        "turnover_value": 1890101513
+      },
+      "moving_averages": {
+        "ma5": 261.9,
+        "ma20": 280.02,
+        "ma60": 274.11,
+        "ma240": 204.05
+      },
+      "weather": [],
+      "aura": {
+        "quadrant": "dormant",
+        "volume_ratio": 0.5,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 29.88,
+        "pb": 6.05,
+        "dividend_yield": 1.96,
+        "pe_tag": "fair",
+        "market_cap": 591765533446,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 2555.0,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 1.88,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 1.0
+      },
+      "kd": {
+        "k": 13.8,
+        "d": 19.64,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2368",
+      "price": {
+        "open": 1220,
+        "high": 1245,
+        "low": 1110,
+        "close": 1115,
+        "change_percent": -6.69,
+        "volume": 9433960,
+        "turnover_value": 11153211900
+      },
+      "moving_averages": {
+        "ma5": 1198.0,
+        "ma20": 1178.75,
+        "ma60": 1058.77,
+        "ma240": 957.16
+      },
+      "weather": [],
+      "aura": {
+        "quadrant": "dormant",
+        "volume_ratio": 0.77,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 40.02,
+        "pb": 13.68,
+        "dividend_yield": 0.88,
+        "pe_tag": "popular",
+        "market_cap": 591613393780,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 11150,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 3.0,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 1.0
+      },
+      "kd": {
+        "k": 34.8,
+        "d": 50.84,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2395",
+      "price": {
+        "open": 685,
+        "high": 691,
+        "low": 667,
+        "close": 670,
+        "change_percent": -1.9,
+        "volume": 1662824,
+        "turnover_value": 1125616279
+      },
+      "moving_averages": {
+        "ma5": 680.2,
+        "ma20": 710.55,
+        "ma60": 675.2,
+        "ma240": 447.35
+      },
+      "weather": [],
+      "aura": {
+        "quadrant": "dormant",
+        "volume_ratio": 0.74,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 42.43,
+        "pb": 10.52,
+        "dividend_yield": 1.67,
+        "pe_tag": "popular",
+        "market_cap": 582260825360,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 6700,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 0.79,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 1.0
+      },
+      "kd": {
+        "k": 23.61,
+        "d": 27.46,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "2603",
+      "price": {
+        "open": 256.5,
+        "high": 263,
+        "low": 256,
+        "close": 260,
+        "change_percent": 0.97,
+        "volume": 9023380,
+        "turnover_value": 2342898680
+      },
+      "moving_averages": {
+        "ma5": 260.9,
+        "ma20": 248.2,
+        "ma60": 234.24,
+        "ma240": 206.75
+      },
+      "weather": [
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "phantom_surge",
+        "volume_ratio": 0.69,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "silver",
+        "amount": 13
+      },
+      "valuation": {
+        "pe": 10.31,
+        "pb": 1.0,
+        "dividend_yield": 6.15,
+        "pe_tag": "undervalued",
+        "market_cap": 562911178960,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 2600,
+        "rate_modifier": 1.0,
+        "iv_range": {
+          "min": 5,
+          "max": 25
+        }
+      },
+      "encounter_weight": 0.89,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 1.0,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 69.85,
+        "d": 71.47,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "3189",
+      "price": {
+        "open": 1025,
+        "high": 1065,
+        "low": 976,
+        "close": 986,
+        "change_percent": -2.38,
+        "volume": 19629047,
+        "turnover_value": 19929986304
+      },
+      "moving_averages": {
+        "ma5": 984.6,
+        "ma20": 1007.7,
+        "ma60": 874.82,
+        "ma240": 509.88
+      },
+      "weather": [
+        "excited"
+      ],
+      "aura": {
+        "quadrant": "true_weak",
+        "volume_ratio": 1.03,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 182.93,
+        "pb": 11.68,
+        "dividend_yield": 0.15,
+        "pe_tag": "popular",
+        "market_cap": 519533614960,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 9860,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 3.0,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 1.0
+      },
+      "kd": {
+        "k": 28.74,
+        "d": 30.99,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "3045",
+      "price": {
+        "open": 130,
+        "high": 134,
+        "low": 130,
+        "close": 133,
+        "change_percent": 1.92,
+        "volume": 9142975,
+        "turnover_value": 1210983756
+      },
+      "moving_averages": {
+        "ma5": 131.0,
+        "ma20": 125.2,
+        "ma60": 118.72,
+        "ma240": 112.33
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "true_surge",
+        "volume_ratio": 1.13,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 25.14,
+        "pb": 4.82,
+        "dividend_yield": 3.56,
+        "pe_tag": "fair",
+        "market_cap": 495216324995,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 1330,
+        "rate_modifier": 0.7,
+        "iv_range": {
+          "min": 15,
+          "max": 30
+        }
+      },
+      "encounter_weight": 0.48,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 83.48,
+        "d": 80.81,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "6446",
+      "price": {
+        "open": 1195,
+        "high": 1195,
+        "low": 1160,
+        "close": 1160,
+        "change_percent": -1.28,
+        "volume": 1195618,
+        "turnover_value": 1404341535
+      },
+      "moving_averages": {
+        "ma5": 1182.0,
+        "ma20": 1182.75,
+        "ma60": 1274.42,
+        "ma240": 866.42
+      },
+      "weather": [],
+      "aura": {
+        "quadrant": "dormant",
+        "volume_ratio": 0.63,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 56.81,
+        "pb": 11.77,
+        "dividend_yield": 0.22,
+        "pe_tag": "popular",
+        "market_cap": 490024177760,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 11600,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 2.0,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 1.0
+      },
+      "kd": {
+        "k": 16.43,
+        "d": 28.63,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "1301",
+      "price": {
+        "open": 77.9,
+        "high": 78,
+        "low": 73.5,
+        "close": 73.8,
+        "change_percent": -4.16,
+        "volume": 47052366,
+        "turnover_value": 3519648015
+      },
+      "moving_averages": {
+        "ma5": 77.2,
+        "ma20": 73.58,
+        "ma60": 64.85,
+        "ma240": 51.49
+      },
+      "weather": [
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "dormant",
+        "volume_ratio": 0.6,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "gold",
+        "amount": 16
+      },
+      "valuation": {
+        "pe": 45.0,
+        "pb": 0.82,
+        "dividend_yield": 0.68,
+        "pe_tag": "popular",
+        "market_cap": 469791669638,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 738.0,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 1.03,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 1.0,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 28.88,
+        "d": 50.11,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "5880",
+      "price": {
+        "open": 27.8,
+        "high": 28.25,
+        "low": 27.8,
+        "close": 28.2,
+        "change_percent": 0.71,
+        "volume": 14833660,
+        "turnover_value": 417434948
+      },
+      "moving_averages": {
+        "ma5": 27.97,
+        "ma20": 26.89,
+        "ma60": 26.3,
+        "ma240": 24.48
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "phantom_surge",
+        "volume_ratio": 0.83,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 18.43,
+        "pb": 1.52,
+        "dividend_yield": 3.72,
+        "pe_tag": "fair",
+        "market_cap": 453257481503,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 282.0,
+        "rate_modifier": 1.0,
+        "iv_range": {
+          "min": 5,
+          "max": 25
+        }
+      },
+      "encounter_weight": 0.28,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 0.85,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 86.2,
+        "d": 82.69,
+        "cross": null,
+        "shield": true
+      }
+    },
+    {
+      "symbol": "1216",
+      "price": {
+        "open": 77.6,
+        "high": 79.6,
+        "low": 77.6,
+        "close": 79.6,
+        "change_percent": 1.4,
+        "volume": 10089033,
+        "turnover_value": 796402426
+      },
+      "moving_averages": {
+        "ma5": 79.14,
+        "ma20": 76.16,
+        "ma60": 75.91,
+        "ma240": 74.75
+      },
+      "weather": [
+        "excited",
+        "tailwind"
+      ],
+      "aura": {
+        "quadrant": "phantom_surge",
+        "volume_ratio": 0.8,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "none",
+        "amount": 0
+      },
+      "valuation": {
+        "pe": 19.23,
+        "pb": 3.32,
+        "dividend_yield": 3.77,
+        "pe_tag": "fair",
+        "market_cap": 452288427512,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 796.0,
+        "rate_modifier": 1.0,
+        "iv_range": {
+          "min": 5,
+          "max": 25
+        }
+      },
+      "encounter_weight": 0.33,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.25,
+        "damage_taken": 1.0,
+        "hp": 1.05,
+        "atk": 1.05,
+        "matk": 1.05,
+        "def": 1.05,
+        "mdef": 1.05,
+        "spd": 1.05
+      },
+      "kd": {
+        "k": 79.24,
+        "d": 80.18,
+        "cross": null,
+        "shield": false
+      }
+    },
+    {
+      "symbol": "1326",
+      "price": {
+        "open": 77.2,
+        "high": 77.4,
+        "low": 73,
+        "close": 73,
+        "change_percent": -4.2,
+        "volume": 24912812,
+        "turnover_value": 1850281398
+      },
+      "moving_averages": {
+        "ma5": 75.44,
+        "ma20": 73.39,
+        "ma60": 66.61,
+        "ma240": 49.69
+      },
+      "weather": [],
+      "aura": {
+        "quadrant": "dormant",
+        "volume_ratio": 0.6,
+        "awakening_omen": false
+      },
+      "net_value_shield": {
+        "tier": "gold",
+        "amount": 19
+      },
+      "valuation": {
+        "pe": 30.93,
+        "pb": 0.82,
+        "dividend_yield": 0.82,
+        "pe_tag": "popular",
+        "market_cap": 427866599243,
+        "as_of": "2026-10-22",
+        "dividend_year": 114,
+        "fiscal_period": "115/2"
+      },
+      "capture": {
+        "cost": 730,
+        "rate_modifier": 1.3,
+        "iv_range": {
+          "min": 0,
+          "max": 15
+        }
+      },
+      "encounter_weight": 1.34,
+      "special_state": null,
+      "multipliers": {
+        "crit_rate": 0.1,
+        "damage_taken": 1.0
+      },
+      "kd": {
+        "k": 23.3,
+        "d": 42.29,
+        "cross": null,
+        "shield": false
+      }
+    }
+  ]
+}
