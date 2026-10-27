@@ -2,27 +2,27 @@
   "schema_version": "0.1.0",
   "generation": 1,
   "season": "2026-S4",
-  "market_date": "2026-10-22",
-  "generated_at": "2026-10-27T01:25:53+08:00",
-  "next_settlement_at": "2026-10-23T19:00:00+08:00",
+  "market_date": "2026-10-27",
+  "generated_at": "2026-10-28T00:41:07+08:00",
+  "next_settlement_at": "2026-10-28T19:00:00+08:00",
   "files": {
     "species": {
       "path": "species.json",
-      "sha256": "ab8349b9210aa64709d3d9801d1ae350aefe08140fcc22d09f594c10baea4d7b",
-      "bytes": 87626,
-      "updated_at": "2026-10-27T01:25:53.665093+08:00"
+      "sha256": "1bae489eff68c2ee2f6b719441ba9189fc4ba36106da9bf90287b7814ca89091",
+      "bytes": 87620,
+      "updated_at": "2026-10-28T00:41:07.147353+08:00"
     },
     "daily": {
-      "path": "daily/2026-10-22.json",
-      "sha256": "f40ed779d28f9e11e4685f2b054e7fdb4d697a6b9d28dc6c5be04f2dee1452f7",
-      "bytes": 67734,
-      "updated_at": "2026-10-27T01:25:53.667883+08:00"
+      "path": "daily/2026-10-27.json",
+      "sha256": "ccddfab9b730cdbc57c99577f1c4138a498a8cb3e739825bedb83deff3d32d0d",
+      "bytes": 68177,
+      "updated_at": "2026-10-28T00:41:07.150527+08:00"
     },
     "balance": {
       "path": "balance.json",
       "sha256": "e9b08c7728ab5a79e5b44210afebea60224ef4c82a5874b1800baa18e54815bf",
       "bytes": 4493,
-      "updated_at": "2026-10-27T01:25:53.668802+08:00"
+      "updated_at": "2026-10-28T00:41:07.150954+08:00"
     }
   },
   "pipeline": {
@@ -30,7 +30,7 @@
       {
         "name": "fugle-snapshot-tse",
         "endpoint": "/snapshot/quotes/TSE",
-        "record_count": 1541
+        "record_count": 1545
       },
       {
         "name": "twse-company-profile",
@@ -40,12 +40,12 @@
       {
         "name": "twse-bwibbu-d",
         "endpoint": "/rwd/zh/afterTrading/BWIBBU_d",
-        "record_count": 1084
+        "record_count": 1087
       },
       {
         "name": "twse-mi-index",
         "endpoint": "/rwd/zh/afterTrading/MI_INDEX",
-        "record_count": 1383
+        "record_count": 1386
       },
       {
         "name": "twse-monthly-revenue",
