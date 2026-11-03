@@ -1,7 +1,7 @@
 {
   "period": "115Q3",
-  "updated_at": "2026-11-03T04:46:50+08:00",
-  "company_count": 47,
+  "updated_at": "2026-11-04T02:26:26+08:00",
+  "company_count": 53,
   "companies": {
     "1232": {
       "symbol": "1232",
@@ -22,6 +22,16 @@
       "book_value_per_share": 53.89,
       "eps": 11.62,
       "debt_ratio": 42.14
+    },
+    "1535": {
+      "symbol": "1535",
+      "name": "中宇",
+      "total_assets": 7043167.0,
+      "total_liabilities": 3185396.0,
+      "share_capital": 1237426.0,
+      "book_value_per_share": 31.18,
+      "eps": 2.44,
+      "debt_ratio": 45.23
     },
     "1773": {
       "symbol": "1773",
@@ -193,6 +203,16 @@
       "eps": 7.19,
       "debt_ratio": 68.61
     },
+    "2498": {
+      "symbol": "2498",
+      "name": "宏達電",
+      "total_assets": 42358043.0,
+      "total_liabilities": 15674403.0,
+      "share_capital": 8370323.0,
+      "book_value_per_share": 31.88,
+      "eps": -0.36,
+      "debt_ratio": 37.0
+    },
     "2912": {
       "symbol": "2912",
       "name": "統一超",
@@ -333,6 +353,16 @@
       "eps": 7.25,
       "debt_ratio": 47.11
     },
+    "3704": {
+      "symbol": "3704",
+      "name": "合勤控",
+      "total_assets": 32169263.0,
+      "total_liabilities": 19301607.0,
+      "share_capital": 4154450.0,
+      "book_value_per_share": 30.92,
+      "eps": 2.71,
+      "debt_ratio": 60.0
+    },
     "4583": {
       "symbol": "4583",
       "name": "台灣精銳",
@@ -383,6 +413,16 @@
       "eps": 25.19,
       "debt_ratio": 53.47
     },
+    "6112": {
+      "symbol": "6112",
+      "name": "邁達特",
+      "total_assets": 16881121.0,
+      "total_liabilities": 11480514.0,
+      "share_capital": 1883573.0,
+      "book_value_per_share": 23.0,
+      "eps": 1.78,
+      "debt_ratio": 68.01
+    },
     "6202": {
       "symbol": "6202",
       "name": "盛群",
@@ -403,6 +443,16 @@
       "eps": 8.0,
       "debt_ratio": 23.19
     },
+    "6278": {
+      "symbol": "6278",
+      "name": "台表科",
+      "total_assets": 57010345.0,
+      "total_liabilities": 32782765.0,
+      "share_capital": 2923984.0,
+      "book_value_per_share": 83.76,
+      "eps": 8.31,
+      "debt_ratio": 57.5
+    },
     "6799": {
       "symbol": "6799",
       "name": "來頡",
@@ -412,6 +462,16 @@
       "book_value_per_share": 39.08,
       "eps": 3.51,
       "debt_ratio": 10.4
+    },
+    "6908": {
+      "symbol": "6908",
+      "name": "宏碁遊戲-創",
+      "total_assets": 3956131.0,
+      "total_liabilities": 1947700.0,
+      "share_capital": 371800.0,
+      "book_value_per_share": 34.45,
+      "eps": -0.35,
+      "debt_ratio": 49.23
     },
     "7765": {
       "symbol": "7765",
