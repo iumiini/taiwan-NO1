@@ -2,27 +2,27 @@
   "schema_version": "0.1.0",
   "generation": 1,
   "season": "2026-S4",
-  "market_date": "2026-11-04",
-  "generated_at": "2026-11-05T02:41:10+08:00",
-  "next_settlement_at": "2026-11-05T19:00:00+08:00",
+  "market_date": "2026-11-05",
+  "generated_at": "2026-11-06T02:48:33+08:00",
+  "next_settlement_at": "2026-11-06T19:00:00+08:00",
   "files": {
     "species": {
       "path": "species.json",
-      "sha256": "11feaccb5baf958a6cd9058066193d4fba9dcd1758b085f05c613598a7c0c903",
-      "bytes": 87642,
-      "updated_at": "2026-11-05T02:41:10.483214+08:00"
+      "sha256": "2c2a5c54b65fafc72345a22990edb42bb42ace09326c137184e4f86048a28786",
+      "bytes": 87643,
+      "updated_at": "2026-11-06T02:48:33.179783+08:00"
     },
     "daily": {
-      "path": "daily/2026-11-04.json",
-      "sha256": "ce4b3e1e25003179c6b26e314f8d6adf742d89ec4a4a73dea4471aed007623df",
-      "bytes": 66824,
-      "updated_at": "2026-11-05T02:41:10.486332+08:00"
+      "path": "daily/2026-11-05.json",
+      "sha256": "0a1d2d615efa59d27ddc885202f9f77cee5246fad28ae5e1f2666b9b891e084c",
+      "bytes": 67049,
+      "updated_at": "2026-11-06T02:48:33.181720+08:00"
     },
     "balance": {
       "path": "balance.json",
       "sha256": "e9b08c7728ab5a79e5b44210afebea60224ef4c82a5874b1800baa18e54815bf",
       "bytes": 4493,
-      "updated_at": "2026-11-05T02:41:10.487125+08:00"
+      "updated_at": "2026-11-06T02:48:33.182063+08:00"
     }
   },
   "pipeline": {
@@ -40,12 +40,12 @@
       {
         "name": "twse-bwibbu-d",
         "endpoint": "/rwd/zh/afterTrading/BWIBBU_d",
-        "record_count": 1088
+        "record_count": 1087
       },
       {
         "name": "twse-mi-index",
         "endpoint": "/rwd/zh/afterTrading/MI_INDEX",
-        "record_count": 1390
+        "record_count": 1389
       },
       {
         "name": "twse-monthly-revenue",
@@ -69,7 +69,7 @@
       }
     ],
     "warnings": [
-      "41 檔沿用較舊季別（最新期 115Q3 尚未公布）"
+      "39 檔沿用較舊季別（最新期 115Q3 尚未公布）"
     ]
   }
 }
