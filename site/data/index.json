@@ -2,27 +2,27 @@
   "schema_version": "0.1.0",
   "generation": 1,
   "season": "2026-S4",
-  "market_date": "2026-11-05",
-  "generated_at": "2026-11-06T02:48:33+08:00",
-  "next_settlement_at": "2026-11-06T19:00:00+08:00",
+  "market_date": "2026-11-06",
+  "generated_at": "2026-11-07T02:00:19+08:00",
+  "next_settlement_at": "2026-11-07T19:00:00+08:00",
   "files": {
     "species": {
       "path": "species.json",
-      "sha256": "2c2a5c54b65fafc72345a22990edb42bb42ace09326c137184e4f86048a28786",
-      "bytes": 87643,
-      "updated_at": "2026-11-06T02:48:33.179783+08:00"
+      "sha256": "4a1e8a46b07066e9d44af16e2d20f8a1ea81fcb30d453b4123a99ae20413dcff",
+      "bytes": 87629,
+      "updated_at": "2026-11-07T02:00:19.320041+08:00"
     },
     "daily": {
-      "path": "daily/2026-11-05.json",
-      "sha256": "0a1d2d615efa59d27ddc885202f9f77cee5246fad28ae5e1f2666b9b891e084c",
-      "bytes": 67049,
-      "updated_at": "2026-11-06T02:48:33.181720+08:00"
+      "path": "daily/2026-11-06.json",
+      "sha256": "d6e38a5427b213ac1edb6c62df9f6cb00c8474249fb7482549cf724f34a0fdaf",
+      "bytes": 66474,
+      "updated_at": "2026-11-07T02:00:19.323254+08:00"
     },
     "balance": {
       "path": "balance.json",
       "sha256": "e9b08c7728ab5a79e5b44210afebea60224ef4c82a5874b1800baa18e54815bf",
       "bytes": 4493,
-      "updated_at": "2026-11-06T02:48:33.182063+08:00"
+      "updated_at": "2026-11-07T02:00:19.323688+08:00"
     }
   },
   "pipeline": {
@@ -30,7 +30,7 @@
       {
         "name": "fugle-snapshot-tse",
         "endpoint": "/snapshot/quotes/TSE",
-        "record_count": 1549
+        "record_count": 1548
       },
       {
         "name": "twse-company-profile",
@@ -69,7 +69,7 @@
       }
     ],
     "warnings": [
-      "39 檔沿用較舊季別（最新期 115Q3 尚未公布）"
+      "37 檔沿用較舊季別（最新期 115Q3 尚未公布）"
     ]
   }
 }
