@@ -2,27 +2,27 @@
   "schema_version": "0.1.0",
   "generation": 1,
   "season": "2026-S4",
-  "market_date": "2026-11-09",
-  "generated_at": "2026-11-10T05:29:05+08:00",
-  "next_settlement_at": "2026-11-10T19:00:00+08:00",
+  "market_date": "2026-11-10",
+  "generated_at": "2026-11-11T02:43:09+08:00",
+  "next_settlement_at": "2026-11-11T19:00:00+08:00",
   "files": {
     "species": {
       "path": "species.json",
-      "sha256": "0cab3e954806dd93ac76aef54d7484f9e03c09eb5bf5c6993726bb213cf74ad8",
-      "bytes": 87631,
-      "updated_at": "2026-11-10T05:29:05.130097+08:00"
+      "sha256": "600d77c9851d9630f05a16a3ba83d6d284b808befa709489da25cbb74fea1207",
+      "bytes": 87629,
+      "updated_at": "2026-11-11T02:43:09.010654+08:00"
     },
     "daily": {
-      "path": "daily/2026-11-09.json",
-      "sha256": "0089feabd7af45e8aacfb7e379ecd06468702747f4cdeb696291c70d333db7d4",
-      "bytes": 66398,
-      "updated_at": "2026-11-10T05:29:05.134343+08:00"
+      "path": "daily/2026-11-10.json",
+      "sha256": "f30e9bdd5d68e19095570409267c74bdda7617639aaa71c114e26a48a8495104",
+      "bytes": 66297,
+      "updated_at": "2026-11-11T02:43:09.014029+08:00"
     },
     "balance": {
       "path": "balance.json",
       "sha256": "e9b08c7728ab5a79e5b44210afebea60224ef4c82a5874b1800baa18e54815bf",
       "bytes": 4493,
-      "updated_at": "2026-11-10T05:29:05.134753+08:00"
+      "updated_at": "2026-11-11T02:43:09.014474+08:00"
     }
   },
   "pipeline": {
@@ -69,7 +69,7 @@
       }
     ],
     "warnings": [
-      "34 檔沿用較舊季別（最新期 115Q3 尚未公布）"
+      "30 檔沿用較舊季別（最新期 115Q3 尚未公布）"
     ]
   }
 }
