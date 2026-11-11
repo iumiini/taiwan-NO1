@@ -1,8 +1,18 @@
 {
   "period": "115Q3",
-  "updated_at": "2026-11-11T02:40:11+08:00",
-  "company_count": 296,
+  "updated_at": "2026-11-12T02:41:45+08:00",
+  "company_count": 397,
   "companies": {
+    "1201": {
+      "symbol": "1201",
+      "name": "味全",
+      "total_assets": 19770047.0,
+      "total_liabilities": 11764539.0,
+      "share_capital": 5060629.0,
+      "book_value_per_share": 15.8,
+      "eps": 0.48,
+      "debt_ratio": 59.51
+    },
     "1213": {
       "symbol": "1213",
       "name": "大飲",
@@ -43,6 +53,16 @@
       "eps": 8.03,
       "debt_ratio": 40.68
     },
+    "1233": {
+      "symbol": "1233",
+      "name": "天仁",
+      "total_assets": 2177646.0,
+      "total_liabilities": 738102.0,
+      "share_capital": 905919.0,
+      "book_value_per_share": 15.86,
+      "eps": 0.81,
+      "debt_ratio": 33.89
+    },
     "1236": {
       "symbol": "1236",
       "name": "宏亞",
@@ -52,6 +72,26 @@
       "book_value_per_share": 30.6,
       "eps": 0.26,
       "debt_ratio": 27.26
+    },
+    "1256": {
+      "symbol": "1256",
+      "name": "鮮活果汁-KY",
+      "total_assets": 6205942.0,
+      "total_liabilities": 1665494.0,
+      "share_capital": 357814.0,
+      "book_value_per_share": 126.67,
+      "eps": 16.84,
+      "debt_ratio": 26.84
+    },
+    "1307": {
+      "symbol": "1307",
+      "name": "三芳",
+      "total_assets": 18928557.0,
+      "total_liabilities": 8717702.0,
+      "share_capital": 3978181.0,
+      "book_value_per_share": 25.67,
+      "eps": 2.04,
+      "debt_ratio": 46.06
     },
     "1321": {
       "symbol": "1321",
@@ -72,6 +112,26 @@
       "book_value_per_share": 102.88,
       "eps": 3.03,
       "debt_ratio": 20.29
+    },
+    "1337": {
+      "symbol": "1337",
+      "name": "再生-KY",
+      "total_assets": 6362549.0,
+      "total_liabilities": 2858214.0,
+      "share_capital": 2689547.0,
+      "book_value_per_share": 13.03,
+      "eps": -1.35,
+      "debt_ratio": 44.92
+    },
+    "1342": {
+      "symbol": "1342",
+      "name": "八貫",
+      "total_assets": 3929831.0,
+      "total_liabilities": 1499857.0,
+      "share_capital": 785009.0,
+      "book_value_per_share": 30.95,
+      "eps": 5.7,
+      "debt_ratio": 38.17
     },
     "1413": {
       "symbol": "1413",
@@ -143,6 +203,16 @@
       "eps": 0.2,
       "debt_ratio": 37.56
     },
+    "1446": {
+      "symbol": "1446",
+      "name": "宏和",
+      "total_assets": 3261518.0,
+      "total_liabilities": 529076.0,
+      "share_capital": 1377095.0,
+      "book_value_per_share": 19.84,
+      "eps": 1.2,
+      "debt_ratio": 16.22
+    },
     "1451": {
       "symbol": "1451",
       "name": "年興",
@@ -173,6 +243,16 @@
       "eps": 0.92,
       "debt_ratio": 34.92
     },
+    "1459": {
+      "symbol": "1459",
+      "name": "聯發",
+      "total_assets": 4706533.0,
+      "total_liabilities": 1392698.0,
+      "share_capital": 2527471.0,
+      "book_value_per_share": 13.92,
+      "eps": 1.95,
+      "debt_ratio": 29.59
+    },
     "1463": {
       "symbol": "1463",
       "name": "強盛新",
@@ -192,6 +272,16 @@
       "book_value_per_share": 43.57,
       "eps": 5.57,
       "debt_ratio": 52.81
+    },
+    "1473": {
+      "symbol": "1473",
+      "name": "台南",
+      "total_assets": 5890461.0,
+      "total_liabilities": 2099353.0,
+      "share_capital": 1461535.0,
+      "book_value_per_share": 25.94,
+      "eps": 0.22,
+      "debt_ratio": 35.64
     },
     "1476": {
       "symbol": "1476",
@@ -253,6 +343,26 @@
       "eps": 1.34,
       "debt_ratio": 12.51
     },
+    "1526": {
+      "symbol": "1526",
+      "name": "日馳",
+      "total_assets": 2603027.0,
+      "total_liabilities": 1307631.0,
+      "share_capital": 600000.0,
+      "book_value_per_share": 21.59,
+      "eps": -1.17,
+      "debt_ratio": 50.24
+    },
+    "1528": {
+      "symbol": "1528",
+      "name": "恩德",
+      "total_assets": 5632088.0,
+      "total_liabilities": 3463684.0,
+      "share_capital": 1913310.0,
+      "book_value_per_share": 11.08,
+      "eps": -0.6,
+      "debt_ratio": 61.5
+    },
     "1535": {
       "symbol": "1535",
       "name": "中宇",
@@ -262,6 +372,16 @@
       "book_value_per_share": 31.18,
       "eps": 2.44,
       "debt_ratio": 45.23
+    },
+    "1537": {
+      "symbol": "1537",
+      "name": "廣隆",
+      "total_assets": 5693136.0,
+      "total_liabilities": 1283793.0,
+      "share_capital": 820628.0,
+      "book_value_per_share": 53.73,
+      "eps": 6.35,
+      "debt_ratio": 22.55
     },
     "1563": {
       "symbol": "1563",
@@ -312,6 +432,16 @@
       "book_value_per_share": 46.84,
       "eps": 4.63,
       "debt_ratio": 38.61
+    },
+    "1608": {
+      "symbol": "1608",
+      "name": "華榮",
+      "total_assets": 19848920.0,
+      "total_liabilities": 7271227.0,
+      "share_capital": 6327735.0,
+      "book_value_per_share": 26.26,
+      "eps": 6.26,
+      "debt_ratio": 36.63
     },
     "1612": {
       "symbol": "1612",
@@ -433,6 +563,26 @@
       "eps": 3.73,
       "debt_ratio": 26.99
     },
+    "1736": {
+      "symbol": "1736",
+      "name": "喬山",
+      "total_assets": 49630427.0,
+      "total_liabilities": 35010901.0,
+      "share_capital": 3033946.0,
+      "book_value_per_share": 48.16,
+      "eps": 5.95,
+      "debt_ratio": 70.54
+    },
+    "1737": {
+      "symbol": "1737",
+      "name": "臺鹽",
+      "total_assets": 8174969.0,
+      "total_liabilities": 1405781.0,
+      "share_capital": 2000000.0,
+      "book_value_per_share": 33.85,
+      "eps": 1.17,
+      "debt_ratio": 17.2
+    },
     "1752": {
       "symbol": "1752",
       "name": "南光",
@@ -503,6 +653,16 @@
       "eps": 3.17,
       "debt_ratio": 77.67
     },
+    "1817": {
+      "symbol": "1817",
+      "name": "凱撒衛",
+      "total_assets": 3150604.0,
+      "total_liabilities": 692557.0,
+      "share_capital": 726000.0,
+      "book_value_per_share": 33.23,
+      "eps": 4.08,
+      "debt_ratio": 21.98
+    },
     "1906": {
       "symbol": "1906",
       "name": "寶隆",
@@ -532,6 +692,16 @@
       "book_value_per_share": 49.3,
       "eps": 6.47,
       "debt_ratio": 34.73
+    },
+    "2009": {
+      "symbol": "2009",
+      "name": "第一銅",
+      "total_assets": 11993562.0,
+      "total_liabilities": 2194603.0,
+      "share_capital": 3596222.0,
+      "book_value_per_share": 27.25,
+      "eps": 1.85,
+      "debt_ratio": 18.3
     },
     "2010": {
       "symbol": "2010",
@@ -593,6 +763,16 @@
       "eps": 0.43,
       "debt_ratio": 47.92
     },
+    "2030": {
+      "symbol": "2030",
+      "name": "彰源",
+      "total_assets": 13702600.0,
+      "total_liabilities": 8062882.0,
+      "share_capital": 2805260.0,
+      "book_value_per_share": 20.1,
+      "eps": 2.51,
+      "debt_ratio": 58.84
+    },
     "2031": {
       "symbol": "2031",
       "name": "新光鋼",
@@ -622,6 +802,26 @@
       "book_value_per_share": 13.26,
       "eps": 0.19,
       "debt_ratio": 10.03
+    },
+    "2049": {
+      "symbol": "2049",
+      "name": "上銀",
+      "total_assets": 58714507.0,
+      "total_liabilities": 18068639.0,
+      "share_capital": 3537923.0,
+      "book_value_per_share": 114.78,
+      "eps": 7.51,
+      "debt_ratio": 30.77
+    },
+    "2062": {
+      "symbol": "2062",
+      "name": "橋椿",
+      "total_assets": 11426647.0,
+      "total_liabilities": 3697593.0,
+      "share_capital": 1999942.0,
+      "book_value_per_share": 38.64,
+      "eps": 0.28,
+      "debt_ratio": 32.36
     },
     "2069": {
       "symbol": "2069",
@@ -663,6 +863,16 @@
       "eps": 1.41,
       "debt_ratio": 38.85
     },
+    "2107": {
+      "symbol": "2107",
+      "name": "厚生",
+      "total_assets": 17282087.0,
+      "total_liabilities": 1775703.0,
+      "share_capital": 3035934.0,
+      "book_value_per_share": 51.08,
+      "eps": 2.07,
+      "debt_ratio": 10.27
+    },
     "2108": {
       "symbol": "2108",
       "name": "南帝",
@@ -702,6 +912,36 @@
       "book_value_per_share": 5.94,
       "eps": 0.23,
       "debt_ratio": 86.97
+    },
+    "2227": {
+      "symbol": "2227",
+      "name": "裕日車",
+      "total_assets": 21288370.0,
+      "total_liabilities": 4200165.0,
+      "share_capital": 3000000.0,
+      "book_value_per_share": 56.96,
+      "eps": -5.28,
+      "debt_ratio": 19.73
+    },
+    "2247": {
+      "symbol": "2247",
+      "name": "汎德永業",
+      "total_assets": 21467616.0,
+      "total_liabilities": 8408251.0,
+      "share_capital": 807109.0,
+      "book_value_per_share": 161.8,
+      "eps": 10.62,
+      "debt_ratio": 39.17
+    },
+    "2250": {
+      "symbol": "2250",
+      "name": "IKKA-KY",
+      "total_assets": 3530318.0,
+      "total_liabilities": 1470039.0,
+      "share_capital": 363882.0,
+      "book_value_per_share": 56.62,
+      "eps": 1.19,
+      "debt_ratio": 41.64
     },
     "2254": {
       "symbol": "2254",
@@ -762,6 +1002,26 @@
       "book_value_per_share": 48.38,
       "eps": 4.31,
       "debt_ratio": 48.62
+    },
+    "2314": {
+      "symbol": "2314",
+      "name": "台揚",
+      "total_assets": 2691959.0,
+      "total_liabilities": 2936456.0,
+      "share_capital": 1085964.0,
+      "book_value_per_share": -2.25,
+      "eps": -4.33,
+      "debt_ratio": 109.08
+    },
+    "2316": {
+      "symbol": "2316",
+      "name": "楠梓電",
+      "total_assets": 22813338.0,
+      "total_liabilities": 6961499.0,
+      "share_capital": 1827405.0,
+      "book_value_per_share": 86.75,
+      "eps": 13.31,
+      "debt_ratio": 30.52
     },
     "2329": {
       "symbol": "2329",
@@ -833,6 +1093,16 @@
       "eps": 1.67,
       "debt_ratio": 66.2
     },
+    "2356": {
+      "symbol": "2356",
+      "name": "英業達",
+      "total_assets": 531384119.0,
+      "total_liabilities": 450294226.0,
+      "share_capital": 35874751.0,
+      "book_value_per_share": 22.52,
+      "eps": 2.47,
+      "debt_ratio": 84.74
+    },
     "2363": {
       "symbol": "2363",
       "name": "矽統",
@@ -872,6 +1142,16 @@
       "book_value_per_share": 205.03,
       "eps": 82.92,
       "debt_ratio": 62.09
+    },
+    "2387": {
+      "symbol": "2387",
+      "name": "精元",
+      "total_assets": 20617991.0,
+      "total_liabilities": 8945470.0,
+      "share_capital": 1952510.0,
+      "book_value_per_share": 54.41,
+      "eps": 0.77,
+      "debt_ratio": 43.39
     },
     "2395": {
       "symbol": "2395",
@@ -913,6 +1193,16 @@
       "eps": 4.25,
       "debt_ratio": 25.14
     },
+    "2413": {
+      "symbol": "2413",
+      "name": "環科",
+      "total_assets": 4735486.0,
+      "total_liabilities": 2488664.0,
+      "share_capital": 1273592.0,
+      "book_value_per_share": 17.64,
+      "eps": 2.23,
+      "debt_ratio": 52.55
+    },
     "2414": {
       "symbol": "2414",
       "name": "精技",
@@ -933,6 +1223,16 @@
       "eps": 0.4,
       "debt_ratio": 53.53
     },
+    "2420": {
+      "symbol": "2420",
+      "name": "新巨",
+      "total_assets": 5855452.0,
+      "total_liabilities": 1733152.0,
+      "share_capital": 1526487.0,
+      "book_value_per_share": 26.88,
+      "eps": 3.64,
+      "debt_ratio": 29.6
+    },
     "2421": {
       "symbol": "2421",
       "name": "建準",
@@ -942,6 +1242,26 @@
       "book_value_per_share": 39.94,
       "eps": 7.93,
       "debt_ratio": 45.68
+    },
+    "2427": {
+      "symbol": "2427",
+      "name": "三商電",
+      "total_assets": 6973312.0,
+      "total_liabilities": 3527915.0,
+      "share_capital": 1979996.0,
+      "book_value_per_share": 17.4,
+      "eps": -0.19,
+      "debt_ratio": 50.59
+    },
+    "2428": {
+      "symbol": "2428",
+      "name": "興勤",
+      "total_assets": 19291671.0,
+      "total_liabilities": 6791227.0,
+      "share_capital": 1281127.0,
+      "book_value_per_share": 96.69,
+      "eps": 11.14,
+      "debt_ratio": 35.2
     },
     "2430": {
       "symbol": "2430",
@@ -953,6 +1273,16 @@
       "eps": 0.21,
       "debt_ratio": 67.96
     },
+    "2431": {
+      "symbol": "2431",
+      "name": "聯昌",
+      "total_assets": 1175192.0,
+      "total_liabilities": 123375.0,
+      "share_capital": 807144.0,
+      "book_value_per_share": 13.03,
+      "eps": -0.59,
+      "debt_ratio": 10.5
+    },
     "2432": {
       "symbol": "2432",
       "name": "倚天酷碁-創",
@@ -962,6 +1292,16 @@
       "book_value_per_share": 19.52,
       "eps": 1.65,
       "debt_ratio": 35.92
+    },
+    "2436": {
+      "symbol": "2436",
+      "name": "偉詮電",
+      "total_assets": 7303939.0,
+      "total_liabilities": 1242120.0,
+      "share_capital": 2210710.0,
+      "book_value_per_share": 27.7,
+      "eps": 4.49,
+      "debt_ratio": 17.01
     },
     "2439": {
       "symbol": "2439",
@@ -1153,6 +1493,26 @@
       "eps": 3.78,
       "debt_ratio": 30.46
     },
+    "2495": {
+      "symbol": "2495",
+      "name": "普安",
+      "total_assets": 7901297.0,
+      "total_liabilities": 3173433.0,
+      "share_capital": 2735515.0,
+      "book_value_per_share": 17.28,
+      "eps": 1.31,
+      "debt_ratio": 40.16
+    },
+    "2496": {
+      "symbol": "2496",
+      "name": "卓越",
+      "total_assets": 1482993.0,
+      "total_liabilities": 596375.0,
+      "share_capital": 200555.0,
+      "book_value_per_share": 43.95,
+      "eps": 4.03,
+      "debt_ratio": 40.21
+    },
     "2498": {
       "symbol": "2498",
       "name": "宏達電",
@@ -1172,6 +1532,16 @@
       "book_value_per_share": 22.27,
       "eps": 0.44,
       "debt_ratio": 32.13
+    },
+    "2509": {
+      "symbol": "2509",
+      "name": "全坤建",
+      "total_assets": 14016816.0,
+      "total_liabilities": 9692456.0,
+      "share_capital": 2245505.0,
+      "book_value_per_share": 17.92,
+      "eps": 0.27,
+      "debt_ratio": 69.15
     },
     "2511": {
       "symbol": "2511",
@@ -1202,6 +1572,16 @@
       "book_value_per_share": 18.34,
       "eps": 1.41,
       "debt_ratio": 64.89
+    },
+    "2536": {
+      "symbol": "2536",
+      "name": "宏普",
+      "total_assets": 38191737.0,
+      "total_liabilities": 25035611.0,
+      "share_capital": 3328087.0,
+      "book_value_per_share": 39.33,
+      "eps": 2.06,
+      "debt_ratio": 65.55
     },
     "2546": {
       "symbol": "2546",
@@ -1243,6 +1623,16 @@
       "eps": 1.8,
       "debt_ratio": 72.31
     },
+    "2618": {
+      "symbol": "2618",
+      "name": "長榮航",
+      "total_assets": 387633853.0,
+      "total_liabilities": 230836216.0,
+      "share_capital": 54004443.0,
+      "book_value_per_share": 27.28,
+      "eps": 3.5,
+      "debt_ratio": 59.55
+    },
     "2630": {
       "symbol": "2630",
       "name": "亞航",
@@ -1273,6 +1663,16 @@
       "eps": 7.15,
       "debt_ratio": 44.13
     },
+    "2704": {
+      "symbol": "2704",
+      "name": "國賓",
+      "total_assets": 37260191.0,
+      "total_liabilities": 8159396.0,
+      "share_capital": 3669234.0,
+      "book_value_per_share": 79.3,
+      "eps": 1.95,
+      "debt_ratio": 21.9
+    },
     "2707": {
       "symbol": "2707",
       "name": "晶華",
@@ -1282,6 +1682,16 @@
       "book_value_per_share": 33.08,
       "eps": 11.1,
       "debt_ratio": 55.12
+    },
+    "2712": {
+      "symbol": "2712",
+      "name": "遠雄來",
+      "total_assets": 1617256.0,
+      "total_liabilities": 582655.0,
+      "share_capital": 1050000.0,
+      "book_value_per_share": 9.85,
+      "eps": 0.08,
+      "debt_ratio": 36.03
     },
     "2727": {
       "symbol": "2727",
@@ -1293,6 +1703,16 @@
       "eps": 14.32,
       "debt_ratio": 73.51
     },
+    "2812": {
+      "symbol": "2812",
+      "name": "台中銀",
+      "total_assets": 1032634114.0,
+      "total_liabilities": 936677337.0,
+      "share_capital": 64250747.0,
+      "book_value_per_share": 14.93,
+      "eps": 1.12,
+      "debt_ratio": 90.71
+    },
     "2820": {
       "symbol": "2820",
       "name": "華票",
@@ -1302,6 +1722,56 @@
       "book_value_per_share": 20.13,
       "eps": 1.49,
       "debt_ratio": 90.02
+    },
+    "2836": {
+      "symbol": "2836",
+      "name": "高雄銀",
+      "total_assets": 356482246.0,
+      "total_liabilities": 328212820.0,
+      "share_capital": 18983162.0,
+      "book_value_per_share": 14.89,
+      "eps": 0.61,
+      "debt_ratio": 92.07
+    },
+    "2851": {
+      "symbol": "2851",
+      "name": "中再保",
+      "total_assets": 61616617.0,
+      "total_liabilities": 34855259.0,
+      "share_capital": 8003888.0,
+      "book_value_per_share": 33.44,
+      "eps": 8.76,
+      "debt_ratio": 56.57
+    },
+    "2852": {
+      "symbol": "2852",
+      "name": "第一保",
+      "total_assets": 20066529.0,
+      "total_liabilities": 10276341.0,
+      "share_capital": 3011638.0,
+      "book_value_per_share": 32.51,
+      "eps": 3.63,
+      "debt_ratio": 51.21
+    },
+    "2901": {
+      "symbol": "2901",
+      "name": "欣欣",
+      "total_assets": 1076382.0,
+      "total_liabilities": 196614.0,
+      "share_capital": 730433.0,
+      "book_value_per_share": 12.04,
+      "eps": 0.31,
+      "debt_ratio": 18.27
+    },
+    "2910": {
+      "symbol": "2910",
+      "name": "統領",
+      "total_assets": 7152197.0,
+      "total_liabilities": 4323934.0,
+      "share_capital": 1754030.0,
+      "book_value_per_share": 16.12,
+      "eps": 1.36,
+      "debt_ratio": 60.46
     },
     "2912": {
       "symbol": "2912",
@@ -1383,6 +1853,16 @@
       "eps": 1.81,
       "debt_ratio": 29.78
     },
+    "3017": {
+      "symbol": "3017",
+      "name": "奇鋐",
+      "total_assets": 232498518.0,
+      "total_liabilities": 157210527.0,
+      "share_capital": 4068021.0,
+      "book_value_per_share": 170.53,
+      "eps": 73.86,
+      "debt_ratio": 67.62
+    },
     "3019": {
       "symbol": "3019",
       "name": "亞光",
@@ -1402,6 +1882,16 @@
       "book_value_per_share": 73.96,
       "eps": 11.16,
       "debt_ratio": 52.93
+    },
+    "3024": {
+      "symbol": "3024",
+      "name": "憶聲",
+      "total_assets": 4954046.0,
+      "total_liabilities": 1919296.0,
+      "share_capital": 2771575.0,
+      "book_value_per_share": 10.95,
+      "eps": 0.11,
+      "debt_ratio": 38.74
     },
     "3026": {
       "symbol": "3026",
@@ -1433,6 +1923,16 @@
       "eps": 10.89,
       "debt_ratio": 25.16
     },
+    "3031": {
+      "symbol": "3031",
+      "name": "佰鴻",
+      "total_assets": 3538799.0,
+      "total_liabilities": 573603.0,
+      "share_capital": 1732032.0,
+      "book_value_per_share": 16.64,
+      "eps": 0.86,
+      "debt_ratio": 16.21
+    },
     "3034": {
       "symbol": "3034",
       "name": "聯詠",
@@ -1462,6 +1962,26 @@
       "book_value_per_share": 108.24,
       "eps": 17.85,
       "debt_ratio": 54.46
+    },
+    "3044": {
+      "symbol": "3044",
+      "name": "健鼎",
+      "total_assets": 121531373.0,
+      "total_liabilities": 59217159.0,
+      "share_capital": 5256059.0,
+      "book_value_per_share": 118.54,
+      "eps": 24.95,
+      "debt_ratio": 48.73
+    },
+    "3046": {
+      "symbol": "3046",
+      "name": "建碁",
+      "total_assets": 4545145.0,
+      "total_liabilities": 2756203.0,
+      "share_capital": 784480.0,
+      "book_value_per_share": 22.92,
+      "eps": 4.31,
+      "debt_ratio": 60.64
     },
     "3047": {
       "symbol": "3047",
@@ -1543,6 +2063,16 @@
       "eps": -0.01,
       "debt_ratio": 10.64
     },
+    "3164": {
+      "symbol": "3164",
+      "name": "景岳",
+      "total_assets": 1687229.0,
+      "total_liabilities": 233484.0,
+      "share_capital": 860104.0,
+      "book_value_per_share": 15.53,
+      "eps": 0.43,
+      "debt_ratio": 13.84
+    },
     "3168": {
       "symbol": "3168",
       "name": "眾福科",
@@ -1562,6 +2092,16 @@
       "book_value_per_share": 89.08,
       "eps": 8.38,
       "debt_ratio": 39.56
+    },
+    "3311": {
+      "symbol": "3311",
+      "name": "閎暉",
+      "total_assets": 13412637.0,
+      "total_liabilities": 8067872.0,
+      "share_capital": 1000000.0,
+      "book_value_per_share": 38.05,
+      "eps": 1.27,
+      "debt_ratio": 60.15
     },
     "3321": {
       "symbol": "3321",
@@ -1633,6 +2173,16 @@
       "eps": 13.64,
       "debt_ratio": 52.0
     },
+    "3518": {
+      "symbol": "3518",
+      "name": "柏騰",
+      "total_assets": 2394993.0,
+      "total_liabilities": 784895.0,
+      "share_capital": 1022922.0,
+      "book_value_per_share": 15.74,
+      "eps": 1.73,
+      "debt_ratio": 32.77
+    },
     "3530": {
       "symbol": "3530",
       "name": "晶相光",
@@ -1662,6 +2212,16 @@
       "book_value_per_share": 90.94,
       "eps": 14.92,
       "debt_ratio": 23.74
+    },
+    "3591": {
+      "symbol": "3591",
+      "name": "艾笛森",
+      "total_assets": 4613367.0,
+      "total_liabilities": 1639548.0,
+      "share_capital": 1303868.0,
+      "book_value_per_share": 21.95,
+      "eps": 0.31,
+      "debt_ratio": 35.54
     },
     "3592": {
       "symbol": "3592",
@@ -1723,6 +2283,16 @@
       "eps": 1.71,
       "debt_ratio": 27.51
     },
+    "3669": {
+      "symbol": "3669",
+      "name": "圓展",
+      "total_assets": 4615043.0,
+      "total_liabilities": 1228081.0,
+      "share_capital": 929200.0,
+      "book_value_per_share": 36.45,
+      "eps": 1.65,
+      "debt_ratio": 26.61
+    },
     "3679": {
       "symbol": "3679",
       "name": "新至陞",
@@ -1732,6 +2302,16 @@
       "book_value_per_share": 80.49,
       "eps": 7.25,
       "debt_ratio": 47.11
+    },
+    "3686": {
+      "symbol": "3686",
+      "name": "達能",
+      "total_assets": 662877.0,
+      "total_liabilities": 6783.0,
+      "share_capital": 764951.0,
+      "book_value_per_share": 8.58,
+      "eps": -0.16,
+      "debt_ratio": 1.02
     },
     "3703": {
       "symbol": "3703",
@@ -1753,6 +2333,16 @@
       "eps": 2.71,
       "debt_ratio": 60.0
     },
+    "3708": {
+      "symbol": "3708",
+      "name": "上緯投控",
+      "total_assets": 30225650.0,
+      "total_liabilities": 3406485.0,
+      "share_capital": 937207.0,
+      "book_value_per_share": 294.46,
+      "eps": -0.91,
+      "debt_ratio": 11.27
+    },
     "3711": {
       "symbol": "3711",
       "name": "日月光投控",
@@ -1762,6 +2352,26 @@
       "book_value_per_share": 95.76,
       "eps": 14.17,
       "debt_ratio": 63.53
+    },
+    "3714": {
+      "symbol": "3714",
+      "name": "富采",
+      "total_assets": 56607075.0,
+      "total_liabilities": 13904824.0,
+      "share_capital": 4000000.0,
+      "book_value_per_share": 104.39,
+      "eps": 3.36,
+      "debt_ratio": 24.56
+    },
+    "3715": {
+      "symbol": "3715",
+      "name": "定穎投控",
+      "total_assets": 56611242.0,
+      "total_liabilities": 44360962.0,
+      "share_capital": 2835753.0,
+      "book_value_per_share": 37.06,
+      "eps": -1.44,
+      "debt_ratio": 78.36
     },
     "4164": {
       "symbol": "4164",
@@ -1853,6 +2463,16 @@
       "eps": 3.11,
       "debt_ratio": 38.98
     },
+    "4722": {
+      "symbol": "4722",
+      "name": "國精化",
+      "total_assets": 9242533.0,
+      "total_liabilities": 5625722.0,
+      "share_capital": 1046020.0,
+      "book_value_per_share": 34.79,
+      "eps": 2.36,
+      "debt_ratio": 60.87
+    },
     "4764": {
       "symbol": "4764",
       "name": "雙鍵",
@@ -1902,6 +2522,26 @@
       "book_value_per_share": 21.1,
       "eps": 2.38,
       "debt_ratio": 28.76
+    },
+    "4956": {
+      "symbol": "4956",
+      "name": "光鋐",
+      "total_assets": 2817626.0,
+      "total_liabilities": 1150887.0,
+      "share_capital": 1004082.0,
+      "book_value_per_share": 16.6,
+      "eps": 0.14,
+      "debt_ratio": 40.85
+    },
+    "4958": {
+      "symbol": "4958",
+      "name": "臻鼎-KY",
+      "total_assets": 402768320.0,
+      "total_liabilities": 174349077.0,
+      "share_capital": 11333972.0,
+      "book_value_per_share": 147.9,
+      "eps": 7.66,
+      "debt_ratio": 43.29
     },
     "4960": {
       "symbol": "4960",
@@ -1963,6 +2603,16 @@
       "eps": -2.15,
       "debt_ratio": 13.41
     },
+    "5007": {
+      "symbol": "5007",
+      "name": "三星",
+      "total_assets": 8721842.0,
+      "total_liabilities": 1279226.0,
+      "share_capital": 2949401.0,
+      "book_value_per_share": 24.04,
+      "eps": 2.62,
+      "debt_ratio": 14.67
+    },
     "5203": {
       "symbol": "5203",
       "name": "訊連",
@@ -1993,6 +2643,16 @@
       "eps": 12.29,
       "debt_ratio": 22.43
     },
+    "5388": {
+      "symbol": "5388",
+      "name": "中磊",
+      "total_assets": 62000109.0,
+      "total_liabilities": 45254232.0,
+      "share_capital": 3043426.0,
+      "book_value_per_share": 55.9,
+      "eps": 4.34,
+      "debt_ratio": 72.99
+    },
     "5434": {
       "symbol": "5434",
       "name": "崇越",
@@ -2002,6 +2662,16 @@
       "book_value_per_share": 122.36,
       "eps": 25.19,
       "debt_ratio": 53.47
+    },
+    "5533": {
+      "symbol": "5533",
+      "name": "皇鼎",
+      "total_assets": 11734857.0,
+      "total_liabilities": 2170516.0,
+      "share_capital": 2852450.0,
+      "book_value_per_share": 33.53,
+      "eps": 0.56,
+      "debt_ratio": 18.5
     },
     "5607": {
       "symbol": "5607",
@@ -2053,6 +2723,16 @@
       "eps": 1.78,
       "debt_ratio": 68.01
     },
+    "6115": {
+      "symbol": "6115",
+      "name": "鎰勝",
+      "total_assets": 8525607.0,
+      "total_liabilities": 3121623.0,
+      "share_capital": 1876622.0,
+      "book_value_per_share": 28.52,
+      "eps": 2.31,
+      "debt_ratio": 36.61
+    },
     "6120": {
       "symbol": "6120",
       "name": "達運",
@@ -2072,6 +2752,26 @@
       "book_value_per_share": 10.08,
       "eps": 2.36,
       "debt_ratio": 50.77
+    },
+    "6153": {
+      "symbol": "6153",
+      "name": "嘉聯益",
+      "total_assets": 15582082.0,
+      "total_liabilities": 7540739.0,
+      "share_capital": 6361777.0,
+      "book_value_per_share": 12.64,
+      "eps": -1.13,
+      "debt_ratio": 48.39
+    },
+    "6155": {
+      "symbol": "6155",
+      "name": "鈞寶",
+      "total_assets": 2462748.0,
+      "total_liabilities": 809188.0,
+      "share_capital": 880239.0,
+      "book_value_per_share": 18.79,
+      "eps": 1.12,
+      "debt_ratio": 32.86
     },
     "6166": {
       "symbol": "6166",
@@ -2233,6 +2933,16 @@
       "eps": 3.16,
       "debt_ratio": 68.98
     },
+    "6282": {
+      "symbol": "6282",
+      "name": "康舒",
+      "total_assets": 55160766.0,
+      "total_liabilities": 31822179.0,
+      "share_capital": 8561007.0,
+      "book_value_per_share": 26.93,
+      "eps": 0.61,
+      "debt_ratio": 57.69
+    },
     "6285": {
       "symbol": "6285",
       "name": "啟碁",
@@ -2242,6 +2952,16 @@
       "book_value_per_share": 80.19,
       "eps": 10.1,
       "debt_ratio": 68.98
+    },
+    "6405": {
+      "symbol": "6405",
+      "name": "悅城",
+      "total_assets": 3403463.0,
+      "total_liabilities": 12806.0,
+      "share_capital": 658000.0,
+      "book_value_per_share": 51.53,
+      "eps": 0.06,
+      "debt_ratio": 0.38
     },
     "6409": {
       "symbol": "6409",
@@ -2272,6 +2992,16 @@
       "book_value_per_share": 98.74,
       "eps": 18.43,
       "debt_ratio": 16.76
+    },
+    "6451": {
+      "symbol": "6451",
+      "name": "訊芯-KY",
+      "total_assets": 22813727.0,
+      "total_liabilities": 12016120.0,
+      "share_capital": 1178536.0,
+      "book_value_per_share": 81.89,
+      "eps": -0.65,
+      "debt_ratio": 52.67
     },
     "6456": {
       "symbol": "6456",
@@ -2313,6 +3043,16 @@
       "eps": 6.35,
       "debt_ratio": 34.22
     },
+    "6526": {
+      "symbol": "6526",
+      "name": "達發",
+      "total_assets": 30686690.0,
+      "total_liabilities": 8403796.0,
+      "share_capital": 1675056.0,
+      "book_value_per_share": 119.04,
+      "eps": 15.87,
+      "debt_ratio": 27.39
+    },
     "6531": {
       "symbol": "6531",
       "name": "愛普*",
@@ -2353,6 +3093,16 @@
       "eps": 9.25,
       "debt_ratio": 22.41
     },
+    "6581": {
+      "symbol": "6581",
+      "name": "鋼聯",
+      "total_assets": 5624928.0,
+      "total_liabilities": 1015167.0,
+      "share_capital": 1112709.0,
+      "book_value_per_share": 41.43,
+      "eps": 6.4,
+      "debt_ratio": 18.05
+    },
     "6582": {
       "symbol": "6582",
       "name": "申豐",
@@ -2382,6 +3132,16 @@
       "book_value_per_share": 51.89,
       "eps": 3.61,
       "debt_ratio": 87.04
+    },
+    "6645": {
+      "symbol": "6645",
+      "name": "金萬林-創",
+      "total_assets": 1028331.0,
+      "total_liabilities": 604173.0,
+      "share_capital": 608640.0,
+      "book_value_per_share": 6.71,
+      "eps": -1.5,
+      "debt_ratio": 58.75
     },
     "6658": {
       "symbol": "6658",
@@ -2423,6 +3183,36 @@
       "eps": 10.97,
       "debt_ratio": 33.68
     },
+    "6674": {
+      "symbol": "6674",
+      "name": "鋐寶科技",
+      "total_assets": 933594.0,
+      "total_liabilities": 241855.0,
+      "share_capital": 682225.0,
+      "book_value_per_share": 10.14,
+      "eps": -3.3,
+      "debt_ratio": 25.91
+    },
+    "6689": {
+      "symbol": "6689",
+      "name": "伊雲谷",
+      "total_assets": 6674241.0,
+      "total_liabilities": 3547158.0,
+      "share_capital": 680000.0,
+      "book_value_per_share": 42.82,
+      "eps": 0.78,
+      "debt_ratio": 53.15
+    },
+    "6695": {
+      "symbol": "6695",
+      "name": "芯鼎",
+      "total_assets": 2116118.0,
+      "total_liabilities": 319285.0,
+      "share_capital": 1070177.0,
+      "book_value_per_share": 16.79,
+      "eps": -1.86,
+      "debt_ratio": 15.09
+    },
     "6698": {
       "symbol": "6698",
       "name": "旭暉應材",
@@ -2442,6 +3232,16 @@
       "book_value_per_share": 134.94,
       "eps": 5.87,
       "debt_ratio": 15.0
+    },
+    "6771": {
+      "symbol": "6771",
+      "name": "平和環保-創",
+      "total_assets": 1309418.0,
+      "total_liabilities": 478952.0,
+      "share_capital": 311795.0,
+      "book_value_per_share": 27.1,
+      "eps": 2.41,
+      "debt_ratio": 36.58
     },
     "6776": {
       "symbol": "6776",
@@ -2493,6 +3293,16 @@
       "eps": 43.88,
       "debt_ratio": 48.49
     },
+    "6838": {
+      "symbol": "6838",
+      "name": "台新藥",
+      "total_assets": 1863378.0,
+      "total_liabilities": 590949.0,
+      "share_capital": 1509771.0,
+      "book_value_per_share": 8.42,
+      "eps": -1.23,
+      "debt_ratio": 31.71
+    },
     "6854": {
       "symbol": "6854",
       "name": "錼創科技-KY創",
@@ -2502,6 +3312,36 @@
       "book_value_per_share": 26.98,
       "eps": -6.37,
       "debt_ratio": 38.06
+    },
+    "6861": {
+      "symbol": "6861",
+      "name": "睿生光電",
+      "total_assets": 3330849.0,
+      "total_liabilities": 1679826.0,
+      "share_capital": 415992.0,
+      "book_value_per_share": 39.69,
+      "eps": 6.72,
+      "debt_ratio": 50.43
+    },
+    "6885": {
+      "symbol": "6885",
+      "name": "全福生技",
+      "total_assets": 1584849.0,
+      "total_liabilities": 49232.0,
+      "share_capital": 1330990.0,
+      "book_value_per_share": 11.03,
+      "eps": -2.11,
+      "debt_ratio": 3.11
+    },
+    "6890": {
+      "symbol": "6890",
+      "name": "來億-KY",
+      "total_assets": 34627471.0,
+      "total_liabilities": 9602855.0,
+      "share_capital": 2502967.0,
+      "book_value_per_share": 96.0,
+      "eps": 6.68,
+      "debt_ratio": 27.73
     },
     "6901": {
       "symbol": "6901",
@@ -2573,6 +3413,16 @@
       "eps": 1.51,
       "debt_ratio": 21.71
     },
+    "6969": {
+      "symbol": "6969",
+      "name": "成信實業*-創",
+      "total_assets": 1036498.0,
+      "total_liabilities": 557915.0,
+      "share_capital": 709197.0,
+      "book_value_per_share": 10.91,
+      "eps": -0.2,
+      "debt_ratio": 53.83
+    },
     "7710": {
       "symbol": "7710",
       "name": "東擎科技",
@@ -2592,6 +3442,16 @@
       "book_value_per_share": 95.3,
       "eps": 37.27,
       "debt_ratio": 65.06
+    },
+    "7750": {
+      "symbol": "7750",
+      "name": "新代",
+      "total_assets": 27878589.0,
+      "total_liabilities": 12705071.0,
+      "share_capital": 718430.0,
+      "book_value_per_share": 211.59,
+      "eps": 66.59,
+      "debt_ratio": 45.57
     },
     "7765": {
       "symbol": "7765",
@@ -2623,6 +3483,26 @@
       "eps": 0.43,
       "debt_ratio": 12.09
     },
+    "7799": {
+      "symbol": "7799",
+      "name": "禾榮科",
+      "total_assets": 12386303.0,
+      "total_liabilities": 1287957.0,
+      "share_capital": 1597385.0,
+      "book_value_per_share": 69.48,
+      "eps": -1.78,
+      "debt_ratio": 10.4
+    },
+    "7803": {
+      "symbol": "7803",
+      "name": "雲象科技-創",
+      "total_assets": 592012.0,
+      "total_liabilities": 85676.0,
+      "share_capital": 944129.0,
+      "book_value_per_share": 5.36,
+      "eps": -2.48,
+      "debt_ratio": 14.47
+    },
     "7822": {
       "symbol": "7822",
       "name": "倍利科",
@@ -2632,6 +3512,16 @@
       "book_value_per_share": 138.48,
       "eps": 16.39,
       "debt_ratio": 29.38
+    },
+    "8016": {
+      "symbol": "8016",
+      "name": "矽創",
+      "total_assets": 24600520.0,
+      "total_liabilities": 6370562.0,
+      "share_capital": 1201369.0,
+      "book_value_per_share": 118.35,
+      "eps": 19.0,
+      "debt_ratio": 25.9
     },
     "8021": {
       "symbol": "8021",
@@ -2673,6 +3563,16 @@
       "eps": 2.25,
       "debt_ratio": 35.73
     },
+    "8072": {
+      "symbol": "8072",
+      "name": "陞泰",
+      "total_assets": 2688221.0,
+      "total_liabilities": 276218.0,
+      "share_capital": 800000.0,
+      "book_value_per_share": 28.86,
+      "eps": 1.06,
+      "debt_ratio": 10.28
+    },
     "8081": {
       "symbol": "8081",
       "name": "致新",
@@ -2682,6 +3582,16 @@
       "book_value_per_share": 101.04,
       "eps": 14.8,
       "debt_ratio": 18.95
+    },
+    "8112": {
+      "symbol": "8112",
+      "name": "至上",
+      "total_assets": 158935743.0,
+      "total_liabilities": 127840561.0,
+      "share_capital": 5958830.0,
+      "book_value_per_share": 50.02,
+      "eps": 17.45,
+      "debt_ratio": 80.44
     },
     "8114": {
       "symbol": "8114",
@@ -2702,6 +3612,16 @@
       "book_value_per_share": 38.91,
       "eps": 3.16,
       "debt_ratio": 15.24
+    },
+    "8150": {
+      "symbol": "8150",
+      "name": "南茂",
+      "total_assets": 45630142.0,
+      "total_liabilities": 19512958.0,
+      "share_capital": 7045231.0,
+      "book_value_per_share": 37.31,
+      "eps": 3.89,
+      "debt_ratio": 42.76
     },
     "8162": {
       "symbol": "8162",
@@ -2732,6 +3652,16 @@
       "book_value_per_share": 107.9,
       "eps": 29.89,
       "debt_ratio": 56.19
+    },
+    "8213": {
+      "symbol": "8213",
+      "name": "志超",
+      "total_assets": 36171215.0,
+      "total_liabilities": 17919934.0,
+      "share_capital": 2712425.0,
+      "book_value_per_share": 64.79,
+      "eps": 2.13,
+      "debt_ratio": 49.54
     },
     "8215": {
       "symbol": "8215",
@@ -2833,6 +3763,16 @@
       "eps": 7.02,
       "debt_ratio": 65.81
     },
+    "8462": {
+      "symbol": "8462",
+      "name": "柏文",
+      "total_assets": 13027488.0,
+      "total_liabilities": 10353062.0,
+      "share_capital": 803801.0,
+      "book_value_per_share": 33.11,
+      "eps": 8.84,
+      "debt_ratio": 79.47
+    },
     "8463": {
       "symbol": "8463",
       "name": "潤泰材",
@@ -2852,6 +3792,16 @@
       "book_value_per_share": 104.66,
       "eps": 16.75,
       "debt_ratio": 25.12
+    },
+    "8478": {
+      "symbol": "8478",
+      "name": "東哥遊艇",
+      "total_assets": 15633558.0,
+      "total_liabilities": 6410960.0,
+      "share_capital": 939723.0,
+      "book_value_per_share": 98.14,
+      "eps": 7.11,
+      "debt_ratio": 41.01
     },
     "8481": {
       "symbol": "8481",
@@ -2893,6 +3843,16 @@
       "eps": 1.29,
       "debt_ratio": 8.17
     },
+    "9905": {
+      "symbol": "9905",
+      "name": "大華",
+      "total_assets": 13134009.0,
+      "total_liabilities": 4035890.0,
+      "share_capital": 3050000.0,
+      "book_value_per_share": 28.92,
+      "eps": 1.43,
+      "debt_ratio": 30.73
+    },
     "9907": {
       "symbol": "9907",
       "name": "統一實",
@@ -2912,6 +3872,26 @@
       "book_value_per_share": 31.5,
       "eps": 2.05,
       "debt_ratio": 25.58
+    },
+    "9911": {
+      "symbol": "9911",
+      "name": "櫻花",
+      "total_assets": 11172146.0,
+      "total_liabilities": 4168411.0,
+      "share_capital": 2223323.0,
+      "book_value_per_share": 31.37,
+      "eps": 4.78,
+      "debt_ratio": 37.31
+    },
+    "9912": {
+      "symbol": "9912",
+      "name": "偉聯",
+      "total_assets": 781559.0,
+      "total_liabilities": 434837.0,
+      "share_capital": 537926.0,
+      "book_value_per_share": 6.29,
+      "eps": -0.69,
+      "debt_ratio": 55.64
     },
     "9924": {
       "symbol": "9924",
@@ -2933,6 +3913,16 @@
       "eps": 2.55,
       "debt_ratio": 51.17
     },
+    "9927": {
+      "symbol": "9927",
+      "name": "泰銘",
+      "total_assets": 6626935.0,
+      "total_liabilities": 1159874.0,
+      "share_capital": 1200000.0,
+      "book_value_per_share": 45.33,
+      "eps": 3.18,
+      "debt_ratio": 17.5
+    },
     "9930": {
       "symbol": "9930",
       "name": "中聯資源",
@@ -2942,6 +3932,16 @@
       "book_value_per_share": 26.0,
       "eps": 3.21,
       "debt_ratio": 40.81
+    },
+    "9933": {
+      "symbol": "9933",
+      "name": "中鼎",
+      "total_assets": 148361543.0,
+      "total_liabilities": 116275613.0,
+      "share_capital": 9617962.0,
+      "book_value_per_share": 27.23,
+      "eps": 4.86,
+      "debt_ratio": 78.37
     },
     "9940": {
       "symbol": "9940",
@@ -2962,6 +3962,16 @@
       "book_value_per_share": 60.74,
       "eps": 5.79,
       "debt_ratio": 85.81
+    },
+    "9943": {
+      "symbol": "9943",
+      "name": "好樂迪",
+      "total_assets": 5524457.0,
+      "total_liabilities": 1721618.0,
+      "share_capital": 1251715.0,
+      "book_value_per_share": 30.21,
+      "eps": 3.54,
+      "debt_ratio": 31.16
     }
   }
 }

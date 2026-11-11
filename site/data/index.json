@@ -2,27 +2,27 @@
   "schema_version": "0.1.0",
   "generation": 1,
   "season": "2026-S4",
-  "market_date": "2026-11-10",
-  "generated_at": "2026-11-11T02:43:09+08:00",
-  "next_settlement_at": "2026-11-11T19:00:00+08:00",
+  "market_date": "2026-11-11",
+  "generated_at": "2026-11-12T02:44:41+08:00",
+  "next_settlement_at": "2026-11-12T19:00:00+08:00",
   "files": {
     "species": {
       "path": "species.json",
-      "sha256": "600d77c9851d9630f05a16a3ba83d6d284b808befa709489da25cbb74fea1207",
-      "bytes": 87629,
-      "updated_at": "2026-11-11T02:43:09.010654+08:00"
+      "sha256": "f94f911a426a48cb5414999726065259d820345d46e0920133060b1001b9c1d3",
+      "bytes": 87631,
+      "updated_at": "2026-11-12T02:44:41.062489+08:00"
     },
     "daily": {
-      "path": "daily/2026-11-10.json",
-      "sha256": "f30e9bdd5d68e19095570409267c74bdda7617639aaa71c114e26a48a8495104",
-      "bytes": 66297,
-      "updated_at": "2026-11-11T02:43:09.014029+08:00"
+      "path": "daily/2026-11-11.json",
+      "sha256": "6b244b073aceddb80eb26430702fe5631b0903a6541876b2d97676ebcab25313",
+      "bytes": 68087,
+      "updated_at": "2026-11-12T02:44:41.064419+08:00"
     },
     "balance": {
       "path": "balance.json",
       "sha256": "e9b08c7728ab5a79e5b44210afebea60224ef4c82a5874b1800baa18e54815bf",
       "bytes": 4493,
-      "updated_at": "2026-11-11T02:43:09.014474+08:00"
+      "updated_at": "2026-11-12T02:44:41.064757+08:00"
     }
   },
   "pipeline": {
@@ -30,7 +30,7 @@
       {
         "name": "fugle-snapshot-tse",
         "endpoint": "/snapshot/quotes/TSE",
-        "record_count": 1548
+        "record_count": 1550
       },
       {
         "name": "twse-company-profile",
@@ -45,7 +45,7 @@
       {
         "name": "twse-mi-index",
         "endpoint": "/rwd/zh/afterTrading/MI_INDEX",
-        "record_count": 1389
+        "record_count": 1390
       },
       {
         "name": "twse-monthly-revenue",
@@ -69,7 +69,7 @@
       }
     ],
     "warnings": [
-      "30 檔沿用較舊季別（最新期 115Q3 尚未公布）"
+      "29 檔沿用較舊季別（最新期 115Q3 尚未公布）"
     ]
   }
 }
