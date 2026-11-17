@@ -2,27 +2,27 @@
   "schema_version": "0.1.0",
   "generation": 1,
   "season": "2026-S4",
-  "market_date": "2026-11-16",
-  "generated_at": "2026-11-17T05:04:27+08:00",
-  "next_settlement_at": "2026-11-17T19:00:00+08:00",
+  "market_date": "2026-11-17",
+  "generated_at": "2026-11-18T03:53:42+08:00",
+  "next_settlement_at": "2026-11-18T19:00:00+08:00",
   "files": {
     "species": {
       "path": "species.json",
-      "sha256": "c606f9a42394d21f362136db2b7722e09b1b0446214f7c332e29693a9c484dbe",
-      "bytes": 87215,
-      "updated_at": "2026-11-17T05:04:27.554213+08:00"
+      "sha256": "1b3a7ea706c28472c5c16bc04e35e20caa4133cd37f34955ef5046c81273740f",
+      "bytes": 87217,
+      "updated_at": "2026-11-18T03:53:42.642956+08:00"
     },
     "daily": {
-      "path": "daily/2026-11-16.json",
-      "sha256": "1071943dde5e7f855b52bf461c396b2dd87ccf0220e35c1f8c0be40c16ea7ddc",
-      "bytes": 66832,
-      "updated_at": "2026-11-17T05:04:27.556790+08:00"
+      "path": "daily/2026-11-17.json",
+      "sha256": "ab289d92c1f95a8edaeccc5157c39e9800530555e1bdbc1cad9b43aff6bc1ef3",
+      "bytes": 67155,
+      "updated_at": "2026-11-18T03:53:42.645957+08:00"
     },
     "balance": {
       "path": "balance.json",
       "sha256": "e9b08c7728ab5a79e5b44210afebea60224ef4c82a5874b1800baa18e54815bf",
       "bytes": 4493,
-      "updated_at": "2026-11-17T05:04:27.557194+08:00"
+      "updated_at": "2026-11-18T03:53:42.646747+08:00"
     }
   },
   "pipeline": {
@@ -30,7 +30,7 @@
       {
         "name": "fugle-snapshot-tse",
         "endpoint": "/snapshot/quotes/TSE",
-        "record_count": 1549
+        "record_count": 1550
       },
       {
         "name": "twse-company-profile",
@@ -45,7 +45,7 @@
       {
         "name": "twse-mi-index",
         "endpoint": "/rwd/zh/afterTrading/MI_INDEX",
-        "record_count": 1390
+        "record_count": 1391
       },
       {
         "name": "twse-monthly-revenue",
@@ -71,7 +71,7 @@
     "warnings": [
       "hp（revenue）缺值 4 檔，以中位百分位替代：2881, 2882, 2884, 2883",
       "matk（revenue_yoy）缺值 4 檔，以中位百分位替代：2881, 2882, 2884, 2883",
-      "15 檔沿用較舊季別（最新期 115Q3 尚未公布）"
+      "12 檔沿用較舊季別（最新期 115Q3 尚未公布）"
     ]
   }
 }
