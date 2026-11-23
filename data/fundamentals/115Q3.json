@@ -1,7 +1,7 @@
 {
   "period": "115Q3",
-  "updated_at": "2026-11-21T03:05:52+08:00",
-  "company_count": 1076,
+  "updated_at": "2026-11-24T06:38:19+08:00",
+  "company_count": 1078,
   "companies": {
     "1101": {
       "symbol": "1101",
@@ -4803,6 +4803,16 @@
       "eps": 8.11,
       "debt_ratio": 85.93
     },
+    "2885": {
+      "symbol": "2885",
+      "name": "元大金",
+      "total_assets": 5223935289.0,
+      "total_liabilities": 4782503201.0,
+      "share_capital": 138643959.0,
+      "book_value_per_share": 29.45,
+      "eps": 3.96,
+      "debt_ratio": 91.55
+    },
     "2886": {
       "symbol": "2886",
       "name": "兆豐金",
@@ -4812,6 +4822,16 @@
       "book_value_per_share": 27.53,
       "eps": 2.21,
       "debt_ratio": 92.72
+    },
+    "2891": {
+      "symbol": "2891",
+      "name": "中信金",
+      "total_assets": 10367179018.0,
+      "total_liabilities": 9607639829.0,
+      "share_capital": 201759228.0,
+      "book_value_per_share": 36.15,
+      "eps": 3.18,
+      "debt_ratio": 92.67
     },
     "2897": {
       "symbol": "2897",

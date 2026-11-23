@@ -2,27 +2,27 @@
   "schema_version": "0.1.0",
   "generation": 1,
   "season": "2026-S4",
-  "market_date": "2026-11-20",
-  "generated_at": "2026-11-21T03:08:45+08:00",
-  "next_settlement_at": "2026-11-21T19:00:00+08:00",
+  "market_date": "2026-11-23",
+  "generated_at": "2026-11-24T06:41:13+08:00",
+  "next_settlement_at": "2026-11-24T19:00:00+08:00",
   "files": {
     "species": {
       "path": "species.json",
-      "sha256": "26d36cbdae7043992a43eb7ac3a9a2ee493936a319fc4288a3dd150abc59aaa6",
-      "bytes": 87643,
-      "updated_at": "2026-11-21T03:08:45.635304+08:00"
+      "sha256": "ef858684569a13caefae589b13fb170ed5a858c4e423673deccad6e1e54af168",
+      "bytes": 87642,
+      "updated_at": "2026-11-24T06:41:13.012588+08:00"
     },
     "daily": {
-      "path": "daily/2026-11-20.json",
-      "sha256": "d43bf6b20a20354ec15fb7712012ccc1406d42e672fbf12d8149118b72b77237",
-      "bytes": 67196,
-      "updated_at": "2026-11-21T03:08:45.638106+08:00"
+      "path": "daily/2026-11-23.json",
+      "sha256": "13416bb254ad1e6f8e9a79f7b77d18f512fd8b87af64bea6b1f88fc0e261fe39",
+      "bytes": 67448,
+      "updated_at": "2026-11-24T06:41:13.015844+08:00"
     },
     "balance": {
       "path": "balance.json",
       "sha256": "e9b08c7728ab5a79e5b44210afebea60224ef4c82a5874b1800baa18e54815bf",
       "bytes": 4493,
-      "updated_at": "2026-11-21T03:08:45.638551+08:00"
+      "updated_at": "2026-11-24T06:41:13.016244+08:00"
     }
   },
   "pipeline": {
@@ -30,7 +30,7 @@
       {
         "name": "fugle-snapshot-tse",
         "endpoint": "/snapshot/quotes/TSE",
-        "record_count": 1552
+        "record_count": 1553
       },
       {
         "name": "twse-company-profile",
@@ -40,12 +40,12 @@
       {
         "name": "twse-bwibbu-d",
         "endpoint": "/rwd/zh/afterTrading/BWIBBU_d",
-        "record_count": 1087
+        "record_count": 1088
       },
       {
         "name": "twse-mi-index",
         "endpoint": "/rwd/zh/afterTrading/MI_INDEX",
-        "record_count": 1393
+        "record_count": 1394
       },
       {
         "name": "twse-monthly-revenue",
@@ -69,7 +69,7 @@
       }
     ],
     "warnings": [
-      "11 檔沿用較舊季別（最新期 115Q3 尚未公布）"
+      "9 檔沿用較舊季別（最新期 115Q3 尚未公布）"
     ]
   }
 }
