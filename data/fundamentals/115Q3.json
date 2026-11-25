@@ -1,7 +1,7 @@
 {
   "period": "115Q3",
-  "updated_at": "2026-11-24T06:38:19+08:00",
-  "company_count": 1078,
+  "updated_at": "2026-11-26T04:28:20+08:00",
+  "company_count": 1081,
   "companies": {
     "1101": {
       "symbol": "1101",
@@ -4803,6 +4803,16 @@
       "eps": 8.11,
       "debt_ratio": 85.93
     },
+    "2883": {
+      "symbol": "2883",
+      "name": "凱基金",
+      "total_assets": 4628232222.0,
+      "total_liabilities": 4124938640.0,
+      "share_capital": 185567549.0,
+      "book_value_per_share": 27.11,
+      "eps": 2.26,
+      "debt_ratio": 89.13
+    },
     "2885": {
       "symbol": "2885",
       "name": "元大金",
@@ -4822,6 +4832,16 @@
       "book_value_per_share": 27.53,
       "eps": 2.21,
       "debt_ratio": 92.72
+    },
+    "2890": {
+      "symbol": "2890",
+      "name": "永豐金",
+      "total_assets": 4157844834.0,
+      "total_liabilities": 3875017262.0,
+      "share_capital": 147821687.0,
+      "book_value_per_share": 18.95,
+      "eps": 2.49,
+      "debt_ratio": 93.2
     },
     "2891": {
       "symbol": "2891",
@@ -7603,6 +7623,16 @@
       "eps": 3.11,
       "debt_ratio": 88.77
     },
+    "5880": {
+      "symbol": "5880",
+      "name": "合庫金",
+      "total_assets": 5544988388.0,
+      "total_liabilities": 5243899843.0,
+      "share_capital": 160729603.0,
+      "book_value_per_share": 18.27,
+      "eps": 1.22,
+      "debt_ratio": 94.57
+    },
     "5906": {
       "symbol": "5906",
       "name": "台南-KY",
@@ -9375,7 +9405,7 @@
     },
     "6949": {
       "symbol": "6949",
-      "name": "沛爾生醫*-創",
+      "name": "沛爾*-創",
       "total_assets": 3059014.0,
       "total_liabilities": 334145.0,
       "share_capital": 655801.0,
