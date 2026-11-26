@@ -1,7 +1,7 @@
 {
   "period": "115Q3",
-  "updated_at": "2026-11-26T04:28:20+08:00",
-  "company_count": 1081,
+  "updated_at": "2026-11-27T04:10:21+08:00",
+  "company_count": 1082,
   "companies": {
     "1101": {
       "symbol": "1101",
@@ -4832,6 +4832,16 @@
       "book_value_per_share": 27.53,
       "eps": 2.21,
       "debt_ratio": 92.72
+    },
+    "2889": {
+      "symbol": "2889",
+      "name": "國票金",
+      "total_assets": 515338748.0,
+      "total_liabilities": 459889243.0,
+      "share_capital": 36659022.0,
+      "book_value_per_share": 12.66,
+      "eps": 1.01,
+      "debt_ratio": 89.24
     },
     "2890": {
       "symbol": "2890",
